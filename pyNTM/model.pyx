@@ -1298,66 +1298,66 @@ class Model(object):
         return non_failed_nodes
 
     # Display calls #########
-    def display_interface_status(self):  # pragma: no cover
-        """Returns failed = True/False for each interface"""
-
-        print('Node'.ljust(12), 'Interface'.ljust(12), 'Remote Node'.ljust(12), end=' ')
-        print('Failed'.ljust(12))
-
-        interface_iterator = (interface for interface in self.interface_objects)
-
-        for interface in interface_iterator:
-            print(interface.node_object.name.ljust(12), interface.name.ljust(12), end=' ')
-            print(interface.remote_node_object.name.ljust(12), end=' ')
-            print(str(interface.failed).ljust(12))
-
-    def display_node_status(self):  # pragma: no cover
-        """Returns failed = True/False for each node"""
-
-        print('Node'.ljust(12), 'Failed'.ljust(12))
-
-        node_iterator = (node for node in self.node_objects)
-
-        for node in node_iterator:
-            print(node.name.ljust(12), str(node.failed).ljust(12))
-
-    def display_interfaces_traffic(self):  # pragma: no cover
-        """
-        A human-readable(-ish) display of interfaces and traffic on each
-        """
-
-        print('Node'.ljust(12), 'Interface'.ljust(12), 'Remote Node'.ljust(12), 'Traffic'.ljust(12))
-
-        interface_iterator = (interface for interface in self.interface_objects)
-
-        for interface in interface_iterator:
-            print(interface.node_object.name.ljust(12), interface.name.ljust(12), end=' ')
-            print(interface.remote_node_object.name.ljust(12), end=' ')
-            print(repr(interface.traffic).ljust(12))
-
-    def display_demand_paths(self):  # pragma: no cover
-        """
-        Displays each demand and its path(s) across the network
-        """
-
-        demand_iter = (demand for demand in self.demand_objects)
-
-        for demand in demand_iter:
-            print('demand._key is', demand._key)
-            print('Demand has %s paths:' % (len(demand.path)))
-            for path in demand.path:
-                pprint(path)
-                print()
-            print()
-            print()
-
-    def display_interface_objects(self):  # pragma: no cover
-        """Displays interface objects in a more human readable manner"""
-
-        for interface in self.interface_objects:
-            pprint(interface)
-            print()
-
+    # def display_interface_status(self):  # pragma: no cover
+    #     """Returns failed = True/False for each interface"""
+    #
+    #     print('Node'.ljust(12), 'Interface'.ljust(12), 'Remote Node'.ljust(12), end=' ')
+    #     print('Failed'.ljust(12))
+    #
+    #     interface_iterator = (interface for interface in self.interface_objects)
+    #
+    #     for interface in interface_iterator:
+    #         print(interface.node_object.name.ljust(12), interface.name.ljust(12), end=' ')
+    #         print(interface.remote_node_object.name.ljust(12), end=' ')
+    #         print(str(interface.failed).ljust(12))
+    #
+    # def display_node_status(self):  # pragma: no cover
+    #     """Returns failed = True/False for each node"""
+    #
+    #     print('Node'.ljust(12), 'Failed'.ljust(12))
+    #
+    #     node_iterator = (node for node in self.node_objects)
+    #
+    #     for node in node_iterator:
+    #         print(node.name.ljust(12), str(node.failed).ljust(12))
+    #
+    # def display_interfaces_traffic(self):  # pragma: no cover
+    #     """
+    #     A human-readable(-ish) display of interfaces and traffic on each
+    #     """
+    #
+    #     print('Node'.ljust(12), 'Interface'.ljust(12), 'Remote Node'.ljust(12), 'Traffic'.ljust(12))
+    #
+    #     interface_iterator = (interface for interface in self.interface_objects)
+    #
+    #     for interface in interface_iterator:
+    #         print(interface.node_object.name.ljust(12), interface.name.ljust(12), end=' ')
+    #         print(interface.remote_node_object.name.ljust(12), end=' ')
+    #         print(repr(interface.traffic).ljust(12))
+    #
+    # def display_demand_paths(self):  # pragma: no cover
+    #     """
+    #     Displays each demand and its path(s) across the network
+    #     """
+    #
+    #     demand_iter = (demand for demand in self.demand_objects)
+    #
+    #     for demand in demand_iter:
+    #         print('demand._key is', demand._key)
+    #         print('Demand has %s paths:' % (len(demand.path)))
+    #         for path in demand.path:
+    #             pprint(path)
+    #             print()
+    #         print()
+    #         print()
+    #
+    # def display_interface_objects(self):  # pragma: no cover
+    #     """Displays interface objects in a more human readable manner"""
+    #
+    #     for interface in self.interface_objects:
+    #         pprint(interface)
+    #         print()
+    #
     def _make_weighted_network_graph(self, include_failed_circuits=True, needed_bw=0, rsvp_required=False):
         """
         Returns a networkx weighted networkx digraph from

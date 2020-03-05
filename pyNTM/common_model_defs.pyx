@@ -1,5 +1,5 @@
 """
-This will be the common defs used by both model.py and parallel_link_model.py
+This will be the common defs used by both model.pyx and parallel_link_model.pyx
 TODO - move defs to here
 Common defs - use parallel_link_model versions
 
