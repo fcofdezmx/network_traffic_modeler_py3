@@ -2,4 +2,4 @@ from distutils.core import setup
 from Cython.Build import cythonize
 
 setup(ext_modules=cythonize('*.pyx', annotate=True),
-      package_data={'cython':['cython/*']})
+      package_data={'pyNTM':['pyNTM/cython/*']})
