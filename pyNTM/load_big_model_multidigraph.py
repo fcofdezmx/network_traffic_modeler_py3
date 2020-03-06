@@ -22,4 +22,11 @@ time_to_update_sim = time_after_update_sim - time_after_load
 print("time_to_load = {}".format(time_to_load))
 print("time_to_update_sim = {}".format(time_to_update_sim))
 
+print("Ints over 100% util: "
+      "{}".format(len([interface for interface in model.interface_objects if interface.utilization > 100])))
+
+for interface in model.interface_objects:
+    if interface.utilization > 100:
+        print([interface.name, interface.node_object.name, interface.utilization])
+
 
