@@ -1,5 +1,5 @@
-import setuptools
+from distutils.core import setup
 from Cython.Build import cythonize
 
-setuptools.setup(ext_modules=cythonize('*.pyx', annotate=True),
-      package_data={'pyNTM':['./*']})
+setup(ext_modules=cythonize('*.pyx', annotate=True),
+      package_data={'pyNTM':['cython/*']})
