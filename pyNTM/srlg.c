@@ -5,7 +5,7 @@
     "distutils": {
         "name": "pyNTM.srlg",
         "sources": [
-            "srlg.pyx"
+            "pyNTM/srlg.py"
         ]
     },
     "module_name": "pyNTM.srlg"
@@ -813,7 +813,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "srlg.pyx",
+  "pyNTM/srlg.py",
 };
 
 /*--- Type declarations ---*/
@@ -1254,7 +1254,6 @@ static const char __pyx_k_prepare[] = "__prepare__";
 static const char __pyx_k_failed_2[] = "failed";
 static const char __pyx_k_property[] = "property";
 static const char __pyx_k_qualname[] = "__qualname__";
-static const char __pyx_k_srlg_pyx[] = "srlg.pyx";
 static const char __pyx_k_SRLG_Name[] = "SRLG(Name: {})";
 static const char __pyx_k_interface[] = "interface";
 static const char __pyx_k_metaclass[] = "__metaclass__";
@@ -1266,6 +1265,7 @@ static const char __pyx_k_SRLG___repr[] = "SRLG.__repr__";
 static const char __pyx_k_SRLG_failed[] = "SRLG.failed";
 static const char __pyx_k_node_objects[] = "node_objects";
 static const char __pyx_k_srlg_objects[] = "srlg_objects";
+static const char __pyx_k_pyNTM_srlg_py[] = "pyNTM/srlg.py";
 static const char __pyx_k_ModelException[] = "ModelException";
 static const char __pyx_k_circuit_objects[] = "circuit_objects";
 static const char __pyx_k_must_be_boolean[] = "must be boolean";
@@ -1313,13 +1313,13 @@ static PyObject *__pyx_n_s_object;
 static PyObject *__pyx_n_s_prepare;
 static PyObject *__pyx_n_s_property;
 static PyObject *__pyx_n_s_pyNTM_srlg;
+static PyObject *__pyx_kp_s_pyNTM_srlg_py;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_repr;
 static PyObject *__pyx_n_s_self;
 static PyObject *__pyx_n_s_setter;
 static PyObject *__pyx_n_s_srlg;
 static PyObject *__pyx_n_s_srlg_objects;
-static PyObject *__pyx_kp_s_srlg_pyx;
 static PyObject *__pyx_n_s_srlgs;
 static PyObject *__pyx_n_s_status;
 static PyObject *__pyx_n_s_test;
@@ -1345,7 +1345,7 @@ static PyObject *__pyx_codeobj__11;
 static PyObject *__pyx_codeobj__13;
 /* Late includes */
 
-/* "pyNTM/srlg.pyx":18
+/* "pyNTM/srlg.py":18
  *     """
  * 
  *     def __init__(self, name, model, circuit_objects=set(), node_objects=set()):             # <<<<<<<<<<<<<<
@@ -1509,7 +1509,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG___init__(CYTHON_UNUSED PyObject *__
   PyObject *__pyx_t_9 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pyNTM/srlg.pyx":21
+  /* "pyNTM/srlg.py":21
  *         # self.circuit_objects = circuit_objects
  *         # self.node_objects = node_objects
  *         if name in set([srlg.name for srlg in model.srlg_objects]):             # <<<<<<<<<<<<<<
@@ -1576,7 +1576,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG___init__(CYTHON_UNUSED PyObject *__
   __pyx_t_7 = (__pyx_t_6 != 0);
   if (unlikely(__pyx_t_7)) {
 
-    /* "pyNTM/srlg.pyx":22
+    /* "pyNTM/srlg.py":22
  *         # self.node_objects = node_objects
  *         if name in set([srlg.name for srlg in model.srlg_objects]):
  *             raise ModelException("SRLG with name {} already exists in Model".format(name))             # <<<<<<<<<<<<<<
@@ -1622,7 +1622,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG___init__(CYTHON_UNUSED PyObject *__
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(0, 22, __pyx_L1_error)
 
-    /* "pyNTM/srlg.pyx":21
+    /* "pyNTM/srlg.py":21
  *         # self.circuit_objects = circuit_objects
  *         # self.node_objects = node_objects
  *         if name in set([srlg.name for srlg in model.srlg_objects]):             # <<<<<<<<<<<<<<
@@ -1631,7 +1631,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG___init__(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "pyNTM/srlg.pyx":24
+  /* "pyNTM/srlg.py":24
  *             raise ModelException("SRLG with name {} already exists in Model".format(name))
  *         else:
  *             self.name = name             # <<<<<<<<<<<<<<
@@ -1641,7 +1641,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG___init__(CYTHON_UNUSED PyObject *__
   /*else*/ {
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_name, __pyx_v_name) < 0) __PYX_ERR(0, 24, __pyx_L1_error)
 
-    /* "pyNTM/srlg.pyx":25
+    /* "pyNTM/srlg.py":25
  *         else:
  *             self.name = name
  *             self.model = model             # <<<<<<<<<<<<<<
@@ -1650,7 +1650,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG___init__(CYTHON_UNUSED PyObject *__
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_model, __pyx_v_model) < 0) __PYX_ERR(0, 25, __pyx_L1_error)
 
-    /* "pyNTM/srlg.pyx":26
+    /* "pyNTM/srlg.py":26
  *             self.name = name
  *             self.model = model
  *             self._failed = False             # <<<<<<<<<<<<<<
@@ -1659,7 +1659,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG___init__(CYTHON_UNUSED PyObject *__
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed, Py_False) < 0) __PYX_ERR(0, 26, __pyx_L1_error)
 
-    /* "pyNTM/srlg.pyx":27
+    /* "pyNTM/srlg.py":27
  *             self.model = model
  *             self._failed = False
  *             model.srlg_objects.add(self)             # <<<<<<<<<<<<<<
@@ -1689,7 +1689,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG___init__(CYTHON_UNUSED PyObject *__
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
 
-  /* "pyNTM/srlg.pyx":18
+  /* "pyNTM/srlg.py":18
  *     """
  * 
  *     def __init__(self, name, model, circuit_objects=set(), node_objects=set()):             # <<<<<<<<<<<<<<
@@ -1715,7 +1715,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG___init__(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "pyNTM/srlg.pyx":29
+/* "pyNTM/srlg.py":29
  *             model.srlg_objects.add(self)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -1746,7 +1746,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_2__repr__(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "pyNTM/srlg.pyx":30
+  /* "pyNTM/srlg.py":30
  * 
  *     def __repr__(self):
  *         return "SRLG(Name: {})".format(self.name)             # <<<<<<<<<<<<<<
@@ -1778,7 +1778,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_2__repr__(CYTHON_UNUSED PyObject *_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/srlg.pyx":29
+  /* "pyNTM/srlg.py":29
  *             model.srlg_objects.add(self)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -1800,7 +1800,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_2__repr__(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "pyNTM/srlg.pyx":33
+/* "pyNTM/srlg.py":33
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -1828,7 +1828,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_4failed(CYTHON_UNUSED PyObject *__p
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("failed", 0);
 
-  /* "pyNTM/srlg.pyx":34
+  /* "pyNTM/srlg.py":34
  *     @property
  *     def failed(self):
  *         return self._failed             # <<<<<<<<<<<<<<
@@ -1842,7 +1842,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_4failed(CYTHON_UNUSED PyObject *__p
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/srlg.pyx":33
+  /* "pyNTM/srlg.py":33
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -1861,7 +1861,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_4failed(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "pyNTM/srlg.pyx":37
+/* "pyNTM/srlg.py":37
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -1941,7 +1941,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_6failed(CYTHON_UNUSED PyObject *__p
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("failed", 0);
 
-  /* "pyNTM/srlg.pyx":38
+  /* "pyNTM/srlg.py":38
  *     @failed.setter
  *     def failed(self, status):
  *         if isinstance(status, bool):             # <<<<<<<<<<<<<<
@@ -1955,7 +1955,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_6failed(CYTHON_UNUSED PyObject *__p
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (likely(__pyx_t_3)) {
 
-    /* "pyNTM/srlg.pyx":39
+    /* "pyNTM/srlg.py":39
  *     def failed(self, status):
  *         if isinstance(status, bool):
  *             self._failed = status             # <<<<<<<<<<<<<<
@@ -1964,7 +1964,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_6failed(CYTHON_UNUSED PyObject *__p
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed, __pyx_v_status) < 0) __PYX_ERR(0, 39, __pyx_L1_error)
 
-    /* "pyNTM/srlg.pyx":38
+    /* "pyNTM/srlg.py":38
  *     @failed.setter
  *     def failed(self, status):
  *         if isinstance(status, bool):             # <<<<<<<<<<<<<<
@@ -1974,7 +1974,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_6failed(CYTHON_UNUSED PyObject *__p
     goto __pyx_L3;
   }
 
-  /* "pyNTM/srlg.pyx":41
+  /* "pyNTM/srlg.py":41
  *             self._failed = status
  *         else:
  *             raise ModelException('must be boolean')             # <<<<<<<<<<<<<<
@@ -2005,7 +2005,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_6failed(CYTHON_UNUSED PyObject *__p
   }
   __pyx_L3:;
 
-  /* "pyNTM/srlg.pyx":37
+  /* "pyNTM/srlg.py":37
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -2028,7 +2028,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_6failed(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "pyNTM/srlg.pyx":44
+/* "pyNTM/srlg.py":44
  * 
  *     @property
  *     def node_objects(self):             # <<<<<<<<<<<<<<
@@ -2064,7 +2064,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_8node_objects(CYTHON_UNUSED PyObjec
   int __pyx_t_7;
   __Pyx_RefNannySetupContext("node_objects", 0);
 
-  /* "pyNTM/srlg.pyx":45
+  /* "pyNTM/srlg.py":45
  *     @property
  *     def node_objects(self):
  *         nodes = set([node for node in self.model.node_objects if self in node.srlgs])             # <<<<<<<<<<<<<<
@@ -2136,7 +2136,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_8node_objects(CYTHON_UNUSED PyObjec
   __pyx_v_nodes = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/srlg.pyx":46
+  /* "pyNTM/srlg.py":46
  *     def node_objects(self):
  *         nodes = set([node for node in self.model.node_objects if self in node.srlgs])
  *         return nodes             # <<<<<<<<<<<<<<
@@ -2148,7 +2148,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_8node_objects(CYTHON_UNUSED PyObjec
   __pyx_r = __pyx_v_nodes;
   goto __pyx_L0;
 
-  /* "pyNTM/srlg.pyx":44
+  /* "pyNTM/srlg.py":44
  * 
  *     @property
  *     def node_objects(self):             # <<<<<<<<<<<<<<
@@ -2171,7 +2171,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_8node_objects(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "pyNTM/srlg.pyx":49
+/* "pyNTM/srlg.py":49
  * 
  *     @property
  *     def interface_objects(self):             # <<<<<<<<<<<<<<
@@ -2207,7 +2207,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_10interface_objects(CYTHON_UNUSED P
   int __pyx_t_7;
   __Pyx_RefNannySetupContext("interface_objects", 0);
 
-  /* "pyNTM/srlg.pyx":50
+  /* "pyNTM/srlg.py":50
  *     @property
  *     def interface_objects(self):
  *         interfaces = set([interface for interface in self.model.interface_objects if self in interface.srlgs])             # <<<<<<<<<<<<<<
@@ -2278,7 +2278,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_10interface_objects(CYTHON_UNUSED P
   __pyx_v_interfaces = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/srlg.pyx":51
+  /* "pyNTM/srlg.py":51
  *     def interface_objects(self):
  *         interfaces = set([interface for interface in self.model.interface_objects if self in interface.srlgs])
  *         return interfaces             # <<<<<<<<<<<<<<
@@ -2288,7 +2288,7 @@ static PyObject *__pyx_pf_5pyNTM_4srlg_4SRLG_10interface_objects(CYTHON_UNUSED P
   __pyx_r = __pyx_v_interfaces;
   goto __pyx_L0;
 
-  /* "pyNTM/srlg.pyx":49
+  /* "pyNTM/srlg.py":49
  * 
  *     @property
  *     def interface_objects(self):             # <<<<<<<<<<<<<<
@@ -2394,13 +2394,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
   {&__pyx_n_s_property, __pyx_k_property, sizeof(__pyx_k_property), 0, 0, 1, 1},
   {&__pyx_n_s_pyNTM_srlg, __pyx_k_pyNTM_srlg, sizeof(__pyx_k_pyNTM_srlg), 0, 0, 1, 1},
+  {&__pyx_kp_s_pyNTM_srlg_py, __pyx_k_pyNTM_srlg_py, sizeof(__pyx_k_pyNTM_srlg_py), 0, 0, 1, 0},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_repr, __pyx_k_repr, sizeof(__pyx_k_repr), 0, 0, 1, 1},
   {&__pyx_n_s_self, __pyx_k_self, sizeof(__pyx_k_self), 0, 0, 1, 1},
   {&__pyx_n_s_setter, __pyx_k_setter, sizeof(__pyx_k_setter), 0, 0, 1, 1},
   {&__pyx_n_s_srlg, __pyx_k_srlg, sizeof(__pyx_k_srlg), 0, 0, 1, 1},
   {&__pyx_n_s_srlg_objects, __pyx_k_srlg_objects, sizeof(__pyx_k_srlg_objects), 0, 0, 1, 1},
-  {&__pyx_kp_s_srlg_pyx, __pyx_k_srlg_pyx, sizeof(__pyx_k_srlg_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_srlgs, __pyx_k_srlgs, sizeof(__pyx_k_srlgs), 0, 0, 1, 1},
   {&__pyx_n_s_status, __pyx_k_status, sizeof(__pyx_k_status), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
@@ -2418,7 +2418,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pyNTM/srlg.pyx":5
+  /* "pyNTM/srlg.py":5
  * 
  * 
  * class SRLG(object):             # <<<<<<<<<<<<<<
@@ -2429,7 +2429,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "pyNTM/srlg.pyx":18
+  /* "pyNTM/srlg.py":18
  *     """
  * 
  *     def __init__(self, name, model, circuit_objects=set(), node_objects=set()):             # <<<<<<<<<<<<<<
@@ -2439,9 +2439,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__2 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_name, __pyx_n_s_model, __pyx_n_s_circuit_objects, __pyx_n_s_node_objects, __pyx_n_s_srlg); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
-  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(5, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_srlg_pyx, __pyx_n_s_init, 18, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(5, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_srlg_py, __pyx_n_s_init, 18, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 18, __pyx_L1_error)
 
-  /* "pyNTM/srlg.pyx":29
+  /* "pyNTM/srlg.py":29
  *             model.srlg_objects.add(self)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -2451,9 +2451,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__4 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_srlg_pyx, __pyx_n_s_repr, 29, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_srlg_py, __pyx_n_s_repr, 29, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 29, __pyx_L1_error)
 
-  /* "pyNTM/srlg.pyx":33
+  /* "pyNTM/srlg.py":33
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -2463,9 +2463,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__6 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_srlg_pyx, __pyx_n_s_failed_2, 33, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_srlg_py, __pyx_n_s_failed_2, 33, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 33, __pyx_L1_error)
 
-  /* "pyNTM/srlg.pyx":37
+  /* "pyNTM/srlg.py":37
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -2475,9 +2475,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__8 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_status); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_srlg_pyx, __pyx_n_s_failed_2, 37, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_srlg_py, __pyx_n_s_failed_2, 37, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 37, __pyx_L1_error)
 
-  /* "pyNTM/srlg.pyx":44
+  /* "pyNTM/srlg.py":44
  * 
  *     @property
  *     def node_objects(self):             # <<<<<<<<<<<<<<
@@ -2487,9 +2487,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__10 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_nodes, __pyx_n_s_node); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_srlg_pyx, __pyx_n_s_node_objects, 44, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 44, __pyx_L1_error)
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_srlg_py, __pyx_n_s_node_objects, 44, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 44, __pyx_L1_error)
 
-  /* "pyNTM/srlg.pyx":49
+  /* "pyNTM/srlg.py":49
  * 
  *     @property
  *     def interface_objects(self):             # <<<<<<<<<<<<<<
@@ -2499,7 +2499,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__12 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_interfaces, __pyx_n_s_interface); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_srlg_pyx, __pyx_n_s_interface_objects, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_srlg_py, __pyx_n_s_interface_objects, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -2780,7 +2780,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "pyNTM/srlg.pyx":2
+  /* "pyNTM/srlg.py":2
  * """A Class to represent Shared Risk Link Groups (SRLGs) in a Model"""
  * from .exceptions import ModelException             # <<<<<<<<<<<<<<
  * 
@@ -2800,7 +2800,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/srlg.pyx":5
+  /* "pyNTM/srlg.py":5
  * 
  * 
  * class SRLG(object):             # <<<<<<<<<<<<<<
@@ -2812,7 +2812,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple_, __pyx_n_s_SRLG, __pyx_n_s_SRLG, (PyObject *) NULL, __pyx_n_s_pyNTM_srlg, __pyx_kp_s_Represents_a_collection_of_Mode); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/srlg.pyx":18
+  /* "pyNTM/srlg.py":18
  *     """
  * 
  *     def __init__(self, name, model, circuit_objects=set(), node_objects=set()):             # <<<<<<<<<<<<<<
@@ -2836,7 +2836,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/srlg.pyx":29
+  /* "pyNTM/srlg.py":29
  *             model.srlg_objects.add(self)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -2848,7 +2848,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_repr, __pyx_t_3) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/srlg.pyx":33
+  /* "pyNTM/srlg.py":33
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -2858,7 +2858,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_4srlg_4SRLG_5failed, 0, __pyx_n_s_SRLG_failed, NULL, __pyx_n_s_pyNTM_srlg, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/srlg.pyx":32
+  /* "pyNTM/srlg.py":32
  *         return "SRLG(Name: {})".format(self.name)
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -2871,7 +2871,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_failed_2, __pyx_t_4) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/srlg.pyx":36
+  /* "pyNTM/srlg.py":36
  *         return self._failed
  * 
  *     @failed.setter             # <<<<<<<<<<<<<<
@@ -2889,7 +2889,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/srlg.pyx":37
+  /* "pyNTM/srlg.py":37
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -2917,7 +2917,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_failed_2, __pyx_t_4) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/srlg.pyx":44
+  /* "pyNTM/srlg.py":44
  * 
  *     @property
  *     def node_objects(self):             # <<<<<<<<<<<<<<
@@ -2927,7 +2927,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_4srlg_4SRLG_9node_objects, 0, __pyx_n_s_SRLG_node_objects, NULL, __pyx_n_s_pyNTM_srlg, __pyx_d, ((PyObject *)__pyx_codeobj__11)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/srlg.pyx":43
+  /* "pyNTM/srlg.py":43
  *             raise ModelException('must be boolean')
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -2940,7 +2940,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_node_objects, __pyx_t_5) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pyNTM/srlg.pyx":49
+  /* "pyNTM/srlg.py":49
  * 
  *     @property
  *     def interface_objects(self):             # <<<<<<<<<<<<<<
@@ -2950,7 +2950,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_4srlg_4SRLG_11interface_objects, 0, __pyx_n_s_SRLG_interface_objects, NULL, __pyx_n_s_pyNTM_srlg, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "pyNTM/srlg.pyx":48
+  /* "pyNTM/srlg.py":48
  *         return nodes
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -2963,7 +2963,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_interface_objects, __pyx_t_4) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/srlg.pyx":5
+  /* "pyNTM/srlg.py":5
  * 
  * 
  * class SRLG(object):             # <<<<<<<<<<<<<<
@@ -2977,7 +2977,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/srlg.pyx":1
+  /* "pyNTM/srlg.py":1
  * """A Class to represent Shared Risk Link Groups (SRLGs) in a Model"""             # <<<<<<<<<<<<<<
  * from .exceptions import ModelException
  * 

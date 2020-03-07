@@ -5,7 +5,7 @@
     "distutils": {
         "name": "pyNTM.interface",
         "sources": [
-            "interface.pyx"
+            "pyNTM/interface.py"
         ]
     },
     "module_name": "pyNTM.interface"
@@ -813,7 +813,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "interface.pyx",
+  "pyNTM/interface.py",
 };
 
 /*--- Type declarations ---*/
@@ -824,7 +824,7 @@ struct __pyx_obj_5pyNTM_9interface___pyx_scope_struct_3_genexpr;
 struct __pyx_obj_5pyNTM_9interface___pyx_scope_struct_4_lsps;
 struct __pyx_obj_5pyNTM_9interface___pyx_scope_struct_5_genexpr;
 
-/* "pyNTM/interface.pyx":186
+/* "pyNTM/interface.py":186
  *             raise ModelException(message)
  * 
  *     def get_remote_interface(self, model):             # <<<<<<<<<<<<<<
@@ -837,7 +837,7 @@ struct __pyx_obj_5pyNTM_9interface___pyx_scope_struct__get_remote_interface {
 };
 
 
-/* "pyNTM/interface.pyx":189
+/* "pyNTM/interface.py":189
  *         """Searches the model and returns the remote interface"""
  * 
  *         for interface in (interface for interface in model.interface_objects):             # <<<<<<<<<<<<<<
@@ -854,7 +854,7 @@ struct __pyx_obj_5pyNTM_9interface___pyx_scope_struct_1_genexpr {
 };
 
 
-/* "pyNTM/interface.pyx":213
+/* "pyNTM/interface.py":213
  *         return ckt
  * 
  *     def demands(self, model):             # <<<<<<<<<<<<<<
@@ -867,7 +867,7 @@ struct __pyx_obj_5pyNTM_9interface___pyx_scope_struct_2_demands {
 };
 
 
-/* "pyNTM/interface.pyx":216
+/* "pyNTM/interface.py":216
  *         """Returns list of demands that egress the interface"""
  *         dmd_set = set()
  *         routed_demands = (demand for demand in model.demand_objects if demand.path != 'Unrouted')             # <<<<<<<<<<<<<<
@@ -884,7 +884,7 @@ struct __pyx_obj_5pyNTM_9interface___pyx_scope_struct_3_genexpr {
 };
 
 
-/* "pyNTM/interface.pyx":238
+/* "pyNTM/interface.py":238
  *         return dmd_list
  * 
  *     def lsps(self, model):             # <<<<<<<<<<<<<<
@@ -897,7 +897,7 @@ struct __pyx_obj_5pyNTM_9interface___pyx_scope_struct_4_lsps {
 };
 
 
-/* "pyNTM/interface.pyx":247
+/* "pyNTM/interface.py":247
  *         lsp_set = set()
  * 
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects if 'Unrouted' not in lsp.path):             # <<<<<<<<<<<<<<
@@ -1566,7 +1566,6 @@ static const char __pyx_k_failed_srlgs[] = "failed_srlgs";
 static const char __pyx_k_other_object[] = "other_object";
 static const char __pyx_k_rsvp_enabled[] = "rsvp_enabled";
 static const char __pyx_k_srlg_objects[] = "srlg_objects";
-static const char __pyx_k_interface_pyx[] = "interface.pyx";
 static const char __pyx_k_Interface___eq[] = "Interface.__eq__";
 static const char __pyx_k_Interface___ne[] = "Interface.__ne__";
 static const char __pyx_k_Interface__key[] = "Interface._key";
@@ -1592,6 +1591,7 @@ static const char __pyx_k_interface_objects[] = "interface_objects";
 static const char __pyx_k_Interface_capacity[] = "Interface.capacity";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_get_circuit_object[] = "get_circuit_object";
+static const char __pyx_k_pyNTM_interface_py[] = "pyNTM/interface.py";
 static const char __pyx_k_remote_node_object[] = "remote_node_object";
 static const char __pyx_k_reserved_bandwidth[] = "_reserved_bandwidth";
 static const char __pyx_k_get_remote_interface[] = "get_remote_interface";
@@ -1706,7 +1706,6 @@ static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_init;
 static PyObject *__pyx_n_s_interface;
 static PyObject *__pyx_n_s_interface_objects;
-static PyObject *__pyx_kp_s_interface_pyx;
 static PyObject *__pyx_n_s_interfaces;
 static PyObject *__pyx_n_s_key;
 static PyObject *__pyx_n_s_lsp;
@@ -1733,6 +1732,7 @@ static PyObject *__pyx_n_s_prepare;
 static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_n_s_property;
 static PyObject *__pyx_n_s_pyNTM_interface;
+static PyObject *__pyx_kp_s_pyNTM_interface_py;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_remote_int;
 static PyObject *__pyx_n_s_remote_interface;
@@ -1860,7 +1860,7 @@ static PyObject *__pyx_codeobj__50;
 static PyObject *__pyx_codeobj__53;
 /* Late includes */
 
-/* "pyNTM/interface.pyx":11
+/* "pyNTM/interface.py":11
  *     """An object representing a Node interface"""
  * 
  *     def __init__(self, name, cost, capacity, node_object, remote_node_object,             # <<<<<<<<<<<<<<
@@ -1888,7 +1888,7 @@ static PyObject *__pyx_pw_5pyNTM_9interface_9Interface_1__init__(PyObject *__pyx
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_name,&__pyx_n_s_cost,&__pyx_n_s_capacity,&__pyx_n_s_node_object,&__pyx_n_s_remote_node_object,&__pyx_n_s_circuit_id,&__pyx_n_s_rsvp_enabled,&__pyx_n_s_percent_reservable_bandwidth,0};
     PyObject* values[9] = {0,0,0,0,0,0,0,0,0};
 
-    /* "pyNTM/interface.pyx":12
+    /* "pyNTM/interface.py":12
  * 
  *     def __init__(self, name, cost, capacity, node_object, remote_node_object,
  *                  circuit_id=None, rsvp_enabled=True, percent_reservable_bandwidth=100):             # <<<<<<<<<<<<<<
@@ -2018,7 +2018,7 @@ static PyObject *__pyx_pw_5pyNTM_9interface_9Interface_1__init__(PyObject *__pyx
   __pyx_L4_argument_unpacking_done:;
   __pyx_r = __pyx_pf_5pyNTM_9interface_9Interface___init__(__pyx_self, __pyx_v_self, __pyx_v_name, __pyx_v_cost, __pyx_v_capacity, __pyx_v_node_object, __pyx_v_remote_node_object, __pyx_v_circuit_id, __pyx_v_rsvp_enabled, __pyx_v_percent_reservable_bandwidth);
 
-  /* "pyNTM/interface.pyx":11
+  /* "pyNTM/interface.py":11
  *     """An object representing a Node interface"""
  * 
  *     def __init__(self, name, cost, capacity, node_object, remote_node_object,             # <<<<<<<<<<<<<<
@@ -2037,7 +2037,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pyNTM/interface.pyx":13
+  /* "pyNTM/interface.py":13
  *     def __init__(self, name, cost, capacity, node_object, remote_node_object,
  *                  circuit_id=None, rsvp_enabled=True, percent_reservable_bandwidth=100):
  *         self.name = name             # <<<<<<<<<<<<<<
@@ -2046,7 +2046,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_name, __pyx_v_name) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":14
+  /* "pyNTM/interface.py":14
  *                  circuit_id=None, rsvp_enabled=True, percent_reservable_bandwidth=100):
  *         self.name = name
  *         self.cost = cost             # <<<<<<<<<<<<<<
@@ -2055,7 +2055,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_cost, __pyx_v_cost) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":15
+  /* "pyNTM/interface.py":15
  *         self.name = name
  *         self.cost = cost
  *         self.capacity = capacity             # <<<<<<<<<<<<<<
@@ -2064,7 +2064,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_capacity, __pyx_v_capacity) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":16
+  /* "pyNTM/interface.py":16
  *         self.cost = cost
  *         self.capacity = capacity
  *         self.node_object = node_object             # <<<<<<<<<<<<<<
@@ -2073,7 +2073,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_node_object, __pyx_v_node_object) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":17
+  /* "pyNTM/interface.py":17
  *         self.capacity = capacity
  *         self.node_object = node_object
  *         self.remote_node_object = remote_node_object             # <<<<<<<<<<<<<<
@@ -2082,7 +2082,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_remote_node_object, __pyx_v_remote_node_object) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":18
+  /* "pyNTM/interface.py":18
  *         self.node_object = node_object
  *         self.remote_node_object = remote_node_object
  *         self.circuit_id = circuit_id  # Has no function in Model object, only in Parallel_Model_Object             # <<<<<<<<<<<<<<
@@ -2091,7 +2091,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_circuit_id, __pyx_v_circuit_id) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":19
+  /* "pyNTM/interface.py":19
  *         self.remote_node_object = remote_node_object
  *         self.circuit_id = circuit_id  # Has no function in Model object, only in Parallel_Model_Object
  *         self.traffic = 0.0             # <<<<<<<<<<<<<<
@@ -2100,7 +2100,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_traffic, __pyx_float_0_0) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":20
+  /* "pyNTM/interface.py":20
  *         self.circuit_id = circuit_id  # Has no function in Model object, only in Parallel_Model_Object
  *         self.traffic = 0.0
  *         self._failed = False             # <<<<<<<<<<<<<<
@@ -2109,7 +2109,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed, Py_False) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":21
+  /* "pyNTM/interface.py":21
  *         self.traffic = 0.0
  *         self._failed = False
  *         self._reserved_bandwidth = 0.0             # <<<<<<<<<<<<<<
@@ -2118,7 +2118,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_reserved_bandwidth, __pyx_float_0_0) < 0) __PYX_ERR(0, 21, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":22
+  /* "pyNTM/interface.py":22
  *         self._failed = False
  *         self._reserved_bandwidth = 0.0
  *         self._srlgs = set()             # <<<<<<<<<<<<<<
@@ -2130,7 +2130,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_srlgs, __pyx_t_1) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/interface.pyx":23
+  /* "pyNTM/interface.py":23
  *         self._reserved_bandwidth = 0.0
  *         self._srlgs = set()
  *         self.rsvp_enabled = rsvp_enabled             # <<<<<<<<<<<<<<
@@ -2139,7 +2139,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rsvp_enabled, __pyx_v_rsvp_enabled) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":24
+  /* "pyNTM/interface.py":24
  *         self._srlgs = set()
  *         self.rsvp_enabled = rsvp_enabled
  *         self.percent_reservable_bandwidth = percent_reservable_bandwidth             # <<<<<<<<<<<<<<
@@ -2148,7 +2148,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_percent_reservable_bandwidth, __pyx_v_percent_reservable_bandwidth) < 0) __PYX_ERR(0, 24, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":11
+  /* "pyNTM/interface.py":11
  *     """An object representing a Node interface"""
  * 
  *     def __init__(self, name, cost, capacity, node_object, remote_node_object,             # <<<<<<<<<<<<<<
@@ -2169,7 +2169,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface___init__(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":27
+/* "pyNTM/interface.py":27
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -2200,7 +2200,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_2_key(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("_key", 0);
 
-  /* "pyNTM/interface.pyx":29
+  /* "pyNTM/interface.py":29
  *     def _key(self):
  *         """Unique ID for interface object"""
  *         return (self.name, self.node_object.name)             # <<<<<<<<<<<<<<
@@ -2227,7 +2227,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_2_key(CYTHON_UNUSED PyObj
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":27
+  /* "pyNTM/interface.py":27
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -2248,7 +2248,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_2_key(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":32
+/* "pyNTM/interface.py":32
  * 
  *     # Modify the __hash__ and __eq__ methods to make comparisons easier
  *     def __eq__(self, other_object):             # <<<<<<<<<<<<<<
@@ -2330,7 +2330,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_4__eq__(CYTHON_UNUSED PyO
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("__eq__", 0);
 
-  /* "pyNTM/interface.pyx":36
+  /* "pyNTM/interface.py":36
  *         #     return NotImplemented
  * 
  *         return [self.node_object, self.remote_node_object, self.name,             # <<<<<<<<<<<<<<
@@ -2345,7 +2345,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_4__eq__(CYTHON_UNUSED PyO
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/interface.pyx":37
+  /* "pyNTM/interface.py":37
  * 
  *         return [self.node_object, self.remote_node_object, self.name,
  *                 self.capacity, self.circuit_id] == [other_object.node_object,             # <<<<<<<<<<<<<<
@@ -2357,7 +2357,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_4__eq__(CYTHON_UNUSED PyO
   __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_circuit_id); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "pyNTM/interface.pyx":36
+  /* "pyNTM/interface.py":36
  *         #     return NotImplemented
  * 
  *         return [self.node_object, self.remote_node_object, self.name,             # <<<<<<<<<<<<<<
@@ -2382,7 +2382,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_4__eq__(CYTHON_UNUSED PyO
   __pyx_t_4 = 0;
   __pyx_t_5 = 0;
 
-  /* "pyNTM/interface.pyx":37
+  /* "pyNTM/interface.py":37
  * 
  *         return [self.node_object, self.remote_node_object, self.name,
  *                 self.capacity, self.circuit_id] == [other_object.node_object,             # <<<<<<<<<<<<<<
@@ -2392,7 +2392,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_4__eq__(CYTHON_UNUSED PyO
   __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_other_object, __pyx_n_s_node_object); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "pyNTM/interface.pyx":38
+  /* "pyNTM/interface.py":38
  *         return [self.node_object, self.remote_node_object, self.name,
  *                 self.capacity, self.circuit_id] == [other_object.node_object,
  *                                                     other_object.remote_node_object, other_object.name,             # <<<<<<<<<<<<<<
@@ -2404,7 +2404,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_4__eq__(CYTHON_UNUSED PyO
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_other_object, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/interface.pyx":39
+  /* "pyNTM/interface.py":39
  *                 self.capacity, self.circuit_id] == [other_object.node_object,
  *                                                     other_object.remote_node_object, other_object.name,
  *                                                     other_object.capacity, other_object.circuit_id]             # <<<<<<<<<<<<<<
@@ -2416,7 +2416,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_4__eq__(CYTHON_UNUSED PyO
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other_object, __pyx_n_s_circuit_id); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/interface.pyx":37
+  /* "pyNTM/interface.py":37
  * 
  *         return [self.node_object, self.remote_node_object, self.name,
  *                 self.capacity, self.circuit_id] == [other_object.node_object,             # <<<<<<<<<<<<<<
@@ -2447,7 +2447,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_4__eq__(CYTHON_UNUSED PyO
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":32
+  /* "pyNTM/interface.py":32
  * 
  *     # Modify the __hash__ and __eq__ methods to make comparisons easier
  *     def __eq__(self, other_object):             # <<<<<<<<<<<<<<
@@ -2472,7 +2472,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_4__eq__(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":41
+/* "pyNTM/interface.py":41
  *                                                     other_object.capacity, other_object.circuit_id]
  * 
  *     def __ne__(self, other_object):             # <<<<<<<<<<<<<<
@@ -2554,7 +2554,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_6__ne__(CYTHON_UNUSED PyO
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("__ne__", 0);
 
-  /* "pyNTM/interface.pyx":42
+  /* "pyNTM/interface.py":42
  * 
  *     def __ne__(self, other_object):
  *         return [self.node_object, self.remote_node_object, self.name,             # <<<<<<<<<<<<<<
@@ -2569,7 +2569,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_6__ne__(CYTHON_UNUSED PyO
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/interface.pyx":43
+  /* "pyNTM/interface.py":43
  *     def __ne__(self, other_object):
  *         return [self.node_object, self.remote_node_object, self.name,
  *                 self.capacity, self.circuit_id] != [other_object.node_object,             # <<<<<<<<<<<<<<
@@ -2581,7 +2581,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_6__ne__(CYTHON_UNUSED PyO
   __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_circuit_id); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "pyNTM/interface.pyx":42
+  /* "pyNTM/interface.py":42
  * 
  *     def __ne__(self, other_object):
  *         return [self.node_object, self.remote_node_object, self.name,             # <<<<<<<<<<<<<<
@@ -2606,7 +2606,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_6__ne__(CYTHON_UNUSED PyO
   __pyx_t_4 = 0;
   __pyx_t_5 = 0;
 
-  /* "pyNTM/interface.pyx":43
+  /* "pyNTM/interface.py":43
  *     def __ne__(self, other_object):
  *         return [self.node_object, self.remote_node_object, self.name,
  *                 self.capacity, self.circuit_id] != [other_object.node_object,             # <<<<<<<<<<<<<<
@@ -2616,7 +2616,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_6__ne__(CYTHON_UNUSED PyO
   __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_other_object, __pyx_n_s_node_object); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "pyNTM/interface.pyx":44
+  /* "pyNTM/interface.py":44
  *         return [self.node_object, self.remote_node_object, self.name,
  *                 self.capacity, self.circuit_id] != [other_object.node_object,
  *                                                     other_object.remote_node_object, other_object.name,             # <<<<<<<<<<<<<<
@@ -2628,7 +2628,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_6__ne__(CYTHON_UNUSED PyO
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_other_object, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/interface.pyx":45
+  /* "pyNTM/interface.py":45
  *                 self.capacity, self.circuit_id] != [other_object.node_object,
  *                                                     other_object.remote_node_object, other_object.name,
  *                                                     other_object.capacity, other_object.circuit_id]             # <<<<<<<<<<<<<<
@@ -2640,7 +2640,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_6__ne__(CYTHON_UNUSED PyO
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_other_object, __pyx_n_s_circuit_id); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/interface.pyx":43
+  /* "pyNTM/interface.py":43
  *     def __ne__(self, other_object):
  *         return [self.node_object, self.remote_node_object, self.name,
  *                 self.capacity, self.circuit_id] != [other_object.node_object,             # <<<<<<<<<<<<<<
@@ -2671,7 +2671,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_6__ne__(CYTHON_UNUSED PyO
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":41
+  /* "pyNTM/interface.py":41
  *                                                     other_object.capacity, other_object.circuit_id]
  * 
  *     def __ne__(self, other_object):             # <<<<<<<<<<<<<<
@@ -2696,7 +2696,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_6__ne__(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":47
+/* "pyNTM/interface.py":47
  *                                                     other_object.capacity, other_object.circuit_id]
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -2727,7 +2727,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_8__hash__(CYTHON_UNUSED P
   Py_hash_t __pyx_t_4;
   __Pyx_RefNannySetupContext("__hash__", 0);
 
-  /* "pyNTM/interface.pyx":49
+  /* "pyNTM/interface.py":49
  *     def __hash__(self):
  *         # return hash(tuple(sorted(self.__dict__.items())))
  *         return hash(self.name+self.node_object.name)             # <<<<<<<<<<<<<<
@@ -2754,7 +2754,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_8__hash__(CYTHON_UNUSED P
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":47
+  /* "pyNTM/interface.py":47
  *                                                     other_object.capacity, other_object.circuit_id]
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -2775,7 +2775,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_8__hash__(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":51
+/* "pyNTM/interface.py":51
  *         return hash(self.name+self.node_object.name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -2810,7 +2810,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_10__repr__(CYTHON_UNUSED 
   PyObject *__pyx_t_8 = NULL;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "pyNTM/interface.pyx":52
+  /* "pyNTM/interface.py":52
  * 
  *     def __repr__(self):
  *         return '%s(name = %r, cost = %s, capacity = %s, node_object = %r, \             # <<<<<<<<<<<<<<
@@ -2819,7 +2819,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_10__repr__(CYTHON_UNUSED 
  */
   __Pyx_XDECREF(__pyx_r);
 
-  /* "pyNTM/interface.pyx":53
+  /* "pyNTM/interface.py":53
  *     def __repr__(self):
  *         return '%s(name = %r, cost = %s, capacity = %s, node_object = %r, \
  * remote_node_object = %r, circuit_id = %r)' % (self.__class__.__name__,             # <<<<<<<<<<<<<<
@@ -2832,7 +2832,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_10__repr__(CYTHON_UNUSED 
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/interface.pyx":54
+  /* "pyNTM/interface.py":54
  *         return '%s(name = %r, cost = %s, capacity = %s, node_object = %r, \
  * remote_node_object = %r, circuit_id = %r)' % (self.__class__.__name__,
  *                                               self.name,             # <<<<<<<<<<<<<<
@@ -2842,7 +2842,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_10__repr__(CYTHON_UNUSED 
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_name); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/interface.pyx":55
+  /* "pyNTM/interface.py":55
  * remote_node_object = %r, circuit_id = %r)' % (self.__class__.__name__,
  *                                               self.name,
  *                                               self.cost,             # <<<<<<<<<<<<<<
@@ -2852,7 +2852,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_10__repr__(CYTHON_UNUSED 
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_cost); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/interface.pyx":56
+  /* "pyNTM/interface.py":56
  *                                               self.name,
  *                                               self.cost,
  *                                               self.capacity,             # <<<<<<<<<<<<<<
@@ -2862,7 +2862,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_10__repr__(CYTHON_UNUSED 
   __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_capacity); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/interface.pyx":57
+  /* "pyNTM/interface.py":57
  *                                               self.cost,
  *                                               self.capacity,
  *                                               self.node_object,             # <<<<<<<<<<<<<<
@@ -2872,7 +2872,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_10__repr__(CYTHON_UNUSED 
   __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_node_object); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "pyNTM/interface.pyx":58
+  /* "pyNTM/interface.py":58
  *                                               self.capacity,
  *                                               self.node_object,
  *                                               self.remote_node_object,             # <<<<<<<<<<<<<<
@@ -2882,7 +2882,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_10__repr__(CYTHON_UNUSED 
   __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_remote_node_object); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
 
-  /* "pyNTM/interface.pyx":59
+  /* "pyNTM/interface.py":59
  *                                               self.node_object,
  *                                               self.remote_node_object,
  *                                               self.circuit_id)             # <<<<<<<<<<<<<<
@@ -2892,7 +2892,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_10__repr__(CYTHON_UNUSED 
   __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_circuit_id); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "pyNTM/interface.pyx":53
+  /* "pyNTM/interface.py":53
  *     def __repr__(self):
  *         return '%s(name = %r, cost = %s, capacity = %s, node_object = %r, \
  * remote_node_object = %r, circuit_id = %r)' % (self.__class__.__name__,             # <<<<<<<<<<<<<<
@@ -2929,7 +2929,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_10__repr__(CYTHON_UNUSED 
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":51
+  /* "pyNTM/interface.py":51
  *         return hash(self.name+self.node_object.name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -2955,7 +2955,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_10__repr__(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":62
+/* "pyNTM/interface.py":62
  * 
  *     @property
  *     def reservable_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -2989,7 +2989,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_12reservable_bandwidth(CY
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("reservable_bandwidth", 0);
 
-  /* "pyNTM/interface.pyx":68
+  /* "pyNTM/interface.py":68
  *         """
  * 
  *         if self.rsvp_enabled is True:             # <<<<<<<<<<<<<<
@@ -3003,7 +3003,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_12reservable_bandwidth(CY
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "pyNTM/interface.pyx":69
+    /* "pyNTM/interface.py":69
  * 
  *         if self.rsvp_enabled is True:
  *             res_bw = (self.capacity * (self.percent_reservable_bandwidth / 100)) - self.reserved_bandwidth             # <<<<<<<<<<<<<<
@@ -3030,7 +3030,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_12reservable_bandwidth(CY
     __pyx_v_res_bw = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "pyNTM/interface.pyx":70
+    /* "pyNTM/interface.py":70
  *         if self.rsvp_enabled is True:
  *             res_bw = (self.capacity * (self.percent_reservable_bandwidth / 100)) - self.reserved_bandwidth
  *             return round(res_bw, 1)             # <<<<<<<<<<<<<<
@@ -3053,7 +3053,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_12reservable_bandwidth(CY
     __pyx_t_5 = 0;
     goto __pyx_L0;
 
-    /* "pyNTM/interface.pyx":68
+    /* "pyNTM/interface.py":68
  *         """
  * 
  *         if self.rsvp_enabled is True:             # <<<<<<<<<<<<<<
@@ -3062,7 +3062,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_12reservable_bandwidth(CY
  */
   }
 
-  /* "pyNTM/interface.pyx":72
+  /* "pyNTM/interface.py":72
  *             return round(res_bw, 1)
  *         else:
  *             return -1.0             # <<<<<<<<<<<<<<
@@ -3076,7 +3076,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_12reservable_bandwidth(CY
     goto __pyx_L0;
   }
 
-  /* "pyNTM/interface.pyx":62
+  /* "pyNTM/interface.py":62
  * 
  *     @property
  *     def reservable_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -3098,7 +3098,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_12reservable_bandwidth(CY
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":75
+/* "pyNTM/interface.py":75
  * 
  *     @property
  *     def reserved_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -3128,7 +3128,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_14reserved_bandwidth(CYTH
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("reserved_bandwidth", 0);
 
-  /* "pyNTM/interface.pyx":79
+  /* "pyNTM/interface.py":79
  *         Amount of interface capacity reserved by RSVP LSPs
  *         """
  *         return round(self._reserved_bandwidth, 1)             # <<<<<<<<<<<<<<
@@ -3153,7 +3153,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_14reserved_bandwidth(CYTH
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":75
+  /* "pyNTM/interface.py":75
  * 
  *     @property
  *     def reserved_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -3173,7 +3173,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_14reserved_bandwidth(CYTH
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":82
+/* "pyNTM/interface.py":82
  * 
  *     @reserved_bandwidth.setter
  *     def reserved_bandwidth(self, value):             # <<<<<<<<<<<<<<
@@ -3255,7 +3255,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_16reserved_bandwidth(CYTH
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("reserved_bandwidth", 0);
 
-  /* "pyNTM/interface.pyx":88
+  /* "pyNTM/interface.py":88
  *         :return: None
  *         """
  *         if isinstance(value, float) or isinstance(value, int):             # <<<<<<<<<<<<<<
@@ -3275,7 +3275,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_16reserved_bandwidth(CYTH
   __pyx_L4_bool_binop_done:;
   if (likely(__pyx_t_1)) {
 
-    /* "pyNTM/interface.pyx":89
+    /* "pyNTM/interface.py":89
  *         """
  *         if isinstance(value, float) or isinstance(value, int):
  *             self._reserved_bandwidth = value             # <<<<<<<<<<<<<<
@@ -3284,7 +3284,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_16reserved_bandwidth(CYTH
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_reserved_bandwidth, __pyx_v_value) < 0) __PYX_ERR(0, 89, __pyx_L1_error)
 
-    /* "pyNTM/interface.pyx":88
+    /* "pyNTM/interface.py":88
  *         :return: None
  *         """
  *         if isinstance(value, float) or isinstance(value, int):             # <<<<<<<<<<<<<<
@@ -3294,7 +3294,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_16reserved_bandwidth(CYTH
     goto __pyx_L3;
   }
 
-  /* "pyNTM/interface.pyx":91
+  /* "pyNTM/interface.py":91
  *             self._reserved_bandwidth = value
  *         else:
  *             raise ModelException("Interface reserved_bandwidth must be a float or integer")             # <<<<<<<<<<<<<<
@@ -3325,7 +3325,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_16reserved_bandwidth(CYTH
   }
   __pyx_L3:;
 
-  /* "pyNTM/interface.pyx":82
+  /* "pyNTM/interface.py":82
  * 
  *     @reserved_bandwidth.setter
  *     def reserved_bandwidth(self, value):             # <<<<<<<<<<<<<<
@@ -3348,7 +3348,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_16reserved_bandwidth(CYTH
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":94
+/* "pyNTM/interface.py":94
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -3377,7 +3377,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_18failed(CYTHON_UNUSED Py
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("failed", 0);
 
-  /* "pyNTM/interface.pyx":100
+  /* "pyNTM/interface.py":100
  *         :return: Boolean - is Interface failed?
  *         """
  *         return self._failed             # <<<<<<<<<<<<<<
@@ -3391,7 +3391,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_18failed(CYTHON_UNUSED Py
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":94
+  /* "pyNTM/interface.py":94
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -3410,7 +3410,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_18failed(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":103
+/* "pyNTM/interface.py":103
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -3496,7 +3496,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
   int __pyx_t_8;
   __Pyx_RefNannySetupContext("failed", 0);
 
-  /* "pyNTM/interface.pyx":109
+  /* "pyNTM/interface.py":109
  *         :return: self._failed; boolean
  *         """
  *         if not (isinstance(status, bool)):             # <<<<<<<<<<<<<<
@@ -3510,7 +3510,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
   __pyx_t_3 = ((!(__pyx_t_2 != 0)) != 0);
   if (unlikely(__pyx_t_3)) {
 
-    /* "pyNTM/interface.pyx":110
+    /* "pyNTM/interface.py":110
  *         """
  *         if not (isinstance(status, bool)):
  *             raise ModelException('must be boolean value')             # <<<<<<<<<<<<<<
@@ -3538,7 +3538,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __PYX_ERR(0, 110, __pyx_L1_error)
 
-    /* "pyNTM/interface.pyx":109
+    /* "pyNTM/interface.py":109
  *         :return: self._failed; boolean
  *         """
  *         if not (isinstance(status, bool)):             # <<<<<<<<<<<<<<
@@ -3547,7 +3547,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
  */
   }
 
-  /* "pyNTM/interface.pyx":113
+  /* "pyNTM/interface.py":113
  * 
  *         # Check for membership in any failed SRLGs
  *         if status is False:             # <<<<<<<<<<<<<<
@@ -3558,7 +3558,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
   __pyx_t_2 = (__pyx_t_3 != 0);
   if (__pyx_t_2) {
 
-    /* "pyNTM/interface.pyx":115
+    /* "pyNTM/interface.py":115
  *         if status is False:
  *             # Check for membership in any failed SRLGs
  *             failed_srlgs = set([srlg for srlg in self.srlgs if srlg.failed is True])             # <<<<<<<<<<<<<<
@@ -3627,7 +3627,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
     __pyx_v_failed_srlgs = ((PyObject*)__pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "pyNTM/interface.pyx":117
+    /* "pyNTM/interface.py":117
  *             failed_srlgs = set([srlg for srlg in self.srlgs if srlg.failed is True])
  * 
  *             if len(failed_srlgs) > 0:             # <<<<<<<<<<<<<<
@@ -3638,7 +3638,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
     __pyx_t_3 = ((__pyx_t_6 > 0) != 0);
     if (unlikely(__pyx_t_3)) {
 
-      /* "pyNTM/interface.pyx":118
+      /* "pyNTM/interface.py":118
  * 
  *             if len(failed_srlgs) > 0:
  *                 self._failed = True             # <<<<<<<<<<<<<<
@@ -3647,7 +3647,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
  */
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed, Py_True) < 0) __PYX_ERR(0, 118, __pyx_L1_error)
 
-      /* "pyNTM/interface.pyx":119
+      /* "pyNTM/interface.py":119
  *             if len(failed_srlgs) > 0:
  *                 self._failed = True
  *                 self.reserved_bandwidth = 0             # <<<<<<<<<<<<<<
@@ -3656,7 +3656,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
  */
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_reserved_bandwidth_2, __pyx_int_0) < 0) __PYX_ERR(0, 119, __pyx_L1_error)
 
-      /* "pyNTM/interface.pyx":120
+      /* "pyNTM/interface.py":120
  *                 self._failed = True
  *                 self.reserved_bandwidth = 0
  *                 raise ModelException("Interface must be failed since it is a member "             # <<<<<<<<<<<<<<
@@ -3684,7 +3684,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __PYX_ERR(0, 120, __pyx_L1_error)
 
-      /* "pyNTM/interface.pyx":117
+      /* "pyNTM/interface.py":117
  *             failed_srlgs = set([srlg for srlg in self.srlgs if srlg.failed is True])
  * 
  *             if len(failed_srlgs) > 0:             # <<<<<<<<<<<<<<
@@ -3693,7 +3693,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
  */
     }
 
-    /* "pyNTM/interface.pyx":124
+    /* "pyNTM/interface.py":124
  * 
  *             # Check to see if both nodes are failed = False
  *             if self.node_object.failed is False and self.remote_node_object.failed is False:             # <<<<<<<<<<<<<<
@@ -3725,7 +3725,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
     __pyx_L10_bool_binop_done:;
     if (__pyx_t_3) {
 
-      /* "pyNTM/interface.pyx":125
+      /* "pyNTM/interface.py":125
  *             # Check to see if both nodes are failed = False
  *             if self.node_object.failed is False and self.remote_node_object.failed is False:
  *                 self._failed = False             # <<<<<<<<<<<<<<
@@ -3734,7 +3734,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
  */
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed, Py_False) < 0) __PYX_ERR(0, 125, __pyx_L1_error)
 
-      /* "pyNTM/interface.pyx":124
+      /* "pyNTM/interface.py":124
  * 
  *             # Check to see if both nodes are failed = False
  *             if self.node_object.failed is False and self.remote_node_object.failed is False:             # <<<<<<<<<<<<<<
@@ -3744,7 +3744,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
       goto __pyx_L9;
     }
 
-    /* "pyNTM/interface.pyx":128
+    /* "pyNTM/interface.py":128
  * 
  *             else:
  *                 self._failed = True             # <<<<<<<<<<<<<<
@@ -3754,7 +3754,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
     /*else*/ {
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed, Py_True) < 0) __PYX_ERR(0, 128, __pyx_L1_error)
 
-      /* "pyNTM/interface.pyx":129
+      /* "pyNTM/interface.py":129
  *             else:
  *                 self._failed = True
  *                 self.reserved_bandwidth = 0             # <<<<<<<<<<<<<<
@@ -3765,7 +3765,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
     }
     __pyx_L9:;
 
-    /* "pyNTM/interface.pyx":113
+    /* "pyNTM/interface.py":113
  * 
  *         # Check for membership in any failed SRLGs
  *         if status is False:             # <<<<<<<<<<<<<<
@@ -3775,7 +3775,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
     goto __pyx_L4;
   }
 
-  /* "pyNTM/interface.pyx":132
+  /* "pyNTM/interface.py":132
  * 
  *         else:
  *             self._failed = True             # <<<<<<<<<<<<<<
@@ -3785,7 +3785,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
   /*else*/ {
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed, Py_True) < 0) __PYX_ERR(0, 132, __pyx_L1_error)
 
-    /* "pyNTM/interface.pyx":133
+    /* "pyNTM/interface.py":133
  *         else:
  *             self._failed = True
  *             self.reserved_bandwidth = 0             # <<<<<<<<<<<<<<
@@ -3796,7 +3796,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
   }
   __pyx_L4:;
 
-  /* "pyNTM/interface.pyx":103
+  /* "pyNTM/interface.py":103
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -3821,7 +3821,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_20failed(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":136
+/* "pyNTM/interface.py":136
  * 
  *     @property
  *     def cost(self):             # <<<<<<<<<<<<<<
@@ -3849,7 +3849,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_22cost(CYTHON_UNUSED PyOb
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("cost", 0);
 
-  /* "pyNTM/interface.pyx":137
+  /* "pyNTM/interface.py":137
  *     @property
  *     def cost(self):
  *         return self._cost             # <<<<<<<<<<<<<<
@@ -3863,7 +3863,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_22cost(CYTHON_UNUSED PyOb
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":136
+  /* "pyNTM/interface.py":136
  * 
  *     @property
  *     def cost(self):             # <<<<<<<<<<<<<<
@@ -3882,7 +3882,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_22cost(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":140
+/* "pyNTM/interface.py":140
  * 
  *     @cost.setter
  *     def cost(self, cost):             # <<<<<<<<<<<<<<
@@ -3962,7 +3962,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_24cost(CYTHON_UNUSED PyOb
   int __pyx_t_5;
   __Pyx_RefNannySetupContext("cost", 0);
 
-  /* "pyNTM/interface.pyx":141
+  /* "pyNTM/interface.py":141
  *     @cost.setter
  *     def cost(self, cost):
  *         if cost < 1:             # <<<<<<<<<<<<<<
@@ -3974,7 +3974,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_24cost(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_t_2)) {
 
-    /* "pyNTM/interface.pyx":142
+    /* "pyNTM/interface.py":142
  *     def cost(self, cost):
  *         if cost < 1:
  *             raise ModelException("Interface cost cannot be less than 1")             # <<<<<<<<<<<<<<
@@ -4002,7 +4002,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_24cost(CYTHON_UNUSED PyOb
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __PYX_ERR(0, 142, __pyx_L1_error)
 
-    /* "pyNTM/interface.pyx":141
+    /* "pyNTM/interface.py":141
  *     @cost.setter
  *     def cost(self, cost):
  *         if cost < 1:             # <<<<<<<<<<<<<<
@@ -4011,7 +4011,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_24cost(CYTHON_UNUSED PyOb
  */
   }
 
-  /* "pyNTM/interface.pyx":143
+  /* "pyNTM/interface.py":143
  *         if cost < 1:
  *             raise ModelException("Interface cost cannot be less than 1")
  *         if not isinstance(cost, int):             # <<<<<<<<<<<<<<
@@ -4022,7 +4022,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_24cost(CYTHON_UNUSED PyOb
   __pyx_t_5 = ((!(__pyx_t_2 != 0)) != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "pyNTM/interface.pyx":144
+    /* "pyNTM/interface.py":144
  *             raise ModelException("Interface cost cannot be less than 1")
  *         if not isinstance(cost, int):
  *             raise ModelException("Interface cost must be integer")             # <<<<<<<<<<<<<<
@@ -4050,7 +4050,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_24cost(CYTHON_UNUSED PyOb
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __PYX_ERR(0, 144, __pyx_L1_error)
 
-    /* "pyNTM/interface.pyx":143
+    /* "pyNTM/interface.py":143
  *         if cost < 1:
  *             raise ModelException("Interface cost cannot be less than 1")
  *         if not isinstance(cost, int):             # <<<<<<<<<<<<<<
@@ -4059,7 +4059,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_24cost(CYTHON_UNUSED PyOb
  */
   }
 
-  /* "pyNTM/interface.pyx":145
+  /* "pyNTM/interface.py":145
  *         if not isinstance(cost, int):
  *             raise ModelException("Interface cost must be integer")
  *         self._cost = cost             # <<<<<<<<<<<<<<
@@ -4068,7 +4068,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_24cost(CYTHON_UNUSED PyOb
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_cost_2, __pyx_v_cost) < 0) __PYX_ERR(0, 145, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":140
+  /* "pyNTM/interface.py":140
  * 
  *     @cost.setter
  *     def cost(self, cost):             # <<<<<<<<<<<<<<
@@ -4091,7 +4091,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_24cost(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":148
+/* "pyNTM/interface.py":148
  * 
  *     @property
  *     def capacity(self):             # <<<<<<<<<<<<<<
@@ -4119,7 +4119,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_26capacity(CYTHON_UNUSED 
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("capacity", 0);
 
-  /* "pyNTM/interface.pyx":149
+  /* "pyNTM/interface.py":149
  *     @property
  *     def capacity(self):
  *         return self._capacity             # <<<<<<<<<<<<<<
@@ -4133,7 +4133,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_26capacity(CYTHON_UNUSED 
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":148
+  /* "pyNTM/interface.py":148
  * 
  *     @property
  *     def capacity(self):             # <<<<<<<<<<<<<<
@@ -4152,7 +4152,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_26capacity(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":152
+/* "pyNTM/interface.py":152
  * 
  *     @capacity.setter
  *     def capacity(self, capacity):             # <<<<<<<<<<<<<<
@@ -4232,7 +4232,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_28capacity(CYTHON_UNUSED 
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("capacity", 0);
 
-  /* "pyNTM/interface.pyx":153
+  /* "pyNTM/interface.py":153
  *     @capacity.setter
  *     def capacity(self, capacity):
  *         if not(capacity > 0):             # <<<<<<<<<<<<<<
@@ -4245,7 +4245,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_28capacity(CYTHON_UNUSED 
   __pyx_t_3 = ((!__pyx_t_2) != 0);
   if (unlikely(__pyx_t_3)) {
 
-    /* "pyNTM/interface.pyx":154
+    /* "pyNTM/interface.py":154
  *     def capacity(self, capacity):
  *         if not(capacity > 0):
  *             raise ModelException("Interface capacity must be greater than 0")             # <<<<<<<<<<<<<<
@@ -4273,7 +4273,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_28capacity(CYTHON_UNUSED 
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __PYX_ERR(0, 154, __pyx_L1_error)
 
-    /* "pyNTM/interface.pyx":153
+    /* "pyNTM/interface.py":153
  *     @capacity.setter
  *     def capacity(self, capacity):
  *         if not(capacity > 0):             # <<<<<<<<<<<<<<
@@ -4282,7 +4282,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_28capacity(CYTHON_UNUSED 
  */
   }
 
-  /* "pyNTM/interface.pyx":155
+  /* "pyNTM/interface.py":155
  *         if not(capacity > 0):
  *             raise ModelException("Interface capacity must be greater than 0")
  *         self._capacity = capacity             # <<<<<<<<<<<<<<
@@ -4291,7 +4291,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_28capacity(CYTHON_UNUSED 
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_capacity_2, __pyx_v_capacity) < 0) __PYX_ERR(0, 155, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":152
+  /* "pyNTM/interface.py":152
  * 
  *     @capacity.setter
  *     def capacity(self, capacity):             # <<<<<<<<<<<<<<
@@ -4314,7 +4314,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_28capacity(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":157
+/* "pyNTM/interface.py":157
  *         self._capacity = capacity
  * 
  *     def fail_interface(self, model):             # <<<<<<<<<<<<<<
@@ -4396,7 +4396,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_30fail_interface(CYTHON_U
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("fail_interface", 0);
 
-  /* "pyNTM/interface.pyx":163
+  /* "pyNTM/interface.py":163
  * 
  *         # find the remote interface
  *         remote_interface = Interface.get_remote_interface(self, model)             # <<<<<<<<<<<<<<
@@ -4456,7 +4456,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_30fail_interface(CYTHON_U
   __pyx_v_remote_interface = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/interface.pyx":166
+  /* "pyNTM/interface.py":166
  * 
  *         # set the 2 interfaces to failed = True
  *         self.failed = True             # <<<<<<<<<<<<<<
@@ -4465,7 +4465,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_30fail_interface(CYTHON_U
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed_2, Py_True) < 0) __PYX_ERR(0, 166, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":167
+  /* "pyNTM/interface.py":167
  *         # set the 2 interfaces to failed = True
  *         self.failed = True
  *         remote_interface.failed = True             # <<<<<<<<<<<<<<
@@ -4474,7 +4474,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_30fail_interface(CYTHON_U
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_remote_interface, __pyx_n_s_failed_2, Py_True) < 0) __PYX_ERR(0, 167, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":157
+  /* "pyNTM/interface.py":157
  *         self._capacity = capacity
  * 
  *     def fail_interface(self, model):             # <<<<<<<<<<<<<<
@@ -4499,7 +4499,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_30fail_interface(CYTHON_U
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":169
+/* "pyNTM/interface.py":169
  *         remote_interface.failed = True
  * 
  *     def unfail_interface(self, model):             # <<<<<<<<<<<<<<
@@ -4585,7 +4585,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_32unfail_interface(CYTHON
   int __pyx_t_8;
   __Pyx_RefNannySetupContext("unfail_interface", 0);
 
-  /* "pyNTM/interface.pyx":175
+  /* "pyNTM/interface.py":175
  * 
  *         # find the remote interface
  *         remote_interface = Interface.get_remote_interface(self, model)             # <<<<<<<<<<<<<<
@@ -4645,7 +4645,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_32unfail_interface(CYTHON
   __pyx_v_remote_interface = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/interface.pyx":178
+  /* "pyNTM/interface.py":178
  * 
  *         # check to see if the local and remote node are failed
  *         if self.node_object.failed is False and self.remote_node_object.failed is False:             # <<<<<<<<<<<<<<
@@ -4677,7 +4677,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_32unfail_interface(CYTHON
   __pyx_L4_bool_binop_done:;
   if (likely(__pyx_t_6)) {
 
-    /* "pyNTM/interface.pyx":180
+    /* "pyNTM/interface.py":180
  *         if self.node_object.failed is False and self.remote_node_object.failed is False:
  *             # Set the 2 interfaces to failed = False
  *             self.failed = False             # <<<<<<<<<<<<<<
@@ -4686,7 +4686,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_32unfail_interface(CYTHON
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed_2, Py_False) < 0) __PYX_ERR(0, 180, __pyx_L1_error)
 
-    /* "pyNTM/interface.pyx":181
+    /* "pyNTM/interface.py":181
  *             # Set the 2 interfaces to failed = False
  *             self.failed = False
  *             remote_interface.failed = False             # <<<<<<<<<<<<<<
@@ -4695,7 +4695,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_32unfail_interface(CYTHON
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_remote_interface, __pyx_n_s_failed_2, Py_False) < 0) __PYX_ERR(0, 181, __pyx_L1_error)
 
-    /* "pyNTM/interface.pyx":178
+    /* "pyNTM/interface.py":178
  * 
  *         # check to see if the local and remote node are failed
  *         if self.node_object.failed is False and self.remote_node_object.failed is False:             # <<<<<<<<<<<<<<
@@ -4705,7 +4705,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_32unfail_interface(CYTHON
     goto __pyx_L3;
   }
 
-  /* "pyNTM/interface.pyx":183
+  /* "pyNTM/interface.py":183
  *             remote_interface.failed = False
  *         else:
  *             message = "Local and/or remote node are failed; cannot have unfailed interface on failed node"             # <<<<<<<<<<<<<<
@@ -4716,7 +4716,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_32unfail_interface(CYTHON
     __Pyx_INCREF(__pyx_kp_s_Local_and_or_remote_node_are_fai);
     __pyx_v_message = __pyx_kp_s_Local_and_or_remote_node_are_fai;
 
-    /* "pyNTM/interface.pyx":184
+    /* "pyNTM/interface.py":184
  *         else:
  *             message = "Local and/or remote node are failed; cannot have unfailed interface on failed node"
  *             raise ModelException(message)             # <<<<<<<<<<<<<<
@@ -4746,7 +4746,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_32unfail_interface(CYTHON
   }
   __pyx_L3:;
 
-  /* "pyNTM/interface.pyx":169
+  /* "pyNTM/interface.py":169
  *         remote_interface.failed = True
  * 
  *     def unfail_interface(self, model):             # <<<<<<<<<<<<<<
@@ -4772,7 +4772,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_32unfail_interface(CYTHON
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":186
+/* "pyNTM/interface.py":186
  *             raise ModelException(message)
  * 
  *     def get_remote_interface(self, model):             # <<<<<<<<<<<<<<
@@ -4844,7 +4844,7 @@ static PyObject *__pyx_pw_5pyNTM_9interface_9Interface_35get_remote_interface(Py
 }
 static PyObject *__pyx_gb_5pyNTM_9interface_9Interface_20get_remote_interface_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/interface.pyx":189
+/* "pyNTM/interface.py":189
  *         """Searches the model and returns the remote interface"""
  * 
  *         for interface in (interface for interface in model.interface_objects):             # <<<<<<<<<<<<<<
@@ -4992,7 +4992,7 @@ static PyObject *__pyx_gb_5pyNTM_9interface_9Interface_20get_remote_interface_2g
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":186
+/* "pyNTM/interface.py":186
  *             raise ModelException(message)
  * 
  *     def get_remote_interface(self, model):             # <<<<<<<<<<<<<<
@@ -5029,7 +5029,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_model);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_model);
 
-  /* "pyNTM/interface.pyx":189
+  /* "pyNTM/interface.py":189
  *         """Searches the model and returns the remote interface"""
  * 
  *         for interface in (interface for interface in model.interface_objects):             # <<<<<<<<<<<<<<
@@ -5081,7 +5081,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/interface.pyx":190
+    /* "pyNTM/interface.py":190
  * 
  *         for interface in (interface for interface in model.interface_objects):
  *             if interface.node_object.name == self.remote_node_object.name and interface.circuit_id == self.circuit_id:             # <<<<<<<<<<<<<<
@@ -5121,7 +5121,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "pyNTM/interface.pyx":191
+      /* "pyNTM/interface.py":191
  *         for interface in (interface for interface in model.interface_objects):
  *             if interface.node_object.name == self.remote_node_object.name and interface.circuit_id == self.circuit_id:
  *                 remote_interface = interface             # <<<<<<<<<<<<<<
@@ -5131,7 +5131,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
       __Pyx_INCREF(__pyx_v_interface);
       __pyx_v_remote_interface = __pyx_v_interface;
 
-      /* "pyNTM/interface.pyx":192
+      /* "pyNTM/interface.py":192
  *             if interface.node_object.name == self.remote_node_object.name and interface.circuit_id == self.circuit_id:
  *                 remote_interface = interface
  *                 break             # <<<<<<<<<<<<<<
@@ -5140,7 +5140,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
  */
       goto __pyx_L4_break;
 
-      /* "pyNTM/interface.pyx":190
+      /* "pyNTM/interface.py":190
  * 
  *         for interface in (interface for interface in model.interface_objects):
  *             if interface.node_object.name == self.remote_node_object.name and interface.circuit_id == self.circuit_id:             # <<<<<<<<<<<<<<
@@ -5149,7 +5149,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
  */
     }
 
-    /* "pyNTM/interface.pyx":189
+    /* "pyNTM/interface.py":189
  *         """Searches the model and returns the remote interface"""
  * 
  *         for interface in (interface for interface in model.interface_objects):             # <<<<<<<<<<<<<<
@@ -5160,7 +5160,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
   __pyx_L4_break:;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/interface.pyx":195
+  /* "pyNTM/interface.py":195
  * 
  *         # Sanity check
  *         if remote_interface.remote_node_object.interfaces(model) == self.node_object.interfaces(model):             # <<<<<<<<<<<<<<
@@ -5215,7 +5215,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_5) {
 
-    /* "pyNTM/interface.pyx":196
+    /* "pyNTM/interface.py":196
  *         # Sanity check
  *         if remote_interface.remote_node_object.interfaces(model) == self.node_object.interfaces(model):
  *             return remote_interface             # <<<<<<<<<<<<<<
@@ -5228,7 +5228,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
     __pyx_r = __pyx_v_remote_interface;
     goto __pyx_L0;
 
-    /* "pyNTM/interface.pyx":195
+    /* "pyNTM/interface.py":195
  * 
  *         # Sanity check
  *         if remote_interface.remote_node_object.interfaces(model) == self.node_object.interfaces(model):             # <<<<<<<<<<<<<<
@@ -5237,7 +5237,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
  */
   }
 
-  /* "pyNTM/interface.pyx":198
+  /* "pyNTM/interface.py":198
  *             return remote_interface
  *         else:  # pragma: no cover
  *             print("Interface validation debug info follows:")             # <<<<<<<<<<<<<<
@@ -5247,7 +5247,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
   /*else*/ {
     if (__Pyx_PrintOne(0, __pyx_kp_s_Interface_validation_debug_info) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
 
-    /* "pyNTM/interface.pyx":199
+    /* "pyNTM/interface.py":199
  *         else:  # pragma: no cover
  *             print("Interface validation debug info follows:")
  *             print(remote_interface.remote_node_object.interfaces(model))             # <<<<<<<<<<<<<<
@@ -5278,7 +5278,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
     if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 199, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/interface.pyx":200
+    /* "pyNTM/interface.py":200
  *             print("Interface validation debug info follows:")
  *             print(remote_interface.remote_node_object.interfaces(model))
  *             print(self.node_object.interfaces(model))             # <<<<<<<<<<<<<<
@@ -5308,7 +5308,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
     if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 200, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/interface.pyx":203
+    /* "pyNTM/interface.py":203
  *             message = ('Internal Validation Error {} and {} fail validation checks; did you '
  *                        'forget to run update_simulation() on the model after making a change or '
  *                        'loading a model file?'.format(remote_interface, self))             # <<<<<<<<<<<<<<
@@ -5366,7 +5366,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
     __pyx_v_message = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "pyNTM/interface.pyx":204
+    /* "pyNTM/interface.py":204
  *                        'forget to run update_simulation() on the model after making a change or '
  *                        'loading a model file?'.format(remote_interface, self))
  *             raise ModelException(message)             # <<<<<<<<<<<<<<
@@ -5395,7 +5395,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
     __PYX_ERR(0, 204, __pyx_L1_error)
   }
 
-  /* "pyNTM/interface.pyx":186
+  /* "pyNTM/interface.py":186
  *             raise ModelException(message)
  * 
  *     def get_remote_interface(self, model):             # <<<<<<<<<<<<<<
@@ -5421,7 +5421,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_34get_remote_interface(CY
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":206
+/* "pyNTM/interface.py":206
  *             raise ModelException(message)
  * 
  *     def get_circuit_object(self, model):             # <<<<<<<<<<<<<<
@@ -5505,7 +5505,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_36get_circuit_object(CYTH
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("get_circuit_object", 0);
 
-  /* "pyNTM/interface.pyx":209
+  /* "pyNTM/interface.py":209
  *         """Returns the circuit object from the model that an
  *         interface is associated with."""
  *         ckt = model.get_circuit_object_from_interface(self.name,             # <<<<<<<<<<<<<<
@@ -5517,7 +5517,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_36get_circuit_object(CYTH
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/interface.pyx":210
+  /* "pyNTM/interface.py":210
  *         interface is associated with."""
  *         ckt = model.get_circuit_object_from_interface(self.name,
  *                                                       self.node_object.name)             # <<<<<<<<<<<<<<
@@ -5581,7 +5581,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_36get_circuit_object(CYTH
   __pyx_v_ckt = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/interface.pyx":211
+  /* "pyNTM/interface.py":211
  *         ckt = model.get_circuit_object_from_interface(self.name,
  *                                                       self.node_object.name)
  *         return ckt             # <<<<<<<<<<<<<<
@@ -5593,7 +5593,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_36get_circuit_object(CYTH
   __pyx_r = __pyx_v_ckt;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":206
+  /* "pyNTM/interface.py":206
  *             raise ModelException(message)
  * 
  *     def get_circuit_object(self, model):             # <<<<<<<<<<<<<<
@@ -5618,7 +5618,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_36get_circuit_object(CYTH
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":213
+/* "pyNTM/interface.py":213
  *         return ckt
  * 
  *     def demands(self, model):             # <<<<<<<<<<<<<<
@@ -5690,7 +5690,7 @@ static PyObject *__pyx_pw_5pyNTM_9interface_9Interface_39demands(PyObject *__pyx
 }
 static PyObject *__pyx_gb_5pyNTM_9interface_9Interface_7demands_2generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/interface.pyx":216
+/* "pyNTM/interface.py":216
  *         """Returns list of demands that egress the interface"""
  *         dmd_set = set()
  *         routed_demands = (demand for demand in model.demand_objects if demand.path != 'Unrouted')             # <<<<<<<<<<<<<<
@@ -5845,7 +5845,7 @@ static PyObject *__pyx_gb_5pyNTM_9interface_9Interface_7demands_2generator1(__py
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":213
+/* "pyNTM/interface.py":213
  *         return ckt
  * 
  *     def demands(self, model):             # <<<<<<<<<<<<<<
@@ -5886,7 +5886,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_model);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_model);
 
-  /* "pyNTM/interface.pyx":215
+  /* "pyNTM/interface.py":215
  *     def demands(self, model):
  *         """Returns list of demands that egress the interface"""
  *         dmd_set = set()             # <<<<<<<<<<<<<<
@@ -5898,7 +5898,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
   __pyx_v_dmd_set = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/interface.pyx":216
+  /* "pyNTM/interface.py":216
  *         """Returns list of demands that egress the interface"""
  *         dmd_set = set()
  *         routed_demands = (demand for demand in model.demand_objects if demand.path != 'Unrouted')             # <<<<<<<<<<<<<<
@@ -5910,7 +5910,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
   __pyx_v_routed_demands = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/interface.pyx":217
+  /* "pyNTM/interface.py":217
  *         dmd_set = set()
  *         routed_demands = (demand for demand in model.demand_objects if demand.path != 'Unrouted')
  *         for demand in routed_demands:             # <<<<<<<<<<<<<<
@@ -5959,7 +5959,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
     __Pyx_XDECREF_SET(__pyx_v_demand, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/interface.pyx":219
+    /* "pyNTM/interface.py":219
  *         for demand in routed_demands:
  * 
  *             for dmd_path in demand.path:             # <<<<<<<<<<<<<<
@@ -6011,7 +6011,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
       __Pyx_XDECREF_SET(__pyx_v_dmd_path, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "pyNTM/interface.pyx":222
+      /* "pyNTM/interface.py":222
  *                 # If dmd_path is an RSVP LSP and self is in dmd_path.path['interfaces'] ,
  *                 # look at the LSP path and get demands on the LSP and add them to dmd_set
  *                 if isinstance(dmd_path, RSVP_LSP):             # <<<<<<<<<<<<<<
@@ -6025,7 +6025,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
       __pyx_t_9 = (__pyx_t_8 != 0);
       if (__pyx_t_9) {
 
-        /* "pyNTM/interface.pyx":223
+        /* "pyNTM/interface.py":223
  *                 # look at the LSP path and get demands on the LSP and add them to dmd_set
  *                 if isinstance(dmd_path, RSVP_LSP):
  *                     if self in dmd_path.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -6042,7 +6042,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
         __pyx_t_8 = (__pyx_t_9 != 0);
         if (__pyx_t_8) {
 
-          /* "pyNTM/interface.pyx":224
+          /* "pyNTM/interface.py":224
  *                 if isinstance(dmd_path, RSVP_LSP):
  *                     if self in dmd_path.path['interfaces']:
  *                         dmd_set.add(demand)             # <<<<<<<<<<<<<<
@@ -6051,7 +6051,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
  */
           __pyx_t_11 = PySet_Add(__pyx_v_dmd_set, __pyx_v_demand); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 224, __pyx_L1_error)
 
-          /* "pyNTM/interface.pyx":223
+          /* "pyNTM/interface.py":223
  *                 # look at the LSP path and get demands on the LSP and add them to dmd_set
  *                 if isinstance(dmd_path, RSVP_LSP):
  *                     if self in dmd_path.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -6060,7 +6060,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
  */
         }
 
-        /* "pyNTM/interface.pyx":222
+        /* "pyNTM/interface.py":222
  *                 # If dmd_path is an RSVP LSP and self is in dmd_path.path['interfaces'] ,
  *                 # look at the LSP path and get demands on the LSP and add them to dmd_set
  *                 if isinstance(dmd_path, RSVP_LSP):             # <<<<<<<<<<<<<<
@@ -6070,7 +6070,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
         goto __pyx_L7;
       }
 
-      /* "pyNTM/interface.pyx":229
+      /* "pyNTM/interface.py":229
  *                 # objects; look for self in dmd_path
  * 
  *                 elif self in dmd_path:             # <<<<<<<<<<<<<<
@@ -6081,7 +6081,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
       __pyx_t_9 = (__pyx_t_8 != 0);
       if (__pyx_t_9) {
 
-        /* "pyNTM/interface.pyx":231
+        /* "pyNTM/interface.py":231
  *                 elif self in dmd_path:
  *                     # num_paths += 1
  *                     dmd_set.add(demand)             # <<<<<<<<<<<<<<
@@ -6090,7 +6090,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
  */
         __pyx_t_11 = PySet_Add(__pyx_v_dmd_set, __pyx_v_demand); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 231, __pyx_L1_error)
 
-        /* "pyNTM/interface.pyx":229
+        /* "pyNTM/interface.py":229
  *                 # objects; look for self in dmd_path
  * 
  *                 elif self in dmd_path:             # <<<<<<<<<<<<<<
@@ -6100,7 +6100,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
       }
       __pyx_L7:;
 
-      /* "pyNTM/interface.pyx":219
+      /* "pyNTM/interface.py":219
  *         for demand in routed_demands:
  * 
  *             for dmd_path in demand.path:             # <<<<<<<<<<<<<<
@@ -6110,7 +6110,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "pyNTM/interface.pyx":217
+    /* "pyNTM/interface.py":217
  *         dmd_set = set()
  *         routed_demands = (demand for demand in model.demand_objects if demand.path != 'Unrouted')
  *         for demand in routed_demands:             # <<<<<<<<<<<<<<
@@ -6120,7 +6120,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/interface.pyx":233
+  /* "pyNTM/interface.py":233
  *                     dmd_set.add(demand)
  * 
  *         dmd_list = list(dmd_set)             # <<<<<<<<<<<<<<
@@ -6132,7 +6132,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
   __pyx_v_dmd_list = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/interface.pyx":236
+  /* "pyNTM/interface.py":236
  * 
  *         # TODO - add % of each demand that is on the interface next to the demand
  *         return dmd_list             # <<<<<<<<<<<<<<
@@ -6144,7 +6144,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
   __pyx_r = __pyx_v_dmd_list;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":213
+  /* "pyNTM/interface.py":213
  *         return ckt
  * 
  *     def demands(self, model):             # <<<<<<<<<<<<<<
@@ -6172,7 +6172,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_38demands(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":238
+/* "pyNTM/interface.py":238
  *         return dmd_list
  * 
  *     def lsps(self, model):             # <<<<<<<<<<<<<<
@@ -6244,7 +6244,7 @@ static PyObject *__pyx_pw_5pyNTM_9interface_9Interface_41lsps(PyObject *__pyx_se
 }
 static PyObject *__pyx_gb_5pyNTM_9interface_9Interface_4lsps_2generator2(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/interface.pyx":247
+/* "pyNTM/interface.py":247
  *         lsp_set = set()
  * 
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects if 'Unrouted' not in lsp.path):             # <<<<<<<<<<<<<<
@@ -6401,7 +6401,7 @@ static PyObject *__pyx_gb_5pyNTM_9interface_9Interface_4lsps_2generator2(__pyx_C
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":238
+/* "pyNTM/interface.py":238
  *         return dmd_list
  * 
  *     def lsps(self, model):             # <<<<<<<<<<<<<<
@@ -6437,7 +6437,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_40lsps(CYTHON_UNUSED PyOb
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_model);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_model);
 
-  /* "pyNTM/interface.pyx":245
+  /* "pyNTM/interface.py":245
  *         """
  * 
  *         lsp_set = set()             # <<<<<<<<<<<<<<
@@ -6449,7 +6449,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_40lsps(CYTHON_UNUSED PyOb
   __pyx_v_lsp_set = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/interface.pyx":247
+  /* "pyNTM/interface.py":247
  *         lsp_set = set()
  * 
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects if 'Unrouted' not in lsp.path):             # <<<<<<<<<<<<<<
@@ -6501,7 +6501,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_40lsps(CYTHON_UNUSED PyOb
     __Pyx_XDECREF_SET(__pyx_v_lsp, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/interface.pyx":248
+    /* "pyNTM/interface.py":248
  * 
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects if 'Unrouted' not in lsp.path):
  *             if self in lsp.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -6518,7 +6518,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_40lsps(CYTHON_UNUSED PyOb
     __pyx_t_7 = (__pyx_t_6 != 0);
     if (__pyx_t_7) {
 
-      /* "pyNTM/interface.pyx":249
+      /* "pyNTM/interface.py":249
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects if 'Unrouted' not in lsp.path):
  *             if self in lsp.path['interfaces']:
  *                 lsp_set.add(lsp)             # <<<<<<<<<<<<<<
@@ -6527,7 +6527,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_40lsps(CYTHON_UNUSED PyOb
  */
       __pyx_t_8 = PySet_Add(__pyx_v_lsp_set, __pyx_v_lsp); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 249, __pyx_L1_error)
 
-      /* "pyNTM/interface.pyx":248
+      /* "pyNTM/interface.py":248
  * 
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects if 'Unrouted' not in lsp.path):
  *             if self in lsp.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -6536,7 +6536,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_40lsps(CYTHON_UNUSED PyOb
  */
     }
 
-    /* "pyNTM/interface.pyx":247
+    /* "pyNTM/interface.py":247
  *         lsp_set = set()
  * 
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects if 'Unrouted' not in lsp.path):             # <<<<<<<<<<<<<<
@@ -6546,7 +6546,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_40lsps(CYTHON_UNUSED PyOb
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/interface.pyx":251
+  /* "pyNTM/interface.py":251
  *                 lsp_set.add(lsp)
  * 
  *         lsp_list = list(lsp_set)             # <<<<<<<<<<<<<<
@@ -6558,7 +6558,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_40lsps(CYTHON_UNUSED PyOb
   __pyx_v_lsp_list = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/interface.pyx":252
+  /* "pyNTM/interface.py":252
  * 
  *         lsp_list = list(lsp_set)
  *         return lsp_list             # <<<<<<<<<<<<<<
@@ -6570,7 +6570,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_40lsps(CYTHON_UNUSED PyOb
   __pyx_r = __pyx_v_lsp_list;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":238
+  /* "pyNTM/interface.py":238
  *         return dmd_list
  * 
  *     def lsps(self, model):             # <<<<<<<<<<<<<<
@@ -6595,7 +6595,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_40lsps(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":255
+/* "pyNTM/interface.py":255
  * 
  *     @property
  *     def utilization(self):             # <<<<<<<<<<<<<<
@@ -6628,7 +6628,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_42utilization(CYTHON_UNUS
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("utilization", 0);
 
-  /* "pyNTM/interface.pyx":257
+  /* "pyNTM/interface.py":257
  *     def utilization(self):
  *         """Returns utilization percent = (self.traffic/self.capacity)*100 """
  *         if self.traffic == 'Down':             # <<<<<<<<<<<<<<
@@ -6641,7 +6641,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_42utilization(CYTHON_UNUS
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "pyNTM/interface.pyx":258
+    /* "pyNTM/interface.py":258
  *         """Returns utilization percent = (self.traffic/self.capacity)*100 """
  *         if self.traffic == 'Down':
  *             return 'Int is down'             # <<<<<<<<<<<<<<
@@ -6653,7 +6653,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_42utilization(CYTHON_UNUS
     __pyx_r = __pyx_kp_s_Int_is_down;
     goto __pyx_L0;
 
-    /* "pyNTM/interface.pyx":257
+    /* "pyNTM/interface.py":257
  *     def utilization(self):
  *         """Returns utilization percent = (self.traffic/self.capacity)*100 """
  *         if self.traffic == 'Down':             # <<<<<<<<<<<<<<
@@ -6662,7 +6662,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_42utilization(CYTHON_UNUS
  */
   }
 
-  /* "pyNTM/interface.pyx":260
+  /* "pyNTM/interface.py":260
  *             return 'Int is down'
  *         else:
  *             util = (self.traffic / self.capacity)*100             # <<<<<<<<<<<<<<
@@ -6684,7 +6684,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_42utilization(CYTHON_UNUS
     __pyx_v_util = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "pyNTM/interface.pyx":261
+    /* "pyNTM/interface.py":261
  *         else:
  *             util = (self.traffic / self.capacity)*100
  *             return float('%.2f' % util)             # <<<<<<<<<<<<<<
@@ -6702,7 +6702,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_42utilization(CYTHON_UNUS
     goto __pyx_L0;
   }
 
-  /* "pyNTM/interface.pyx":255
+  /* "pyNTM/interface.py":255
  * 
  *     @property
  *     def utilization(self):             # <<<<<<<<<<<<<<
@@ -6724,7 +6724,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_42utilization(CYTHON_UNUS
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":264
+/* "pyNTM/interface.py":264
  * 
  *     @property
  *     def srlgs(self):             # <<<<<<<<<<<<<<
@@ -6752,7 +6752,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_44srlgs(CYTHON_UNUSED PyO
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("srlgs", 0);
 
-  /* "pyNTM/interface.pyx":265
+  /* "pyNTM/interface.py":265
  *     @property
  *     def srlgs(self):
  *         return self._srlgs             # <<<<<<<<<<<<<<
@@ -6766,7 +6766,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_44srlgs(CYTHON_UNUSED PyO
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/interface.pyx":264
+  /* "pyNTM/interface.py":264
  * 
  *     @property
  *     def srlgs(self):             # <<<<<<<<<<<<<<
@@ -6785,7 +6785,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_44srlgs(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":267
+/* "pyNTM/interface.py":267
  *         return self._srlgs
  * 
  *     def add_to_srlg(self, srlg_name, model, create_if_not_present=False):             # <<<<<<<<<<<<<<
@@ -6901,7 +6901,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
   int __pyx_t_10;
   __Pyx_RefNannySetupContext("add_to_srlg", 0);
 
-  /* "pyNTM/interface.pyx":283
+  /* "pyNTM/interface.py":283
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -6917,7 +6917,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pyNTM/interface.pyx":284
+      /* "pyNTM/interface.py":284
  *         # exist in model
  *         try:
  *             get_srlg = model.get_srlg_object(srlg_name)             # <<<<<<<<<<<<<<
@@ -6944,7 +6944,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
       __pyx_v_get_srlg = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "pyNTM/interface.pyx":283
+      /* "pyNTM/interface.py":283
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -6961,7 +6961,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "pyNTM/interface.pyx":285
+    /* "pyNTM/interface.py":285
  *         try:
  *             get_srlg = model.get_srlg_object(srlg_name)
  *         except ModelException:             # <<<<<<<<<<<<<<
@@ -6982,7 +6982,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
 
-      /* "pyNTM/interface.pyx":286
+      /* "pyNTM/interface.py":286
  *             get_srlg = model.get_srlg_object(srlg_name)
  *         except ModelException:
  *             get_srlg = False             # <<<<<<<<<<<<<<
@@ -6999,7 +6999,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "pyNTM/interface.pyx":283
+    /* "pyNTM/interface.py":283
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -7019,7 +7019,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
     __pyx_L8_try_end:;
   }
 
-  /* "pyNTM/interface.pyx":288
+  /* "pyNTM/interface.py":288
  *             get_srlg = False
  * 
  *         if get_srlg is False:             # <<<<<<<<<<<<<<
@@ -7030,7 +7030,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
   __pyx_t_10 = (__pyx_t_9 != 0);
   if (__pyx_t_10) {
 
-    /* "pyNTM/interface.pyx":290
+    /* "pyNTM/interface.py":290
  *         if get_srlg is False:
  *             # SRLG does not exist
  *             if create_if_not_present is True:             # <<<<<<<<<<<<<<
@@ -7041,7 +7041,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
     __pyx_t_9 = (__pyx_t_10 != 0);
     if (likely(__pyx_t_9)) {
 
-      /* "pyNTM/interface.pyx":291
+      /* "pyNTM/interface.py":291
  *             # SRLG does not exist
  *             if create_if_not_present is True:
  *                 new_srlg = SRLG(srlg_name, model)             # <<<<<<<<<<<<<<
@@ -7098,7 +7098,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
       __pyx_v_new_srlg = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "pyNTM/interface.pyx":292
+      /* "pyNTM/interface.py":292
  *             if create_if_not_present is True:
  *                 new_srlg = SRLG(srlg_name, model)
  *                 model.srlg_objects.add(new_srlg)             # <<<<<<<<<<<<<<
@@ -7127,7 +7127,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/interface.pyx":293
+      /* "pyNTM/interface.py":293
  *                 new_srlg = SRLG(srlg_name, model)
  *                 model.srlg_objects.add(new_srlg)
  *                 self._srlgs.add(new_srlg)             # <<<<<<<<<<<<<<
@@ -7156,7 +7156,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/interface.pyx":296
+      /* "pyNTM/interface.py":296
  * 
  *                 # Add remote interface
  *                 remote_int = self.get_remote_interface(model)             # <<<<<<<<<<<<<<
@@ -7183,7 +7183,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
       __pyx_v_remote_int = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "pyNTM/interface.pyx":297
+      /* "pyNTM/interface.py":297
  *                 # Add remote interface
  *                 remote_int = self.get_remote_interface(model)
  *                 remote_int._srlgs.add(new_srlg)             # <<<<<<<<<<<<<<
@@ -7212,7 +7212,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/interface.pyx":290
+      /* "pyNTM/interface.py":290
  *         if get_srlg is False:
  *             # SRLG does not exist
  *             if create_if_not_present is True:             # <<<<<<<<<<<<<<
@@ -7222,7 +7222,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
       goto __pyx_L12;
     }
 
-    /* "pyNTM/interface.pyx":299
+    /* "pyNTM/interface.py":299
  *                 remote_int._srlgs.add(new_srlg)
  *             else:
  *                 msg = "An SRLG with name {} does not exist in the Model".format(srlg_name)             # <<<<<<<<<<<<<<
@@ -7250,7 +7250,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
       __pyx_v_msg = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "pyNTM/interface.pyx":300
+      /* "pyNTM/interface.py":300
  *             else:
  *                 msg = "An SRLG with name {} does not exist in the Model".format(srlg_name)
  *                 raise ModelException(msg)             # <<<<<<<<<<<<<<
@@ -7280,7 +7280,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
     }
     __pyx_L12:;
 
-    /* "pyNTM/interface.pyx":288
+    /* "pyNTM/interface.py":288
  *             get_srlg = False
  * 
  *         if get_srlg is False:             # <<<<<<<<<<<<<<
@@ -7290,7 +7290,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
     goto __pyx_L11;
   }
 
-  /* "pyNTM/interface.pyx":303
+  /* "pyNTM/interface.py":303
  *         else:
  *             # SRLG does exist in model; add self to that SRLG
  *             get_srlg.interface_objects.add(self)             # <<<<<<<<<<<<<<
@@ -7320,7 +7320,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/interface.pyx":304
+    /* "pyNTM/interface.py":304
  *             # SRLG does exist in model; add self to that SRLG
  *             get_srlg.interface_objects.add(self)
  *             self._srlgs.add(get_srlg)             # <<<<<<<<<<<<<<
@@ -7349,7 +7349,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/interface.pyx":307
+    /* "pyNTM/interface.py":307
  * 
  *             # Add remote interface
  *             remote_int = self.get_remote_interface(model)             # <<<<<<<<<<<<<<
@@ -7376,7 +7376,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
     __pyx_v_remote_int = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "pyNTM/interface.pyx":308
+    /* "pyNTM/interface.py":308
  *             # Add remote interface
  *             remote_int = self.get_remote_interface(model)
  *             get_srlg.interface_objects.add(remote_int)             # <<<<<<<<<<<<<<
@@ -7405,7 +7405,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/interface.pyx":309
+    /* "pyNTM/interface.py":309
  *             remote_int = self.get_remote_interface(model)
  *             get_srlg.interface_objects.add(remote_int)
  *             remote_int._srlgs.add(get_srlg)             # <<<<<<<<<<<<<<
@@ -7436,7 +7436,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
   }
   __pyx_L11:;
 
-  /* "pyNTM/interface.pyx":267
+  /* "pyNTM/interface.py":267
  *         return self._srlgs
  * 
  *     def add_to_srlg(self, srlg_name, model, create_if_not_present=False):             # <<<<<<<<<<<<<<
@@ -7464,7 +7464,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_46add_to_srlg(CYTHON_UNUS
   return __pyx_r;
 }
 
-/* "pyNTM/interface.pyx":311
+/* "pyNTM/interface.py":311
  *             remote_int._srlgs.add(get_srlg)
  * 
  *     def remove_from_srlg(self, srlg_name, model):             # <<<<<<<<<<<<<<
@@ -7564,7 +7564,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
   int __pyx_t_10;
   __Pyx_RefNannySetupContext("remove_from_srlg", 0);
 
-  /* "pyNTM/interface.pyx":322
+  /* "pyNTM/interface.py":322
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -7580,7 +7580,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pyNTM/interface.pyx":323
+      /* "pyNTM/interface.py":323
  *         # exist in model
  *         try:
  *             get_srlg = model.get_srlg_object(srlg_name)             # <<<<<<<<<<<<<<
@@ -7607,7 +7607,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
       __pyx_v_get_srlg = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "pyNTM/interface.pyx":322
+      /* "pyNTM/interface.py":322
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -7624,7 +7624,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "pyNTM/interface.pyx":324
+    /* "pyNTM/interface.py":324
  *         try:
  *             get_srlg = model.get_srlg_object(srlg_name)
  *         except ModelException:             # <<<<<<<<<<<<<<
@@ -7645,7 +7645,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
 
-      /* "pyNTM/interface.pyx":325
+      /* "pyNTM/interface.py":325
  *             get_srlg = model.get_srlg_object(srlg_name)
  *         except ModelException:
  *             get_srlg = False             # <<<<<<<<<<<<<<
@@ -7662,7 +7662,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "pyNTM/interface.pyx":322
+    /* "pyNTM/interface.py":322
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -7682,7 +7682,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
     __pyx_L8_try_end:;
   }
 
-  /* "pyNTM/interface.pyx":327
+  /* "pyNTM/interface.py":327
  *             get_srlg = False
  * 
  *         if get_srlg is False:             # <<<<<<<<<<<<<<
@@ -7693,7 +7693,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
   __pyx_t_10 = (__pyx_t_9 != 0);
   if (unlikely(__pyx_t_10)) {
 
-    /* "pyNTM/interface.pyx":328
+    /* "pyNTM/interface.py":328
  * 
  *         if get_srlg is False:
  *             msg = "An SRLG with name {} does not exist in the Model".format(srlg_name)             # <<<<<<<<<<<<<<
@@ -7720,7 +7720,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
     __pyx_v_msg = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "pyNTM/interface.pyx":329
+    /* "pyNTM/interface.py":329
  *         if get_srlg is False:
  *             msg = "An SRLG with name {} does not exist in the Model".format(srlg_name)
  *             raise ModelException(msg)             # <<<<<<<<<<<<<<
@@ -7748,7 +7748,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __PYX_ERR(0, 329, __pyx_L1_error)
 
-    /* "pyNTM/interface.pyx":327
+    /* "pyNTM/interface.py":327
  *             get_srlg = False
  * 
  *         if get_srlg is False:             # <<<<<<<<<<<<<<
@@ -7757,7 +7757,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
  */
   }
 
-  /* "pyNTM/interface.pyx":332
+  /* "pyNTM/interface.py":332
  *         else:
  *             # Remove self from SRLG
  *             get_srlg.interface_objects.remove(self)             # <<<<<<<<<<<<<<
@@ -7787,7 +7787,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/interface.pyx":333
+    /* "pyNTM/interface.py":333
  *             # Remove self from SRLG
  *             get_srlg.interface_objects.remove(self)
  *             self._srlgs.remove(get_srlg)             # <<<<<<<<<<<<<<
@@ -7816,7 +7816,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/interface.pyx":336
+    /* "pyNTM/interface.py":336
  * 
  *             # Remove remote interface from SRLG
  *             remote_int = self.get_remote_interface(model)             # <<<<<<<<<<<<<<
@@ -7843,7 +7843,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
     __pyx_v_remote_int = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "pyNTM/interface.pyx":337
+    /* "pyNTM/interface.py":337
  *             # Remove remote interface from SRLG
  *             remote_int = self.get_remote_interface(model)
  *             get_srlg.interface_objects.remove(remote_int)             # <<<<<<<<<<<<<<
@@ -7872,7 +7872,7 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/interface.pyx":338
+    /* "pyNTM/interface.py":338
  *             remote_int = self.get_remote_interface(model)
  *             get_srlg.interface_objects.remove(remote_int)
  *             remote_int._srlgs.remove(get_srlg)             # <<<<<<<<<<<<<<
@@ -7902,14 +7902,14 @@ static PyObject *__pyx_pf_5pyNTM_9interface_9Interface_48remove_from_srlg(CYTHON
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
 
-  /* "pyNTM/interface.pyx":340
+  /* "pyNTM/interface.py":340
  *             remote_int._srlgs.remove(get_srlg)
  * 
  *         self.failed = False             # <<<<<<<<<<<<<<
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed_2, Py_False) < 0) __PYX_ERR(0, 340, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":311
+  /* "pyNTM/interface.py":311
  *             remote_int._srlgs.add(get_srlg)
  * 
  *     def remove_from_srlg(self, srlg_name, model):             # <<<<<<<<<<<<<<
@@ -8751,7 +8751,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_init, __pyx_k_init, sizeof(__pyx_k_init), 0, 0, 1, 1},
   {&__pyx_n_s_interface, __pyx_k_interface, sizeof(__pyx_k_interface), 0, 0, 1, 1},
   {&__pyx_n_s_interface_objects, __pyx_k_interface_objects, sizeof(__pyx_k_interface_objects), 0, 0, 1, 1},
-  {&__pyx_kp_s_interface_pyx, __pyx_k_interface_pyx, sizeof(__pyx_k_interface_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_interfaces, __pyx_k_interfaces, sizeof(__pyx_k_interfaces), 0, 0, 1, 1},
   {&__pyx_n_s_key, __pyx_k_key, sizeof(__pyx_k_key), 0, 0, 1, 1},
   {&__pyx_n_s_lsp, __pyx_k_lsp, sizeof(__pyx_k_lsp), 0, 0, 1, 1},
@@ -8778,6 +8777,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
   {&__pyx_n_s_property, __pyx_k_property, sizeof(__pyx_k_property), 0, 0, 1, 1},
   {&__pyx_n_s_pyNTM_interface, __pyx_k_pyNTM_interface, sizeof(__pyx_k_pyNTM_interface), 0, 0, 1, 1},
+  {&__pyx_kp_s_pyNTM_interface_py, __pyx_k_pyNTM_interface_py, sizeof(__pyx_k_pyNTM_interface_py), 0, 0, 1, 0},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_remote_int, __pyx_k_remote_int, sizeof(__pyx_k_remote_int), 0, 0, 1, 1},
   {&__pyx_n_s_remote_interface, __pyx_k_remote_interface, sizeof(__pyx_k_remote_interface), 0, 0, 1, 1},
@@ -8826,7 +8826,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pyNTM/interface.pyx":8
+  /* "pyNTM/interface.py":8
  * 
  * 
  * class Interface(object):             # <<<<<<<<<<<<<<
@@ -8837,7 +8837,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "pyNTM/interface.pyx":11
+  /* "pyNTM/interface.py":11
  *     """An object representing a Node interface"""
  * 
  *     def __init__(self, name, cost, capacity, node_object, remote_node_object,             # <<<<<<<<<<<<<<
@@ -8847,12 +8847,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__2 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_name, __pyx_n_s_cost, __pyx_n_s_capacity, __pyx_n_s_node_object, __pyx_n_s_remote_node_object, __pyx_n_s_circuit_id, __pyx_n_s_rsvp_enabled, __pyx_n_s_percent_reservable_bandwidth); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
-  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(9, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_init, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(9, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_init, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 11, __pyx_L1_error)
   __pyx_tuple__4 = PyTuple_Pack(3, ((PyObject *)Py_None), ((PyObject *)Py_True), ((PyObject *)__pyx_int_100)); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "pyNTM/interface.pyx":27
+  /* "pyNTM/interface.py":27
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -8862,9 +8862,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__5 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
-  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_key, 27, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_key, 27, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 27, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":32
+  /* "pyNTM/interface.py":32
  * 
  *     # Modify the __hash__ and __eq__ methods to make comparisons easier
  *     def __eq__(self, other_object):             # <<<<<<<<<<<<<<
@@ -8874,9 +8874,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__7 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_other_object); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
-  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_eq, 32, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_eq, 32, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 32, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":41
+  /* "pyNTM/interface.py":41
  *                                                     other_object.capacity, other_object.circuit_id]
  * 
  *     def __ne__(self, other_object):             # <<<<<<<<<<<<<<
@@ -8886,9 +8886,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__9 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_other_object); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
-  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_ne, 41, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_ne, 41, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 41, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":47
+  /* "pyNTM/interface.py":47
  *                                                     other_object.capacity, other_object.circuit_id]
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -8898,9 +8898,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__11 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
-  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_hash, 47, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_hash, 47, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 47, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":51
+  /* "pyNTM/interface.py":51
  *         return hash(self.name+self.node_object.name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -8910,9 +8910,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__13 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_repr, 51, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 51, __pyx_L1_error)
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_repr, 51, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 51, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":62
+  /* "pyNTM/interface.py":62
  * 
  *     @property
  *     def reservable_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -8922,9 +8922,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__15 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_res_bw); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
-  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_reservable_bandwidth, 62, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_reservable_bandwidth, 62, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 62, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":75
+  /* "pyNTM/interface.py":75
  * 
  *     @property
  *     def reserved_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -8934,9 +8934,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__17 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
-  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_reserved_bandwidth_2, 75, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_reserved_bandwidth_2, 75, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 75, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":82
+  /* "pyNTM/interface.py":82
  * 
  *     @reserved_bandwidth.setter
  *     def reserved_bandwidth(self, value):             # <<<<<<<<<<<<<<
@@ -8946,9 +8946,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__19 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_value); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_reserved_bandwidth_2, 82, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_reserved_bandwidth_2, 82, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 82, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":94
+  /* "pyNTM/interface.py":94
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -8958,9 +8958,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__21 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_failed_2, 94, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 94, __pyx_L1_error)
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_failed_2, 94, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 94, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":103
+  /* "pyNTM/interface.py":103
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -8970,9 +8970,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__23 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_status, __pyx_n_s_failed_srlgs, __pyx_n_s_srlg); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 103, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_failed_2, 103, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_failed_2, 103, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 103, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":136
+  /* "pyNTM/interface.py":136
  * 
  *     @property
  *     def cost(self):             # <<<<<<<<<<<<<<
@@ -8982,9 +8982,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__25 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_cost, 136, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_cost, 136, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 136, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":140
+  /* "pyNTM/interface.py":140
  * 
  *     @cost.setter
  *     def cost(self, cost):             # <<<<<<<<<<<<<<
@@ -8994,9 +8994,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__27 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_cost); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_cost, 140, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_cost, 140, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 140, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":148
+  /* "pyNTM/interface.py":148
  * 
  *     @property
  *     def capacity(self):             # <<<<<<<<<<<<<<
@@ -9006,9 +9006,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__29 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_capacity, 148, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 148, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_capacity, 148, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 148, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":152
+  /* "pyNTM/interface.py":152
  * 
  *     @capacity.setter
  *     def capacity(self, capacity):             # <<<<<<<<<<<<<<
@@ -9018,9 +9018,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__31 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_capacity); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 152, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__31);
   __Pyx_GIVEREF(__pyx_tuple__31);
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_capacity, 152, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 152, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_capacity, 152, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 152, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":157
+  /* "pyNTM/interface.py":157
  *         self._capacity = capacity
  * 
  *     def fail_interface(self, model):             # <<<<<<<<<<<<<<
@@ -9030,9 +9030,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__33 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_remote_interface); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
-  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_fail_interface, 157, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_fail_interface, 157, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 157, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":169
+  /* "pyNTM/interface.py":169
  *         remote_interface.failed = True
  * 
  *     def unfail_interface(self, model):             # <<<<<<<<<<<<<<
@@ -9042,9 +9042,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__35 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_remote_interface, __pyx_n_s_message); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__35);
   __Pyx_GIVEREF(__pyx_tuple__35);
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_unfail_interface, 169, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_unfail_interface, 169, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 169, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":186
+  /* "pyNTM/interface.py":186
  *             raise ModelException(message)
  * 
  *     def get_remote_interface(self, model):             # <<<<<<<<<<<<<<
@@ -9054,9 +9054,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__37 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_interface, __pyx_n_s_remote_interface, __pyx_n_s_message, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 186, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_get_remote_interface, 186, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 186, __pyx_L1_error)
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_get_remote_interface, 186, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 186, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":206
+  /* "pyNTM/interface.py":206
  *             raise ModelException(message)
  * 
  *     def get_circuit_object(self, model):             # <<<<<<<<<<<<<<
@@ -9066,9 +9066,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__39 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_ckt); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__39);
   __Pyx_GIVEREF(__pyx_tuple__39);
-  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_get_circuit_object, 206, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_get_circuit_object, 206, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 206, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":213
+  /* "pyNTM/interface.py":213
  *         return ckt
  * 
  *     def demands(self, model):             # <<<<<<<<<<<<<<
@@ -9078,9 +9078,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__41 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_dmd_set, __pyx_n_s_routed_demands, __pyx_n_s_demand, __pyx_n_s_dmd_path, __pyx_n_s_dmd_list, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__41);
   __Pyx_GIVEREF(__pyx_tuple__41);
-  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_demands, 213, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_demands, 213, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 213, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":238
+  /* "pyNTM/interface.py":238
  *         return dmd_list
  * 
  *     def lsps(self, model):             # <<<<<<<<<<<<<<
@@ -9090,9 +9090,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__43 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_lsp_set, __pyx_n_s_lsp, __pyx_n_s_lsp_list, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__43);
   __Pyx_GIVEREF(__pyx_tuple__43);
-  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_lsps, 238, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 238, __pyx_L1_error)
+  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_lsps, 238, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 238, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":255
+  /* "pyNTM/interface.py":255
  * 
  *     @property
  *     def utilization(self):             # <<<<<<<<<<<<<<
@@ -9102,9 +9102,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__45 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_util); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__45);
   __Pyx_GIVEREF(__pyx_tuple__45);
-  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_utilization, 255, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_utilization, 255, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 255, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":264
+  /* "pyNTM/interface.py":264
  * 
  *     @property
  *     def srlgs(self):             # <<<<<<<<<<<<<<
@@ -9114,9 +9114,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__47 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__47)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__47);
   __Pyx_GIVEREF(__pyx_tuple__47);
-  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__47, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_srlgs_2, 264, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__47, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_srlgs_2, 264, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(0, 264, __pyx_L1_error)
 
-  /* "pyNTM/interface.pyx":267
+  /* "pyNTM/interface.py":267
  *         return self._srlgs
  * 
  *     def add_to_srlg(self, srlg_name, model, create_if_not_present=False):             # <<<<<<<<<<<<<<
@@ -9126,12 +9126,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__49 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_srlg_name, __pyx_n_s_model, __pyx_n_s_create_if_not_present, __pyx_n_s_get_srlg, __pyx_n_s_new_srlg, __pyx_n_s_remote_int, __pyx_n_s_msg); if (unlikely(!__pyx_tuple__49)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__49);
   __Pyx_GIVEREF(__pyx_tuple__49);
-  __pyx_codeobj__50 = (PyObject*)__Pyx_PyCode_New(4, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__49, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_add_to_srlg, 267, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__50)) __PYX_ERR(0, 267, __pyx_L1_error)
+  __pyx_codeobj__50 = (PyObject*)__Pyx_PyCode_New(4, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__49, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_add_to_srlg, 267, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__50)) __PYX_ERR(0, 267, __pyx_L1_error)
   __pyx_tuple__51 = PyTuple_Pack(1, ((PyObject *)Py_False)); if (unlikely(!__pyx_tuple__51)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__51);
   __Pyx_GIVEREF(__pyx_tuple__51);
 
-  /* "pyNTM/interface.pyx":311
+  /* "pyNTM/interface.py":311
  *             remote_int._srlgs.add(get_srlg)
  * 
  *     def remove_from_srlg(self, srlg_name, model):             # <<<<<<<<<<<<<<
@@ -9141,7 +9141,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__52 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_srlg_name, __pyx_n_s_model, __pyx_n_s_get_srlg, __pyx_n_s_msg, __pyx_n_s_remote_int); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 311, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__52);
   __Pyx_GIVEREF(__pyx_tuple__52);
-  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_interface_pyx, __pyx_n_s_remove_from_srlg, 311, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 311, __pyx_L1_error)
+  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_interface_py, __pyx_n_s_remove_from_srlg, 311, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 311, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -9478,7 +9478,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "pyNTM/interface.pyx":3
+  /* "pyNTM/interface.py":3
  * """An object representing a Node interface"""
  * 
  * from .exceptions import ModelException             # <<<<<<<<<<<<<<
@@ -9499,7 +9499,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/interface.pyx":4
+  /* "pyNTM/interface.py":4
  * 
  * from .exceptions import ModelException
  * from .rsvp import RSVP_LSP             # <<<<<<<<<<<<<<
@@ -9520,7 +9520,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/interface.pyx":5
+  /* "pyNTM/interface.py":5
  * from .exceptions import ModelException
  * from .rsvp import RSVP_LSP
  * from .srlg import SRLG             # <<<<<<<<<<<<<<
@@ -9541,7 +9541,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/interface.pyx":8
+  /* "pyNTM/interface.py":8
  * 
  * 
  * class Interface(object):             # <<<<<<<<<<<<<<
@@ -9553,7 +9553,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple_, __pyx_n_s_Interface, __pyx_n_s_Interface, (PyObject *) NULL, __pyx_n_s_pyNTM_interface, __pyx_kp_s_An_object_representing_a_Node_in); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/interface.pyx":11
+  /* "pyNTM/interface.py":11
  *     """An object representing a Node interface"""
  * 
  *     def __init__(self, name, cost, capacity, node_object, remote_node_object,             # <<<<<<<<<<<<<<
@@ -9566,7 +9566,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/interface.pyx":27
+  /* "pyNTM/interface.py":27
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -9576,7 +9576,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_9interface_9Interface_3_key, 0, __pyx_n_s_Interface__key, NULL, __pyx_n_s_pyNTM_interface, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/interface.pyx":26
+  /* "pyNTM/interface.py":26
  *         self.percent_reservable_bandwidth = percent_reservable_bandwidth
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -9589,7 +9589,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_key, __pyx_t_4) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":32
+  /* "pyNTM/interface.py":32
  * 
  *     # Modify the __hash__ and __eq__ methods to make comparisons easier
  *     def __eq__(self, other_object):             # <<<<<<<<<<<<<<
@@ -9601,7 +9601,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_eq, __pyx_t_4) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":41
+  /* "pyNTM/interface.py":41
  *                                                     other_object.capacity, other_object.circuit_id]
  * 
  *     def __ne__(self, other_object):             # <<<<<<<<<<<<<<
@@ -9613,7 +9613,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_ne, __pyx_t_4) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":47
+  /* "pyNTM/interface.py":47
  *                                                     other_object.capacity, other_object.circuit_id]
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -9625,7 +9625,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_hash, __pyx_t_4) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":51
+  /* "pyNTM/interface.py":51
  *         return hash(self.name+self.node_object.name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -9637,7 +9637,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_repr, __pyx_t_4) < 0) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":62
+  /* "pyNTM/interface.py":62
  * 
  *     @property
  *     def reservable_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -9647,7 +9647,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_9interface_9Interface_13reservable_bandwidth, 0, __pyx_n_s_Interface_reservable_bandwidth, NULL, __pyx_n_s_pyNTM_interface, __pyx_d, ((PyObject *)__pyx_codeobj__16)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/interface.pyx":61
+  /* "pyNTM/interface.py":61
  *                                               self.circuit_id)
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -9660,7 +9660,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_reservable_bandwidth, __pyx_t_3) < 0) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/interface.pyx":75
+  /* "pyNTM/interface.py":75
  * 
  *     @property
  *     def reserved_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -9670,7 +9670,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_9interface_9Interface_15reserved_bandwidth, 0, __pyx_n_s_Interface_reserved_bandwidth, NULL, __pyx_n_s_pyNTM_interface, __pyx_d, ((PyObject *)__pyx_codeobj__18)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/interface.pyx":74
+  /* "pyNTM/interface.py":74
  *             return -1.0
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -9683,7 +9683,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_reserved_bandwidth_2, __pyx_t_4) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":81
+  /* "pyNTM/interface.py":81
  *         return round(self._reserved_bandwidth, 1)
  * 
  *     @reserved_bandwidth.setter             # <<<<<<<<<<<<<<
@@ -9701,7 +9701,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/interface.pyx":82
+  /* "pyNTM/interface.py":82
  * 
  *     @reserved_bandwidth.setter
  *     def reserved_bandwidth(self, value):             # <<<<<<<<<<<<<<
@@ -9729,7 +9729,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_reserved_bandwidth_2, __pyx_t_4) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":94
+  /* "pyNTM/interface.py":94
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -9739,7 +9739,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_9interface_9Interface_19failed, 0, __pyx_n_s_Interface_failed, NULL, __pyx_n_s_pyNTM_interface, __pyx_d, ((PyObject *)__pyx_codeobj__22)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/interface.pyx":93
+  /* "pyNTM/interface.py":93
  *             raise ModelException("Interface reserved_bandwidth must be a float or integer")
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -9752,7 +9752,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_failed_2, __pyx_t_5) < 0) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pyNTM/interface.pyx":102
+  /* "pyNTM/interface.py":102
  *         return self._failed
  * 
  *     @failed.setter             # <<<<<<<<<<<<<<
@@ -9770,7 +9770,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":103
+  /* "pyNTM/interface.py":103
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -9798,7 +9798,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_failed_2, __pyx_t_5) < 0) __PYX_ERR(0, 103, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pyNTM/interface.pyx":136
+  /* "pyNTM/interface.py":136
  * 
  *     @property
  *     def cost(self):             # <<<<<<<<<<<<<<
@@ -9808,7 +9808,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_9interface_9Interface_23cost, 0, __pyx_n_s_Interface_cost, NULL, __pyx_n_s_pyNTM_interface, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "pyNTM/interface.pyx":135
+  /* "pyNTM/interface.py":135
  *             self.reserved_bandwidth = 0
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -9821,7 +9821,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_cost, __pyx_t_3) < 0) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/interface.pyx":139
+  /* "pyNTM/interface.py":139
  *         return self._cost
  * 
  *     @cost.setter             # <<<<<<<<<<<<<<
@@ -9839,7 +9839,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pyNTM/interface.pyx":140
+  /* "pyNTM/interface.py":140
  * 
  *     @cost.setter
  *     def cost(self, cost):             # <<<<<<<<<<<<<<
@@ -9867,7 +9867,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_cost, __pyx_t_3) < 0) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/interface.pyx":148
+  /* "pyNTM/interface.py":148
  * 
  *     @property
  *     def capacity(self):             # <<<<<<<<<<<<<<
@@ -9877,7 +9877,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_9interface_9Interface_27capacity, 0, __pyx_n_s_Interface_capacity, NULL, __pyx_n_s_pyNTM_interface, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/interface.pyx":147
+  /* "pyNTM/interface.py":147
  *         self._cost = cost
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -9890,7 +9890,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_capacity, __pyx_t_4) < 0) __PYX_ERR(0, 148, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":151
+  /* "pyNTM/interface.py":151
  *         return self._capacity
  * 
  *     @capacity.setter             # <<<<<<<<<<<<<<
@@ -9908,7 +9908,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/interface.pyx":152
+  /* "pyNTM/interface.py":152
  * 
  *     @capacity.setter
  *     def capacity(self, capacity):             # <<<<<<<<<<<<<<
@@ -9936,7 +9936,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_capacity, __pyx_t_4) < 0) __PYX_ERR(0, 152, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":157
+  /* "pyNTM/interface.py":157
  *         self._capacity = capacity
  * 
  *     def fail_interface(self, model):             # <<<<<<<<<<<<<<
@@ -9948,7 +9948,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_fail_interface, __pyx_t_4) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":169
+  /* "pyNTM/interface.py":169
  *         remote_interface.failed = True
  * 
  *     def unfail_interface(self, model):             # <<<<<<<<<<<<<<
@@ -9960,7 +9960,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_unfail_interface, __pyx_t_4) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":186
+  /* "pyNTM/interface.py":186
  *             raise ModelException(message)
  * 
  *     def get_remote_interface(self, model):             # <<<<<<<<<<<<<<
@@ -9972,7 +9972,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_remote_interface, __pyx_t_4) < 0) __PYX_ERR(0, 186, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":206
+  /* "pyNTM/interface.py":206
  *             raise ModelException(message)
  * 
  *     def get_circuit_object(self, model):             # <<<<<<<<<<<<<<
@@ -9984,7 +9984,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_circuit_object, __pyx_t_4) < 0) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":213
+  /* "pyNTM/interface.py":213
  *         return ckt
  * 
  *     def demands(self, model):             # <<<<<<<<<<<<<<
@@ -9996,7 +9996,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_demands, __pyx_t_4) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":238
+  /* "pyNTM/interface.py":238
  *         return dmd_list
  * 
  *     def lsps(self, model):             # <<<<<<<<<<<<<<
@@ -10008,7 +10008,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_lsps, __pyx_t_4) < 0) __PYX_ERR(0, 238, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":255
+  /* "pyNTM/interface.py":255
  * 
  *     @property
  *     def utilization(self):             # <<<<<<<<<<<<<<
@@ -10018,7 +10018,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_9interface_9Interface_43utilization, 0, __pyx_n_s_Interface_utilization, NULL, __pyx_n_s_pyNTM_interface, __pyx_d, ((PyObject *)__pyx_codeobj__46)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/interface.pyx":254
+  /* "pyNTM/interface.py":254
  *         return lsp_list
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -10031,7 +10031,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_utilization, __pyx_t_5) < 0) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pyNTM/interface.pyx":264
+  /* "pyNTM/interface.py":264
  * 
  *     @property
  *     def srlgs(self):             # <<<<<<<<<<<<<<
@@ -10041,7 +10041,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_9interface_9Interface_45srlgs, 0, __pyx_n_s_Interface_srlgs, NULL, __pyx_n_s_pyNTM_interface, __pyx_d, ((PyObject *)__pyx_codeobj__48)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "pyNTM/interface.pyx":263
+  /* "pyNTM/interface.py":263
  *             return float('%.2f' % util)
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -10054,7 +10054,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_srlgs_2, __pyx_t_4) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":267
+  /* "pyNTM/interface.py":267
  *         return self._srlgs
  * 
  *     def add_to_srlg(self, srlg_name, model, create_if_not_present=False):             # <<<<<<<<<<<<<<
@@ -10067,7 +10067,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_add_to_srlg, __pyx_t_4) < 0) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":311
+  /* "pyNTM/interface.py":311
  *             remote_int._srlgs.add(get_srlg)
  * 
  *     def remove_from_srlg(self, srlg_name, model):             # <<<<<<<<<<<<<<
@@ -10079,7 +10079,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_remove_from_srlg, __pyx_t_4) < 0) __PYX_ERR(0, 311, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/interface.pyx":8
+  /* "pyNTM/interface.py":8
  * 
  * 
  * class Interface(object):             # <<<<<<<<<<<<<<
@@ -10093,7 +10093,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/interface.pyx":1
+  /* "pyNTM/interface.py":1
  * """An object representing a Node interface"""             # <<<<<<<<<<<<<<
  * 
  * from .exceptions import ModelException

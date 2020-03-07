@@ -5,7 +5,7 @@
     "distutils": {
         "name": "pyNTM.demand",
         "sources": [
-            "demand.pyx"
+            "pyNTM/demand.py"
         ]
     },
     "module_name": "pyNTM.demand"
@@ -813,14 +813,14 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "demand.pyx",
+  "pyNTM/demand.py",
 };
 
 /*--- Type declarations ---*/
 struct __pyx_obj_5pyNTM_6demand___pyx_scope_struct___add_demand_path;
 struct __pyx_obj_5pyNTM_6demand___pyx_scope_struct_1_genexpr;
 
-/* "pyNTM/demand.pyx":33
+/* "pyNTM/demand.py":33
  *                 self.name)
  * 
  *     def _add_demand_path(self, model):             # <<<<<<<<<<<<<<
@@ -833,7 +833,7 @@ struct __pyx_obj_5pyNTM_6demand___pyx_scope_struct___add_demand_path {
 };
 
 
-/* "pyNTM/demand.pyx":44
+/* "pyNTM/demand.py":44
  * 
  *         # Find all LSPs that can carry the demand:
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -1386,13 +1386,13 @@ static const char __pyx_k_qualname[] = "__qualname__";
 static const char __pyx_k_metaclass[] = "__metaclass__";
 static const char __pyx_k_needed_bw[] = "needed_bw";
 static const char __pyx_k_ValueError[] = "ValueError";
-static const char __pyx_k_demand_pyx[] = "demand.pyx";
 static const char __pyx_k_Demand__key[] = "Demand._key";
 static const char __pyx_k_demand_path[] = "demand_path";
 static const char __pyx_k_pyNTM_demand[] = "pyNTM.demand";
 static const char __pyx_k_Demand___init[] = "Demand.__init__";
 static const char __pyx_k_Demand___repr[] = "Demand.__repr__";
 static const char __pyx_k_add_demand_path[] = "_add_demand_path";
+static const char __pyx_k_pyNTM_demand_py[] = "pyNTM/demand.py";
 static const char __pyx_k_dest_node_object[] = "dest_node_object";
 static const char __pyx_k_rsvp_lsp_objects[] = "rsvp_lsp_objects";
 static const char __pyx_k_get_shortest_path[] = "get_shortest_path";
@@ -1421,7 +1421,6 @@ static PyObject *__pyx_n_s_args;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_close;
 static PyObject *__pyx_n_s_demand_path;
-static PyObject *__pyx_kp_s_demand_pyx;
 static PyObject *__pyx_n_s_dest_node_object;
 static PyObject *__pyx_n_s_doc;
 static PyObject *__pyx_n_s_genexpr;
@@ -1442,6 +1441,7 @@ static PyObject *__pyx_n_s_path;
 static PyObject *__pyx_n_s_prepare;
 static PyObject *__pyx_n_s_property;
 static PyObject *__pyx_n_s_pyNTM_demand;
+static PyObject *__pyx_kp_s_pyNTM_demand_py;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_repr;
 static PyObject *__pyx_n_s_rsvp_lsp_objects;
@@ -1472,7 +1472,7 @@ static PyObject *__pyx_codeobj__9;
 static PyObject *__pyx_codeobj__11;
 /* Late includes */
 
-/* "pyNTM/demand.pyx":10
+/* "pyNTM/demand.py":10
  *     """
  * 
  *     def __init__(self, source_node_object, dest_node_object, traffic=0, name='none'):             # <<<<<<<<<<<<<<
@@ -1591,7 +1591,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand___init__(CYTHON_UNUSED PyObject
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pyNTM/demand.pyx":11
+  /* "pyNTM/demand.py":11
  * 
  *     def __init__(self, source_node_object, dest_node_object, traffic=0, name='none'):
  *         self.source_node_object = source_node_object             # <<<<<<<<<<<<<<
@@ -1600,7 +1600,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_source_node_object, __pyx_v_source_node_object) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
 
-  /* "pyNTM/demand.pyx":12
+  /* "pyNTM/demand.py":12
  *     def __init__(self, source_node_object, dest_node_object, traffic=0, name='none'):
  *         self.source_node_object = source_node_object
  *         self.dest_node_object = dest_node_object             # <<<<<<<<<<<<<<
@@ -1609,7 +1609,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dest_node_object, __pyx_v_dest_node_object) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
 
-  /* "pyNTM/demand.pyx":13
+  /* "pyNTM/demand.py":13
  *         self.source_node_object = source_node_object
  *         self.dest_node_object = dest_node_object
  *         self.traffic = traffic             # <<<<<<<<<<<<<<
@@ -1618,7 +1618,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_traffic, __pyx_v_traffic) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
 
-  /* "pyNTM/demand.pyx":14
+  /* "pyNTM/demand.py":14
  *         self.dest_node_object = dest_node_object
  *         self.traffic = traffic
  *         self.name = name             # <<<<<<<<<<<<<<
@@ -1627,7 +1627,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_name, __pyx_v_name) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
 
-  /* "pyNTM/demand.pyx":15
+  /* "pyNTM/demand.py":15
  *         self.traffic = traffic
  *         self.name = name
  *         self.path = 'Unrouted'             # <<<<<<<<<<<<<<
@@ -1636,7 +1636,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_path, __pyx_n_s_Unrouted) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
 
-  /* "pyNTM/demand.pyx":18
+  /* "pyNTM/demand.py":18
  * 
  *         # Validate traffic value
  *         if not(isinstance(traffic, (int, float))) or traffic < 0:             # <<<<<<<<<<<<<<
@@ -1667,7 +1667,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand___init__(CYTHON_UNUSED PyObject
   __pyx_L4_bool_binop_done:;
   if (unlikely(__pyx_t_1)) {
 
-    /* "pyNTM/demand.pyx":19
+    /* "pyNTM/demand.py":19
  *         # Validate traffic value
  *         if not(isinstance(traffic, (int, float))) or traffic < 0:
  *             raise ValueError('Must be a positive int or float')             # <<<<<<<<<<<<<<
@@ -1680,7 +1680,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand___init__(CYTHON_UNUSED PyObject
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __PYX_ERR(0, 19, __pyx_L1_error)
 
-    /* "pyNTM/demand.pyx":18
+    /* "pyNTM/demand.py":18
  * 
  *         # Validate traffic value
  *         if not(isinstance(traffic, (int, float))) or traffic < 0:             # <<<<<<<<<<<<<<
@@ -1689,7 +1689,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand___init__(CYTHON_UNUSED PyObject
  */
   }
 
-  /* "pyNTM/demand.pyx":10
+  /* "pyNTM/demand.py":10
  *     """
  * 
  *     def __init__(self, source_node_object, dest_node_object, traffic=0, name='none'):             # <<<<<<<<<<<<<<
@@ -1710,7 +1710,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand___init__(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "pyNTM/demand.pyx":22
+/* "pyNTM/demand.py":22
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -1742,7 +1742,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_2_key(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("_key", 0);
 
-  /* "pyNTM/demand.pyx":24
+  /* "pyNTM/demand.py":24
  *     def _key(self):
  *         """Unique identifier for the demand: (Node('source').name, Node('dest').name, name)"""
  *         return (self.source_node_object.name, self.dest_node_object.name, self.name)             # <<<<<<<<<<<<<<
@@ -1777,7 +1777,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_2_key(CYTHON_UNUSED PyObject *_
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/demand.pyx":22
+  /* "pyNTM/demand.py":22
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -1799,7 +1799,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_2_key(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "pyNTM/demand.pyx":26
+/* "pyNTM/demand.py":26
  *         return (self.source_node_object.name, self.dest_node_object.name, self.name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -1831,7 +1831,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_4__repr__(CYTHON_UNUSED PyObjec
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "pyNTM/demand.pyx":27
+  /* "pyNTM/demand.py":27
  * 
  *     def __repr__(self):
  *         return 'Demand(source = %s, dest = %s, traffic = %s, name = %r)' % \             # <<<<<<<<<<<<<<
@@ -1840,7 +1840,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_4__repr__(CYTHON_UNUSED PyObjec
  */
   __Pyx_XDECREF(__pyx_r);
 
-  /* "pyNTM/demand.pyx":28
+  /* "pyNTM/demand.py":28
  *     def __repr__(self):
  *         return 'Demand(source = %s, dest = %s, traffic = %s, name = %r)' % \
  *                (self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -1853,7 +1853,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_4__repr__(CYTHON_UNUSED PyObjec
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/demand.pyx":29
+  /* "pyNTM/demand.py":29
  *         return 'Demand(source = %s, dest = %s, traffic = %s, name = %r)' % \
  *                (self.source_node_object.name,
  *                 self.dest_node_object.name,             # <<<<<<<<<<<<<<
@@ -1866,7 +1866,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_4__repr__(CYTHON_UNUSED PyObjec
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/demand.pyx":30
+  /* "pyNTM/demand.py":30
  *                (self.source_node_object.name,
  *                 self.dest_node_object.name,
  *                 self.traffic,             # <<<<<<<<<<<<<<
@@ -1876,7 +1876,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_4__repr__(CYTHON_UNUSED PyObjec
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_traffic); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 30, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/demand.pyx":31
+  /* "pyNTM/demand.py":31
  *                 self.dest_node_object.name,
  *                 self.traffic,
  *                 self.name)             # <<<<<<<<<<<<<<
@@ -1886,7 +1886,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_4__repr__(CYTHON_UNUSED PyObjec
   __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_name); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/demand.pyx":28
+  /* "pyNTM/demand.py":28
  *     def __repr__(self):
  *         return 'Demand(source = %s, dest = %s, traffic = %s, name = %r)' % \
  *                (self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -1908,7 +1908,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_4__repr__(CYTHON_UNUSED PyObjec
   __pyx_t_1 = 0;
   __pyx_t_4 = 0;
 
-  /* "pyNTM/demand.pyx":27
+  /* "pyNTM/demand.py":27
  * 
  *     def __repr__(self):
  *         return 'Demand(source = %s, dest = %s, traffic = %s, name = %r)' % \             # <<<<<<<<<<<<<<
@@ -1922,7 +1922,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_4__repr__(CYTHON_UNUSED PyObjec
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/demand.pyx":26
+  /* "pyNTM/demand.py":26
  *         return (self.source_node_object.name, self.dest_node_object.name, self.name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -1945,7 +1945,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_4__repr__(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "pyNTM/demand.pyx":33
+/* "pyNTM/demand.py":33
  *                 self.name)
  * 
  *     def _add_demand_path(self, model):             # <<<<<<<<<<<<<<
@@ -2017,7 +2017,7 @@ static PyObject *__pyx_pw_5pyNTM_6demand_6Demand_7_add_demand_path(PyObject *__p
 }
 static PyObject *__pyx_gb_5pyNTM_6demand_6Demand_16_add_demand_path_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/demand.pyx":44
+/* "pyNTM/demand.py":44
  * 
  *         # Find all LSPs that can carry the demand:
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -2165,7 +2165,7 @@ static PyObject *__pyx_gb_5pyNTM_6demand_6Demand_16_add_demand_path_2generator(_
   return __pyx_r;
 }
 
-/* "pyNTM/demand.pyx":33
+/* "pyNTM/demand.py":33
  *                 self.name)
  * 
  *     def _add_demand_path(self, model):             # <<<<<<<<<<<<<<
@@ -2202,7 +2202,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_model);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_model);
 
-  /* "pyNTM/demand.pyx":41
+  /* "pyNTM/demand.py":41
  * 
  *         # Find if there is an LSP with source/dest same as demand source/dest
  *         demand_path = []             # <<<<<<<<<<<<<<
@@ -2214,7 +2214,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
   __pyx_v_demand_path = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/demand.pyx":44
+  /* "pyNTM/demand.py":44
  * 
  *         # Find all LSPs that can carry the demand:
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -2266,7 +2266,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
     __Pyx_XDECREF_SET(__pyx_v_lsp, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/demand.pyx":45
+    /* "pyNTM/demand.py":45
  *         # Find all LSPs that can carry the demand:
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects):
  *             if (lsp.source_node_object == self.source_node_object and             # <<<<<<<<<<<<<<
@@ -2288,7 +2288,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
       goto __pyx_L6_bool_binop_done;
     }
 
-    /* "pyNTM/demand.pyx":46
+    /* "pyNTM/demand.py":46
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects):
  *             if (lsp.source_node_object == self.source_node_object and
  *                     lsp.dest_node_object == self.dest_node_object and             # <<<<<<<<<<<<<<
@@ -2310,7 +2310,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
       goto __pyx_L6_bool_binop_done;
     }
 
-    /* "pyNTM/demand.pyx":47
+    /* "pyNTM/demand.py":47
  *             if (lsp.source_node_object == self.source_node_object and
  *                     lsp.dest_node_object == self.dest_node_object and
  *                     'Unrouted' not in lsp.path):             # <<<<<<<<<<<<<<
@@ -2325,7 +2325,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
     __pyx_t_5 = __pyx_t_9;
     __pyx_L6_bool_binop_done:;
 
-    /* "pyNTM/demand.pyx":45
+    /* "pyNTM/demand.py":45
  *         # Find all LSPs that can carry the demand:
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects):
  *             if (lsp.source_node_object == self.source_node_object and             # <<<<<<<<<<<<<<
@@ -2334,7 +2334,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
  */
     if (__pyx_t_5) {
 
-      /* "pyNTM/demand.pyx":49
+      /* "pyNTM/demand.py":49
  *                     'Unrouted' not in lsp.path):
  * 
  *                 demand_path.append(lsp)             # <<<<<<<<<<<<<<
@@ -2343,7 +2343,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
  */
       __pyx_t_10 = __Pyx_PyObject_Append(__pyx_v_demand_path, __pyx_v_lsp); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 49, __pyx_L1_error)
 
-      /* "pyNTM/demand.pyx":45
+      /* "pyNTM/demand.py":45
  *         # Find all LSPs that can carry the demand:
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects):
  *             if (lsp.source_node_object == self.source_node_object and             # <<<<<<<<<<<<<<
@@ -2352,7 +2352,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
  */
     }
 
-    /* "pyNTM/demand.pyx":44
+    /* "pyNTM/demand.py":44
  * 
  *         # Find all LSPs that can carry the demand:
  *         for lsp in (lsp for lsp in model.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -2362,7 +2362,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/demand.pyx":52
+  /* "pyNTM/demand.py":52
  * 
  *         # If demand can't be carried by LSP, do shortest path routing
  *         if demand_path == []:             # <<<<<<<<<<<<<<
@@ -2377,7 +2377,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_5) {
 
-    /* "pyNTM/demand.pyx":53
+    /* "pyNTM/demand.py":53
  *         # If demand can't be carried by LSP, do shortest path routing
  *         if demand_path == []:
  *             demand_path = model.get_shortest_path(self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -2392,7 +2392,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/demand.pyx":54
+    /* "pyNTM/demand.py":54
  *         if demand_path == []:
  *             demand_path = model.get_shortest_path(self.source_node_object.name,
  *                                                   self.dest_node_object.name, needed_bw=0)['path']             # <<<<<<<<<<<<<<
@@ -2405,7 +2405,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/demand.pyx":53
+    /* "pyNTM/demand.py":53
  *         # If demand can't be carried by LSP, do shortest path routing
  *         if demand_path == []:
  *             demand_path = model.get_shortest_path(self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -2421,7 +2421,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
     __pyx_t_6 = 0;
     __pyx_t_7 = 0;
 
-    /* "pyNTM/demand.pyx":54
+    /* "pyNTM/demand.py":54
  *         if demand_path == []:
  *             demand_path = model.get_shortest_path(self.source_node_object.name,
  *                                                   self.dest_node_object.name, needed_bw=0)['path']             # <<<<<<<<<<<<<<
@@ -2432,7 +2432,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
     __Pyx_GOTREF(__pyx_t_7);
     if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_needed_bw, __pyx_int_0) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
 
-    /* "pyNTM/demand.pyx":53
+    /* "pyNTM/demand.py":53
  *         # If demand can't be carried by LSP, do shortest path routing
  *         if demand_path == []:
  *             demand_path = model.get_shortest_path(self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -2445,7 +2445,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "pyNTM/demand.pyx":54
+    /* "pyNTM/demand.py":54
  *         if demand_path == []:
  *             demand_path = model.get_shortest_path(self.source_node_object.name,
  *                                                   self.dest_node_object.name, needed_bw=0)['path']             # <<<<<<<<<<<<<<
@@ -2458,7 +2458,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
     __Pyx_DECREF_SET(__pyx_v_demand_path, __pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "pyNTM/demand.pyx":52
+    /* "pyNTM/demand.py":52
  * 
  *         # If demand can't be carried by LSP, do shortest path routing
  *         if demand_path == []:             # <<<<<<<<<<<<<<
@@ -2467,7 +2467,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
  */
   }
 
-  /* "pyNTM/demand.pyx":56
+  /* "pyNTM/demand.py":56
  *                                                   self.dest_node_object.name, needed_bw=0)['path']
  * 
  *         if demand_path == []:             # <<<<<<<<<<<<<<
@@ -2482,7 +2482,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   if (__pyx_t_5) {
 
-    /* "pyNTM/demand.pyx":57
+    /* "pyNTM/demand.py":57
  * 
  *         if demand_path == []:
  *             demand_path = 'Unrouted'             # <<<<<<<<<<<<<<
@@ -2492,7 +2492,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
     __Pyx_INCREF(__pyx_n_s_Unrouted);
     __Pyx_DECREF_SET(__pyx_v_demand_path, __pyx_n_s_Unrouted);
 
-    /* "pyNTM/demand.pyx":56
+    /* "pyNTM/demand.py":56
  *                                                   self.dest_node_object.name, needed_bw=0)['path']
  * 
  *         if demand_path == []:             # <<<<<<<<<<<<<<
@@ -2501,7 +2501,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
  */
   }
 
-  /* "pyNTM/demand.pyx":59
+  /* "pyNTM/demand.py":59
  *             demand_path = 'Unrouted'
  * 
  *         self.path = demand_path             # <<<<<<<<<<<<<<
@@ -2510,7 +2510,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_path, __pyx_v_demand_path) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
 
-  /* "pyNTM/demand.pyx":61
+  /* "pyNTM/demand.py":61
  *         self.path = demand_path
  * 
  *         return self             # <<<<<<<<<<<<<<
@@ -2520,7 +2520,7 @@ static PyObject *__pyx_pf_5pyNTM_6demand_6Demand_6_add_demand_path(CYTHON_UNUSED
   __pyx_r = __pyx_v_self;
   goto __pyx_L0;
 
-  /* "pyNTM/demand.pyx":33
+  /* "pyNTM/demand.py":33
  *                 self.name)
  * 
  *     def _add_demand_path(self, model):             # <<<<<<<<<<<<<<
@@ -2837,7 +2837,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_close, __pyx_k_close, sizeof(__pyx_k_close), 0, 0, 1, 1},
   {&__pyx_n_s_demand_path, __pyx_k_demand_path, sizeof(__pyx_k_demand_path), 0, 0, 1, 1},
-  {&__pyx_kp_s_demand_pyx, __pyx_k_demand_pyx, sizeof(__pyx_k_demand_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_dest_node_object, __pyx_k_dest_node_object, sizeof(__pyx_k_dest_node_object), 0, 0, 1, 1},
   {&__pyx_n_s_doc, __pyx_k_doc, sizeof(__pyx_k_doc), 0, 0, 1, 1},
   {&__pyx_n_s_genexpr, __pyx_k_genexpr, sizeof(__pyx_k_genexpr), 0, 0, 1, 1},
@@ -2858,6 +2857,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
   {&__pyx_n_s_property, __pyx_k_property, sizeof(__pyx_k_property), 0, 0, 1, 1},
   {&__pyx_n_s_pyNTM_demand, __pyx_k_pyNTM_demand, sizeof(__pyx_k_pyNTM_demand), 0, 0, 1, 1},
+  {&__pyx_kp_s_pyNTM_demand_py, __pyx_k_pyNTM_demand_py, sizeof(__pyx_k_pyNTM_demand_py), 0, 0, 1, 0},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_repr, __pyx_k_repr, sizeof(__pyx_k_repr), 0, 0, 1, 1},
   {&__pyx_n_s_rsvp_lsp_objects, __pyx_k_rsvp_lsp_objects, sizeof(__pyx_k_rsvp_lsp_objects), 0, 0, 1, 1},
@@ -2882,7 +2882,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pyNTM/demand.pyx":19
+  /* "pyNTM/demand.py":19
  *         # Validate traffic value
  *         if not(isinstance(traffic, (int, float))) or traffic < 0:
  *             raise ValueError('Must be a positive int or float')             # <<<<<<<<<<<<<<
@@ -2893,7 +2893,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "pyNTM/demand.pyx":5
+  /* "pyNTM/demand.py":5
  * 
  * 
  * class Demand(object):             # <<<<<<<<<<<<<<
@@ -2904,7 +2904,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "pyNTM/demand.pyx":10
+  /* "pyNTM/demand.py":10
  *     """
  * 
  *     def __init__(self, source_node_object, dest_node_object, traffic=0, name='none'):             # <<<<<<<<<<<<<<
@@ -2914,12 +2914,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__3 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_source_node_object, __pyx_n_s_dest_node_object, __pyx_n_s_traffic, __pyx_n_s_name); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_demand_pyx, __pyx_n_s_init, 10, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_demand_py, __pyx_n_s_init, 10, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 10, __pyx_L1_error)
   __pyx_tuple__5 = PyTuple_Pack(2, ((PyObject *)__pyx_int_0), ((PyObject*)__pyx_n_s_none)); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "pyNTM/demand.pyx":22
+  /* "pyNTM/demand.py":22
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -2929,9 +2929,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__6 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_demand_pyx, __pyx_n_s_key, 22, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_demand_py, __pyx_n_s_key, 22, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 22, __pyx_L1_error)
 
-  /* "pyNTM/demand.pyx":26
+  /* "pyNTM/demand.py":26
  *         return (self.source_node_object.name, self.dest_node_object.name, self.name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -2941,9 +2941,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__8 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_demand_pyx, __pyx_n_s_repr, 26, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 26, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_demand_py, __pyx_n_s_repr, 26, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 26, __pyx_L1_error)
 
-  /* "pyNTM/demand.pyx":33
+  /* "pyNTM/demand.py":33
  *                 self.name)
  * 
  *     def _add_demand_path(self, model):             # <<<<<<<<<<<<<<
@@ -2953,7 +2953,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__10 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_demand_path, __pyx_n_s_lsp, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_demand_pyx, __pyx_n_s_add_demand_path, 33, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 33, __pyx_L1_error)
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_demand_py, __pyx_n_s_add_demand_path, 33, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -3252,7 +3252,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "pyNTM/demand.pyx":5
+  /* "pyNTM/demand.py":5
  * 
  * 
  * class Demand(object):             # <<<<<<<<<<<<<<
@@ -3264,7 +3264,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_2 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_tuple__2, __pyx_n_s_Demand, __pyx_n_s_Demand, (PyObject *) NULL, __pyx_n_s_pyNTM_demand, __pyx_kp_s_A_representation_of_traffic_loa); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "pyNTM/demand.pyx":10
+  /* "pyNTM/demand.py":10
  *     """
  * 
  *     def __init__(self, source_node_object, dest_node_object, traffic=0, name='none'):             # <<<<<<<<<<<<<<
@@ -3277,7 +3277,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/demand.pyx":22
+  /* "pyNTM/demand.py":22
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -3287,7 +3287,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_6demand_6Demand_3_key, 0, __pyx_n_s_Demand__key, NULL, __pyx_n_s_pyNTM_demand, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/demand.pyx":21
+  /* "pyNTM/demand.py":21
  *             raise ValueError('Must be a positive int or float')
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -3300,7 +3300,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_key, __pyx_t_4) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/demand.pyx":26
+  /* "pyNTM/demand.py":26
  *         return (self.source_node_object.name, self.dest_node_object.name, self.name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -3312,7 +3312,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_repr, __pyx_t_4) < 0) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/demand.pyx":33
+  /* "pyNTM/demand.py":33
  *                 self.name)
  * 
  *     def _add_demand_path(self, model):             # <<<<<<<<<<<<<<
@@ -3324,7 +3324,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_add_demand_path, __pyx_t_4) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/demand.pyx":5
+  /* "pyNTM/demand.py":5
  * 
  * 
  * class Demand(object):             # <<<<<<<<<<<<<<
@@ -3338,7 +3338,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/demand.pyx":1
+  /* "pyNTM/demand.py":1
  * """A Demand is a traffic load that traverses the network from a source Node             # <<<<<<<<<<<<<<
  * to a destination Node"""
  * 

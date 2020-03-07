@@ -5,7 +5,7 @@
     "distutils": {
         "name": "pyNTM.rsvp",
         "sources": [
-            "rsvp.pyx"
+            "pyNTM/rsvp.py"
         ]
     },
     "module_name": "pyNTM.rsvp"
@@ -813,14 +813,14 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "rsvp.pyx",
+  "pyNTM/rsvp.py",
 };
 
 /*--- Type declarations ---*/
 struct __pyx_obj_5pyNTM_4rsvp___pyx_scope_struct__demands_on_lsp;
 struct __pyx_obj_5pyNTM_4rsvp___pyx_scope_struct_1_genexpr;
 
-/* "pyNTM/rsvp.pyx":252
+/* "pyNTM/rsvp.py":252
  *         return candidate_path_info
  * 
  *     def demands_on_lsp(self, model):             # <<<<<<<<<<<<<<
@@ -833,7 +833,7 @@ struct __pyx_obj_5pyNTM_4rsvp___pyx_scope_struct__demands_on_lsp {
 };
 
 
-/* "pyNTM/rsvp.pyx":255
+/* "pyNTM/rsvp.py":255
  *         """Returns demands that LSP is transporting."""
  *         demand_list = []
  *         for demand in (demand for demand in model.demand_objects):             # <<<<<<<<<<<<<<
@@ -1508,7 +1508,6 @@ static const char __pyx_k_lsp_name[] = "lsp_name";
 static const char __pyx_k_new_path[] = "new_path";
 static const char __pyx_k_property[] = "property";
 static const char __pyx_k_qualname[] = "__qualname__";
-static const char __pyx_k_rsvp_pyx[] = "rsvp.pyx";
 static const char __pyx_k_interface[] = "interface";
 static const char __pyx_k_metaclass[] = "__metaclass__";
 static const char __pyx_k_needed_bw[] = "needed_bw";
@@ -1522,6 +1521,7 @@ static const char __pyx_k_demand_list[] = "demand_list";
 static const char __pyx_k_fewest_hops[] = "fewest_hops";
 static const char __pyx_k_RSVP_LSP__key[] = "RSVP_LSP._key";
 static const char __pyx_k_actual_metric[] = "actual_metric";
+static const char __pyx_k_pyNTM_rsvp_py[] = "pyNTM/rsvp.py";
 static const char __pyx_k_total_traffic[] = "total_traffic";
 static const char __pyx_k_ModelException[] = "ModelException";
 static const char __pyx_k_demand_objects[] = "demand_objects";
@@ -1649,6 +1649,7 @@ static PyObject *__pyx_n_s_property;
 static PyObject *__pyx_n_s_proposed_setup_bw;
 static PyObject *__pyx_n_s_proto_reservable_bw;
 static PyObject *__pyx_n_s_pyNTM_rsvp;
+static PyObject *__pyx_kp_s_pyNTM_rsvp_py;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_random;
 static PyObject *__pyx_n_s_repr;
@@ -1656,7 +1657,6 @@ static PyObject *__pyx_n_s_requested_bandwidth;
 static PyObject *__pyx_n_s_reservable_bandwidth;
 static PyObject *__pyx_n_s_reserved_bandwidth;
 static PyObject *__pyx_n_s_route_lsp;
-static PyObject *__pyx_kp_s_rsvp_pyx;
 static PyObject *__pyx_n_s_self;
 static PyObject *__pyx_n_s_send;
 static PyObject *__pyx_n_s_setter;
@@ -1722,7 +1722,7 @@ static PyObject *__pyx_codeobj__29;
 static PyObject *__pyx_codeobj__31;
 /* Late includes */
 
-/* "pyNTM/rsvp.pyx":30
+/* "pyNTM/rsvp.py":30
  *     """
  * 
  *     def __init__(self, source_node_object, dest_node_object,             # <<<<<<<<<<<<<<
@@ -1747,7 +1747,7 @@ static PyObject *__pyx_pw_5pyNTM_4rsvp_8RSVP_LSP_1__init__(PyObject *__pyx_self,
     PyObject* values[5] = {0,0,0,0,0};
     values[3] = ((PyObject *)((PyObject*)__pyx_n_s_none));
 
-    /* "pyNTM/rsvp.pyx":31
+    /* "pyNTM/rsvp.py":31
  * 
  *     def __init__(self, source_node_object, dest_node_object,
  *                  lsp_name='none', configured_setup_bandwidth=None):             # <<<<<<<<<<<<<<
@@ -1834,7 +1834,7 @@ static PyObject *__pyx_pw_5pyNTM_4rsvp_8RSVP_LSP_1__init__(PyObject *__pyx_self,
   __pyx_L4_argument_unpacking_done:;
   __pyx_r = __pyx_pf_5pyNTM_4rsvp_8RSVP_LSP___init__(__pyx_self, __pyx_v_self, __pyx_v_source_node_object, __pyx_v_dest_node_object, __pyx_v_lsp_name, __pyx_v_configured_setup_bandwidth);
 
-  /* "pyNTM/rsvp.pyx":30
+  /* "pyNTM/rsvp.py":30
  *     """
  * 
  *     def __init__(self, source_node_object, dest_node_object,             # <<<<<<<<<<<<<<
@@ -1852,7 +1852,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP___init__(CYTHON_UNUSED PyObject
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pyNTM/rsvp.pyx":33
+  /* "pyNTM/rsvp.py":33
  *                  lsp_name='none', configured_setup_bandwidth=None):
  * 
  *         self.source_node_object = source_node_object             # <<<<<<<<<<<<<<
@@ -1861,7 +1861,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_source_node_object, __pyx_v_source_node_object) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":34
+  /* "pyNTM/rsvp.py":34
  * 
  *         self.source_node_object = source_node_object
  *         self.dest_node_object = dest_node_object             # <<<<<<<<<<<<<<
@@ -1870,7 +1870,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dest_node_object, __pyx_v_dest_node_object) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":35
+  /* "pyNTM/rsvp.py":35
  *         self.source_node_object = source_node_object
  *         self.dest_node_object = dest_node_object
  *         self.lsp_name = lsp_name             # <<<<<<<<<<<<<<
@@ -1879,7 +1879,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lsp_name, __pyx_v_lsp_name) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":36
+  /* "pyNTM/rsvp.py":36
  *         self.dest_node_object = dest_node_object
  *         self.lsp_name = lsp_name
  *         self.path = 'Unrouted - initial'             # <<<<<<<<<<<<<<
@@ -1888,7 +1888,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_path, __pyx_kp_s_Unrouted_initial) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":37
+  /* "pyNTM/rsvp.py":37
  *         self.lsp_name = lsp_name
  *         self.path = 'Unrouted - initial'
  *         self.reserved_bandwidth = 'Unrouted - initial'             # <<<<<<<<<<<<<<
@@ -1897,7 +1897,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_reserved_bandwidth, __pyx_kp_s_Unrouted_initial) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":38
+  /* "pyNTM/rsvp.py":38
  *         self.path = 'Unrouted - initial'
  *         self.reserved_bandwidth = 'Unrouted - initial'
  *         self._setup_bandwidth = 'Unrouted - initial'             # <<<<<<<<<<<<<<
@@ -1906,7 +1906,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_setup_bandwidth, __pyx_kp_s_Unrouted_initial) < 0) __PYX_ERR(0, 38, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":39
+  /* "pyNTM/rsvp.py":39
  *         self.reserved_bandwidth = 'Unrouted - initial'
  *         self._setup_bandwidth = 'Unrouted - initial'
  *         self.configured_setup_bandwidth = configured_setup_bandwidth             # <<<<<<<<<<<<<<
@@ -1915,7 +1915,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP___init__(CYTHON_UNUSED PyObject
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_configured_setup_bandwidth, __pyx_v_configured_setup_bandwidth) < 0) __PYX_ERR(0, 39, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":30
+  /* "pyNTM/rsvp.py":30
  *     """
  * 
  *     def __init__(self, source_node_object, dest_node_object,             # <<<<<<<<<<<<<<
@@ -1935,7 +1935,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP___init__(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":42
+/* "pyNTM/rsvp.py":42
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -1967,7 +1967,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_2_key(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("_key", 0);
 
-  /* "pyNTM/rsvp.pyx":44
+  /* "pyNTM/rsvp.py":44
  *     def _key(self):
  *         """Unique identifier for the rsvp lsp: (Node('source').name, Node('dest').name, name)"""
  *         return (self.source_node_object.name, self.dest_node_object.name, self.lsp_name)             # <<<<<<<<<<<<<<
@@ -2002,7 +2002,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_2_key(CYTHON_UNUSED PyObject *_
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":42
+  /* "pyNTM/rsvp.py":42
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -2024,7 +2024,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_2_key(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":46
+/* "pyNTM/rsvp.py":46
  *         return (self.source_node_object.name, self.dest_node_object.name, self.lsp_name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -2055,7 +2055,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_4__repr__(CYTHON_UNUSED PyObjec
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "pyNTM/rsvp.pyx":47
+  /* "pyNTM/rsvp.py":47
  * 
  *     def __repr__(self):
  *         return 'RSVP_LSP(source = %s, dest = %s, lsp_name = %r)' % \             # <<<<<<<<<<<<<<
@@ -2064,7 +2064,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_4__repr__(CYTHON_UNUSED PyObjec
  */
   __Pyx_XDECREF(__pyx_r);
 
-  /* "pyNTM/rsvp.pyx":48
+  /* "pyNTM/rsvp.py":48
  *     def __repr__(self):
  *         return 'RSVP_LSP(source = %s, dest = %s, lsp_name = %r)' % \
  *                (self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -2077,7 +2077,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_4__repr__(CYTHON_UNUSED PyObjec
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":49
+  /* "pyNTM/rsvp.py":49
  *         return 'RSVP_LSP(source = %s, dest = %s, lsp_name = %r)' % \
  *                (self.source_node_object.name,
  *                 self.dest_node_object.name,             # <<<<<<<<<<<<<<
@@ -2090,7 +2090,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_4__repr__(CYTHON_UNUSED PyObjec
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":50
+  /* "pyNTM/rsvp.py":50
  *                (self.source_node_object.name,
  *                 self.dest_node_object.name,
  *                 self.lsp_name)             # <<<<<<<<<<<<<<
@@ -2100,7 +2100,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_4__repr__(CYTHON_UNUSED PyObjec
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_lsp_name); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 50, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/rsvp.pyx":48
+  /* "pyNTM/rsvp.py":48
  *     def __repr__(self):
  *         return 'RSVP_LSP(source = %s, dest = %s, lsp_name = %r)' % \
  *                (self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -2119,7 +2119,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_4__repr__(CYTHON_UNUSED PyObjec
   __pyx_t_3 = 0;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":47
+  /* "pyNTM/rsvp.py":47
  * 
  *     def __repr__(self):
  *         return 'RSVP_LSP(source = %s, dest = %s, lsp_name = %r)' % \             # <<<<<<<<<<<<<<
@@ -2133,7 +2133,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_4__repr__(CYTHON_UNUSED PyObjec
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":46
+  /* "pyNTM/rsvp.py":46
  *         return (self.source_node_object.name, self.dest_node_object.name, self.lsp_name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -2155,7 +2155,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_4__repr__(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":52
+/* "pyNTM/rsvp.py":52
  *                 self.lsp_name)
  * 
  *     def _find_path_cost_and_headroom_routed_lsp(self, candidate_paths):             # <<<<<<<<<<<<<<
@@ -2250,7 +2250,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
   int __pyx_t_12;
   __Pyx_RefNannySetupContext("_find_path_cost_and_headroom_routed_lsp", 0);
 
-  /* "pyNTM/rsvp.pyx":67
+  /* "pyNTM/rsvp.py":67
  * 
  *         # List to hold info on each candidate path
  *         candidate_path_info = []             # <<<<<<<<<<<<<<
@@ -2262,7 +2262,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
   __pyx_v_candidate_path_info = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":70
+  /* "pyNTM/rsvp.py":70
  * 
  *         # Find the path cost and path headroom for each path candidate
  *         for path in candidate_paths['path']:             # <<<<<<<<<<<<<<
@@ -2314,7 +2314,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
     __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/rsvp.pyx":71
+    /* "pyNTM/rsvp.py":71
  *         # Find the path cost and path headroom for each path candidate
  *         for path in candidate_paths['path']:
  *             path_cost = 0             # <<<<<<<<<<<<<<
@@ -2324,7 +2324,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
     __Pyx_INCREF(__pyx_int_0);
     __Pyx_XDECREF_SET(__pyx_v_path_cost, __pyx_int_0);
 
-    /* "pyNTM/rsvp.pyx":72
+    /* "pyNTM/rsvp.py":72
  *         for path in candidate_paths['path']:
  *             path_cost = 0
  *             for interface in path:             # <<<<<<<<<<<<<<
@@ -2373,7 +2373,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
       __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "pyNTM/rsvp.pyx":73
+      /* "pyNTM/rsvp.py":73
  *             path_cost = 0
  *             for interface in path:
  *                 path_cost += interface.cost             # <<<<<<<<<<<<<<
@@ -2388,7 +2388,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
       __Pyx_DECREF_SET(__pyx_v_path_cost, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "pyNTM/rsvp.pyx":72
+      /* "pyNTM/rsvp.py":72
  *         for path in candidate_paths['path']:
  *             path_cost = 0
  *             for interface in path:             # <<<<<<<<<<<<<<
@@ -2398,7 +2398,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/rsvp.pyx":79
+    /* "pyNTM/rsvp.py":79
  *             # the LSP's current path, add back in the
  *             # reserved bandwidth for the LSP to that interface
  *             proto_reservable_bw = {}             # <<<<<<<<<<<<<<
@@ -2410,7 +2410,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
     __Pyx_XDECREF_SET(__pyx_v_proto_reservable_bw, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "pyNTM/rsvp.pyx":80
+    /* "pyNTM/rsvp.py":80
  *             # reserved bandwidth for the LSP to that interface
  *             proto_reservable_bw = {}
  *             for interface in path:             # <<<<<<<<<<<<<<
@@ -2459,7 +2459,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
       __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "pyNTM/rsvp.pyx":81
+      /* "pyNTM/rsvp.py":81
  *             proto_reservable_bw = {}
  *             for interface in path:
  *                 if interface in self.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -2476,7 +2476,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
       __pyx_t_10 = (__pyx_t_9 != 0);
       if (__pyx_t_10) {
 
-        /* "pyNTM/rsvp.pyx":82
+        /* "pyNTM/rsvp.py":82
  *             for interface in path:
  *                 if interface in self.path['interfaces']:
  *                     proto_reservable_bw[interface] = interface.reservable_bandwidth + self.reserved_bandwidth             # <<<<<<<<<<<<<<
@@ -2494,7 +2494,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
         if (unlikely(PyDict_SetItem(__pyx_v_proto_reservable_bw, __pyx_v_interface, __pyx_t_11) < 0)) __PYX_ERR(0, 82, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-        /* "pyNTM/rsvp.pyx":81
+        /* "pyNTM/rsvp.py":81
  *             proto_reservable_bw = {}
  *             for interface in path:
  *                 if interface in self.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -2504,7 +2504,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
         goto __pyx_L9;
       }
 
-      /* "pyNTM/rsvp.pyx":84
+      /* "pyNTM/rsvp.py":84
  *                     proto_reservable_bw[interface] = interface.reservable_bandwidth + self.reserved_bandwidth
  *                 else:
  *                     proto_reservable_bw[interface] = interface.reservable_bandwidth             # <<<<<<<<<<<<<<
@@ -2519,7 +2519,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
       }
       __pyx_L9:;
 
-      /* "pyNTM/rsvp.pyx":80
+      /* "pyNTM/rsvp.py":80
  *             # reserved bandwidth for the LSP to that interface
  *             proto_reservable_bw = {}
  *             for interface in path:             # <<<<<<<<<<<<<<
@@ -2529,7 +2529,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/rsvp.pyx":89
+    /* "pyNTM/rsvp.py":89
  *             # that the path can handle without using more than a component
  *             # interface's reservable_bandwidth
  *             baseline_path_reservable_bw = min(proto_reservable_bw.values())             # <<<<<<<<<<<<<<
@@ -2544,7 +2544,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
     __Pyx_XDECREF_SET(__pyx_v_baseline_path_reservable_bw, __pyx_t_11);
     __pyx_t_11 = 0;
 
-    /* "pyNTM/rsvp.pyx":91
+    /* "pyNTM/rsvp.py":91
  *             baseline_path_reservable_bw = min(proto_reservable_bw.values())
  * 
  *             path_info = {'interfaces': path, 'path_cost': path_cost,             # <<<<<<<<<<<<<<
@@ -2556,7 +2556,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
     if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_interfaces, __pyx_v_path) < 0) __PYX_ERR(0, 91, __pyx_L1_error)
     if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_path_cost, __pyx_v_path_cost) < 0) __PYX_ERR(0, 91, __pyx_L1_error)
 
-    /* "pyNTM/rsvp.pyx":92
+    /* "pyNTM/rsvp.py":92
  * 
  *             path_info = {'interfaces': path, 'path_cost': path_cost,
  *                          'baseline_path_reservable_bw': baseline_path_reservable_bw}             # <<<<<<<<<<<<<<
@@ -2567,7 +2567,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
     __Pyx_XDECREF_SET(__pyx_v_path_info, ((PyObject*)__pyx_t_11));
     __pyx_t_11 = 0;
 
-    /* "pyNTM/rsvp.pyx":94
+    /* "pyNTM/rsvp.py":94
  *                          'baseline_path_reservable_bw': baseline_path_reservable_bw}
  * 
  *             candidate_path_info.append(path_info)             # <<<<<<<<<<<<<<
@@ -2576,7 +2576,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
  */
     __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_candidate_path_info, __pyx_v_path_info); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 94, __pyx_L1_error)
 
-    /* "pyNTM/rsvp.pyx":70
+    /* "pyNTM/rsvp.py":70
  * 
  *         # Find the path cost and path headroom for each path candidate
  *         for path in candidate_paths['path']:             # <<<<<<<<<<<<<<
@@ -2586,7 +2586,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/rsvp.pyx":96
+  /* "pyNTM/rsvp.py":96
  *             candidate_path_info.append(path_info)
  * 
  *         return candidate_path_info             # <<<<<<<<<<<<<<
@@ -2598,7 +2598,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
   __pyx_r = __pyx_v_candidate_path_info;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":52
+  /* "pyNTM/rsvp.py":52
  *                 self.lsp_name)
  * 
  *     def _find_path_cost_and_headroom_routed_lsp(self, candidate_paths):             # <<<<<<<<<<<<<<
@@ -2628,7 +2628,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_6_find_path_cost_and_headroom_r
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":99
+/* "pyNTM/rsvp.py":99
  * 
  *     @property
  *     def setup_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -2657,7 +2657,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_8setup_bandwidth(CYTHON_UNUSED 
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("setup_bandwidth", 0);
 
-  /* "pyNTM/rsvp.pyx":105
+  /* "pyNTM/rsvp.py":105
  *         """
  * 
  *         return self._setup_bandwidth             # <<<<<<<<<<<<<<
@@ -2671,7 +2671,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_8setup_bandwidth(CYTHON_UNUSED 
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":99
+  /* "pyNTM/rsvp.py":99
  * 
  *     @property
  *     def setup_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -2690,7 +2690,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_8setup_bandwidth(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":108
+/* "pyNTM/rsvp.py":108
  * 
  *     @setup_bandwidth.setter
  *     def setup_bandwidth(self, proposed_setup_bw):             # <<<<<<<<<<<<<<
@@ -2771,7 +2771,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("setup_bandwidth", 0);
 
-  /* "pyNTM/rsvp.pyx":116
+  /* "pyNTM/rsvp.py":116
  * 
  *         # Check for configured_setup_bandwidth
  *         if self.configured_setup_bandwidth:             # <<<<<<<<<<<<<<
@@ -2784,7 +2784,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "pyNTM/rsvp.pyx":117
+    /* "pyNTM/rsvp.py":117
  *         # Check for configured_setup_bandwidth
  *         if self.configured_setup_bandwidth:
  *             self._setup_bandwidth = float(self.configured_setup_bandwidth)             # <<<<<<<<<<<<<<
@@ -2799,7 +2799,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_setup_bandwidth, __pyx_t_3) < 0) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "pyNTM/rsvp.pyx":116
+    /* "pyNTM/rsvp.py":116
  * 
  *         # Check for configured_setup_bandwidth
  *         if self.configured_setup_bandwidth:             # <<<<<<<<<<<<<<
@@ -2809,7 +2809,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
     goto __pyx_L3;
   }
 
-  /* "pyNTM/rsvp.pyx":118
+  /* "pyNTM/rsvp.py":118
  *         if self.configured_setup_bandwidth:
  *             self._setup_bandwidth = float(self.configured_setup_bandwidth)
  *         elif proposed_setup_bw >= 0:             # <<<<<<<<<<<<<<
@@ -2821,7 +2821,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_2) {
 
-    /* "pyNTM/rsvp.pyx":119
+    /* "pyNTM/rsvp.py":119
  *             self._setup_bandwidth = float(self.configured_setup_bandwidth)
  *         elif proposed_setup_bw >= 0:
  *             self._setup_bandwidth = float(proposed_setup_bw)             # <<<<<<<<<<<<<<
@@ -2833,7 +2833,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_setup_bandwidth, __pyx_t_3) < 0) __PYX_ERR(0, 119, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "pyNTM/rsvp.pyx":118
+    /* "pyNTM/rsvp.py":118
  *         if self.configured_setup_bandwidth:
  *             self._setup_bandwidth = float(self.configured_setup_bandwidth)
  *         elif proposed_setup_bw >= 0:             # <<<<<<<<<<<<<<
@@ -2843,7 +2843,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
     goto __pyx_L3;
   }
 
-  /* "pyNTM/rsvp.pyx":120
+  /* "pyNTM/rsvp.py":120
  *         elif proposed_setup_bw >= 0:
  *             self._setup_bandwidth = float(proposed_setup_bw)
  *         elif proposed_setup_bw < 0:             # <<<<<<<<<<<<<<
@@ -2855,7 +2855,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (unlikely(__pyx_t_2)) {
 
-    /* "pyNTM/rsvp.pyx":121
+    /* "pyNTM/rsvp.py":121
  *             self._setup_bandwidth = float(proposed_setup_bw)
  *         elif proposed_setup_bw < 0:
  *             msg = "setup_bandwidth must be 0 or greater"             # <<<<<<<<<<<<<<
@@ -2865,7 +2865,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
     __Pyx_INCREF(__pyx_kp_s_setup_bandwidth_must_be_0_or_gre);
     __pyx_v_msg = __pyx_kp_s_setup_bandwidth_must_be_0_or_gre;
 
-    /* "pyNTM/rsvp.pyx":122
+    /* "pyNTM/rsvp.py":122
  *         elif proposed_setup_bw < 0:
  *             msg = "setup_bandwidth must be 0 or greater"
  *             raise ModelException(msg)             # <<<<<<<<<<<<<<
@@ -2893,7 +2893,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(0, 122, __pyx_L1_error)
 
-    /* "pyNTM/rsvp.pyx":120
+    /* "pyNTM/rsvp.py":120
  *         elif proposed_setup_bw >= 0:
  *             self._setup_bandwidth = float(proposed_setup_bw)
  *         elif proposed_setup_bw < 0:             # <<<<<<<<<<<<<<
@@ -2903,7 +2903,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
   }
   __pyx_L3:;
 
-  /* "pyNTM/rsvp.pyx":108
+  /* "pyNTM/rsvp.py":108
  * 
  *     @setup_bandwidth.setter
  *     def setup_bandwidth(self, proposed_setup_bw):             # <<<<<<<<<<<<<<
@@ -2927,7 +2927,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_10setup_bandwidth(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":124
+/* "pyNTM/rsvp.py":124
  *             raise ModelException(msg)
  * 
  *     def find_rsvp_path_w_bw(self, requested_bandwidth, model):             # <<<<<<<<<<<<<<
@@ -3025,7 +3025,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
   int __pyx_t_9;
   __Pyx_RefNannySetupContext("find_rsvp_path_w_bw", 0);
 
-  /* "pyNTM/rsvp.pyx":141
+  /* "pyNTM/rsvp.py":141
  *         # Get candidate paths; only include interfaces that have requested_bandwidth
  *         # of reservable_bandwidth
  *         candidate_paths = model.get_shortest_path_for_routed_lsp(self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -3040,7 +3040,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":142
+  /* "pyNTM/rsvp.py":142
  *         # of reservable_bandwidth
  *         candidate_paths = model.get_shortest_path_for_routed_lsp(self.source_node_object.name,
  *                                                                  self.dest_node_object.name,             # <<<<<<<<<<<<<<
@@ -3053,7 +3053,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":143
+  /* "pyNTM/rsvp.py":143
  *         candidate_paths = model.get_shortest_path_for_routed_lsp(self.source_node_object.name,
  *                                                                  self.dest_node_object.name,
  *                                                                  self, requested_bandwidth)             # <<<<<<<<<<<<<<
@@ -3118,7 +3118,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
   __pyx_v_candidate_paths = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":146
+  /* "pyNTM/rsvp.py":146
  * 
  *         # Find the path cost and path headroom for each path candidate
  *         candidate_path_info = self._find_path_cost_and_headroom_routed_lsp(candidate_paths)             # <<<<<<<<<<<<<<
@@ -3145,7 +3145,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
   __pyx_v_candidate_path_info = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":149
+  /* "pyNTM/rsvp.py":149
  * 
  *         # If there are no paths with enough headroom, return self
  *         if len(candidate_path_info) == 0:             # <<<<<<<<<<<<<<
@@ -3156,7 +3156,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
   __pyx_t_9 = ((__pyx_t_8 == 0) != 0);
   if (__pyx_t_9) {
 
-    /* "pyNTM/rsvp.pyx":150
+    /* "pyNTM/rsvp.py":150
  *         # If there are no paths with enough headroom, return self
  *         if len(candidate_path_info) == 0:
  *             return self             # <<<<<<<<<<<<<<
@@ -3168,7 +3168,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
     __pyx_r = __pyx_v_self;
     goto __pyx_L0;
 
-    /* "pyNTM/rsvp.pyx":149
+    /* "pyNTM/rsvp.py":149
  * 
  *         # If there are no paths with enough headroom, return self
  *         if len(candidate_path_info) == 0:             # <<<<<<<<<<<<<<
@@ -3177,7 +3177,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
  */
   }
 
-  /* "pyNTM/rsvp.pyx":152
+  /* "pyNTM/rsvp.py":152
  *             return self
  *         # If there is only one path with enough headroom, make that self.path
  *         elif len(candidate_path_info) == 1:             # <<<<<<<<<<<<<<
@@ -3188,7 +3188,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
   __pyx_t_9 = ((__pyx_t_8 == 1) != 0);
   if (__pyx_t_9) {
 
-    /* "pyNTM/rsvp.pyx":153
+    /* "pyNTM/rsvp.py":153
  *         # If there is only one path with enough headroom, make that self.path
  *         elif len(candidate_path_info) == 1:
  *             self.path = candidate_path_info[0]             # <<<<<<<<<<<<<<
@@ -3200,7 +3200,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_path, __pyx_t_1) < 0) __PYX_ERR(0, 153, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/rsvp.pyx":152
+    /* "pyNTM/rsvp.py":152
  *             return self
  *         # If there is only one path with enough headroom, make that self.path
  *         elif len(candidate_path_info) == 1:             # <<<<<<<<<<<<<<
@@ -3210,7 +3210,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
     goto __pyx_L3;
   }
 
-  /* "pyNTM/rsvp.pyx":156
+  /* "pyNTM/rsvp.py":156
  *         # If there is more than one path with enough headroom,
  *         # choose one at random and make that self.path
  *         elif len(candidate_path_info) > 1:             # <<<<<<<<<<<<<<
@@ -3221,7 +3221,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
   __pyx_t_9 = ((__pyx_t_8 > 1) != 0);
   if (__pyx_t_9) {
 
-    /* "pyNTM/rsvp.pyx":157
+    /* "pyNTM/rsvp.py":157
  *         # choose one at random and make that self.path
  *         elif len(candidate_path_info) > 1:
  *             self.path = random.choice(candidate_path_info)             # <<<<<<<<<<<<<<
@@ -3251,7 +3251,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_path, __pyx_t_1) < 0) __PYX_ERR(0, 157, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/rsvp.pyx":156
+    /* "pyNTM/rsvp.py":156
  *         # If there is more than one path with enough headroom,
  *         # choose one at random and make that self.path
  *         elif len(candidate_path_info) > 1:             # <<<<<<<<<<<<<<
@@ -3261,7 +3261,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
   }
   __pyx_L3:;
 
-  /* "pyNTM/rsvp.pyx":159
+  /* "pyNTM/rsvp.py":159
  *             self.path = random.choice(candidate_path_info)
  * 
  *         self.reserved_bandwidth = requested_bandwidth             # <<<<<<<<<<<<<<
@@ -3270,7 +3270,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_reserved_bandwidth, __pyx_v_requested_bandwidth) < 0) __PYX_ERR(0, 159, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":160
+  /* "pyNTM/rsvp.py":160
  * 
  *         self.reserved_bandwidth = requested_bandwidth
  *         self.setup_bandwidth = requested_bandwidth             # <<<<<<<<<<<<<<
@@ -3279,7 +3279,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_setup_bandwidth_2, __pyx_v_requested_bandwidth) < 0) __PYX_ERR(0, 160, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":161
+  /* "pyNTM/rsvp.py":161
  *         self.reserved_bandwidth = requested_bandwidth
  *         self.setup_bandwidth = requested_bandwidth
  *         return self             # <<<<<<<<<<<<<<
@@ -3291,7 +3291,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
   __pyx_r = __pyx_v_self;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":124
+  /* "pyNTM/rsvp.py":124
  *             raise ModelException(msg)
  * 
  *     def find_rsvp_path_w_bw(self, requested_bandwidth, model):             # <<<<<<<<<<<<<<
@@ -3317,7 +3317,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_12find_rsvp_path_w_bw(CYTHON_UN
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":163
+/* "pyNTM/rsvp.py":163
  *         return self
  * 
  *     def _add_rsvp_lsp_path(self, model):             # <<<<<<<<<<<<<<
@@ -3412,7 +3412,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   Py_ssize_t __pyx_t_12;
   __Pyx_RefNannySetupContext("_add_rsvp_lsp_path", 0);
 
-  /* "pyNTM/rsvp.pyx":175
+  /* "pyNTM/rsvp.py":175
  * 
  *         # Try all shortest paths with needed reservable bandwidth
  *         candidate_paths = model.get_shortest_path(self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -3427,7 +3427,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":176
+  /* "pyNTM/rsvp.py":176
  *         # Try all shortest paths with needed reservable bandwidth
  *         candidate_paths = model.get_shortest_path(self.source_node_object.name,
  *                                                   self.dest_node_object.name, self.setup_bandwidth)             # <<<<<<<<<<<<<<
@@ -3498,7 +3498,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   __pyx_v_candidate_paths = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":184
+  /* "pyNTM/rsvp.py":184
  * 
  *         # Option a.  There are no viable paths on the topology to route LSP - LSP will be unrouted
  *         if candidate_paths['path'] == []:             # <<<<<<<<<<<<<<
@@ -3516,7 +3516,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   if (__pyx_t_9) {
 
-    /* "pyNTM/rsvp.pyx":186
+    /* "pyNTM/rsvp.py":186
  *         if candidate_paths['path'] == []:
  *             # If there are no possible paths, then LSP is Unrouted
  *             self.path = 'Unrouted'             # <<<<<<<<<<<<<<
@@ -3525,7 +3525,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_path, __pyx_n_s_Unrouted) < 0) __PYX_ERR(0, 186, __pyx_L1_error)
 
-    /* "pyNTM/rsvp.pyx":187
+    /* "pyNTM/rsvp.py":187
  *             # If there are no possible paths, then LSP is Unrouted
  *             self.path = 'Unrouted'
  *             self.reserved_bandwidth = 'Unrouted'             # <<<<<<<<<<<<<<
@@ -3534,7 +3534,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_reserved_bandwidth, __pyx_n_s_Unrouted) < 0) __PYX_ERR(0, 187, __pyx_L1_error)
 
-    /* "pyNTM/rsvp.pyx":188
+    /* "pyNTM/rsvp.py":188
  *             self.path = 'Unrouted'
  *             self.reserved_bandwidth = 'Unrouted'
  *             return self             # <<<<<<<<<<<<<<
@@ -3546,7 +3546,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
     __pyx_r = __pyx_v_self;
     goto __pyx_L0;
 
-    /* "pyNTM/rsvp.pyx":184
+    /* "pyNTM/rsvp.py":184
  * 
  *         # Option a.  There are no viable paths on the topology to route LSP - LSP will be unrouted
  *         if candidate_paths['path'] == []:             # <<<<<<<<<<<<<<
@@ -3555,7 +3555,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
  */
   }
 
-  /* "pyNTM/rsvp.pyx":190
+  /* "pyNTM/rsvp.py":190
  *             return self
  * 
  *         self.path = {}             # <<<<<<<<<<<<<<
@@ -3567,7 +3567,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_path, __pyx_t_8) < 0) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "pyNTM/rsvp.pyx":193
+  /* "pyNTM/rsvp.py":193
  * 
  *         # Find the path cost and path headroom for each path candidate
  *         candidate_path_info = self._find_path_cost_and_headroom(candidate_paths)             # <<<<<<<<<<<<<<
@@ -3594,7 +3594,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   __pyx_v_candidate_path_info = __pyx_t_8;
   __pyx_t_8 = 0;
 
-  /* "pyNTM/rsvp.pyx":198
+  /* "pyNTM/rsvp.py":198
  * 
  *         # If multiple lowest_metric_paths, find those with fewest hops
  *         if len(candidate_path_info) > 1:             # <<<<<<<<<<<<<<
@@ -3605,7 +3605,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   __pyx_t_9 = ((__pyx_t_10 > 1) != 0);
   if (__pyx_t_9) {
 
-    /* "pyNTM/rsvp.pyx":199
+    /* "pyNTM/rsvp.py":199
  *         # If multiple lowest_metric_paths, find those with fewest hops
  *         if len(candidate_path_info) > 1:
  *             fewest_hops = min([len(path['interfaces']) for path in candidate_path_info])             # <<<<<<<<<<<<<<
@@ -3671,7 +3671,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
     __pyx_v_fewest_hops = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "pyNTM/rsvp.pyx":200
+    /* "pyNTM/rsvp.py":200
  *         if len(candidate_path_info) > 1:
  *             fewest_hops = min([len(path['interfaces']) for path in candidate_path_info])
  *             lowest_hop_count_paths = [path for path in candidate_path_info if len(path['interfaces']) == fewest_hops]             # <<<<<<<<<<<<<<
@@ -3739,7 +3739,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
     __pyx_v_lowest_hop_count_paths = ((PyObject*)__pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/rsvp.pyx":201
+    /* "pyNTM/rsvp.py":201
  *             fewest_hops = min([len(path['interfaces']) for path in candidate_path_info])
  *             lowest_hop_count_paths = [path for path in candidate_path_info if len(path['interfaces']) == fewest_hops]
  *             if len(lowest_hop_count_paths) > 1:             # <<<<<<<<<<<<<<
@@ -3750,7 +3750,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
     __pyx_t_9 = ((__pyx_t_10 > 1) != 0);
     if (__pyx_t_9) {
 
-      /* "pyNTM/rsvp.pyx":202
+      /* "pyNTM/rsvp.py":202
  *             lowest_hop_count_paths = [path for path in candidate_path_info if len(path['interfaces']) == fewest_hops]
  *             if len(lowest_hop_count_paths) > 1:
  *                 new_path = random.choice(lowest_hop_count_paths)             # <<<<<<<<<<<<<<
@@ -3780,7 +3780,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
       __pyx_v_new_path = __pyx_t_2;
       __pyx_t_2 = 0;
 
-      /* "pyNTM/rsvp.pyx":201
+      /* "pyNTM/rsvp.py":201
  *             fewest_hops = min([len(path['interfaces']) for path in candidate_path_info])
  *             lowest_hop_count_paths = [path for path in candidate_path_info if len(path['interfaces']) == fewest_hops]
  *             if len(lowest_hop_count_paths) > 1:             # <<<<<<<<<<<<<<
@@ -3790,7 +3790,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
       goto __pyx_L10;
     }
 
-    /* "pyNTM/rsvp.pyx":204
+    /* "pyNTM/rsvp.py":204
  *                 new_path = random.choice(lowest_hop_count_paths)
  *             else:
  *                 new_path = lowest_hop_count_paths[0]             # <<<<<<<<<<<<<<
@@ -3805,7 +3805,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
     }
     __pyx_L10:;
 
-    /* "pyNTM/rsvp.pyx":198
+    /* "pyNTM/rsvp.py":198
  * 
  *         # If multiple lowest_metric_paths, find those with fewest hops
  *         if len(candidate_path_info) > 1:             # <<<<<<<<<<<<<<
@@ -3815,7 +3815,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
     goto __pyx_L4;
   }
 
-  /* "pyNTM/rsvp.pyx":206
+  /* "pyNTM/rsvp.py":206
  *                 new_path = lowest_hop_count_paths[0]
  *         else:
  *             new_path = candidate_path_info[0]             # <<<<<<<<<<<<<<
@@ -3830,7 +3830,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   }
   __pyx_L4:;
 
-  /* "pyNTM/rsvp.pyx":208
+  /* "pyNTM/rsvp.py":208
  *             new_path = candidate_path_info[0]
  * 
  *         self.path = new_path             # <<<<<<<<<<<<<<
@@ -3839,7 +3839,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_path, __pyx_v_new_path) < 0) __PYX_ERR(0, 208, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":212
+  /* "pyNTM/rsvp.py":212
  *         # Since there is enough headroom, set LSP
  *         # reserved_bandwidth to setup_bandwidth
  *         self.reserved_bandwidth = self.setup_bandwidth             # <<<<<<<<<<<<<<
@@ -3851,7 +3851,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_reserved_bandwidth, __pyx_t_2) < 0) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/rsvp.pyx":215
+  /* "pyNTM/rsvp.py":215
  * 
  *         # Update the reserved_bandwidth on each interface on the new path
  *         for interface in self.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -3906,7 +3906,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "pyNTM/rsvp.pyx":218
+    /* "pyNTM/rsvp.py":218
  *             # Make LSP reserved_bandwidth = setup_bandwidth because it is able to
  *             # signal for the entire amount
  *             interface.reserved_bandwidth += self.reserved_bandwidth             # <<<<<<<<<<<<<<
@@ -3924,7 +3924,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface, __pyx_n_s_reserved_bandwidth, __pyx_t_1) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/rsvp.pyx":215
+    /* "pyNTM/rsvp.py":215
  * 
  *         # Update the reserved_bandwidth on each interface on the new path
  *         for interface in self.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -3934,7 +3934,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/rsvp.pyx":220
+  /* "pyNTM/rsvp.py":220
  *             interface.reserved_bandwidth += self.reserved_bandwidth
  * 
  *         return self             # <<<<<<<<<<<<<<
@@ -3946,7 +3946,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   __pyx_r = __pyx_v_self;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":163
+  /* "pyNTM/rsvp.py":163
  *         return self
  * 
  *     def _add_rsvp_lsp_path(self, model):             # <<<<<<<<<<<<<<
@@ -3978,7 +3978,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_14_add_rsvp_lsp_path(CYTHON_UNU
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":222
+/* "pyNTM/rsvp.py":222
  *         return self
  * 
  *     def _find_path_cost_and_headroom(self, candidate_paths):             # <<<<<<<<<<<<<<
@@ -4069,7 +4069,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
   int __pyx_t_9;
   __Pyx_RefNannySetupContext("_find_path_cost_and_headroom", 0);
 
-  /* "pyNTM/rsvp.pyx":233
+  /* "pyNTM/rsvp.py":233
  * 
  *         # List to hold info on each candidate path
  *         candidate_path_info = []             # <<<<<<<<<<<<<<
@@ -4081,7 +4081,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
   __pyx_v_candidate_path_info = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":236
+  /* "pyNTM/rsvp.py":236
  * 
  *         # Find the path cost and path headroom for each path candidate
  *         for path in candidate_paths['path']:             # <<<<<<<<<<<<<<
@@ -4133,7 +4133,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
     __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/rsvp.pyx":237
+    /* "pyNTM/rsvp.py":237
  *         # Find the path cost and path headroom for each path candidate
  *         for path in candidate_paths['path']:
  *             path_cost = 0             # <<<<<<<<<<<<<<
@@ -4143,7 +4143,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
     __Pyx_INCREF(__pyx_int_0);
     __Pyx_XDECREF_SET(__pyx_v_path_cost, __pyx_int_0);
 
-    /* "pyNTM/rsvp.pyx":238
+    /* "pyNTM/rsvp.py":238
  *         for path in candidate_paths['path']:
  *             path_cost = 0
  *             for interface in path:             # <<<<<<<<<<<<<<
@@ -4192,7 +4192,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
       __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "pyNTM/rsvp.pyx":239
+      /* "pyNTM/rsvp.py":239
  *             path_cost = 0
  *             for interface in path:
  *                 path_cost += interface.cost             # <<<<<<<<<<<<<<
@@ -4207,7 +4207,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
       __Pyx_DECREF_SET(__pyx_v_path_cost, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "pyNTM/rsvp.pyx":238
+      /* "pyNTM/rsvp.py":238
  *         for path in candidate_paths['path']:
  *             path_cost = 0
  *             for interface in path:             # <<<<<<<<<<<<<<
@@ -4217,7 +4217,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/rsvp.pyx":243
+    /* "pyNTM/rsvp.py":243
  *             # baseline_path_reservable_bw is the max amount of traffic that the path
  *             # can handle without saturating a component interface
  *             baseline_path_reservable_bw = min([interface.reservable_bandwidth for interface in path])             # <<<<<<<<<<<<<<
@@ -4279,7 +4279,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
     __Pyx_XDECREF_SET(__pyx_v_baseline_path_reservable_bw, __pyx_t_8);
     __pyx_t_8 = 0;
 
-    /* "pyNTM/rsvp.pyx":245
+    /* "pyNTM/rsvp.py":245
  *             baseline_path_reservable_bw = min([interface.reservable_bandwidth for interface in path])
  * 
  *             path_info = {'interfaces': path, 'path_cost': path_cost,             # <<<<<<<<<<<<<<
@@ -4291,7 +4291,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
     if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_interfaces, __pyx_v_path) < 0) __PYX_ERR(0, 245, __pyx_L1_error)
     if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_path_cost, __pyx_v_path_cost) < 0) __PYX_ERR(0, 245, __pyx_L1_error)
 
-    /* "pyNTM/rsvp.pyx":246
+    /* "pyNTM/rsvp.py":246
  * 
  *             path_info = {'interfaces': path, 'path_cost': path_cost,
  *                          'baseline_path_reservable_bw': baseline_path_reservable_bw}             # <<<<<<<<<<<<<<
@@ -4302,7 +4302,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
     __Pyx_XDECREF_SET(__pyx_v_path_info, ((PyObject*)__pyx_t_8));
     __pyx_t_8 = 0;
 
-    /* "pyNTM/rsvp.pyx":248
+    /* "pyNTM/rsvp.py":248
  *                          'baseline_path_reservable_bw': baseline_path_reservable_bw}
  * 
  *             candidate_path_info.append(path_info)             # <<<<<<<<<<<<<<
@@ -4311,7 +4311,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
  */
     __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_candidate_path_info, __pyx_v_path_info); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 248, __pyx_L1_error)
 
-    /* "pyNTM/rsvp.pyx":236
+    /* "pyNTM/rsvp.py":236
  * 
  *         # Find the path cost and path headroom for each path candidate
  *         for path in candidate_paths['path']:             # <<<<<<<<<<<<<<
@@ -4321,7 +4321,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/rsvp.pyx":250
+  /* "pyNTM/rsvp.py":250
  *             candidate_path_info.append(path_info)
  * 
  *         return candidate_path_info             # <<<<<<<<<<<<<<
@@ -4333,7 +4333,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
   __pyx_r = __pyx_v_candidate_path_info;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":222
+  /* "pyNTM/rsvp.py":222
  *         return self
  * 
  *     def _find_path_cost_and_headroom(self, candidate_paths):             # <<<<<<<<<<<<<<
@@ -4361,7 +4361,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_16_find_path_cost_and_headroom(
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":252
+/* "pyNTM/rsvp.py":252
  *         return candidate_path_info
  * 
  *     def demands_on_lsp(self, model):             # <<<<<<<<<<<<<<
@@ -4433,7 +4433,7 @@ static PyObject *__pyx_pw_5pyNTM_4rsvp_8RSVP_LSP_19demands_on_lsp(PyObject *__py
 }
 static PyObject *__pyx_gb_5pyNTM_4rsvp_8RSVP_LSP_14demands_on_lsp_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/rsvp.pyx":255
+/* "pyNTM/rsvp.py":255
  *         """Returns demands that LSP is transporting."""
  *         demand_list = []
  *         for demand in (demand for demand in model.demand_objects):             # <<<<<<<<<<<<<<
@@ -4581,7 +4581,7 @@ static PyObject *__pyx_gb_5pyNTM_4rsvp_8RSVP_LSP_14demands_on_lsp_2generator(__p
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":252
+/* "pyNTM/rsvp.py":252
  *         return candidate_path_info
  * 
  *     def demands_on_lsp(self, model):             # <<<<<<<<<<<<<<
@@ -4615,7 +4615,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_18demands_on_lsp(CYTHON_UNUSED 
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_model);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_model);
 
-  /* "pyNTM/rsvp.pyx":254
+  /* "pyNTM/rsvp.py":254
  *     def demands_on_lsp(self, model):
  *         """Returns demands that LSP is transporting."""
  *         demand_list = []             # <<<<<<<<<<<<<<
@@ -4627,7 +4627,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_18demands_on_lsp(CYTHON_UNUSED 
   __pyx_v_demand_list = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":255
+  /* "pyNTM/rsvp.py":255
  *         """Returns demands that LSP is transporting."""
  *         demand_list = []
  *         for demand in (demand for demand in model.demand_objects):             # <<<<<<<<<<<<<<
@@ -4679,7 +4679,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_18demands_on_lsp(CYTHON_UNUSED 
     __Pyx_XDECREF_SET(__pyx_v_demand, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/rsvp.pyx":256
+    /* "pyNTM/rsvp.py":256
  *         demand_list = []
  *         for demand in (demand for demand in model.demand_objects):
  *             if self in demand.path:             # <<<<<<<<<<<<<<
@@ -4693,7 +4693,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_18demands_on_lsp(CYTHON_UNUSED 
     __pyx_t_6 = (__pyx_t_5 != 0);
     if (__pyx_t_6) {
 
-      /* "pyNTM/rsvp.pyx":257
+      /* "pyNTM/rsvp.py":257
  *         for demand in (demand for demand in model.demand_objects):
  *             if self in demand.path:
  *                 demand_list.append(demand)             # <<<<<<<<<<<<<<
@@ -4702,7 +4702,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_18demands_on_lsp(CYTHON_UNUSED 
  */
       __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_demand_list, __pyx_v_demand); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 257, __pyx_L1_error)
 
-      /* "pyNTM/rsvp.pyx":256
+      /* "pyNTM/rsvp.py":256
  *         demand_list = []
  *         for demand in (demand for demand in model.demand_objects):
  *             if self in demand.path:             # <<<<<<<<<<<<<<
@@ -4711,7 +4711,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_18demands_on_lsp(CYTHON_UNUSED 
  */
     }
 
-    /* "pyNTM/rsvp.pyx":255
+    /* "pyNTM/rsvp.py":255
  *         """Returns demands that LSP is transporting."""
  *         demand_list = []
  *         for demand in (demand for demand in model.demand_objects):             # <<<<<<<<<<<<<<
@@ -4721,7 +4721,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_18demands_on_lsp(CYTHON_UNUSED 
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/rsvp.pyx":259
+  /* "pyNTM/rsvp.py":259
  *                 demand_list.append(demand)
  * 
  *         return demand_list             # <<<<<<<<<<<<<<
@@ -4733,7 +4733,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_18demands_on_lsp(CYTHON_UNUSED 
   __pyx_r = __pyx_v_demand_list;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":252
+  /* "pyNTM/rsvp.py":252
  *         return candidate_path_info
  * 
  *     def demands_on_lsp(self, model):             # <<<<<<<<<<<<<<
@@ -4756,7 +4756,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_18demands_on_lsp(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":261
+/* "pyNTM/rsvp.py":261
  *         return demand_list
  * 
  *     def traffic_on_lsp(self, model):             # <<<<<<<<<<<<<<
@@ -4850,7 +4850,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_20traffic_on_lsp(CYTHON_UNUSED 
   int __pyx_t_11;
   __Pyx_RefNannySetupContext("traffic_on_lsp", 0);
 
-  /* "pyNTM/rsvp.pyx":269
+  /* "pyNTM/rsvp.py":269
  * 
  *         # Find all LSPs with same source and dest as self
  *         parallel_lsp_groups = model.parallel_lsp_groups()             # <<<<<<<<<<<<<<
@@ -4877,7 +4877,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_20traffic_on_lsp(CYTHON_UNUSED 
   __pyx_v_parallel_lsp_groups = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":270
+  /* "pyNTM/rsvp.py":270
  *         # Find all LSPs with same source and dest as self
  *         parallel_lsp_groups = model.parallel_lsp_groups()
  *         total_traffic = sum([demand.traffic for demand in self.demands_on_lsp(model)])             # <<<<<<<<<<<<<<
@@ -4957,7 +4957,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_20traffic_on_lsp(CYTHON_UNUSED 
   __pyx_v_total_traffic = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":272
+  /* "pyNTM/rsvp.py":272
  *         total_traffic = sum([demand.traffic for demand in self.demands_on_lsp(model)])
  * 
  *         key = "{}-{}".format(self.source_node_object.name, self.dest_node_object.name)             # <<<<<<<<<<<<<<
@@ -5028,7 +5028,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_20traffic_on_lsp(CYTHON_UNUSED 
   __pyx_v_key = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":273
+  /* "pyNTM/rsvp.py":273
  * 
  *         key = "{}-{}".format(self.source_node_object.name, self.dest_node_object.name)
  *         parallel_routed_lsps = [lsp for lsp in parallel_lsp_groups[key] if 'Unrouted' not in lsp.path]             # <<<<<<<<<<<<<<
@@ -5094,7 +5094,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_20traffic_on_lsp(CYTHON_UNUSED 
   __pyx_v_parallel_routed_lsps = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":275
+  /* "pyNTM/rsvp.py":275
  *         parallel_routed_lsps = [lsp for lsp in parallel_lsp_groups[key] if 'Unrouted' not in lsp.path]
  * 
  *         traffic_on_lsp = total_traffic / len(parallel_routed_lsps)             # <<<<<<<<<<<<<<
@@ -5110,7 +5110,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_20traffic_on_lsp(CYTHON_UNUSED 
   __pyx_v_traffic_on_lsp = __pyx_t_9;
   __pyx_t_9 = 0;
 
-  /* "pyNTM/rsvp.pyx":277
+  /* "pyNTM/rsvp.py":277
  *         traffic_on_lsp = total_traffic / len(parallel_routed_lsps)
  * 
  *         return traffic_on_lsp             # <<<<<<<<<<<<<<
@@ -5122,7 +5122,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_20traffic_on_lsp(CYTHON_UNUSED 
   __pyx_r = __pyx_v_traffic_on_lsp;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":261
+  /* "pyNTM/rsvp.py":261
  *         return demand_list
  * 
  *     def traffic_on_lsp(self, model):             # <<<<<<<<<<<<<<
@@ -5153,7 +5153,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_20traffic_on_lsp(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":279
+/* "pyNTM/rsvp.py":279
  *         return traffic_on_lsp
  * 
  *     def effective_metric(self, model):             # <<<<<<<<<<<<<<
@@ -5233,7 +5233,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_22effective_metric(CYTHON_UNUSE
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("effective_metric", 0);
 
-  /* "pyNTM/rsvp.pyx":284
+  /* "pyNTM/rsvp.py":284
  *         whether the LSP takes that shortest path or not."""
  * 
  *         return model.get_shortest_path(self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -5249,7 +5249,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_22effective_metric(CYTHON_UNUSE
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/rsvp.pyx":285
+  /* "pyNTM/rsvp.py":285
  * 
  *         return model.get_shortest_path(self.source_node_object.name,
  *                                        self.dest_node_object.name, needed_bw=0)['cost']             # <<<<<<<<<<<<<<
@@ -5262,7 +5262,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_22effective_metric(CYTHON_UNUSE
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/rsvp.pyx":284
+  /* "pyNTM/rsvp.py":284
  *         whether the LSP takes that shortest path or not."""
  * 
  *         return model.get_shortest_path(self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -5278,7 +5278,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_22effective_metric(CYTHON_UNUSE
   __pyx_t_3 = 0;
   __pyx_t_4 = 0;
 
-  /* "pyNTM/rsvp.pyx":285
+  /* "pyNTM/rsvp.py":285
  * 
  *         return model.get_shortest_path(self.source_node_object.name,
  *                                        self.dest_node_object.name, needed_bw=0)['cost']             # <<<<<<<<<<<<<<
@@ -5289,7 +5289,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_22effective_metric(CYTHON_UNUSE
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_needed_bw, __pyx_int_0) < 0) __PYX_ERR(0, 285, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":284
+  /* "pyNTM/rsvp.py":284
  *         whether the LSP takes that shortest path or not."""
  * 
  *         return model.get_shortest_path(self.source_node_object.name,             # <<<<<<<<<<<<<<
@@ -5302,7 +5302,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_22effective_metric(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/rsvp.pyx":285
+  /* "pyNTM/rsvp.py":285
  * 
  *         return model.get_shortest_path(self.source_node_object.name,
  *                                        self.dest_node_object.name, needed_bw=0)['cost']             # <<<<<<<<<<<<<<
@@ -5316,7 +5316,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_22effective_metric(CYTHON_UNUSE
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":279
+  /* "pyNTM/rsvp.py":279
  *         return traffic_on_lsp
  * 
  *     def effective_metric(self, model):             # <<<<<<<<<<<<<<
@@ -5338,7 +5338,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_22effective_metric(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":287
+/* "pyNTM/rsvp.py":287
  *                                        self.dest_node_object.name, needed_bw=0)['cost']
  * 
  *     def actual_metric(self, model):             # <<<<<<<<<<<<<<
@@ -5423,7 +5423,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_24actual_metric(CYTHON_UNUSED P
   PyObject *(*__pyx_t_7)(PyObject *);
   __Pyx_RefNannySetupContext("actual_metric", 0);
 
-  /* "pyNTM/rsvp.pyx":290
+  /* "pyNTM/rsvp.py":290
  *         """Returns the metric sum of the interfaces that the LSP actually
  *         transits."""
  *         if 'Unrouted' in self.path:             # <<<<<<<<<<<<<<
@@ -5437,7 +5437,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_24actual_metric(CYTHON_UNUSED P
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "pyNTM/rsvp.pyx":291
+    /* "pyNTM/rsvp.py":291
  *         transits."""
  *         if 'Unrouted' in self.path:
  *             metric = 'Unrouted'             # <<<<<<<<<<<<<<
@@ -5447,7 +5447,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_24actual_metric(CYTHON_UNUSED P
     __Pyx_INCREF(__pyx_n_s_Unrouted);
     __pyx_v_metric = __pyx_n_s_Unrouted;
 
-    /* "pyNTM/rsvp.pyx":290
+    /* "pyNTM/rsvp.py":290
  *         """Returns the metric sum of the interfaces that the LSP actually
  *         transits."""
  *         if 'Unrouted' in self.path:             # <<<<<<<<<<<<<<
@@ -5457,7 +5457,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_24actual_metric(CYTHON_UNUSED P
     goto __pyx_L3;
   }
 
-  /* "pyNTM/rsvp.pyx":294
+  /* "pyNTM/rsvp.py":294
  * 
  *         else:
  *             metric = sum([interface.cost for interface in self.path['interfaces']])             # <<<<<<<<<<<<<<
@@ -5528,7 +5528,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_24actual_metric(CYTHON_UNUSED P
   }
   __pyx_L3:;
 
-  /* "pyNTM/rsvp.pyx":296
+  /* "pyNTM/rsvp.py":296
  *             metric = sum([interface.cost for interface in self.path['interfaces']])
  * 
  *         return metric             # <<<<<<<<<<<<<<
@@ -5540,7 +5540,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_24actual_metric(CYTHON_UNUSED P
   __pyx_r = __pyx_v_metric;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":287
+  /* "pyNTM/rsvp.py":287
  *                                        self.dest_node_object.name, needed_bw=0)['cost']
  * 
  *     def actual_metric(self, model):             # <<<<<<<<<<<<<<
@@ -5563,7 +5563,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_24actual_metric(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "pyNTM/rsvp.pyx":298
+/* "pyNTM/rsvp.py":298
  *         return metric
  * 
  *     def route_lsp(self, model, setup_bandwidth):             # <<<<<<<<<<<<<<
@@ -5653,7 +5653,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_26route_lsp(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("route_lsp", 0);
 
-  /* "pyNTM/rsvp.pyx":306
+  /* "pyNTM/rsvp.py":306
  * 
  *         # Calculate setup bandwidth
  *         self.setup_bandwidth = setup_bandwidth             # <<<<<<<<<<<<<<
@@ -5662,7 +5662,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_26route_lsp(CYTHON_UNUSED PyObj
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_setup_bandwidth_2, __pyx_v_setup_bandwidth) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":309
+  /* "pyNTM/rsvp.py":309
  * 
  *         # Route the LSP
  *         self._add_rsvp_lsp_path(model)             # <<<<<<<<<<<<<<
@@ -5688,7 +5688,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_26route_lsp(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":311
+  /* "pyNTM/rsvp.py":311
  *         self._add_rsvp_lsp_path(model)
  * 
  *         return self             # <<<<<<<<<<<<<<
@@ -5698,7 +5698,7 @@ static PyObject *__pyx_pf_5pyNTM_4rsvp_8RSVP_LSP_26route_lsp(CYTHON_UNUSED PyObj
   __pyx_r = __pyx_v_self;
   goto __pyx_L0;
 
-  /* "pyNTM/rsvp.pyx":298
+  /* "pyNTM/rsvp.py":298
  *         return metric
  * 
  *     def route_lsp(self, model, setup_bandwidth):             # <<<<<<<<<<<<<<
@@ -6074,6 +6074,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_proposed_setup_bw, __pyx_k_proposed_setup_bw, sizeof(__pyx_k_proposed_setup_bw), 0, 0, 1, 1},
   {&__pyx_n_s_proto_reservable_bw, __pyx_k_proto_reservable_bw, sizeof(__pyx_k_proto_reservable_bw), 0, 0, 1, 1},
   {&__pyx_n_s_pyNTM_rsvp, __pyx_k_pyNTM_rsvp, sizeof(__pyx_k_pyNTM_rsvp), 0, 0, 1, 1},
+  {&__pyx_kp_s_pyNTM_rsvp_py, __pyx_k_pyNTM_rsvp_py, sizeof(__pyx_k_pyNTM_rsvp_py), 0, 0, 1, 0},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_random, __pyx_k_random, sizeof(__pyx_k_random), 0, 0, 1, 1},
   {&__pyx_n_s_repr, __pyx_k_repr, sizeof(__pyx_k_repr), 0, 0, 1, 1},
@@ -6081,7 +6082,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_reservable_bandwidth, __pyx_k_reservable_bandwidth, sizeof(__pyx_k_reservable_bandwidth), 0, 0, 1, 1},
   {&__pyx_n_s_reserved_bandwidth, __pyx_k_reserved_bandwidth, sizeof(__pyx_k_reserved_bandwidth), 0, 0, 1, 1},
   {&__pyx_n_s_route_lsp, __pyx_k_route_lsp, sizeof(__pyx_k_route_lsp), 0, 0, 1, 1},
-  {&__pyx_kp_s_rsvp_pyx, __pyx_k_rsvp_pyx, sizeof(__pyx_k_rsvp_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_self, __pyx_k_self, sizeof(__pyx_k_self), 0, 0, 1, 1},
   {&__pyx_n_s_send, __pyx_k_send, sizeof(__pyx_k_send), 0, 0, 1, 1},
   {&__pyx_n_s_setter, __pyx_k_setter, sizeof(__pyx_k_setter), 0, 0, 1, 1},
@@ -6112,7 +6112,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pyNTM/rsvp.pyx":7
+  /* "pyNTM/rsvp.py":7
  * 
  * 
  * class RSVP_LSP(object):             # <<<<<<<<<<<<<<
@@ -6123,7 +6123,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "pyNTM/rsvp.pyx":30
+  /* "pyNTM/rsvp.py":30
  *     """
  * 
  *     def __init__(self, source_node_object, dest_node_object,             # <<<<<<<<<<<<<<
@@ -6133,12 +6133,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__3 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_source_node_object, __pyx_n_s_dest_node_object, __pyx_n_s_lsp_name, __pyx_n_s_configured_setup_bandwidth); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 30, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_init, 30, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 30, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_init, 30, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 30, __pyx_L1_error)
   __pyx_tuple__5 = PyTuple_Pack(2, ((PyObject*)__pyx_n_s_none), ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 30, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "pyNTM/rsvp.pyx":42
+  /* "pyNTM/rsvp.py":42
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -6148,9 +6148,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__6 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_key, 42, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_key, 42, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 42, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":46
+  /* "pyNTM/rsvp.py":46
  *         return (self.source_node_object.name, self.dest_node_object.name, self.lsp_name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -6160,9 +6160,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__8 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_repr, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 46, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_repr, 46, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 46, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":52
+  /* "pyNTM/rsvp.py":52
  *                 self.lsp_name)
  * 
  *     def _find_path_cost_and_headroom_routed_lsp(self, candidate_paths):             # <<<<<<<<<<<<<<
@@ -6172,9 +6172,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__10 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_candidate_paths, __pyx_n_s_candidate_path_info, __pyx_n_s_path, __pyx_n_s_path_cost, __pyx_n_s_interface, __pyx_n_s_proto_reservable_bw, __pyx_n_s_baseline_path_reservable_bw, __pyx_n_s_path_info); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_find_path_cost_and_headroom_rou, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_find_path_cost_and_headroom_rou, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 52, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":99
+  /* "pyNTM/rsvp.py":99
  * 
  *     @property
  *     def setup_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -6184,9 +6184,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__12 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_setup_bandwidth_2, 99, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_setup_bandwidth_2, 99, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 99, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":108
+  /* "pyNTM/rsvp.py":108
  * 
  *     @setup_bandwidth.setter
  *     def setup_bandwidth(self, proposed_setup_bw):             # <<<<<<<<<<<<<<
@@ -6196,9 +6196,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__14 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_proposed_setup_bw, __pyx_n_s_msg); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_setup_bandwidth_2, 108, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_setup_bandwidth_2, 108, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 108, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":124
+  /* "pyNTM/rsvp.py":124
  *             raise ModelException(msg)
  * 
  *     def find_rsvp_path_w_bw(self, requested_bandwidth, model):             # <<<<<<<<<<<<<<
@@ -6208,9 +6208,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__16 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_requested_bandwidth, __pyx_n_s_model, __pyx_n_s_candidate_paths, __pyx_n_s_candidate_path_info); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 124, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
-  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_find_rsvp_path_w_bw, 124, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 124, __pyx_L1_error)
+  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_find_rsvp_path_w_bw, 124, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 124, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":163
+  /* "pyNTM/rsvp.py":163
  *         return self
  * 
  *     def _add_rsvp_lsp_path(self, model):             # <<<<<<<<<<<<<<
@@ -6220,9 +6220,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__18 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_candidate_paths, __pyx_n_s_candidate_path_info, __pyx_n_s_fewest_hops, __pyx_n_s_lowest_hop_count_paths, __pyx_n_s_new_path, __pyx_n_s_interface, __pyx_n_s_path); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
-  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_add_rsvp_lsp_path, 163, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_add_rsvp_lsp_path, 163, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 163, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":222
+  /* "pyNTM/rsvp.py":222
  *         return self
  * 
  *     def _find_path_cost_and_headroom(self, candidate_paths):             # <<<<<<<<<<<<<<
@@ -6232,9 +6232,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__20 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_candidate_paths, __pyx_n_s_candidate_path_info, __pyx_n_s_path, __pyx_n_s_path_cost, __pyx_n_s_interface, __pyx_n_s_baseline_path_reservable_bw, __pyx_n_s_path_info); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_find_path_cost_and_headroom, 222, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_find_path_cost_and_headroom, 222, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 222, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":252
+  /* "pyNTM/rsvp.py":252
  *         return candidate_path_info
  * 
  *     def demands_on_lsp(self, model):             # <<<<<<<<<<<<<<
@@ -6244,9 +6244,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__22 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_demand_list, __pyx_n_s_demand, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 252, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_demands_on_lsp, 252, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_demands_on_lsp, 252, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 252, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":261
+  /* "pyNTM/rsvp.py":261
  *         return demand_list
  * 
  *     def traffic_on_lsp(self, model):             # <<<<<<<<<<<<<<
@@ -6256,9 +6256,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__24 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_parallel_lsp_groups, __pyx_n_s_total_traffic, __pyx_n_s_key_2, __pyx_n_s_parallel_routed_lsps, __pyx_n_s_traffic_on_lsp, __pyx_n_s_demand, __pyx_n_s_lsp); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 261, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
-  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_traffic_on_lsp, 261, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_traffic_on_lsp, 261, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 261, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":279
+  /* "pyNTM/rsvp.py":279
  *         return traffic_on_lsp
  * 
  *     def effective_metric(self, model):             # <<<<<<<<<<<<<<
@@ -6268,9 +6268,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__26 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_model); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 279, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_effective_metric, 279, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 279, __pyx_L1_error)
+  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_effective_metric, 279, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 279, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":287
+  /* "pyNTM/rsvp.py":287
  *                                        self.dest_node_object.name, needed_bw=0)['cost']
  * 
  *     def actual_metric(self, model):             # <<<<<<<<<<<<<<
@@ -6280,9 +6280,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__28 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_metric, __pyx_n_s_interface); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_actual_metric, 287, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_actual_metric, 287, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 287, __pyx_L1_error)
 
-  /* "pyNTM/rsvp.pyx":298
+  /* "pyNTM/rsvp.py":298
  *         return metric
  * 
  *     def route_lsp(self, model, setup_bandwidth):             # <<<<<<<<<<<<<<
@@ -6292,7 +6292,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__30 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_setup_bandwidth_2); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 298, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_rsvp_pyx, __pyx_n_s_route_lsp, 298, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_rsvp_py, __pyx_n_s_route_lsp, 298, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 298, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -6594,7 +6594,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "pyNTM/rsvp.pyx":3
+  /* "pyNTM/rsvp.py":3
  * """A class to represent an RSVP label-switched-path in the network model """
  * 
  * import random             # <<<<<<<<<<<<<<
@@ -6606,7 +6606,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_random, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/rsvp.pyx":4
+  /* "pyNTM/rsvp.py":4
  * 
  * import random
  * from .exceptions import ModelException             # <<<<<<<<<<<<<<
@@ -6627,7 +6627,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/rsvp.pyx":7
+  /* "pyNTM/rsvp.py":7
  * 
  * 
  * class RSVP_LSP(object):             # <<<<<<<<<<<<<<
@@ -6639,7 +6639,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__2, __pyx_n_s_RSVP_LSP, __pyx_n_s_RSVP_LSP, (PyObject *) NULL, __pyx_n_s_pyNTM_rsvp, __pyx_kp_s_A_class_to_represent_an_RSVP_lab_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/rsvp.pyx":30
+  /* "pyNTM/rsvp.py":30
  *     """
  * 
  *     def __init__(self, source_node_object, dest_node_object,             # <<<<<<<<<<<<<<
@@ -6652,7 +6652,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":42
+  /* "pyNTM/rsvp.py":42
  * 
  *     @property
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -6662,7 +6662,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_4rsvp_8RSVP_LSP_3_key, 0, __pyx_n_s_RSVP_LSP__key, NULL, __pyx_n_s_pyNTM_rsvp, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/rsvp.pyx":41
+  /* "pyNTM/rsvp.py":41
  *         self.configured_setup_bandwidth = configured_setup_bandwidth
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -6675,7 +6675,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_key, __pyx_t_4) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/rsvp.pyx":46
+  /* "pyNTM/rsvp.py":46
  *         return (self.source_node_object.name, self.dest_node_object.name, self.lsp_name)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -6687,7 +6687,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_repr, __pyx_t_4) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/rsvp.pyx":52
+  /* "pyNTM/rsvp.py":52
  *                 self.lsp_name)
  * 
  *     def _find_path_cost_and_headroom_routed_lsp(self, candidate_paths):             # <<<<<<<<<<<<<<
@@ -6699,7 +6699,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_find_path_cost_and_headroom_rou, __pyx_t_4) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/rsvp.pyx":99
+  /* "pyNTM/rsvp.py":99
  * 
  *     @property
  *     def setup_bandwidth(self):             # <<<<<<<<<<<<<<
@@ -6709,7 +6709,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_4rsvp_8RSVP_LSP_9setup_bandwidth, 0, __pyx_n_s_RSVP_LSP_setup_bandwidth, NULL, __pyx_n_s_pyNTM_rsvp, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/rsvp.pyx":98
+  /* "pyNTM/rsvp.py":98
  *         return candidate_path_info
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -6722,7 +6722,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_setup_bandwidth_2, __pyx_t_3) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":107
+  /* "pyNTM/rsvp.py":107
  *         return self._setup_bandwidth
  * 
  *     @setup_bandwidth.setter             # <<<<<<<<<<<<<<
@@ -6740,7 +6740,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/rsvp.pyx":108
+  /* "pyNTM/rsvp.py":108
  * 
  *     @setup_bandwidth.setter
  *     def setup_bandwidth(self, proposed_setup_bw):             # <<<<<<<<<<<<<<
@@ -6768,7 +6768,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_setup_bandwidth_2, __pyx_t_3) < 0) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":124
+  /* "pyNTM/rsvp.py":124
  *             raise ModelException(msg)
  * 
  *     def find_rsvp_path_w_bw(self, requested_bandwidth, model):             # <<<<<<<<<<<<<<
@@ -6780,7 +6780,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_find_rsvp_path_w_bw, __pyx_t_3) < 0) __PYX_ERR(0, 124, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":163
+  /* "pyNTM/rsvp.py":163
  *         return self
  * 
  *     def _add_rsvp_lsp_path(self, model):             # <<<<<<<<<<<<<<
@@ -6792,7 +6792,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_add_rsvp_lsp_path, __pyx_t_3) < 0) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":222
+  /* "pyNTM/rsvp.py":222
  *         return self
  * 
  *     def _find_path_cost_and_headroom(self, candidate_paths):             # <<<<<<<<<<<<<<
@@ -6804,7 +6804,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_find_path_cost_and_headroom, __pyx_t_3) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":252
+  /* "pyNTM/rsvp.py":252
  *         return candidate_path_info
  * 
  *     def demands_on_lsp(self, model):             # <<<<<<<<<<<<<<
@@ -6816,7 +6816,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_demands_on_lsp, __pyx_t_3) < 0) __PYX_ERR(0, 252, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":261
+  /* "pyNTM/rsvp.py":261
  *         return demand_list
  * 
  *     def traffic_on_lsp(self, model):             # <<<<<<<<<<<<<<
@@ -6828,7 +6828,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_traffic_on_lsp, __pyx_t_3) < 0) __PYX_ERR(0, 261, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":279
+  /* "pyNTM/rsvp.py":279
  *         return traffic_on_lsp
  * 
  *     def effective_metric(self, model):             # <<<<<<<<<<<<<<
@@ -6840,7 +6840,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_effective_metric, __pyx_t_3) < 0) __PYX_ERR(0, 279, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":287
+  /* "pyNTM/rsvp.py":287
  *                                        self.dest_node_object.name, needed_bw=0)['cost']
  * 
  *     def actual_metric(self, model):             # <<<<<<<<<<<<<<
@@ -6852,7 +6852,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_actual_metric, __pyx_t_3) < 0) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":298
+  /* "pyNTM/rsvp.py":298
  *         return metric
  * 
  *     def route_lsp(self, model, setup_bandwidth):             # <<<<<<<<<<<<<<
@@ -6864,7 +6864,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_route_lsp, __pyx_t_3) < 0) __PYX_ERR(0, 298, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/rsvp.pyx":7
+  /* "pyNTM/rsvp.py":7
  * 
  * 
  * class RSVP_LSP(object):             # <<<<<<<<<<<<<<
@@ -6878,7 +6878,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/rsvp.pyx":1
+  /* "pyNTM/rsvp.py":1
  * """A class to represent an RSVP label-switched-path in the network model """             # <<<<<<<<<<<<<<
  * 
  * import random

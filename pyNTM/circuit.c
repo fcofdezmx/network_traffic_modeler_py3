@@ -5,7 +5,7 @@
     "distutils": {
         "name": "pyNTM.circuit",
         "sources": [
-            "circuit.pyx"
+            "pyNTM/circuit.py"
         ]
     },
     "module_name": "pyNTM.circuit"
@@ -813,7 +813,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "circuit.pyx",
+  "pyNTM/circuit.py",
 };
 
 /*--- Type declarations ---*/
@@ -1193,7 +1193,6 @@ static const char __pyx_k_prepare[] = "__prepare__";
 static const char __pyx_k_qualname[] = "__qualname__";
 static const char __pyx_k_metaclass[] = "__metaclass__";
 static const char __pyx_k_Circuit_r_r[] = "Circuit(%r, %r)";
-static const char __pyx_k_circuit_pyx[] = "circuit.pyx";
 static const char __pyx_k_interface_a[] = "interface_a";
 static const char __pyx_k_interface_b[] = "interface_b";
 static const char __pyx_k_Circuit__key[] = "Circuit._key";
@@ -1201,6 +1200,7 @@ static const char __pyx_k_pyNTM_circuit[] = "pyNTM.circuit";
 static const char __pyx_k_Circuit___init[] = "Circuit.__init__";
 static const char __pyx_k_Circuit___repr[] = "Circuit.__repr__";
 static const char __pyx_k_Circuit_failed[] = "Circuit.failed";
+static const char __pyx_k_pyNTM_circuit_py[] = "pyNTM/circuit.py";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_get_circuit_interfaces[] = "get_circuit_interfaces";
 static const char __pyx_k_Circuit_get_circuit_interfaces[] = "Circuit.get_circuit_interfaces";
@@ -1214,7 +1214,6 @@ static PyObject *__pyx_n_s_Circuit__key;
 static PyObject *__pyx_n_s_Circuit_failed;
 static PyObject *__pyx_n_s_Circuit_get_circuit_interfaces;
 static PyObject *__pyx_kp_s_Circuit_r_r;
-static PyObject *__pyx_kp_s_circuit_pyx;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_doc;
 static PyObject *__pyx_n_s_failed;
@@ -1233,6 +1232,7 @@ static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_object;
 static PyObject *__pyx_n_s_prepare;
 static PyObject *__pyx_n_s_pyNTM_circuit;
+static PyObject *__pyx_kp_s_pyNTM_circuit_py;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_repr;
 static PyObject *__pyx_n_s_self;
@@ -1255,7 +1255,7 @@ static PyObject *__pyx_codeobj__9;
 static PyObject *__pyx_codeobj__11;
 /* Late includes */
 
-/* "pyNTM/circuit.pyx":7
+/* "pyNTM/circuit.py":7
  *     """A circuit is an object consisting of 2 connected interfaces """
  * 
  *     def __init__(self, interface_a, interface_b):             # <<<<<<<<<<<<<<
@@ -1341,7 +1341,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit___init__(CYTHON_UNUSED PyObje
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pyNTM/circuit.pyx":8
+  /* "pyNTM/circuit.py":8
  * 
  *     def __init__(self, interface_a, interface_b):
  *         self.interface_a = interface_a             # <<<<<<<<<<<<<<
@@ -1350,7 +1350,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit___init__(CYTHON_UNUSED PyObje
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_interface_a, __pyx_v_interface_a) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
 
-  /* "pyNTM/circuit.pyx":9
+  /* "pyNTM/circuit.py":9
  *     def __init__(self, interface_a, interface_b):
  *         self.interface_a = interface_a
  *         self.interface_b = interface_b             # <<<<<<<<<<<<<<
@@ -1359,7 +1359,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit___init__(CYTHON_UNUSED PyObje
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_interface_b, __pyx_v_interface_b) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
 
-  /* "pyNTM/circuit.pyx":7
+  /* "pyNTM/circuit.py":7
  *     """A circuit is an object consisting of 2 connected interfaces """
  * 
  *     def __init__(self, interface_a, interface_b):             # <<<<<<<<<<<<<<
@@ -1379,7 +1379,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit___init__(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "pyNTM/circuit.pyx":11
+/* "pyNTM/circuit.py":11
  *         self.interface_b = interface_b
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -1409,7 +1409,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_2__repr__(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "pyNTM/circuit.pyx":12
+  /* "pyNTM/circuit.py":12
  * 
  *     def __repr__(self):
  *         return 'Circuit(%r, %r)' \             # <<<<<<<<<<<<<<
@@ -1418,7 +1418,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_2__repr__(CYTHON_UNUSED PyObj
  */
   __Pyx_XDECREF(__pyx_r);
 
-  /* "pyNTM/circuit.pyx":13
+  /* "pyNTM/circuit.py":13
  *     def __repr__(self):
  *         return 'Circuit(%r, %r)' \
  *                % (self.interface_a,             # <<<<<<<<<<<<<<
@@ -1428,7 +1428,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_2__repr__(CYTHON_UNUSED PyObj
   __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_interface_a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/circuit.pyx":14
+  /* "pyNTM/circuit.py":14
  *         return 'Circuit(%r, %r)' \
  *                % (self.interface_a,
  *                   self.interface_b,)             # <<<<<<<<<<<<<<
@@ -1438,7 +1438,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_2__repr__(CYTHON_UNUSED PyObj
   __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_interface_b); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "pyNTM/circuit.pyx":13
+  /* "pyNTM/circuit.py":13
  *     def __repr__(self):
  *         return 'Circuit(%r, %r)' \
  *                % (self.interface_a,             # <<<<<<<<<<<<<<
@@ -1460,7 +1460,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_2__repr__(CYTHON_UNUSED PyObj
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/circuit.pyx":11
+  /* "pyNTM/circuit.py":11
  *         self.interface_b = interface_b
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -1481,7 +1481,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_2__repr__(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "pyNTM/circuit.pyx":16
+/* "pyNTM/circuit.py":16
  *                   self.interface_b,)
  * 
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -1511,7 +1511,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_4_key(CYTHON_UNUSED PyObject 
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("_key", 0);
 
-  /* "pyNTM/circuit.pyx":17
+  /* "pyNTM/circuit.py":17
  * 
  *     def _key(self):
  *         return (self.interface_a._key, self.interface_b._key)             # <<<<<<<<<<<<<<
@@ -1541,7 +1541,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_4_key(CYTHON_UNUSED PyObject 
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/circuit.pyx":16
+  /* "pyNTM/circuit.py":16
  *                   self.interface_b,)
  * 
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -1562,7 +1562,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_4_key(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "pyNTM/circuit.pyx":19
+/* "pyNTM/circuit.py":19
  *         return (self.interface_a._key, self.interface_b._key)
  * 
  *     def get_circuit_interfaces(self, model):             # <<<<<<<<<<<<<<
@@ -1641,7 +1641,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_6get_circuit_interfaces(CYTHO
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("get_circuit_interfaces", 0);
 
-  /* "pyNTM/circuit.pyx":23
+  /* "pyNTM/circuit.py":23
  *         Return the circuit's interface objects
  *         """
  *         return (self.interface_a, self.interface_b)             # <<<<<<<<<<<<<<
@@ -1665,7 +1665,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_6get_circuit_interfaces(CYTHO
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/circuit.pyx":19
+  /* "pyNTM/circuit.py":19
  *         return (self.interface_a._key, self.interface_b._key)
  * 
  *     def get_circuit_interfaces(self, model):             # <<<<<<<<<<<<<<
@@ -1686,7 +1686,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_6get_circuit_interfaces(CYTHO
   return __pyx_r;
 }
 
-/* "pyNTM/circuit.pyx":25
+/* "pyNTM/circuit.py":25
  *         return (self.interface_a, self.interface_b)
  * 
  *     def failed(self, model):             # <<<<<<<<<<<<<<
@@ -1771,7 +1771,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_8failed(CYTHON_UNUSED PyObjec
   int __pyx_t_7;
   __Pyx_RefNannySetupContext("failed", 0);
 
-  /* "pyNTM/circuit.pyx":31
+  /* "pyNTM/circuit.py":31
  *         :return: Boolean
  *         """
  *         int_a, int_b = self.get_circuit_interfaces(model)             # <<<<<<<<<<<<<<
@@ -1846,7 +1846,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_8failed(CYTHON_UNUSED PyObjec
   __pyx_v_int_b = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/circuit.pyx":32
+  /* "pyNTM/circuit.py":32
  *         """
  *         int_a, int_b = self.get_circuit_interfaces(model)
  *         if int_a.failed or int_b.failed:             # <<<<<<<<<<<<<<
@@ -1870,7 +1870,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_8failed(CYTHON_UNUSED PyObjec
   __pyx_L6_bool_binop_done:;
   if (__pyx_t_6) {
 
-    /* "pyNTM/circuit.pyx":33
+    /* "pyNTM/circuit.py":33
  *         int_a, int_b = self.get_circuit_interfaces(model)
  *         if int_a.failed or int_b.failed:
  *             return True             # <<<<<<<<<<<<<<
@@ -1882,7 +1882,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_8failed(CYTHON_UNUSED PyObjec
     __pyx_r = Py_True;
     goto __pyx_L0;
 
-    /* "pyNTM/circuit.pyx":32
+    /* "pyNTM/circuit.py":32
  *         """
  *         int_a, int_b = self.get_circuit_interfaces(model)
  *         if int_a.failed or int_b.failed:             # <<<<<<<<<<<<<<
@@ -1891,7 +1891,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_8failed(CYTHON_UNUSED PyObjec
  */
   }
 
-  /* "pyNTM/circuit.pyx":35
+  /* "pyNTM/circuit.py":35
  *             return True
  *         else:
  *             return False             # <<<<<<<<<<<<<<
@@ -1903,7 +1903,7 @@ static PyObject *__pyx_pf_5pyNTM_7circuit_7Circuit_8failed(CYTHON_UNUSED PyObjec
     goto __pyx_L0;
   }
 
-  /* "pyNTM/circuit.pyx":25
+  /* "pyNTM/circuit.py":25
  *         return (self.interface_a, self.interface_b)
  * 
  *     def failed(self, model):             # <<<<<<<<<<<<<<
@@ -1981,7 +1981,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_Circuit_failed, __pyx_k_Circuit_failed, sizeof(__pyx_k_Circuit_failed), 0, 0, 1, 1},
   {&__pyx_n_s_Circuit_get_circuit_interfaces, __pyx_k_Circuit_get_circuit_interfaces, sizeof(__pyx_k_Circuit_get_circuit_interfaces), 0, 0, 1, 1},
   {&__pyx_kp_s_Circuit_r_r, __pyx_k_Circuit_r_r, sizeof(__pyx_k_Circuit_r_r), 0, 0, 1, 0},
-  {&__pyx_kp_s_circuit_pyx, __pyx_k_circuit_pyx, sizeof(__pyx_k_circuit_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_n_s_doc, __pyx_k_doc, sizeof(__pyx_k_doc), 0, 0, 1, 1},
   {&__pyx_n_s_failed, __pyx_k_failed, sizeof(__pyx_k_failed), 0, 0, 1, 1},
@@ -2000,6 +1999,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_object, __pyx_k_object, sizeof(__pyx_k_object), 0, 0, 1, 1},
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
   {&__pyx_n_s_pyNTM_circuit, __pyx_k_pyNTM_circuit, sizeof(__pyx_k_pyNTM_circuit), 0, 0, 1, 1},
+  {&__pyx_kp_s_pyNTM_circuit_py, __pyx_k_pyNTM_circuit_py, sizeof(__pyx_k_pyNTM_circuit_py), 0, 0, 1, 0},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_repr, __pyx_k_repr, sizeof(__pyx_k_repr), 0, 0, 1, 1},
   {&__pyx_n_s_self, __pyx_k_self, sizeof(__pyx_k_self), 0, 0, 1, 1},
@@ -2017,7 +2017,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pyNTM/circuit.pyx":4
+  /* "pyNTM/circuit.py":4
  * 
  * 
  * class Circuit(object):             # <<<<<<<<<<<<<<
@@ -2028,7 +2028,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "pyNTM/circuit.pyx":7
+  /* "pyNTM/circuit.py":7
  *     """A circuit is an object consisting of 2 connected interfaces """
  * 
  *     def __init__(self, interface_a, interface_b):             # <<<<<<<<<<<<<<
@@ -2038,9 +2038,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__2 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_interface_a, __pyx_n_s_interface_b); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
-  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_circuit_pyx, __pyx_n_s_init, 7, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_circuit_py, __pyx_n_s_init, 7, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 7, __pyx_L1_error)
 
-  /* "pyNTM/circuit.pyx":11
+  /* "pyNTM/circuit.py":11
  *         self.interface_b = interface_b
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -2050,9 +2050,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__4 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_circuit_pyx, __pyx_n_s_repr, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_circuit_py, __pyx_n_s_repr, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 11, __pyx_L1_error)
 
-  /* "pyNTM/circuit.pyx":16
+  /* "pyNTM/circuit.py":16
  *                   self.interface_b,)
  * 
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -2062,9 +2062,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__6 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_circuit_pyx, __pyx_n_s_key, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_circuit_py, __pyx_n_s_key, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 16, __pyx_L1_error)
 
-  /* "pyNTM/circuit.pyx":19
+  /* "pyNTM/circuit.py":19
  *         return (self.interface_a._key, self.interface_b._key)
  * 
  *     def get_circuit_interfaces(self, model):             # <<<<<<<<<<<<<<
@@ -2074,9 +2074,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__8 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_model); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_circuit_pyx, __pyx_n_s_get_circuit_interfaces, 19, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_circuit_py, __pyx_n_s_get_circuit_interfaces, 19, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 19, __pyx_L1_error)
 
-  /* "pyNTM/circuit.pyx":25
+  /* "pyNTM/circuit.py":25
  *         return (self.interface_a, self.interface_b)
  * 
  *     def failed(self, model):             # <<<<<<<<<<<<<<
@@ -2086,7 +2086,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__10 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_int_a, __pyx_n_s_int_b); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_circuit_pyx, __pyx_n_s_failed, 25, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_circuit_py, __pyx_n_s_failed, 25, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -2364,7 +2364,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "pyNTM/circuit.pyx":4
+  /* "pyNTM/circuit.py":4
  * 
  * 
  * class Circuit(object):             # <<<<<<<<<<<<<<
@@ -2376,7 +2376,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_2 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_tuple_, __pyx_n_s_Circuit, __pyx_n_s_Circuit, (PyObject *) NULL, __pyx_n_s_pyNTM_circuit, __pyx_kp_s_A_circuit_is_an_object_consistin); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "pyNTM/circuit.pyx":7
+  /* "pyNTM/circuit.py":7
  *     """A circuit is an object consisting of 2 connected interfaces """
  * 
  *     def __init__(self, interface_a, interface_b):             # <<<<<<<<<<<<<<
@@ -2388,7 +2388,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/circuit.pyx":11
+  /* "pyNTM/circuit.py":11
  *         self.interface_b = interface_b
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -2400,7 +2400,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_repr, __pyx_t_3) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/circuit.pyx":16
+  /* "pyNTM/circuit.py":16
  *                   self.interface_b,)
  * 
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -2412,7 +2412,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_key, __pyx_t_3) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/circuit.pyx":19
+  /* "pyNTM/circuit.py":19
  *         return (self.interface_a._key, self.interface_b._key)
  * 
  *     def get_circuit_interfaces(self, model):             # <<<<<<<<<<<<<<
@@ -2424,7 +2424,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_get_circuit_interfaces, __pyx_t_3) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/circuit.pyx":25
+  /* "pyNTM/circuit.py":25
  *         return (self.interface_a, self.interface_b)
  * 
  *     def failed(self, model):             # <<<<<<<<<<<<<<
@@ -2436,7 +2436,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_failed, __pyx_t_3) < 0) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/circuit.pyx":4
+  /* "pyNTM/circuit.py":4
  * 
  * 
  * class Circuit(object):             # <<<<<<<<<<<<<<
@@ -2450,7 +2450,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/circuit.pyx":1
+  /* "pyNTM/circuit.py":1
  * """A Circuit object in a Model. Circuit is comprised of two Interface objects"""             # <<<<<<<<<<<<<<
  * 
  * 

@@ -5,7 +5,7 @@
     "distutils": {
         "name": "pyNTM.exceptions",
         "sources": [
-            "exceptions.pyx"
+            "pyNTM/exceptions.py"
         ]
     },
     "module_name": "pyNTM.exceptions"
@@ -813,7 +813,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "exceptions.pyx",
+  "pyNTM/exceptions.py",
 };
 
 /*--- Type declarations ---*/
@@ -1387,7 +1387,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "pyNTM/exceptions.pyx":4
+  /* "pyNTM/exceptions.py":4
  * 
  * 
  * class ModelException(Exception):             # <<<<<<<<<<<<<<
@@ -1410,7 +1410,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/exceptions.pyx":1
+  /* "pyNTM/exceptions.py":1
  * """Exceptions"""             # <<<<<<<<<<<<<<
  * 
  * 

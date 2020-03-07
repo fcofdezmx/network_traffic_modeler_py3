@@ -5,7 +5,7 @@
     "distutils": {
         "name": "pyNTM.parallel_link_model",
         "sources": [
-            "parallel_link_model.pyx"
+            "pyNTM/parallel_link_model.py"
         ]
     },
     "module_name": "pyNTM.parallel_link_model"
@@ -813,7 +813,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "parallel_link_model.pyx",
+  "pyNTM/parallel_link_model.py",
 };
 
 /*--- Type declarations ---*/
@@ -894,7 +894,7 @@ struct __pyx_defaults {
   PyObject *__pyx_arg_rsvp_lsp_objects;
 };
 
-/* "pyNTM/parallel_link_model.pyx":95
+/* "pyNTM/parallel_link_model.py":95
  *         self.validate_model()
  * 
  *     def _make_int_info_dict(self):             # <<<<<<<<<<<<<<
@@ -907,7 +907,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct___make_int_info
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":104
+/* "pyNTM/parallel_link_model.py":104
  *         """
  * 
  *         keys = (interface._key for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -924,7 +924,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_1_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":106
+/* "pyNTM/parallel_link_model.py":106
  *         keys = (interface._key for interface in self.interface_objects)
  *         int_info = {key: {'lsps': [], 'reserved_bandwidth': 0} for key in keys}
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path):             # <<<<<<<<<<<<<<
@@ -941,7 +941,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_2_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":112
+/* "pyNTM/parallel_link_model.py":112
  *         return int_info
  * 
  *     def validate_model(self):             # <<<<<<<<<<<<<<
@@ -954,7 +954,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_3_validate_mode
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":131
+/* "pyNTM/parallel_link_model.py":131
  *         error_data = []  # list of all errored checks
  * 
  *         for interface in (interface for interface in self.interface_objects):  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -971,7 +971,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_4_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":155
+/* "pyNTM/parallel_link_model.py":155
  *         # on the interfaces and matching interface capacity
  *         circuits_with_mismatched_interface_capacity = []
  *         for ckt in (ckt for ckt in self.circuit_objects):             # <<<<<<<<<<<<<<
@@ -988,7 +988,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_5_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":395
+/* "pyNTM/parallel_link_model.py":395
  *         return traff_per_int
  * 
  *     def _update_interface_utilization(self):  # common between model and parallel_link_model             # <<<<<<<<<<<<<<
@@ -1001,7 +1001,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_6__update_inter
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":407
+/* "pyNTM/parallel_link_model.py":407
  *                 interface_object.traffic = 0.0
  * 
  *         routed_demand_object_generator = (demand_object for demand_object in self.demand_objects if             # <<<<<<<<<<<<<<
@@ -1018,7 +1018,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_7_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":420
+/* "pyNTM/parallel_link_model.py":420
  * 
  *             # Can demand take LSP?
  *             routed_lsp_generator = (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path)             # <<<<<<<<<<<<<<
@@ -1035,7 +1035,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_8_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":630
+/* "pyNTM/parallel_link_model.py":630
  *         return parallel_demand_groups
  * 
  *     def update_simulation(self):             # <<<<<<<<<<<<<<
@@ -1048,7 +1048,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_9_update_simula
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":651
+/* "pyNTM/parallel_link_model.py":651
  *         # If the interface is not failed, then by definition, the nodes are
  *         # not failed
  *         for interface_object in (interface_object for interface_object in self.interface_objects             # <<<<<<<<<<<<<<
@@ -1065,7 +1065,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_10_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":664
+/* "pyNTM/parallel_link_model.py":664
  * 
  *         # Reset the reserved_bandwidth, traffic on each interface
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -1082,7 +1082,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_11_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":668
+/* "pyNTM/parallel_link_model.py":668
  *             interface.traffic = 0
  * 
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -1099,7 +1099,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_12_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":671
+/* "pyNTM/parallel_link_model.py":671
  *             lsp.path = 'Unrouted'
  * 
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -1116,7 +1116,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_13_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":684
+/* "pyNTM/parallel_link_model.py":684
  *         self.validate_model()
  * 
  *     def _unique_interface_per_node(self):             # <<<<<<<<<<<<<<
@@ -1129,7 +1129,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_14__unique_inte
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":692
+/* "pyNTM/parallel_link_model.py":692
  *         exception_interfaces = set()  # duplicate interfaces
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -1146,7 +1146,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_15_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":711
+/* "pyNTM/parallel_link_model.py":711
  *             return True
  * 
  *     def _make_circuits_multidigraph(self, return_exception=True, include_failed_circuits=True):             # <<<<<<<<<<<<<<
@@ -1160,7 +1160,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_16__make_circui
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":726
+/* "pyNTM/parallel_link_model.py":726
  * 
  *         # Determine which interfaces pair up into good circuits in G
  *         graph_interfaces = ((local_node_name, remote_node_name, data) for             # <<<<<<<<<<<<<<
@@ -1179,7 +1179,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_17_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":731
+/* "pyNTM/parallel_link_model.py":731
  * 
  *         # Set interface object in_ckt = False
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -1196,7 +1196,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_18_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":779
+/* "pyNTM/parallel_link_model.py":779
  *         self.circuit_objects = circuits
  * 
  *     def get_interface_object_from_nodes(self, local_node_name, remote_node_name, circuit_id=None):             # <<<<<<<<<<<<<<
@@ -1209,7 +1209,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_19_get_interfac
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":799
+/* "pyNTM/parallel_link_model.py":799
  *         """
  * 
  *         interface_gen = (interface for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -1226,7 +1226,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_20_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":819
+/* "pyNTM/parallel_link_model.py":819
  * 
  *     @property
  *     def all_interface_circuit_ids(self):             # <<<<<<<<<<<<<<
@@ -1239,7 +1239,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_21_all_interfac
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":823
+/* "pyNTM/parallel_link_model.py":823
  *         Returns all interface circuit_ids
  *         """
  *         return set(interface.circuit_id for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -1253,7 +1253,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_22_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":887
+/* "pyNTM/parallel_link_model.py":887
  *         return orphan_nodes
  * 
  *     def add_node(self, node_object):             # <<<<<<<<<<<<<<
@@ -1266,7 +1266,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_23_add_node {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":892
+/* "pyNTM/parallel_link_model.py":892
  *         """
  * 
  *         if node_object.name in (node.name for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -1283,7 +1283,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_24_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":982
+/* "pyNTM/parallel_link_model.py":982
  *         self.validate_model()
  * 
  *     def get_demand_object(self, source_node_name, dest_node_name, demand_name='none'):             # <<<<<<<<<<<<<<
@@ -1296,7 +1296,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_25_get_demand_o
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":987
+/* "pyNTM/parallel_link_model.py":987
  *         throws exception if demand not found
  *         """
  *         model_demand_iterator = (demand for demand in self.demand_objects)             # <<<<<<<<<<<<<<
@@ -1313,7 +1313,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_26_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1001
+/* "pyNTM/parallel_link_model.py":1001
  *             raise ModelException('no matching demand')
  * 
  *     def get_rsvp_lsp(self, source_node_name, dest_node_name, lsp_name='none'):             # <<<<<<<<<<<<<<
@@ -1326,7 +1326,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_27_get_rsvp_lsp
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1014
+/* "pyNTM/parallel_link_model.py":1014
  *         needed_key = (source_node_name, dest_node_name, lsp_name)
  * 
  *         if needed_key not in (lsp._key for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -1343,7 +1343,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_28_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1019
+/* "pyNTM/parallel_link_model.py":1019
  *             raise ModelException(msg)
  *         else:
  *             for lsp in (lsp for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -1360,7 +1360,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_29_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1034
+/* "pyNTM/parallel_link_model.py":1034
  *         return int_object[0]
  * 
  *     def _does_interface_exist(self, interface_name, node_object_name):             # <<<<<<<<<<<<<<
@@ -1373,7 +1373,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_30__does_interf
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1036
+/* "pyNTM/parallel_link_model.py":1036
  *     def _does_interface_exist(self, interface_name, node_object_name):
  *         int_key = (interface_name, node_object_name)
  *         interface_key_iterator = (interface._key for interface in             # <<<<<<<<<<<<<<
@@ -1390,7 +1390,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_31_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1057
+/* "pyNTM/parallel_link_model.py":1057
  * 
  *     # Convenience calls #####
  *     def get_failed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -1403,7 +1403,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_32_get_failed_i
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1063
+/* "pyNTM/parallel_link_model.py":1063
  *         failed_interfaces = []
  * 
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -1420,7 +1420,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_33_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1069
+/* "pyNTM/parallel_link_model.py":1069
  *         return failed_interfaces
  * 
  *     def get_unfailed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -1433,7 +1433,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_34_get_unfailed
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1076
+/* "pyNTM/parallel_link_model.py":1076
  *         unfailed_interface_objects = set()
  * 
  *         interface_iter = (interface for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -1450,7 +1450,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_35_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1084
+/* "pyNTM/parallel_link_model.py":1084
  *         return unfailed_interface_objects
  * 
  *     def get_unrouted_demand_objects(self):             # <<<<<<<<<<<<<<
@@ -1463,7 +1463,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_36_get_unrouted
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1089
+/* "pyNTM/parallel_link_model.py":1089
  *         """
  *         unrouted_demands = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -1480,7 +1480,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_37_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1164
+/* "pyNTM/parallel_link_model.py":1164
  *                 raise ModelException(message)
  * 
  *     def get_all_paths_reservable_bw(self, source_node_name, dest_node_name, include_failed_circuits=True,             # <<<<<<<<<<<<<<
@@ -1493,7 +1493,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_38_get_all_path
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1197
+/* "pyNTM/parallel_link_model.py":1197
  *         # Remove duplicate paths from digraph_all_paths
  *         # (duplicates can be caused by multiple links between nodes)
  *         digraph_unique_paths = [list(path) for path in set(tuple(path) for path in digraph_all_paths)]             # <<<<<<<<<<<<<<
@@ -1507,7 +1507,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_39_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1450
+/* "pyNTM/parallel_link_model.py":1450
  *         return Node(node_name).interfaces(self)
  * 
  *     def fail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -1521,7 +1521,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_40_fail_node {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1454
+/* "pyNTM/parallel_link_model.py":1454
  * 
  *         # Find node's interfaces and fail them
  *         ints_to_fail_iterator = (interface for interface in             # <<<<<<<<<<<<<<
@@ -1538,7 +1538,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_41_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1463
+/* "pyNTM/parallel_link_model.py":1463
  *         self.get_node_object(node_name).failed = True
  * 
  *     def unfail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -1552,7 +1552,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_42_unfail_node 
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1470
+/* "pyNTM/parallel_link_model.py":1470
  * 
  *         # Find node's interfaces and unfail them
  *         ints_to_unfail_iterator = (interface for interface in self.get_node_interfaces(node_name))             # <<<<<<<<<<<<<<
@@ -1569,7 +1569,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_43_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1484
+/* "pyNTM/parallel_link_model.py":1484
  *                                       remote_int.node_object.name, False)
  * 
  *     def get_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -1582,7 +1582,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_44_get_failed_n
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1490
+/* "pyNTM/parallel_link_model.py":1490
  *         failed_nodes = []
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -1599,7 +1599,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_45_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1497
+/* "pyNTM/parallel_link_model.py":1497
  *         return failed_nodes
  * 
  *     def get_non_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -1612,7 +1612,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_46_get_non_fail
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1501
+/* "pyNTM/parallel_link_model.py":1501
  *         non_failed_nodes = []
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -1629,7 +1629,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_47_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1569
+/* "pyNTM/parallel_link_model.py":1569
  *     #         print()
  * 
  *     def _make_weighted_network_graph(self, include_failed_circuits=True, needed_bw=0, rsvp_required=False):             # <<<<<<<<<<<<<<
@@ -1644,7 +1644,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_48__make_weight
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1587
+/* "pyNTM/parallel_link_model.py":1587
  *         # Get all the edges that meet 'failed' and 'reservable_bw' criteria
  *         if include_failed_circuits is False:
  *             considered_interfaces = (interface for interface in self.interface_objects             # <<<<<<<<<<<<<<
@@ -1661,7 +1661,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_49_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1591
+/* "pyNTM/parallel_link_model.py":1591
  *                                          interface.reservable_bandwidth >= needed_bw))
  *         elif include_failed_circuits is True:
  *             considered_interfaces = (interface for interface in self.interface_objects             # <<<<<<<<<<<<<<
@@ -1678,7 +1678,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_50_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1595
+/* "pyNTM/parallel_link_model.py":1595
  * 
  *         if rsvp_required is True:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -1695,7 +1695,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_51_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1601
+/* "pyNTM/parallel_link_model.py":1601
  *                           if interface.rsvp_enabled is True)
  *         else:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -1712,7 +1712,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_52_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1610
+/* "pyNTM/parallel_link_model.py":1610
  * 
  *         # Add all the nodes
  *         node_name_iterator = (node.name for node in self.node_objects)             # <<<<<<<<<<<<<<
@@ -1729,7 +1729,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_53_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1615
+/* "pyNTM/parallel_link_model.py":1615
  *         return G
  * 
  *     def _make_weighted_network_graph_routed_lsp(self, lsp, needed_bw=0):             # <<<<<<<<<<<<<<
@@ -1743,7 +1743,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_54__make_weight
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1632
+/* "pyNTM/parallel_link_model.py":1632
  *         lsp_path_interfaces = lsp.path['interfaces']
  * 
  *         eligible_interface_generator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -1760,7 +1760,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_55_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1650
+/* "pyNTM/parallel_link_model.py":1650
  * 
  *         # Get edge names in eligible_interfaces
  *         edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -1778,7 +1778,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_56_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1662
+/* "pyNTM/parallel_link_model.py":1662
  * 
  *         # Add all the nodes
  *         node_name_iterator = (node.name for node in self.node_objects)             # <<<<<<<<<<<<<<
@@ -1795,7 +1795,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_57_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1978
+/* "pyNTM/parallel_link_model.py":1978
  *         return interface_set, node_set
  * 
  *     def get_demand_objects_source_node(self, source_node_name):             # <<<<<<<<<<<<<<
@@ -1808,7 +1808,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_58_get_demand_o
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1984
+/* "pyNTM/parallel_link_model.py":1984
  * 
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -1825,7 +1825,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_59_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1990
+/* "pyNTM/parallel_link_model.py":1990
  *         return demand_list
  * 
  *     def get_demand_objects_dest_node(self, dest_node_name):             # <<<<<<<<<<<<<<
@@ -1838,7 +1838,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_60_get_demand_o
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":1994
+/* "pyNTM/parallel_link_model.py":1994
  *         destination node """
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -1855,7 +1855,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_61_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":2021
+/* "pyNTM/parallel_link_model.py":2021
  *                 return None
  * 
  *     def fail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -1869,7 +1869,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_62_fail_srlg {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":2031
+/* "pyNTM/parallel_link_model.py":2031
  * 
  *         # Find SRLG's Nodes to fail
  *         nodes_to_fail_iterator = (node for node in self.node_objects if node in srlg_to_fail.node_objects)             # <<<<<<<<<<<<<<
@@ -1886,7 +1886,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_63_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":2037
+/* "pyNTM/parallel_link_model.py":2037
  * 
  *         # Find SRLG's Interfaces to fail
  *         interfaces_to_fail_iterator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -1903,7 +1903,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_64_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":2046
+/* "pyNTM/parallel_link_model.py":2046
  *         srlg_to_fail.failed = True
  * 
  *     def unfail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -1917,7 +1917,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_65_unfail_srlg 
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":2059
+/* "pyNTM/parallel_link_model.py":2059
  * 
  *         # Find SRLG's Nodes to unfail
  *         nodes_to_unfail_iterator = (node for node in self.node_objects if node in srlg_to_unfail.node_objects)             # <<<<<<<<<<<<<<
@@ -1934,7 +1934,7 @@ struct __pyx_obj_5pyNTM_19parallel_link_model___pyx_scope_struct_66_genexpr {
 };
 
 
-/* "pyNTM/parallel_link_model.pyx":2070
+/* "pyNTM/parallel_link_model.py":2070
  * 
  *         # Find SRLG's Interfaces to unfail
  *         interfaces_to_unfail_iterator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -3130,7 +3130,6 @@ static const char __pyx_k_get_orphan_node_objects[] = "get_orphan_node_objects";
 static const char __pyx_k_include_failed_circuits[] = "include_failed_circuits";
 static const char __pyx_k_ints_to_unfail_iterator[] = "ints_to_unfail_iterator";
 static const char __pyx_k_make_network_interfaces[] = "_make_network_interfaces";
-static const char __pyx_k_parallel_link_model_pyx[] = "parallel_link_model.pyx";
 static const char __pyx_k_remote_interface_object[] = "remote_interface_object";
 static const char __pyx_k_traff_on_each_group_lsp[] = "traff_on_each_group_lsp";
 static const char __pyx_k_traffic_in_demand_group[] = "traffic_in_demand_group";
@@ -3167,6 +3166,7 @@ static const char __pyx_k_get_demand_objects_dest_node[] = "get_demand_objects_d
 static const char __pyx_k_get_failed_interface_objects[] = "get_failed_interface_objects";
 static const char __pyx_k_normalize_multidigraph_paths[] = "_normalize_multidigraph_paths";
 static const char __pyx_k_percent_reservable_bandwidth[] = "percent_reservable_bandwidth";
+static const char __pyx_k_pyNTM_parallel_link_model_py[] = "pyNTM/parallel_link_model.py";
 static const char __pyx_k_traffic_splits_per_interface[] = "traffic_splits_per_interface";
 static const char __pyx_k_update_interface_utilization[] = "_update_interface_utilization";
 static const char __pyx_k_Parallel_Link_Model_fail_node[] = "Parallel_Link_Model.fail_node";
@@ -3709,7 +3709,6 @@ static PyObject *__pyx_n_s_open;
 static PyObject *__pyx_n_s_optimize_parallel_lsp_group_res;
 static PyObject *__pyx_n_s_orphan_nodes;
 static PyObject *__pyx_n_s_parallel_demand_groups;
-static PyObject *__pyx_kp_s_parallel_link_model_pyx;
 static PyObject *__pyx_n_s_parallel_lsp_groups;
 static PyObject *__pyx_n_s_parallel_lsp_groups_2;
 static PyObject *__pyx_n_s_path;
@@ -3727,6 +3726,7 @@ static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_n_s_product;
 static PyObject *__pyx_n_s_property;
 static PyObject *__pyx_n_s_pyNTM_parallel_link_model;
+static PyObject *__pyx_kp_s_pyNTM_parallel_link_model_py;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_r;
 static PyObject *__pyx_n_s_raise_exception;
@@ -4134,7 +4134,7 @@ static PyObject *__pyx_codeobj__138;
 static PyObject *__pyx_codeobj__140;
 /* Late includes */
 
-/* "pyNTM/parallel_link_model.pyx":57
+/* "pyNTM/parallel_link_model.py":57
  *     """
  * 
  *     def __init__(self, interface_objects=set(), node_objects=set(),             # <<<<<<<<<<<<<<
@@ -4299,7 +4299,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model___i
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":59
+  /* "pyNTM/parallel_link_model.py":59
  *     def __init__(self, interface_objects=set(), node_objects=set(),
  *                  demand_objects=set(), rsvp_lsp_objects=set()):
  *         self.interface_objects = interface_objects             # <<<<<<<<<<<<<<
@@ -4308,7 +4308,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model___i
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_interface_objects, __pyx_v_interface_objects) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":60
+  /* "pyNTM/parallel_link_model.py":60
  *                  demand_objects=set(), rsvp_lsp_objects=set()):
  *         self.interface_objects = interface_objects
  *         self.node_objects = node_objects             # <<<<<<<<<<<<<<
@@ -4317,7 +4317,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model___i
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_node_objects, __pyx_v_node_objects) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":61
+  /* "pyNTM/parallel_link_model.py":61
  *         self.interface_objects = interface_objects
  *         self.node_objects = node_objects
  *         self.demand_objects = demand_objects             # <<<<<<<<<<<<<<
@@ -4326,7 +4326,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model___i
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_demand_objects, __pyx_v_demand_objects) < 0) __PYX_ERR(0, 61, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":62
+  /* "pyNTM/parallel_link_model.py":62
  *         self.node_objects = node_objects
  *         self.demand_objects = demand_objects
  *         self.circuit_objects = set()             # <<<<<<<<<<<<<<
@@ -4338,7 +4338,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model___i
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_circuit_objects, __pyx_t_1) < 0) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":63
+  /* "pyNTM/parallel_link_model.py":63
  *         self.demand_objects = demand_objects
  *         self.circuit_objects = set()
  *         self.rsvp_lsp_objects = rsvp_lsp_objects             # <<<<<<<<<<<<<<
@@ -4347,7 +4347,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model___i
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_rsvp_lsp_objects, __pyx_v_rsvp_lsp_objects) < 0) __PYX_ERR(0, 63, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":64
+  /* "pyNTM/parallel_link_model.py":64
  *         self.circuit_objects = set()
  *         self.rsvp_lsp_objects = rsvp_lsp_objects
  *         self.srlg_objects = set()             # <<<<<<<<<<<<<<
@@ -4359,7 +4359,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model___i
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_srlg_objects, __pyx_t_1) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":65
+  /* "pyNTM/parallel_link_model.py":65
  *         self.rsvp_lsp_objects = rsvp_lsp_objects
  *         self.srlg_objects = set()
  *         self._parallel_lsp_groups = {}             # <<<<<<<<<<<<<<
@@ -4371,7 +4371,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model___i
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_parallel_lsp_groups, __pyx_t_1) < 0) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":57
+  /* "pyNTM/parallel_link_model.py":57
  *     """
  * 
  *     def __init__(self, interface_objects=set(), node_objects=set(),             # <<<<<<<<<<<<<<
@@ -4392,7 +4392,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model___i
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":67
+/* "pyNTM/parallel_link_model.py":67
  *         self._parallel_lsp_groups = {}
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -4425,7 +4425,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_2__
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":68
+  /* "pyNTM/parallel_link_model.py":68
  * 
  *     def __repr__(self):
  *         return 'Parallel_Link_Model(Interfaces: %s, Nodes: %s, ' \             # <<<<<<<<<<<<<<
@@ -4434,7 +4434,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_2__
  */
   __Pyx_XDECREF(__pyx_r);
 
-  /* "pyNTM/parallel_link_model.pyx":69
+  /* "pyNTM/parallel_link_model.py":69
  *     def __repr__(self):
  *         return 'Parallel_Link_Model(Interfaces: %s, Nodes: %s, ' \
  *                'Demands: %s, RSVP_LSPs: %s)' % (len(self.interface_objects),             # <<<<<<<<<<<<<<
@@ -4448,7 +4448,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_2__
   __pyx_t_1 = PyInt_FromSsize_t(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/parallel_link_model.pyx":70
+  /* "pyNTM/parallel_link_model.py":70
  *         return 'Parallel_Link_Model(Interfaces: %s, Nodes: %s, ' \
  *                'Demands: %s, RSVP_LSPs: %s)' % (len(self.interface_objects),
  *                                                 len(self.node_objects),             # <<<<<<<<<<<<<<
@@ -4462,7 +4462,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_2__
   __pyx_t_3 = PyInt_FromSsize_t(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/parallel_link_model.pyx":71
+  /* "pyNTM/parallel_link_model.py":71
  *                'Demands: %s, RSVP_LSPs: %s)' % (len(self.interface_objects),
  *                                                 len(self.node_objects),
  *                                                 len(self.demand_objects),             # <<<<<<<<<<<<<<
@@ -4476,7 +4476,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_2__
   __pyx_t_4 = PyInt_FromSsize_t(__pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/parallel_link_model.pyx":72
+  /* "pyNTM/parallel_link_model.py":72
  *                                                 len(self.node_objects),
  *                                                 len(self.demand_objects),
  *                                                 len(self.rsvp_lsp_objects))             # <<<<<<<<<<<<<<
@@ -4490,7 +4490,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_2__
   __pyx_t_5 = PyInt_FromSsize_t(__pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "pyNTM/parallel_link_model.pyx":69
+  /* "pyNTM/parallel_link_model.py":69
  *     def __repr__(self):
  *         return 'Parallel_Link_Model(Interfaces: %s, Nodes: %s, ' \
  *                'Demands: %s, RSVP_LSPs: %s)' % (len(self.interface_objects),             # <<<<<<<<<<<<<<
@@ -4518,7 +4518,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_2__
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":67
+  /* "pyNTM/parallel_link_model.py":67
  *         self._parallel_lsp_groups = {}
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -4541,7 +4541,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_2__
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":74
+/* "pyNTM/parallel_link_model.py":74
  *                                                 len(self.rsvp_lsp_objects))
  * 
  *     def add_network_interfaces_from_list(self, network_interfaces):             # <<<<<<<<<<<<<<
@@ -4624,7 +4624,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_4ad
   PyObject *(*__pyx_t_5)(PyObject *);
   __Pyx_RefNannySetupContext("add_network_interfaces_from_list", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":90
+  /* "pyNTM/parallel_link_model.py":90
  *         """
  * 
  *         new_interface_objects, new_node_objects = self._make_network_interfaces(network_interfaces)             # <<<<<<<<<<<<<<
@@ -4699,7 +4699,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_4ad
   __pyx_v_new_node_objects = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":91
+  /* "pyNTM/parallel_link_model.py":91
  * 
  *         new_interface_objects, new_node_objects = self._make_network_interfaces(network_interfaces)
  *         self.node_objects = self.node_objects.union(new_node_objects)             # <<<<<<<<<<<<<<
@@ -4729,7 +4729,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_4ad
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_node_objects, __pyx_t_1) < 0) __PYX_ERR(0, 91, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":92
+  /* "pyNTM/parallel_link_model.py":92
  *         new_interface_objects, new_node_objects = self._make_network_interfaces(network_interfaces)
  *         self.node_objects = self.node_objects.union(new_node_objects)
  *         self.interface_objects = self.interface_objects.union(new_interface_objects)             # <<<<<<<<<<<<<<
@@ -4759,7 +4759,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_4ad
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_interface_objects, __pyx_t_1) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":93
+  /* "pyNTM/parallel_link_model.py":93
  *         self.node_objects = self.node_objects.union(new_node_objects)
  *         self.interface_objects = self.interface_objects.union(new_interface_objects)
  *         self.validate_model()             # <<<<<<<<<<<<<<
@@ -4785,7 +4785,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_4ad
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":74
+  /* "pyNTM/parallel_link_model.py":74
  *                                                 len(self.rsvp_lsp_objects))
  * 
  *     def add_network_interfaces_from_list(self, network_interfaces):             # <<<<<<<<<<<<<<
@@ -4811,7 +4811,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_4ad
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":95
+/* "pyNTM/parallel_link_model.py":95
  *         self.validate_model()
  * 
  *     def _make_int_info_dict(self):             # <<<<<<<<<<<<<<
@@ -4835,7 +4835,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_7_m
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_19_make_int_info_dict_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":104
+/* "pyNTM/parallel_link_model.py":104
  *         """
  * 
  *         keys = (interface._key for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -4986,7 +4986,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_19_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_19_make_int_info_dict_5generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":106
+/* "pyNTM/parallel_link_model.py":106
  *         keys = (interface._key for interface in self.interface_objects)
  *         int_info = {key: {'lsps': [], 'reserved_bandwidth': 0} for key in keys}
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path):             # <<<<<<<<<<<<<<
@@ -5143,7 +5143,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_19_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":95
+/* "pyNTM/parallel_link_model.py":95
  *         self.validate_model()
  * 
  *     def _make_int_info_dict(self):             # <<<<<<<<<<<<<<
@@ -5185,7 +5185,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_6_m
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":104
+  /* "pyNTM/parallel_link_model.py":104
  *         """
  * 
  *         keys = (interface._key for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -5197,7 +5197,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_6_m
   __pyx_v_keys = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":105
+  /* "pyNTM/parallel_link_model.py":105
  * 
  *         keys = (interface._key for interface in self.interface_objects)
  *         int_info = {key: {'lsps': [], 'reserved_bandwidth': 0} for key in keys}             # <<<<<<<<<<<<<<
@@ -5269,7 +5269,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_6_m
   __pyx_v_int_info = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":106
+  /* "pyNTM/parallel_link_model.py":106
  *         keys = (interface._key for interface in self.interface_objects)
  *         int_info = {key: {'lsps': [], 'reserved_bandwidth': 0} for key in keys}
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path):             # <<<<<<<<<<<<<<
@@ -5321,7 +5321,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_6_m
     __Pyx_XDECREF_SET(__pyx_v_lsp, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":107
+    /* "pyNTM/parallel_link_model.py":107
  *         int_info = {key: {'lsps': [], 'reserved_bandwidth': 0} for key in keys}
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path):
  *             for interface in lsp.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -5376,7 +5376,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_6_m
       __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":108
+      /* "pyNTM/parallel_link_model.py":108
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path):
  *             for interface in lsp.path['interfaces']:
  *                 int_info[interface._key]['lsps'].append(lsp)             # <<<<<<<<<<<<<<
@@ -5394,7 +5394,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_6_m
       __pyx_t_9 = __Pyx_PyObject_Append(__pyx_t_5, __pyx_v_lsp); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 108, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":109
+      /* "pyNTM/parallel_link_model.py":109
  *             for interface in lsp.path['interfaces']:
  *                 int_info[interface._key]['lsps'].append(lsp)
  *                 int_info[interface._key]['reserved_bandwidth'] += round(lsp.reserved_bandwidth, 1)             # <<<<<<<<<<<<<<
@@ -5432,7 +5432,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_6_m
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":107
+      /* "pyNTM/parallel_link_model.py":107
  *         int_info = {key: {'lsps': [], 'reserved_bandwidth': 0} for key in keys}
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path):
  *             for interface in lsp.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -5442,7 +5442,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_6_m
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":106
+    /* "pyNTM/parallel_link_model.py":106
  *         keys = (interface._key for interface in self.interface_objects)
  *         int_info = {key: {'lsps': [], 'reserved_bandwidth': 0} for key in keys}
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path):             # <<<<<<<<<<<<<<
@@ -5452,7 +5452,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_6_m
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":110
+  /* "pyNTM/parallel_link_model.py":110
  *                 int_info[interface._key]['lsps'].append(lsp)
  *                 int_info[interface._key]['reserved_bandwidth'] += round(lsp.reserved_bandwidth, 1)
  *         return int_info             # <<<<<<<<<<<<<<
@@ -5464,7 +5464,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_6_m
   __pyx_r = __pyx_v_int_info;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":95
+  /* "pyNTM/parallel_link_model.py":95
  *         self.validate_model()
  * 
  *     def _make_int_info_dict(self):             # <<<<<<<<<<<<<<
@@ -5495,7 +5495,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_6_m
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":112
+/* "pyNTM/parallel_link_model.py":112
  *         return int_info
  * 
  *     def validate_model(self):             # <<<<<<<<<<<<<<
@@ -5519,7 +5519,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_9va
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14validate_model_2generator2(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":131
+/* "pyNTM/parallel_link_model.py":131
  *         error_data = []  # list of all errored checks
  * 
  *         for interface in (interface for interface in self.interface_objects):  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -5668,7 +5668,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14v
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14validate_model_5generator3(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":155
+/* "pyNTM/parallel_link_model.py":155
  *         # on the interfaces and matching interface capacity
  *         circuits_with_mismatched_interface_capacity = []
  *         for ckt in (ckt for ckt in self.circuit_objects):             # <<<<<<<<<<<<<<
@@ -5816,7 +5816,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14v
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":112
+/* "pyNTM/parallel_link_model.py":112
  *         return int_info
  * 
  *     def validate_model(self):             # <<<<<<<<<<<<<<
@@ -5876,7 +5876,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":118
+  /* "pyNTM/parallel_link_model.py":118
  * 
  *         # create circuits table, flags ints that are not part of a circuit
  *         circuits = self._make_circuits_multidigraph(return_exception=True)             # <<<<<<<<<<<<<<
@@ -5895,7 +5895,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_v_circuits = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":123
+  /* "pyNTM/parallel_link_model.py":123
  *         # format:
  *         # {'lsps': [], 'reserved_bandwidth': 0}
  *         int_info = self._make_int_info_dict()             # <<<<<<<<<<<<<<
@@ -5922,7 +5922,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_v_int_info = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":126
+  /* "pyNTM/parallel_link_model.py":126
  * 
  *         # Interface reserved bandwidth error sets
  *         int_res_bw_too_high = set([])             # <<<<<<<<<<<<<<
@@ -5934,7 +5934,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_v_int_res_bw_too_high = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":127
+  /* "pyNTM/parallel_link_model.py":127
  *         # Interface reserved bandwidth error sets
  *         int_res_bw_too_high = set([])
  *         int_res_bw_sum_error = set([])             # <<<<<<<<<<<<<<
@@ -5946,7 +5946,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_v_int_res_bw_sum_error = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":129
+  /* "pyNTM/parallel_link_model.py":129
  *         int_res_bw_sum_error = set([])
  * 
  *         error_data = []  # list of all errored checks             # <<<<<<<<<<<<<<
@@ -5958,7 +5958,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_v_error_data = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":131
+  /* "pyNTM/parallel_link_model.py":131
  *         error_data = []  # list of all errored checks
  * 
  *         for interface in (interface for interface in self.interface_objects):  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6010,7 +6010,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":132
+    /* "pyNTM/parallel_link_model.py":132
  * 
  *         for interface in (interface for interface in self.interface_objects):  # pragma: no cover
  *             self._reserved_bw_error_checks(int_info, int_res_bw_sum_error, int_res_bw_too_high, interface)             # <<<<<<<<<<<<<<
@@ -6072,7 +6072,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":131
+    /* "pyNTM/parallel_link_model.py":131
  *         error_data = []  # list of all errored checks
  * 
  *         for interface in (interface for interface in self.interface_objects):  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6082,7 +6082,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":135
+  /* "pyNTM/parallel_link_model.py":135
  * 
  *         # If creation of circuits returns a dict, there are problems
  *         if isinstance(circuits, dict):  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6093,7 +6093,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_t_10 = (__pyx_t_9 != 0);
   if (__pyx_t_10) {
 
-    /* "pyNTM/parallel_link_model.pyx":136
+    /* "pyNTM/parallel_link_model.py":136
  *         # If creation of circuits returns a dict, there are problems
  *         if isinstance(circuits, dict):  # pragma: no cover
  *             error_data.append({'ints_w_no_remote_int': circuits['data']})             # <<<<<<<<<<<<<<
@@ -6109,7 +6109,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_error_data, __pyx_t_2); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 136, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":135
+    /* "pyNTM/parallel_link_model.py":135
  * 
  *         # If creation of circuits returns a dict, there are problems
  *         if isinstance(circuits, dict):  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6118,7 +6118,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":139
+  /* "pyNTM/parallel_link_model.py":139
  * 
  *         # Append any failed checks to error_data
  *         if len(int_res_bw_too_high) > 0:  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6129,7 +6129,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_t_10 = ((__pyx_t_4 > 0) != 0);
   if (__pyx_t_10) {
 
-    /* "pyNTM/parallel_link_model.pyx":140
+    /* "pyNTM/parallel_link_model.py":140
  *         # Append any failed checks to error_data
  *         if len(int_res_bw_too_high) > 0:  # pragma: no cover
  *             error_data.append({'int_res_bw_too_high': int_res_bw_too_high})             # <<<<<<<<<<<<<<
@@ -6142,7 +6142,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_error_data, __pyx_t_2); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 140, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":139
+    /* "pyNTM/parallel_link_model.py":139
  * 
  *         # Append any failed checks to error_data
  *         if len(int_res_bw_too_high) > 0:  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6151,7 +6151,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":142
+  /* "pyNTM/parallel_link_model.py":142
  *             error_data.append({'int_res_bw_too_high': int_res_bw_too_high})
  * 
  *         if len(int_res_bw_sum_error) > 0:  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6162,7 +6162,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_t_10 = ((__pyx_t_4 > 0) != 0);
   if (__pyx_t_10) {
 
-    /* "pyNTM/parallel_link_model.pyx":143
+    /* "pyNTM/parallel_link_model.py":143
  * 
  *         if len(int_res_bw_sum_error) > 0:  # pragma: no cover
  *             error_data.append({'int_res_bw_sum_error': int_res_bw_sum_error})             # <<<<<<<<<<<<<<
@@ -6175,7 +6175,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_error_data, __pyx_t_2); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":142
+    /* "pyNTM/parallel_link_model.py":142
  *             error_data.append({'int_res_bw_too_high': int_res_bw_too_high})
  * 
  *         if len(int_res_bw_sum_error) > 0:  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6184,7 +6184,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":146
+  /* "pyNTM/parallel_link_model.py":146
  * 
  *         # Validate there are no duplicate interfaces
  *         unique_interfaces_per_node = self._unique_interface_per_node()             # <<<<<<<<<<<<<<
@@ -6211,7 +6211,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_v_unique_interfaces_per_node = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":149
+  /* "pyNTM/parallel_link_model.py":149
  * 
  *         # Log any duplicate interfaces on a node
  *         if not unique_interfaces_per_node:  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6222,7 +6222,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_t_9 = ((!__pyx_t_10) != 0);
   if (__pyx_t_9) {
 
-    /* "pyNTM/parallel_link_model.pyx":150
+    /* "pyNTM/parallel_link_model.py":150
  *         # Log any duplicate interfaces on a node
  *         if not unique_interfaces_per_node:  # pragma: no cover
  *             error_data.append(unique_interfaces_per_node)             # <<<<<<<<<<<<<<
@@ -6231,7 +6231,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
     __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_error_data, __pyx_v_unique_interfaces_per_node); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 150, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":149
+    /* "pyNTM/parallel_link_model.py":149
  * 
  *         # Log any duplicate interfaces on a node
  *         if not unique_interfaces_per_node:  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6240,7 +6240,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":154
+  /* "pyNTM/parallel_link_model.py":154
  *         # Make validate_model() check for matching failed statuses
  *         # on the interfaces and matching interface capacity
  *         circuits_with_mismatched_interface_capacity = []             # <<<<<<<<<<<<<<
@@ -6252,7 +6252,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_v_circuits_with_mismatched_interface_capacity = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":155
+  /* "pyNTM/parallel_link_model.py":155
  *         # on the interfaces and matching interface capacity
  *         circuits_with_mismatched_interface_capacity = []
  *         for ckt in (ckt for ckt in self.circuit_objects):             # <<<<<<<<<<<<<<
@@ -6304,7 +6304,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __Pyx_XDECREF_SET(__pyx_v_ckt, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":156
+    /* "pyNTM/parallel_link_model.py":156
  *         circuits_with_mismatched_interface_capacity = []
  *         for ckt in (ckt for ckt in self.circuit_objects):
  *             self._validate_circuit_interface_capacity(circuits_with_mismatched_interface_capacity, ckt)             # <<<<<<<<<<<<<<
@@ -6360,7 +6360,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":155
+    /* "pyNTM/parallel_link_model.py":155
  *         # on the interfaces and matching interface capacity
  *         circuits_with_mismatched_interface_capacity = []
  *         for ckt in (ckt for ckt in self.circuit_objects):             # <<<<<<<<<<<<<<
@@ -6370,7 +6370,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":158
+  /* "pyNTM/parallel_link_model.py":158
  *             self._validate_circuit_interface_capacity(circuits_with_mismatched_interface_capacity, ckt)
  * 
  *         if len(circuits_with_mismatched_interface_capacity) > 0:             # <<<<<<<<<<<<<<
@@ -6381,7 +6381,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_t_9 = ((__pyx_t_4 > 0) != 0);
   if (__pyx_t_9) {
 
-    /* "pyNTM/parallel_link_model.pyx":160
+    /* "pyNTM/parallel_link_model.py":160
  *         if len(circuits_with_mismatched_interface_capacity) > 0:
  *             int_status_error_dict = {
  *                 'circuits_with_mismatched_interface_capacity':             # <<<<<<<<<<<<<<
@@ -6391,7 +6391,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
 
-    /* "pyNTM/parallel_link_model.pyx":161
+    /* "pyNTM/parallel_link_model.py":161
  *             int_status_error_dict = {
  *                 'circuits_with_mismatched_interface_capacity':
  *                 circuits_with_mismatched_interface_capacity             # <<<<<<<<<<<<<<
@@ -6402,7 +6402,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __pyx_v_int_status_error_dict = ((PyObject*)__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":163
+    /* "pyNTM/parallel_link_model.py":163
  *                 circuits_with_mismatched_interface_capacity
  *             }
  *             error_data.append(int_status_error_dict)             # <<<<<<<<<<<<<<
@@ -6411,7 +6411,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
     __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_error_data, __pyx_v_int_status_error_dict); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 163, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":158
+    /* "pyNTM/parallel_link_model.py":158
  *             self._validate_circuit_interface_capacity(circuits_with_mismatched_interface_capacity, ckt)
  * 
  *         if len(circuits_with_mismatched_interface_capacity) > 0:             # <<<<<<<<<<<<<<
@@ -6420,7 +6420,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":168
+  /* "pyNTM/parallel_link_model.py":168
  *         # srlg_errors is a dict of node names as keys and a list of SRLGs that node is
  *         # a member of in the model but that the SRLG is not in node.srlgs
  *         srlg_errors = {}             # <<<<<<<<<<<<<<
@@ -6432,7 +6432,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_v_srlg_errors = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":170
+  /* "pyNTM/parallel_link_model.py":170
  *         srlg_errors = {}
  * 
  *         for srlg in self.srlg_objects:  # pragma: no cover  # noqa  # TODO - perhaps cover this later in unit testing             # <<<<<<<<<<<<<<
@@ -6484,7 +6484,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __Pyx_XDECREF_SET(__pyx_v_srlg, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":171
+    /* "pyNTM/parallel_link_model.py":171
  * 
  *         for srlg in self.srlg_objects:  # pragma: no cover  # noqa  # TODO - perhaps cover this later in unit testing
  *             nodes_in_srlg_but_srlg_not_in_node_srlgs = [node for node in srlg.node_objects if srlg not in node.srlgs]             # <<<<<<<<<<<<<<
@@ -6550,7 +6550,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __Pyx_XDECREF_SET(__pyx_v_nodes_in_srlg_but_srlg_not_in_node_srlgs, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":172
+    /* "pyNTM/parallel_link_model.py":172
  *         for srlg in self.srlg_objects:  # pragma: no cover  # noqa  # TODO - perhaps cover this later in unit testing
  *             nodes_in_srlg_but_srlg_not_in_node_srlgs = [node for node in srlg.node_objects if srlg not in node.srlgs]
  *             for node in nodes_in_srlg_but_srlg_not_in_node_srlgs:             # <<<<<<<<<<<<<<
@@ -6569,7 +6569,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
       __Pyx_XDECREF_SET(__pyx_v_node, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":173
+      /* "pyNTM/parallel_link_model.py":173
  *             nodes_in_srlg_but_srlg_not_in_node_srlgs = [node for node in srlg.node_objects if srlg not in node.srlgs]
  *             for node in nodes_in_srlg_but_srlg_not_in_node_srlgs:
  *                 try:             # <<<<<<<<<<<<<<
@@ -6585,7 +6585,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
         __Pyx_XGOTREF(__pyx_t_16);
         /*try:*/ {
 
-          /* "pyNTM/parallel_link_model.pyx":174
+          /* "pyNTM/parallel_link_model.py":174
  *             for node in nodes_in_srlg_but_srlg_not_in_node_srlgs:
  *                 try:
  *                     srlg_errors[node.name].append(srlg.name)             # <<<<<<<<<<<<<<
@@ -6603,7 +6603,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-          /* "pyNTM/parallel_link_model.pyx":173
+          /* "pyNTM/parallel_link_model.py":173
  *             nodes_in_srlg_but_srlg_not_in_node_srlgs = [node for node in srlg.node_objects if srlg not in node.srlgs]
  *             for node in nodes_in_srlg_but_srlg_not_in_node_srlgs:
  *                 try:             # <<<<<<<<<<<<<<
@@ -6620,7 +6620,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
         __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":175
+        /* "pyNTM/parallel_link_model.py":175
  *                 try:
  *                     srlg_errors[node.name].append(srlg.name)
  *                 except KeyError:             # <<<<<<<<<<<<<<
@@ -6635,7 +6635,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_GOTREF(__pyx_t_8);
 
-          /* "pyNTM/parallel_link_model.pyx":176
+          /* "pyNTM/parallel_link_model.py":176
  *                     srlg_errors[node.name].append(srlg.name)
  *                 except KeyError:
  *                     srlg_errors[node.name] = []             # <<<<<<<<<<<<<<
@@ -6657,7 +6657,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
         goto __pyx_L21_except_error;
         __pyx_L21_except_error:;
 
-        /* "pyNTM/parallel_link_model.pyx":173
+        /* "pyNTM/parallel_link_model.py":173
  *             nodes_in_srlg_but_srlg_not_in_node_srlgs = [node for node in srlg.node_objects if srlg not in node.srlgs]
  *             for node in nodes_in_srlg_but_srlg_not_in_node_srlgs:
  *                 try:             # <<<<<<<<<<<<<<
@@ -6677,7 +6677,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
         __pyx_L26_try_end:;
       }
 
-      /* "pyNTM/parallel_link_model.pyx":172
+      /* "pyNTM/parallel_link_model.py":172
  *         for srlg in self.srlg_objects:  # pragma: no cover  # noqa  # TODO - perhaps cover this later in unit testing
  *             nodes_in_srlg_but_srlg_not_in_node_srlgs = [node for node in srlg.node_objects if srlg not in node.srlgs]
  *             for node in nodes_in_srlg_but_srlg_not_in_node_srlgs:             # <<<<<<<<<<<<<<
@@ -6687,7 +6687,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":170
+    /* "pyNTM/parallel_link_model.py":170
  *         srlg_errors = {}
  * 
  *         for srlg in self.srlg_objects:  # pragma: no cover  # noqa  # TODO - perhaps cover this later in unit testing             # <<<<<<<<<<<<<<
@@ -6697,7 +6697,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":178
+  /* "pyNTM/parallel_link_model.py":178
  *                     srlg_errors[node.name] = []
  * 
  *         if len(srlg_errors) > 0:             # <<<<<<<<<<<<<<
@@ -6708,7 +6708,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_t_10 = ((__pyx_t_4 > 0) != 0);
   if (__pyx_t_10) {
 
-    /* "pyNTM/parallel_link_model.pyx":179
+    /* "pyNTM/parallel_link_model.py":179
  * 
  *         if len(srlg_errors) > 0:
  *             error_data.append(srlg_errors)             # <<<<<<<<<<<<<<
@@ -6717,7 +6717,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
     __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_error_data, __pyx_v_srlg_errors); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 179, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":178
+    /* "pyNTM/parallel_link_model.py":178
  *                     srlg_errors[node.name] = []
  * 
  *         if len(srlg_errors) > 0:             # <<<<<<<<<<<<<<
@@ -6726,7 +6726,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":182
+  /* "pyNTM/parallel_link_model.py":182
  * 
  *         # Verify no duplicate nodes
  *         node_names = set([node.name for node in self.node_objects])             # <<<<<<<<<<<<<<
@@ -6791,7 +6791,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_v_node_names = ((PyObject*)__pyx_t_8);
   __pyx_t_8 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":183
+  /* "pyNTM/parallel_link_model.py":183
  *         # Verify no duplicate nodes
  *         node_names = set([node.name for node in self.node_objects])
  *         if (len(self.node_objects)) != (len(node_names)):  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6806,7 +6806,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_t_10 = ((__pyx_t_4 != __pyx_t_12) != 0);
   if (__pyx_t_10) {
 
-    /* "pyNTM/parallel_link_model.pyx":184
+    /* "pyNTM/parallel_link_model.py":184
  *         node_names = set([node.name for node in self.node_objects])
  *         if (len(self.node_objects)) != (len(node_names)):  # pragma: no cover
  *             node_dict = {'len_node_objects': len(self.node_objects),             # <<<<<<<<<<<<<<
@@ -6824,7 +6824,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_len_node_objects, __pyx_t_2) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":185
+    /* "pyNTM/parallel_link_model.py":185
  *         if (len(self.node_objects)) != (len(node_names)):  # pragma: no cover
  *             node_dict = {'len_node_objects': len(self.node_objects),
  *                          'len_node_names': len(node_names)}             # <<<<<<<<<<<<<<
@@ -6839,7 +6839,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __pyx_v_node_dict = ((PyObject*)__pyx_t_8);
     __pyx_t_8 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":186
+    /* "pyNTM/parallel_link_model.py":186
  *             node_dict = {'len_node_objects': len(self.node_objects),
  *                          'len_node_names': len(node_names)}
  *             error_data.append(node_dict)             # <<<<<<<<<<<<<<
@@ -6848,7 +6848,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
     __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_error_data, __pyx_v_node_dict); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 186, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":183
+    /* "pyNTM/parallel_link_model.py":183
  *         # Verify no duplicate nodes
  *         node_names = set([node.name for node in self.node_objects])
  *         if (len(self.node_objects)) != (len(node_names)):  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -6857,7 +6857,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":189
+  /* "pyNTM/parallel_link_model.py":189
  * 
  *         # Read error_data
  *         if len(error_data) > 0:             # <<<<<<<<<<<<<<
@@ -6868,7 +6868,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   __pyx_t_10 = ((__pyx_t_12 > 0) != 0);
   if (unlikely(__pyx_t_10)) {
 
-    /* "pyNTM/parallel_link_model.pyx":190
+    /* "pyNTM/parallel_link_model.py":190
  *         # Read error_data
  *         if len(error_data) > 0:
  *             message = 'network interface validation failed, see returned data'             # <<<<<<<<<<<<<<
@@ -6878,7 +6878,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __Pyx_INCREF(__pyx_kp_s_network_interface_validation_fai);
     __pyx_v_message = __pyx_kp_s_network_interface_validation_fai;
 
-    /* "pyNTM/parallel_link_model.pyx":191
+    /* "pyNTM/parallel_link_model.py":191
  *         if len(error_data) > 0:
  *             message = 'network interface validation failed, see returned data'
  *             pprint(message)             # <<<<<<<<<<<<<<
@@ -6904,7 +6904,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":192
+    /* "pyNTM/parallel_link_model.py":192
  *             message = 'network interface validation failed, see returned data'
  *             pprint(message)
  *             pprint(error_data)             # <<<<<<<<<<<<<<
@@ -6930,7 +6930,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":193
+    /* "pyNTM/parallel_link_model.py":193
  *             pprint(message)
  *             pprint(error_data)
  *             raise ModelException((message, error_data))             # <<<<<<<<<<<<<<
@@ -6967,7 +6967,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __PYX_ERR(0, 193, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":189
+    /* "pyNTM/parallel_link_model.py":189
  * 
  *         # Read error_data
  *         if len(error_data) > 0:             # <<<<<<<<<<<<<<
@@ -6976,7 +6976,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":195
+  /* "pyNTM/parallel_link_model.py":195
  *             raise ModelException((message, error_data))
  *         else:
  *             return self             # <<<<<<<<<<<<<<
@@ -6990,7 +6990,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
     goto __pyx_L0;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":112
+  /* "pyNTM/parallel_link_model.py":112
  *         return int_info
  * 
  *     def validate_model(self):             # <<<<<<<<<<<<<<
@@ -7033,7 +7033,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8va
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":197
+/* "pyNTM/parallel_link_model.py":197
  *             return self
  * 
  *     def _validate_circuit_interface_capacity(self, circuits_with_mismatched_interface_capacity, ckt):             # <<<<<<<<<<<<<<
@@ -7127,7 +7127,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_10_
   int __pyx_t_5;
   __Pyx_RefNannySetupContext("_validate_circuit_interface_capacity", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":205
+  /* "pyNTM/parallel_link_model.py":205
  *         :return: None
  *         """
  *         int1 = ckt.get_circuit_interfaces(self)[0]             # <<<<<<<<<<<<<<
@@ -7157,7 +7157,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_10_
   __pyx_v_int1 = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":206
+  /* "pyNTM/parallel_link_model.py":206
  *         """
  *         int1 = ckt.get_circuit_interfaces(self)[0]
  *         int2 = ckt.get_circuit_interfaces(self)[1]             # <<<<<<<<<<<<<<
@@ -7187,7 +7187,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_10_
   __pyx_v_int2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":208
+  /* "pyNTM/parallel_link_model.py":208
  *         int2 = ckt.get_circuit_interfaces(self)[1]
  *         # Match the failed status to True if they are different
  *         if int1.failed != int2.failed:             # <<<<<<<<<<<<<<
@@ -7205,7 +7205,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_10_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_4) {
 
-    /* "pyNTM/parallel_link_model.pyx":209
+    /* "pyNTM/parallel_link_model.py":209
  *         # Match the failed status to True if they are different
  *         if int1.failed != int2.failed:
  *             int1.failed = True  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -7214,7 +7214,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_10_
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_int1, __pyx_n_s_failed, Py_True) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":210
+    /* "pyNTM/parallel_link_model.py":210
  *         if int1.failed != int2.failed:
  *             int1.failed = True  # pragma: no cover
  *             int2.failed = True  # pragma: no cover             # <<<<<<<<<<<<<<
@@ -7223,7 +7223,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_10_
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_int2, __pyx_n_s_failed, Py_True) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":208
+    /* "pyNTM/parallel_link_model.py":208
  *         int2 = ckt.get_circuit_interfaces(self)[1]
  *         # Match the failed status to True if they are different
  *         if int1.failed != int2.failed:             # <<<<<<<<<<<<<<
@@ -7232,7 +7232,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_10_
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":212
+  /* "pyNTM/parallel_link_model.py":212
  *             int2.failed = True  # pragma: no cover
  *         # Make sure the interface capacities in the circuit match
  *         if int1.capacity != int2.capacity:             # <<<<<<<<<<<<<<
@@ -7250,7 +7250,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_10_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_4) {
 
-    /* "pyNTM/parallel_link_model.pyx":213
+    /* "pyNTM/parallel_link_model.py":213
  *         # Make sure the interface capacities in the circuit match
  *         if int1.capacity != int2.capacity:
  *             circuits_with_mismatched_interface_capacity.append(ckt)             # <<<<<<<<<<<<<<
@@ -7259,7 +7259,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_10_
  */
     __pyx_t_5 = __Pyx_PyObject_Append(__pyx_v_circuits_with_mismatched_interface_capacity, __pyx_v_ckt); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 213, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":212
+    /* "pyNTM/parallel_link_model.py":212
  *             int2.failed = True  # pragma: no cover
  *         # Make sure the interface capacities in the circuit match
  *         if int1.capacity != int2.capacity:             # <<<<<<<<<<<<<<
@@ -7268,7 +7268,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_10_
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":197
+  /* "pyNTM/parallel_link_model.py":197
  *             return self
  * 
  *     def _validate_circuit_interface_capacity(self, circuits_with_mismatched_interface_capacity, ckt):             # <<<<<<<<<<<<<<
@@ -7293,7 +7293,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_10_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":215
+/* "pyNTM/parallel_link_model.py":215
  *             circuits_with_mismatched_interface_capacity.append(ckt)
  * 
  *     def _reserved_bw_error_checks(self, int_info, int_res_bw_sum_error, int_res_bw_too_high, interface):             # <<<<<<<<<<<<<<
@@ -7409,7 +7409,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12_
   PyObject *__pyx_t_7 = NULL;
   __Pyx_RefNannySetupContext("_reserved_bw_error_checks", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":241
+  /* "pyNTM/parallel_link_model.py":241
  *         """
  * 
  *         if interface.reserved_bandwidth > interface.capacity:             # <<<<<<<<<<<<<<
@@ -7427,7 +7427,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_4) {
 
-    /* "pyNTM/parallel_link_model.pyx":242
+    /* "pyNTM/parallel_link_model.py":242
  * 
  *         if interface.reserved_bandwidth > interface.capacity:
  *             int_res_bw_too_high.add(interface)             # <<<<<<<<<<<<<<
@@ -7453,7 +7453,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12_
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":241
+    /* "pyNTM/parallel_link_model.py":241
  *         """
  * 
  *         if interface.reserved_bandwidth > interface.capacity:             # <<<<<<<<<<<<<<
@@ -7462,7 +7462,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12_
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":243
+  /* "pyNTM/parallel_link_model.py":243
  *         if interface.reserved_bandwidth > interface.capacity:
  *             int_res_bw_too_high.add(interface)
  *         if round(interface.reserved_bandwidth, 1) != round(int_info[interface._key][             # <<<<<<<<<<<<<<
@@ -7508,7 +7508,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_4) {
 
-    /* "pyNTM/parallel_link_model.pyx":245
+    /* "pyNTM/parallel_link_model.py":245
  *         if round(interface.reserved_bandwidth, 1) != round(int_info[interface._key][
  *             'reserved_bandwidth'], 1):  # pragma: no cover  # noqa
  *             int_res_bw_sum_error.add((interface, interface.reserved_bandwidth, tuple(interface.lsps(self))))             # <<<<<<<<<<<<<<
@@ -7568,7 +7568,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12_
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":243
+    /* "pyNTM/parallel_link_model.py":243
  *         if interface.reserved_bandwidth > interface.capacity:
  *             int_res_bw_too_high.add(interface)
  *         if round(interface.reserved_bandwidth, 1) != round(int_info[interface._key][             # <<<<<<<<<<<<<<
@@ -7577,7 +7577,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12_
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":215
+  /* "pyNTM/parallel_link_model.py":215
  *             circuits_with_mismatched_interface_capacity.append(ckt)
  * 
  *     def _reserved_bw_error_checks(self, int_info, int_res_bw_sum_error, int_res_bw_too_high, interface):             # <<<<<<<<<<<<<<
@@ -7603,7 +7603,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":247
+/* "pyNTM/parallel_link_model.py":247
  *             int_res_bw_sum_error.add((interface, interface.reserved_bandwidth, tuple(interface.lsps(self))))
  * 
  *     def _demand_traffic_per_int(self, demand):  # common between model and parallel_link_model             # <<<<<<<<<<<<<<
@@ -7716,7 +7716,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   PyObject *(*__pyx_t_19)(PyObject *);
   __Pyx_RefNannySetupContext("_demand_traffic_per_int", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":270
+  /* "pyNTM/parallel_link_model.py":270
  *         """
  * 
  *         shortest_path_int_list = []             # <<<<<<<<<<<<<<
@@ -7728,7 +7728,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   __pyx_v_shortest_path_int_list = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":271
+  /* "pyNTM/parallel_link_model.py":271
  * 
  *         shortest_path_int_list = []
  *         for path in demand.path:             # <<<<<<<<<<<<<<
@@ -7780,7 +7780,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":272
+    /* "pyNTM/parallel_link_model.py":272
  *         shortest_path_int_list = []
  *         for path in demand.path:
  *             shortest_path_int_list += path             # <<<<<<<<<<<<<<
@@ -7792,7 +7792,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     __Pyx_DECREF_SET(__pyx_v_shortest_path_int_list, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":271
+    /* "pyNTM/parallel_link_model.py":271
  * 
  *         shortest_path_int_list = []
  *         for path in demand.path:             # <<<<<<<<<<<<<<
@@ -7802,7 +7802,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":275
+  /* "pyNTM/parallel_link_model.py":275
  * 
  *         # Unique interfaces across all shortest paths
  *         shortest_path_int_set = set(shortest_path_int_list)             # <<<<<<<<<<<<<<
@@ -7814,7 +7814,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   __pyx_v_shortest_path_int_set = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":278
+  /* "pyNTM/parallel_link_model.py":278
  * 
  *         # Dict to store how many unique next hops each node has in the shortest paths
  *         unique_next_hops = {}             # <<<<<<<<<<<<<<
@@ -7826,7 +7826,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   __pyx_v_unique_next_hops = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":281
+  /* "pyNTM/parallel_link_model.py":281
  * 
  *         # Iterate through all the interfaces
  *         for interface in shortest_path_int_set:             # <<<<<<<<<<<<<<
@@ -7847,7 +7847,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":284
+    /* "pyNTM/parallel_link_model.py":284
  *             # For a given Interface's node_object, determine how many
  *             # Interfaces on that Node are facing next hops
  *             unique_next_hops[interface.node_object.name] = [intf.node_object.name for intf in shortest_path_int_set             # <<<<<<<<<<<<<<
@@ -7870,7 +7870,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
       __Pyx_XDECREF_SET(__pyx_v_intf, __pyx_t_11);
       __pyx_t_11 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":285
+      /* "pyNTM/parallel_link_model.py":285
  *             # Interfaces on that Node are facing next hops
  *             unique_next_hops[interface.node_object.name] = [intf.node_object.name for intf in shortest_path_int_set
  *                                                             if intf.node_object.name == interface.node_object.name]             # <<<<<<<<<<<<<<
@@ -7894,7 +7894,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       if (__pyx_t_15) {
 
-        /* "pyNTM/parallel_link_model.pyx":284
+        /* "pyNTM/parallel_link_model.py":284
  *             # For a given Interface's node_object, determine how many
  *             # Interfaces on that Node are facing next hops
  *             unique_next_hops[interface.node_object.name] = [intf.node_object.name for intf in shortest_path_int_set             # <<<<<<<<<<<<<<
@@ -7909,7 +7909,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
         if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_14))) __PYX_ERR(0, 284, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":285
+        /* "pyNTM/parallel_link_model.py":285
  *             # Interfaces on that Node are facing next hops
  *             unique_next_hops[interface.node_object.name] = [intf.node_object.name for intf in shortest_path_int_set
  *                                                             if intf.node_object.name == interface.node_object.name]             # <<<<<<<<<<<<<<
@@ -7920,7 +7920,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     }
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":284
+    /* "pyNTM/parallel_link_model.py":284
  *             # For a given Interface's node_object, determine how many
  *             # Interfaces on that Node are facing next hops
  *             unique_next_hops[interface.node_object.name] = [intf.node_object.name for intf in shortest_path_int_set             # <<<<<<<<<<<<<<
@@ -7938,7 +7938,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":354
+  /* "pyNTM/parallel_link_model.py":354
  *         #                        Interface(name='B-to-E_3', cost=3, capacity=200, node_object=Node('B'),
  *         #                                  remote_node_object=Node('E'), circuit_id='27'): 6}}}
  *         shortest_path_info = {}             # <<<<<<<<<<<<<<
@@ -7950,7 +7950,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   __pyx_v_shortest_path_info = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":355
+  /* "pyNTM/parallel_link_model.py":355
  *         #                                  remote_node_object=Node('E'), circuit_id='27'): 6}}}
  *         shortest_path_info = {}
  *         path_counter = 0             # <<<<<<<<<<<<<<
@@ -7960,7 +7960,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_path_counter = __pyx_int_0;
 
-  /* "pyNTM/parallel_link_model.pyx":358
+  /* "pyNTM/parallel_link_model.py":358
  * 
  *         # Iterate thru each path for the demand
  *         for path in demand.path:             # <<<<<<<<<<<<<<
@@ -8012,7 +8012,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":360
+    /* "pyNTM/parallel_link_model.py":360
  *         for path in demand.path:
  *             # Dict of cumulative splits per interface
  *             traffic_splits_per_interface = {}             # <<<<<<<<<<<<<<
@@ -8024,7 +8024,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     __Pyx_XDECREF_SET(__pyx_v_traffic_splits_per_interface, ((PyObject*)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":362
+    /* "pyNTM/parallel_link_model.py":362
  *             traffic_splits_per_interface = {}
  * 
  *             path_key = 'path_' + str(path_counter)             # <<<<<<<<<<<<<<
@@ -8039,7 +8039,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     __Pyx_XDECREF_SET(__pyx_v_path_key, __pyx_t_14);
     __pyx_t_14 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":364
+    /* "pyNTM/parallel_link_model.py":364
  *             path_key = 'path_' + str(path_counter)
  * 
  *             shortest_path_info[path_key] = {}             # <<<<<<<<<<<<<<
@@ -8051,7 +8051,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     if (unlikely(PyDict_SetItem(__pyx_v_shortest_path_info, __pyx_v_path_key, __pyx_t_14) < 0)) __PYX_ERR(0, 364, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":367
+    /* "pyNTM/parallel_link_model.py":367
  * 
  *             # Create cumulative path splits for each interface
  *             total_splits = 1             # <<<<<<<<<<<<<<
@@ -8061,7 +8061,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     __Pyx_INCREF(__pyx_int_1);
     __Pyx_XDECREF_SET(__pyx_v_total_splits, __pyx_int_1);
 
-    /* "pyNTM/parallel_link_model.pyx":368
+    /* "pyNTM/parallel_link_model.py":368
  *             # Create cumulative path splits for each interface
  *             total_splits = 1
  *             for interface in path:             # <<<<<<<<<<<<<<
@@ -8110,7 +8110,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
       __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":369
+      /* "pyNTM/parallel_link_model.py":369
  *             total_splits = 1
  *             for interface in path:
  *                 total_splits = total_splits * len(unique_next_hops[interface.node_object.name])             # <<<<<<<<<<<<<<
@@ -8135,7 +8135,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
       __Pyx_DECREF_SET(__pyx_v_total_splits, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":370
+      /* "pyNTM/parallel_link_model.py":370
  *             for interface in path:
  *                 total_splits = total_splits * len(unique_next_hops[interface.node_object.name])
  *                 traffic_splits_per_interface[interface] = total_splits             # <<<<<<<<<<<<<<
@@ -8144,7 +8144,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
  */
       if (unlikely(PyDict_SetItem(__pyx_v_traffic_splits_per_interface, __pyx_v_interface, __pyx_v_total_splits) < 0)) __PYX_ERR(0, 370, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":368
+      /* "pyNTM/parallel_link_model.py":368
  *             # Create cumulative path splits for each interface
  *             total_splits = 1
  *             for interface in path:             # <<<<<<<<<<<<<<
@@ -8154,7 +8154,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     }
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":373
+    /* "pyNTM/parallel_link_model.py":373
  * 
  *             # Find path traffic
  *             max_split = max([split for split in traffic_splits_per_interface.values()])             # <<<<<<<<<<<<<<
@@ -8216,7 +8216,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     __Pyx_XDECREF_SET(__pyx_v_max_split, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":374
+    /* "pyNTM/parallel_link_model.py":374
  *             # Find path traffic
  *             max_split = max([split for split in traffic_splits_per_interface.values()])
  *             path_traffic = float(demand.traffic) / float(max_split)             # <<<<<<<<<<<<<<
@@ -8234,7 +8234,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     }
     __pyx_v_path_traffic = (__pyx_t_17 / __pyx_t_18);
 
-    /* "pyNTM/parallel_link_model.pyx":376
+    /* "pyNTM/parallel_link_model.py":376
  *             path_traffic = float(demand.traffic) / float(max_split)
  * 
  *             shortest_path_info[path_key]['interfaces'] = path             # <<<<<<<<<<<<<<
@@ -8246,7 +8246,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     if (unlikely(PyObject_SetItem(__pyx_t_2, __pyx_n_s_interfaces, __pyx_v_path) < 0)) __PYX_ERR(0, 376, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":377
+    /* "pyNTM/parallel_link_model.py":377
  * 
  *             shortest_path_info[path_key]['interfaces'] = path
  *             shortest_path_info[path_key]['splits'] = traffic_splits_per_interface             # <<<<<<<<<<<<<<
@@ -8258,7 +8258,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     if (unlikely(PyObject_SetItem(__pyx_t_2, __pyx_n_s_splits, __pyx_v_traffic_splits_per_interface) < 0)) __PYX_ERR(0, 377, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":378
+    /* "pyNTM/parallel_link_model.py":378
  *             shortest_path_info[path_key]['interfaces'] = path
  *             shortest_path_info[path_key]['splits'] = traffic_splits_per_interface
  *             shortest_path_info[path_key]['path_traffic'] = path_traffic             # <<<<<<<<<<<<<<
@@ -8273,7 +8273,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":379
+    /* "pyNTM/parallel_link_model.py":379
  *             shortest_path_info[path_key]['splits'] = traffic_splits_per_interface
  *             shortest_path_info[path_key]['path_traffic'] = path_traffic
  *             path_counter += 1             # <<<<<<<<<<<<<<
@@ -8285,7 +8285,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     __Pyx_DECREF_SET(__pyx_v_path_counter, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":358
+    /* "pyNTM/parallel_link_model.py":358
  * 
  *         # Iterate thru each path for the demand
  *         for path in demand.path:             # <<<<<<<<<<<<<<
@@ -8295,7 +8295,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":385
+  /* "pyNTM/parallel_link_model.py":385
  * 
  *         # Create dict to hold cumulative traffic for each interface for demand
  *         traff_per_int = dict.fromkeys(shortest_path_int_set, 0)             # <<<<<<<<<<<<<<
@@ -8352,7 +8352,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   __pyx_v_traff_per_int = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":386
+  /* "pyNTM/parallel_link_model.py":386
  *         # Create dict to hold cumulative traffic for each interface for demand
  *         traff_per_int = dict.fromkeys(shortest_path_int_set, 0)
  *         for path, info in shortest_path_info.items():             # <<<<<<<<<<<<<<
@@ -8452,7 +8452,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     __Pyx_XDECREF_SET(__pyx_v_info, __pyx_t_14);
     __pyx_t_14 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":387
+    /* "pyNTM/parallel_link_model.py":387
  *         traff_per_int = dict.fromkeys(shortest_path_int_set, 0)
  *         for path, info in shortest_path_info.items():
  *             for interface in info['interfaces']:             # <<<<<<<<<<<<<<
@@ -8504,7 +8504,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
       __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":388
+      /* "pyNTM/parallel_link_model.py":388
  *         for path, info in shortest_path_info.items():
  *             for interface in info['interfaces']:
  *                 traff_per_int[interface] += info['path_traffic']             # <<<<<<<<<<<<<<
@@ -8525,7 +8525,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":387
+      /* "pyNTM/parallel_link_model.py":387
  *         traff_per_int = dict.fromkeys(shortest_path_int_set, 0)
  *         for path, info in shortest_path_info.items():
  *             for interface in info['interfaces']:             # <<<<<<<<<<<<<<
@@ -8535,7 +8535,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
     }
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":386
+    /* "pyNTM/parallel_link_model.py":386
  *         # Create dict to hold cumulative traffic for each interface for demand
  *         traff_per_int = dict.fromkeys(shortest_path_int_set, 0)
  *         for path, info in shortest_path_info.items():             # <<<<<<<<<<<<<<
@@ -8545,7 +8545,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":391
+  /* "pyNTM/parallel_link_model.py":391
  * 
  *         # Round all traffic values to 1 decimal place
  *         traff_per_int = {interface: round(traffic, 1) for interface, traffic in traff_per_int.items()}             # <<<<<<<<<<<<<<
@@ -8689,7 +8689,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   __Pyx_DECREF_SET(__pyx_v_traff_per_int, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":393
+  /* "pyNTM/parallel_link_model.py":393
  *         traff_per_int = {interface: round(traffic, 1) for interface, traffic in traff_per_int.items()}
  * 
  *         return traff_per_int             # <<<<<<<<<<<<<<
@@ -8701,7 +8701,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   __pyx_r = __pyx_v_traff_per_int;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":247
+  /* "pyNTM/parallel_link_model.py":247
  *             int_res_bw_sum_error.add((interface, interface.reserved_bandwidth, tuple(interface.lsps(self))))
  * 
  *     def _demand_traffic_per_int(self, demand):  # common between model and parallel_link_model             # <<<<<<<<<<<<<<
@@ -8742,7 +8742,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_14_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":395
+/* "pyNTM/parallel_link_model.py":395
  *         return traff_per_int
  * 
  *     def _update_interface_utilization(self):  # common between model and parallel_link_model             # <<<<<<<<<<<<<<
@@ -8766,7 +8766,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_29_update_interface_utilization_2generator4(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":407
+/* "pyNTM/parallel_link_model.py":407
  *                 interface_object.traffic = 0.0
  * 
  *         routed_demand_object_generator = (demand_object for demand_object in self.demand_objects if             # <<<<<<<<<<<<<<
@@ -8876,7 +8876,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_29_
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":408
+    /* "pyNTM/parallel_link_model.py":408
  * 
  *         routed_demand_object_generator = (demand_object for demand_object in self.demand_objects if
  *                                           'Unrouted' not in demand_object.path)             # <<<<<<<<<<<<<<
@@ -8889,7 +8889,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_29_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_6 = (__pyx_t_5 != 0);
 
-    /* "pyNTM/parallel_link_model.pyx":407
+    /* "pyNTM/parallel_link_model.py":407
  *                 interface_object.traffic = 0.0
  * 
  *         routed_demand_object_generator = (demand_object for demand_object in self.demand_objects if             # <<<<<<<<<<<<<<
@@ -8940,7 +8940,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_29_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_29_update_interface_utilization_5generator5(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":420
+/* "pyNTM/parallel_link_model.py":420
  * 
  *             # Can demand take LSP?
  *             routed_lsp_generator = (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path)             # <<<<<<<<<<<<<<
@@ -9097,7 +9097,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_29_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":395
+/* "pyNTM/parallel_link_model.py":395
  *         return traff_per_int
  * 
  *     def _update_interface_utilization(self):  # common between model and parallel_link_model             # <<<<<<<<<<<<<<
@@ -9149,7 +9149,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":401
+  /* "pyNTM/parallel_link_model.py":401
  *         # In the model, in an interface is failed, set the traffic attribute
  *         # to 'Down', otherwise, initialize the traffic to zero
  *         for interface_object in self.interface_objects:             # <<<<<<<<<<<<<<
@@ -9201,7 +9201,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
     __Pyx_XDECREF_SET(__pyx_v_interface_object, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":402
+    /* "pyNTM/parallel_link_model.py":402
  *         # to 'Down', otherwise, initialize the traffic to zero
  *         for interface_object in self.interface_objects:
  *             if interface_object.failed:             # <<<<<<<<<<<<<<
@@ -9214,7 +9214,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_5) {
 
-      /* "pyNTM/parallel_link_model.pyx":403
+      /* "pyNTM/parallel_link_model.py":403
  *         for interface_object in self.interface_objects:
  *             if interface_object.failed:
  *                 interface_object.traffic = 'Down'             # <<<<<<<<<<<<<<
@@ -9223,7 +9223,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
  */
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface_object, __pyx_n_s_traffic, __pyx_n_s_Down) < 0) __PYX_ERR(0, 403, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":402
+      /* "pyNTM/parallel_link_model.py":402
  *         # to 'Down', otherwise, initialize the traffic to zero
  *         for interface_object in self.interface_objects:
  *             if interface_object.failed:             # <<<<<<<<<<<<<<
@@ -9233,7 +9233,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
       goto __pyx_L5;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":405
+    /* "pyNTM/parallel_link_model.py":405
  *                 interface_object.traffic = 'Down'
  *             else:
  *                 interface_object.traffic = 0.0             # <<<<<<<<<<<<<<
@@ -9245,7 +9245,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
     }
     __pyx_L5:;
 
-    /* "pyNTM/parallel_link_model.pyx":401
+    /* "pyNTM/parallel_link_model.py":401
  *         # In the model, in an interface is failed, set the traffic attribute
  *         # to 'Down', otherwise, initialize the traffic to zero
  *         for interface_object in self.interface_objects:             # <<<<<<<<<<<<<<
@@ -9255,7 +9255,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":407
+  /* "pyNTM/parallel_link_model.py":407
  *                 interface_object.traffic = 0.0
  * 
  *         routed_demand_object_generator = (demand_object for demand_object in self.demand_objects if             # <<<<<<<<<<<<<<
@@ -9267,7 +9267,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
   __pyx_v_routed_demand_object_generator = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":412
+  /* "pyNTM/parallel_link_model.py":412
  *         # For each demand that is not Unrouted, add its traffic value to each
  *         # interface object in the path
  *         for demand_object in routed_demand_object_generator:             # <<<<<<<<<<<<<<
@@ -9316,7 +9316,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
     __Pyx_XDECREF_SET(__pyx_v_demand_object, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":420
+    /* "pyNTM/parallel_link_model.py":420
  * 
  *             # Can demand take LSP?
  *             routed_lsp_generator = (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path)             # <<<<<<<<<<<<<<
@@ -9328,7 +9328,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
     __Pyx_XDECREF_SET(__pyx_v_routed_lsp_generator, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":421
+    /* "pyNTM/parallel_link_model.py":421
  *             # Can demand take LSP?
  *             routed_lsp_generator = (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path)
  *             lsps_for_demand = []             # <<<<<<<<<<<<<<
@@ -9340,7 +9340,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
     __Pyx_XDECREF_SET(__pyx_v_lsps_for_demand, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":422
+    /* "pyNTM/parallel_link_model.py":422
  *             routed_lsp_generator = (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path)
  *             lsps_for_demand = []
  *             for lsp in routed_lsp_generator:             # <<<<<<<<<<<<<<
@@ -9389,7 +9389,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
       __Pyx_XDECREF_SET(__pyx_v_lsp, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":423
+      /* "pyNTM/parallel_link_model.py":423
  *             lsps_for_demand = []
  *             for lsp in routed_lsp_generator:
  *                 if (lsp.source_node_object == demand_object.source_node_object and             # <<<<<<<<<<<<<<
@@ -9411,7 +9411,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
         goto __pyx_L11_bool_binop_done;
       }
 
-      /* "pyNTM/parallel_link_model.pyx":424
+      /* "pyNTM/parallel_link_model.py":424
  *             for lsp in routed_lsp_generator:
  *                 if (lsp.source_node_object == demand_object.source_node_object and
  *                         lsp.dest_node_object == demand_object.dest_node_object):             # <<<<<<<<<<<<<<
@@ -9430,7 +9430,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
       __pyx_t_5 = __pyx_t_11;
       __pyx_L11_bool_binop_done:;
 
-      /* "pyNTM/parallel_link_model.pyx":423
+      /* "pyNTM/parallel_link_model.py":423
  *             lsps_for_demand = []
  *             for lsp in routed_lsp_generator:
  *                 if (lsp.source_node_object == demand_object.source_node_object and             # <<<<<<<<<<<<<<
@@ -9439,7 +9439,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
  */
       if (__pyx_t_5) {
 
-        /* "pyNTM/parallel_link_model.pyx":425
+        /* "pyNTM/parallel_link_model.py":425
  *                 if (lsp.source_node_object == demand_object.source_node_object and
  *                         lsp.dest_node_object == demand_object.dest_node_object):
  *                     lsps_for_demand.append(lsp)             # <<<<<<<<<<<<<<
@@ -9448,7 +9448,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
  */
         __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_lsps_for_demand, __pyx_v_lsp); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 425, __pyx_L1_error)
 
-        /* "pyNTM/parallel_link_model.pyx":423
+        /* "pyNTM/parallel_link_model.py":423
  *             lsps_for_demand = []
  *             for lsp in routed_lsp_generator:
  *                 if (lsp.source_node_object == demand_object.source_node_object and             # <<<<<<<<<<<<<<
@@ -9457,7 +9457,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
  */
       }
 
-      /* "pyNTM/parallel_link_model.pyx":422
+      /* "pyNTM/parallel_link_model.py":422
  *             routed_lsp_generator = (lsp for lsp in self.rsvp_lsp_objects if 'Unrouted' not in lsp.path)
  *             lsps_for_demand = []
  *             for lsp in routed_lsp_generator:             # <<<<<<<<<<<<<<
@@ -9467,7 +9467,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":427
+    /* "pyNTM/parallel_link_model.py":427
  *                     lsps_for_demand.append(lsp)
  * 
  *             if lsps_for_demand != []:             # <<<<<<<<<<<<<<
@@ -9482,7 +9482,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     if (__pyx_t_5) {
 
-      /* "pyNTM/parallel_link_model.pyx":430
+      /* "pyNTM/parallel_link_model.py":430
  *                 # Find each demands path list, determine the ECMP split across the
  *                 # routed LSPs, and find the traffic per path (LSP)
  *                 num_routed_lsps_for_demand = len(lsps_for_demand)             # <<<<<<<<<<<<<<
@@ -9495,7 +9495,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
       __Pyx_XDECREF_SET(__pyx_v_num_routed_lsps_for_demand, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":432
+      /* "pyNTM/parallel_link_model.py":432
  *                 num_routed_lsps_for_demand = len(lsps_for_demand)
  * 
  *                 traffic_per_demand_path = demand_object.traffic / num_routed_lsps_for_demand             # <<<<<<<<<<<<<<
@@ -9510,7 +9510,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
       __Pyx_XDECREF_SET(__pyx_v_traffic_per_demand_path, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":435
+      /* "pyNTM/parallel_link_model.py":435
  * 
  *                 # Get the interfaces for each LSP in the demand's path
  *                 for lsp in lsps_for_demand:             # <<<<<<<<<<<<<<
@@ -9529,7 +9529,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
         __Pyx_XDECREF_SET(__pyx_v_lsp, __pyx_t_8);
         __pyx_t_8 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":437
+        /* "pyNTM/parallel_link_model.py":437
  *                 for lsp in lsps_for_demand:
  * 
  *                     lsp_path_interfaces = lsp.path['interfaces']             # <<<<<<<<<<<<<<
@@ -9544,7 +9544,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
         __Pyx_XDECREF_SET(__pyx_v_lsp_path_interfaces, __pyx_t_9);
         __pyx_t_9 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":441
+        /* "pyNTM/parallel_link_model.py":441
  *                     # Now that all interfaces are known,
  *                     # update traffic on interfaces demand touches
  *                     for interface in lsp_path_interfaces:             # <<<<<<<<<<<<<<
@@ -9593,7 +9593,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
           __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_8);
           __pyx_t_8 = 0;
 
-          /* "pyNTM/parallel_link_model.pyx":444
+          /* "pyNTM/parallel_link_model.py":444
  *                         # Get the interface's existing traffic and add the
  *                         # portion of the demand's traffic
  *                         interface.traffic += traffic_per_demand_path             # <<<<<<<<<<<<<<
@@ -9608,7 +9608,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
           if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface, __pyx_n_s_traffic, __pyx_t_10) < 0) __PYX_ERR(0, 444, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-          /* "pyNTM/parallel_link_model.pyx":441
+          /* "pyNTM/parallel_link_model.py":441
  *                     # Now that all interfaces are known,
  *                     # update traffic on interfaces demand touches
  *                     for interface in lsp_path_interfaces:             # <<<<<<<<<<<<<<
@@ -9618,7 +9618,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
         }
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":435
+        /* "pyNTM/parallel_link_model.py":435
  * 
  *                 # Get the interfaces for each LSP in the demand's path
  *                 for lsp in lsps_for_demand:             # <<<<<<<<<<<<<<
@@ -9628,7 +9628,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
       }
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":427
+      /* "pyNTM/parallel_link_model.py":427
  *                     lsps_for_demand.append(lsp)
  * 
  *             if lsps_for_demand != []:             # <<<<<<<<<<<<<<
@@ -9638,7 +9638,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
       goto __pyx_L13;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":453
+    /* "pyNTM/parallel_link_model.py":453
  *                 # Example: The interface from node G to node D has 2.5 units of traffic from 'demand'
  *                 # {'G-D': 2.5, 'A-B': 10.0, 'B-D': 2.5, 'A-D': 5.0, 'D-F': 10.0, 'B-G': 2.5}
  *                 demand_traffic_per_int = self._demand_traffic_per_int(demand_object)             # <<<<<<<<<<<<<<
@@ -9666,7 +9666,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
       __Pyx_XDECREF_SET(__pyx_v_demand_traffic_per_int, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":456
+      /* "pyNTM/parallel_link_model.py":456
  * 
  *                 # Get the interface objects and update them with the traffic
  *                 for interface, traffic_from_demand in demand_traffic_per_int.items():             # <<<<<<<<<<<<<<
@@ -9781,7 +9781,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
         __Pyx_XDECREF_SET(__pyx_v_traffic_from_demand, __pyx_t_8);
         __pyx_t_8 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":457
+        /* "pyNTM/parallel_link_model.py":457
  *                 # Get the interface objects and update them with the traffic
  *                 for interface, traffic_from_demand in demand_traffic_per_int.items():
  *                     interface.traffic += traffic_from_demand             # <<<<<<<<<<<<<<
@@ -9796,7 +9796,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
         if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface, __pyx_n_s_traffic, __pyx_t_8) < 0) __PYX_ERR(0, 457, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":456
+        /* "pyNTM/parallel_link_model.py":456
  * 
  *                 # Get the interface objects and update them with the traffic
  *                 for interface, traffic_from_demand in demand_traffic_per_int.items():             # <<<<<<<<<<<<<<
@@ -9808,7 +9808,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
     }
     __pyx_L13:;
 
-    /* "pyNTM/parallel_link_model.pyx":412
+    /* "pyNTM/parallel_link_model.py":412
  *         # For each demand that is not Unrouted, add its traffic value to each
  *         # interface object in the path
  *         for demand_object in routed_demand_object_generator:             # <<<<<<<<<<<<<<
@@ -9818,7 +9818,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":459
+  /* "pyNTM/parallel_link_model.py":459
  *                     interface.traffic += traffic_from_demand
  * 
  *         return self             # <<<<<<<<<<<<<<
@@ -9830,7 +9830,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
   __pyx_r = __pyx_cur_scope->__pyx_v_self;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":395
+  /* "pyNTM/parallel_link_model.py":395
  *         return traff_per_int
  * 
  *     def _update_interface_utilization(self):  # common between model and parallel_link_model             # <<<<<<<<<<<<<<
@@ -9867,7 +9867,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_16_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":461
+/* "pyNTM/parallel_link_model.py":461
  *         return self
  * 
  *     def _route_demands(self, demands, input_model):             # <<<<<<<<<<<<<<
@@ -9961,7 +9961,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_18_
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("_route_demands", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":468
+  /* "pyNTM/parallel_link_model.py":468
  *         :return:
  *         """
  *         for demand_object in demands:             # <<<<<<<<<<<<<<
@@ -10010,7 +10010,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_18_
     __Pyx_XDECREF_SET(__pyx_v_demand_object, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":469
+    /* "pyNTM/parallel_link_model.py":469
  *         """
  *         for demand_object in demands:
  *             demand_object = demand_object._add_demand_path(input_model)             # <<<<<<<<<<<<<<
@@ -10037,7 +10037,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_18_
     __Pyx_DECREF_SET(__pyx_v_demand_object, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":468
+    /* "pyNTM/parallel_link_model.py":468
  *         :return:
  *         """
  *         for demand_object in demands:             # <<<<<<<<<<<<<<
@@ -10047,7 +10047,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_18_
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":471
+  /* "pyNTM/parallel_link_model.py":471
  *             demand_object = demand_object._add_demand_path(input_model)
  * 
  *         return self._update_interface_utilization()             # <<<<<<<<<<<<<<
@@ -10076,7 +10076,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_18_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":461
+  /* "pyNTM/parallel_link_model.py":461
  *         return self
  * 
  *     def _route_demands(self, demands, input_model):             # <<<<<<<<<<<<<<
@@ -10099,7 +10099,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_18_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":473
+/* "pyNTM/parallel_link_model.py":473
  *         return self._update_interface_utilization()
  * 
  *     def _route_lsps(self, input_model):             # <<<<<<<<<<<<<<
@@ -10205,7 +10205,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
   int __pyx_t_19;
   __Pyx_RefNannySetupContext("_route_lsps", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":487
+  /* "pyNTM/parallel_link_model.py":487
  * 
  *         # Find parallel LSP groups
  *         parallel_lsp_groups = self.parallel_lsp_groups()  # TODO - can this be optimized?             # <<<<<<<<<<<<<<
@@ -10232,7 +10232,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
   __pyx_v_parallel_lsp_groups = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":490
+  /* "pyNTM/parallel_link_model.py":490
  * 
  *         # Find all the parallel demand groups
  *         parallel_demand_groups = self.parallel_demand_groups()  # TODO - can this be optimized?             # <<<<<<<<<<<<<<
@@ -10259,7 +10259,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
   __pyx_v_parallel_demand_groups = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":493
+  /* "pyNTM/parallel_link_model.py":493
  * 
  *         # Find the amount of bandwidth each LSP in each parallel group will carry
  *         counter = 1             # <<<<<<<<<<<<<<
@@ -10269,7 +10269,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
   __Pyx_INCREF(__pyx_int_1);
   __pyx_v_counter = __pyx_int_1;
 
-  /* "pyNTM/parallel_link_model.pyx":494
+  /* "pyNTM/parallel_link_model.py":494
  *         # Find the amount of bandwidth each LSP in each parallel group will carry
  *         counter = 1
  *         for group, lsps in parallel_lsp_groups.items():             # <<<<<<<<<<<<<<
@@ -10384,7 +10384,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
     __Pyx_XDECREF_SET(__pyx_v_lsps, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":495
+    /* "pyNTM/parallel_link_model.py":495
  *         counter = 1
  *         for group, lsps in parallel_lsp_groups.items():
  *             print("Routing {} LSPs in parallel LSP group {}; {}/{}".format(len(lsps), group, counter,             # <<<<<<<<<<<<<<
@@ -10397,7 +10397,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
     __pyx_t_3 = PyInt_FromSsize_t(__pyx_t_9); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 495, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
 
-    /* "pyNTM/parallel_link_model.pyx":496
+    /* "pyNTM/parallel_link_model.py":496
  *         for group, lsps in parallel_lsp_groups.items():
  *             print("Routing {} LSPs in parallel LSP group {}; {}/{}".format(len(lsps), group, counter,
  *                                                                            len(parallel_lsp_groups)))             # <<<<<<<<<<<<<<
@@ -10465,7 +10465,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
     if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 495, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":498
+    /* "pyNTM/parallel_link_model.py":498
  *                                                                            len(parallel_lsp_groups)))
  *             # Traffic each LSP in a parallel LSP group will carry; initialize
  *             traff_on_each_group_lsp = 0             # <<<<<<<<<<<<<<
@@ -10475,7 +10475,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
     __Pyx_INCREF(__pyx_int_0);
     __Pyx_XDECREF_SET(__pyx_v_traff_on_each_group_lsp, __pyx_int_0);
 
-    /* "pyNTM/parallel_link_model.pyx":500
+    /* "pyNTM/parallel_link_model.py":500
  *             traff_on_each_group_lsp = 0
  * 
  *             try:             # <<<<<<<<<<<<<<
@@ -10491,7 +10491,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
       __Pyx_XGOTREF(__pyx_t_15);
       /*try:*/ {
 
-        /* "pyNTM/parallel_link_model.pyx":502
+        /* "pyNTM/parallel_link_model.py":502
  *             try:
  *                 # Get all demands that would ride the parallel LSP group
  *                 dmds_on_lsp_group = parallel_demand_groups[group]             # <<<<<<<<<<<<<<
@@ -10503,7 +10503,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
         __Pyx_XDECREF_SET(__pyx_v_dmds_on_lsp_group, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":504
+        /* "pyNTM/parallel_link_model.py":504
  *                 dmds_on_lsp_group = parallel_demand_groups[group]
  * 
  *                 traffic_in_demand_group = sum([dmd.traffic for dmd in dmds_on_lsp_group])             # <<<<<<<<<<<<<<
@@ -10565,7 +10565,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
         __Pyx_XDECREF_SET(__pyx_v_traffic_in_demand_group, __pyx_t_6);
         __pyx_t_6 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":505
+        /* "pyNTM/parallel_link_model.py":505
  * 
  *                 traffic_in_demand_group = sum([dmd.traffic for dmd in dmds_on_lsp_group])
  *                 if traffic_in_demand_group > 0:             # <<<<<<<<<<<<<<
@@ -10577,7 +10577,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         if (__pyx_t_17) {
 
-          /* "pyNTM/parallel_link_model.pyx":506
+          /* "pyNTM/parallel_link_model.py":506
  *                 traffic_in_demand_group = sum([dmd.traffic for dmd in dmds_on_lsp_group])
  *                 if traffic_in_demand_group > 0:
  *                     traff_on_each_group_lsp = traffic_in_demand_group / len(lsps)             # <<<<<<<<<<<<<<
@@ -10593,7 +10593,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
           __Pyx_DECREF_SET(__pyx_v_traff_on_each_group_lsp, __pyx_t_1);
           __pyx_t_1 = 0;
 
-          /* "pyNTM/parallel_link_model.pyx":505
+          /* "pyNTM/parallel_link_model.py":505
  * 
  *                 traffic_in_demand_group = sum([dmd.traffic for dmd in dmds_on_lsp_group])
  *                 if traffic_in_demand_group > 0:             # <<<<<<<<<<<<<<
@@ -10602,7 +10602,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
  */
         }
 
-        /* "pyNTM/parallel_link_model.pyx":500
+        /* "pyNTM/parallel_link_model.py":500
  *             traff_on_each_group_lsp = 0
  * 
  *             try:             # <<<<<<<<<<<<<<
@@ -10622,7 +10622,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":507
+      /* "pyNTM/parallel_link_model.py":507
  *                 if traffic_in_demand_group > 0:
  *                     traff_on_each_group_lsp = traffic_in_demand_group / len(lsps)
  *             except KeyError:             # <<<<<<<<<<<<<<
@@ -10637,7 +10637,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
       goto __pyx_L9_except_error;
       __pyx_L9_except_error:;
 
-      /* "pyNTM/parallel_link_model.pyx":500
+      /* "pyNTM/parallel_link_model.py":500
  *             traff_on_each_group_lsp = 0
  * 
  *             try:             # <<<<<<<<<<<<<<
@@ -10657,7 +10657,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
       __pyx_L14_try_end:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":513
+    /* "pyNTM/parallel_link_model.py":513
  * 
  *             # Now route each LSP in the group (first routing iteration)
  *             for lsp in lsps:  # TODO - can this be optimized?             # <<<<<<<<<<<<<<
@@ -10706,7 +10706,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
       __Pyx_XDECREF_SET(__pyx_v_lsp, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":515
+      /* "pyNTM/parallel_link_model.py":515
  *             for lsp in lsps:  # TODO - can this be optimized?
  *                 # Route each LSP one at a time
  *                 lsp.route_lsp(input_model, traff_on_each_group_lsp)             # <<<<<<<<<<<<<<
@@ -10762,7 +10762,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":513
+      /* "pyNTM/parallel_link_model.py":513
  * 
  *             # Now route each LSP in the group (first routing iteration)
  *             for lsp in lsps:  # TODO - can this be optimized?             # <<<<<<<<<<<<<<
@@ -10772,7 +10772,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":517
+    /* "pyNTM/parallel_link_model.py":517
  *                 lsp.route_lsp(input_model, traff_on_each_group_lsp)
  * 
  *             routed_lsps_in_group = [lsp for lsp in lsps if lsp.path != 'Unrouted']             # <<<<<<<<<<<<<<
@@ -10834,7 +10834,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
     __Pyx_XDECREF_SET(__pyx_v_routed_lsps_in_group, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":522
+    /* "pyNTM/parallel_link_model.py":522
  *             # If not all the LSPs in the group can route at the lowest (initial)
  *             # setup bandwidth, determine which LSPs can signal and for how much traffic
  *             if len(routed_lsps_in_group) != len(lsps) and len(routed_lsps_in_group) > 0:             # <<<<<<<<<<<<<<
@@ -10855,7 +10855,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
     __pyx_L24_bool_binop_done:;
     if (__pyx_t_17) {
 
-      /* "pyNTM/parallel_link_model.pyx":523
+      /* "pyNTM/parallel_link_model.py":523
  *             # setup bandwidth, determine which LSPs can signal and for how much traffic
  *             if len(routed_lsps_in_group) != len(lsps) and len(routed_lsps_in_group) > 0:
  *                 self._optimize_parallel_lsp_group_res_bw(input_model, routed_lsps_in_group, traffic_in_demand_group)             # <<<<<<<<<<<<<<
@@ -10915,7 +10915,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":522
+      /* "pyNTM/parallel_link_model.py":522
  *             # If not all the LSPs in the group can route at the lowest (initial)
  *             # setup bandwidth, determine which LSPs can signal and for how much traffic
  *             if len(routed_lsps_in_group) != len(lsps) and len(routed_lsps_in_group) > 0:             # <<<<<<<<<<<<<<
@@ -10924,7 +10924,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":525
+    /* "pyNTM/parallel_link_model.py":525
  *                 self._optimize_parallel_lsp_group_res_bw(input_model, routed_lsps_in_group, traffic_in_demand_group)
  * 
  *             counter += 1             # <<<<<<<<<<<<<<
@@ -10936,7 +10936,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
     __Pyx_DECREF_SET(__pyx_v_counter, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":494
+    /* "pyNTM/parallel_link_model.py":494
  *         # Find the amount of bandwidth each LSP in each parallel group will carry
  *         counter = 1
  *         for group, lsps in parallel_lsp_groups.items():             # <<<<<<<<<<<<<<
@@ -10946,7 +10946,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":527
+  /* "pyNTM/parallel_link_model.py":527
  *             counter += 1
  * 
  *         return self             # <<<<<<<<<<<<<<
@@ -10958,7 +10958,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
   __pyx_r = __pyx_v_self;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":473
+  /* "pyNTM/parallel_link_model.py":473
  *         return self._update_interface_utilization()
  * 
  *     def _route_lsps(self, input_model):             # <<<<<<<<<<<<<<
@@ -10994,7 +10994,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_20_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":529
+/* "pyNTM/parallel_link_model.py":529
  *         return self
  * 
  *     def _optimize_parallel_lsp_group_res_bw(self, input_model, routed_lsps_in_group, traffic_in_demand_group):             # <<<<<<<<<<<<<<
@@ -11108,7 +11108,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
   PyObject *(*__pyx_t_11)(PyObject *);
   __Pyx_RefNannySetupContext("_optimize_parallel_lsp_group_res_bw", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":547
+  /* "pyNTM/parallel_link_model.py":547
  *         # as it would allow the LSP to reserve bandwidth for the amount
  *         # of traffic it carries
  *         setup_bandwidth_optimized = traffic_in_demand_group / len(routed_lsps_in_group)             # <<<<<<<<<<<<<<
@@ -11124,7 +11124,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
   __pyx_v_setup_bandwidth_optimized = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":551
+  /* "pyNTM/parallel_link_model.py":551
  *         # Determine if any of the LSPs can signal for the amount of
  *         # traffic they would carry (setup_bandwidth_optimized)
  *         for lsp in routed_lsps_in_group:             # <<<<<<<<<<<<<<
@@ -11173,7 +11173,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
     __Pyx_XDECREF_SET(__pyx_v_lsp, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":556
+    /* "pyNTM/parallel_link_model.py":556
  *             # a 'setup_bandwidth_optimized' amount of setup_bandwidth
  * 
  *             lsp_path_interfaces_before = lsp.path['interfaces']             # <<<<<<<<<<<<<<
@@ -11188,7 +11188,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
     __Pyx_XDECREF_SET(__pyx_v_lsp_path_interfaces_before, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":557
+    /* "pyNTM/parallel_link_model.py":557
  * 
  *             lsp_path_interfaces_before = lsp.path['interfaces']
  *             lsp_res_bw_before = lsp.reserved_bandwidth             # <<<<<<<<<<<<<<
@@ -11200,7 +11200,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
     __Pyx_XDECREF_SET(__pyx_v_lsp_res_bw_before, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":560
+    /* "pyNTM/parallel_link_model.py":560
  * 
  *             # See if LSP can resignal for setup_bandwidth_optimized
  *             lsp = lsp.find_rsvp_path_w_bw(setup_bandwidth_optimized, input_model)             # <<<<<<<<<<<<<<
@@ -11257,7 +11257,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
     __Pyx_DECREF_SET(__pyx_v_lsp, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":565
+    /* "pyNTM/parallel_link_model.py":565
  *             # reserved_bandwidth value to the interfaces in its
  *             # prior path['interfaces'] list
  *             if lsp_res_bw_before != lsp.reserved_bandwidth:             # <<<<<<<<<<<<<<
@@ -11272,7 +11272,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_9) {
 
-      /* "pyNTM/parallel_link_model.pyx":566
+      /* "pyNTM/parallel_link_model.py":566
  *             # prior path['interfaces'] list
  *             if lsp_res_bw_before != lsp.reserved_bandwidth:
  *                 for interface in lsp_path_interfaces_before:             # <<<<<<<<<<<<<<
@@ -11321,7 +11321,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
         __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":567
+        /* "pyNTM/parallel_link_model.py":567
  *             if lsp_res_bw_before != lsp.reserved_bandwidth:
  *                 for interface in lsp_path_interfaces_before:
  *                     interface.reserved_bandwidth -= lsp_res_bw_before             # <<<<<<<<<<<<<<
@@ -11336,7 +11336,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
         if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface, __pyx_n_s_reserved_bandwidth, __pyx_t_8) < 0) __PYX_ERR(0, 567, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":566
+        /* "pyNTM/parallel_link_model.py":566
  *             # prior path['interfaces'] list
  *             if lsp_res_bw_before != lsp.reserved_bandwidth:
  *                 for interface in lsp_path_interfaces_before:             # <<<<<<<<<<<<<<
@@ -11346,7 +11346,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":570
+      /* "pyNTM/parallel_link_model.py":570
  *                 # . . . and then remove the new reserved bandwidth from the
  *                 # new path interfaces
  *                 for interface in lsp.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -11401,7 +11401,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
         __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_8);
         __pyx_t_8 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":571
+        /* "pyNTM/parallel_link_model.py":571
  *                 # new path interfaces
  *                 for interface in lsp.path['interfaces']:
  *                     interface.reserved_bandwidth += lsp.reserved_bandwidth             # <<<<<<<<<<<<<<
@@ -11419,7 +11419,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
         if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface, __pyx_n_s_reserved_bandwidth, __pyx_t_6) < 0) __PYX_ERR(0, 571, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":570
+        /* "pyNTM/parallel_link_model.py":570
  *                 # . . . and then remove the new reserved bandwidth from the
  *                 # new path interfaces
  *                 for interface in lsp.path['interfaces']:             # <<<<<<<<<<<<<<
@@ -11429,7 +11429,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":565
+      /* "pyNTM/parallel_link_model.py":565
  *             # reserved_bandwidth value to the interfaces in its
  *             # prior path['interfaces'] list
  *             if lsp_res_bw_before != lsp.reserved_bandwidth:             # <<<<<<<<<<<<<<
@@ -11438,7 +11438,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":551
+    /* "pyNTM/parallel_link_model.py":551
  *         # Determine if any of the LSPs can signal for the amount of
  *         # traffic they would carry (setup_bandwidth_optimized)
  *         for lsp in routed_lsps_in_group:             # <<<<<<<<<<<<<<
@@ -11448,7 +11448,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":529
+  /* "pyNTM/parallel_link_model.py":529
  *         return self
  * 
  *     def _optimize_parallel_lsp_group_res_bw(self, input_model, routed_lsps_in_group, traffic_in_demand_group):             # <<<<<<<<<<<<<<
@@ -11478,7 +11478,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_22_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":573
+/* "pyNTM/parallel_link_model.py":573
  *                     interface.reserved_bandwidth += lsp.reserved_bandwidth
  * 
  *     def parallel_lsp_groups(self):             # <<<<<<<<<<<<<<
@@ -11531,7 +11531,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
   int __pyx_t_18;
   __Pyx_RefNannySetupContext("parallel_lsp_groups", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":580
+  /* "pyNTM/parallel_link_model.py":580
  *         """
  * 
  *         if self._parallel_lsp_groups == {}:             # <<<<<<<<<<<<<<
@@ -11549,7 +11549,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_4) {
 
-    /* "pyNTM/parallel_link_model.pyx":581
+    /* "pyNTM/parallel_link_model.py":581
  * 
  *         if self._parallel_lsp_groups == {}:
  *             src_node_names = set([lsp.source_node_object.name for lsp in self.rsvp_lsp_objects])             # <<<<<<<<<<<<<<
@@ -11617,7 +11617,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
     __pyx_v_src_node_names = ((PyObject*)__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":582
+    /* "pyNTM/parallel_link_model.py":582
  *         if self._parallel_lsp_groups == {}:
  *             src_node_names = set([lsp.source_node_object.name for lsp in self.rsvp_lsp_objects])
  *             dest_node_names = set([lsp.dest_node_object.name for lsp in self.rsvp_lsp_objects])             # <<<<<<<<<<<<<<
@@ -11685,7 +11685,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
     __pyx_v_dest_node_names = ((PyObject*)__pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":584
+    /* "pyNTM/parallel_link_model.py":584
  *             dest_node_names = set([lsp.dest_node_object.name for lsp in self.rsvp_lsp_objects])
  * 
  *             parallel_lsp_groups = {}             # <<<<<<<<<<<<<<
@@ -11697,7 +11697,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
     __pyx_v_parallel_lsp_groups = ((PyObject*)__pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":586
+    /* "pyNTM/parallel_link_model.py":586
  *             parallel_lsp_groups = {}
  * 
  *             for src_node_name in src_node_names:             # <<<<<<<<<<<<<<
@@ -11718,7 +11718,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
       __Pyx_XDECREF_SET(__pyx_v_src_node_name, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":587
+      /* "pyNTM/parallel_link_model.py":587
  * 
  *             for src_node_name in src_node_names:
  *                 for dest_node_name in dest_node_names:             # <<<<<<<<<<<<<<
@@ -11739,7 +11739,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
         __Pyx_XDECREF_SET(__pyx_v_dest_node_name, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":588
+        /* "pyNTM/parallel_link_model.py":588
  *             for src_node_name in src_node_names:
  *                 for dest_node_name in dest_node_names:
  *                     key = '{}-{}'.format(src_node_name, dest_node_name)             # <<<<<<<<<<<<<<
@@ -11796,7 +11796,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
         __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":589
+        /* "pyNTM/parallel_link_model.py":589
  *                 for dest_node_name in dest_node_names:
  *                     key = '{}-{}'.format(src_node_name, dest_node_name)
  *                     parallel_lsp_groups[key] = []             # <<<<<<<<<<<<<<
@@ -11808,7 +11808,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
         if (unlikely(PyDict_SetItem(__pyx_v_parallel_lsp_groups, __pyx_v_key, __pyx_t_2) < 0)) __PYX_ERR(0, 589, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":590
+        /* "pyNTM/parallel_link_model.py":590
  *                     key = '{}-{}'.format(src_node_name, dest_node_name)
  *                     parallel_lsp_groups[key] = []
  *                     for lsp in self.rsvp_lsp_objects:             # <<<<<<<<<<<<<<
@@ -11860,7 +11860,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
           __Pyx_XDECREF_SET(__pyx_v_lsp, __pyx_t_2);
           __pyx_t_2 = 0;
 
-          /* "pyNTM/parallel_link_model.pyx":591
+          /* "pyNTM/parallel_link_model.py":591
  *                     parallel_lsp_groups[key] = []
  *                     for lsp in self.rsvp_lsp_objects:
  *                         if (lsp.source_node_object.name == src_node_name and             # <<<<<<<<<<<<<<
@@ -11882,7 +11882,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
             goto __pyx_L15_bool_binop_done;
           }
 
-          /* "pyNTM/parallel_link_model.pyx":592
+          /* "pyNTM/parallel_link_model.py":592
  *                     for lsp in self.rsvp_lsp_objects:
  *                         if (lsp.source_node_object.name == src_node_name and
  *                                 lsp.dest_node_object.name == dest_node_name):             # <<<<<<<<<<<<<<
@@ -11901,7 +11901,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
           __pyx_t_4 = __pyx_t_17;
           __pyx_L15_bool_binop_done:;
 
-          /* "pyNTM/parallel_link_model.pyx":591
+          /* "pyNTM/parallel_link_model.py":591
  *                     parallel_lsp_groups[key] = []
  *                     for lsp in self.rsvp_lsp_objects:
  *                         if (lsp.source_node_object.name == src_node_name and             # <<<<<<<<<<<<<<
@@ -11910,7 +11910,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
  */
           if (__pyx_t_4) {
 
-            /* "pyNTM/parallel_link_model.pyx":593
+            /* "pyNTM/parallel_link_model.py":593
  *                         if (lsp.source_node_object.name == src_node_name and
  *                                 lsp.dest_node_object.name == dest_node_name):
  *                             parallel_lsp_groups[key].append(lsp)             # <<<<<<<<<<<<<<
@@ -11922,7 +11922,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
             __pyx_t_18 = __Pyx_PyObject_Append(__pyx_t_2, __pyx_v_lsp); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 593, __pyx_L1_error)
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-            /* "pyNTM/parallel_link_model.pyx":591
+            /* "pyNTM/parallel_link_model.py":591
  *                     parallel_lsp_groups[key] = []
  *                     for lsp in self.rsvp_lsp_objects:
  *                         if (lsp.source_node_object.name == src_node_name and             # <<<<<<<<<<<<<<
@@ -11931,7 +11931,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
  */
           }
 
-          /* "pyNTM/parallel_link_model.pyx":590
+          /* "pyNTM/parallel_link_model.py":590
  *                     key = '{}-{}'.format(src_node_name, dest_node_name)
  *                     parallel_lsp_groups[key] = []
  *                     for lsp in self.rsvp_lsp_objects:             # <<<<<<<<<<<<<<
@@ -11941,7 +11941,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
         }
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":595
+        /* "pyNTM/parallel_link_model.py":595
  *                             parallel_lsp_groups[key].append(lsp)
  * 
  *                     if parallel_lsp_groups[key] == []:             # <<<<<<<<<<<<<<
@@ -11959,7 +11959,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
         __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
         if (__pyx_t_4) {
 
-          /* "pyNTM/parallel_link_model.pyx":596
+          /* "pyNTM/parallel_link_model.py":596
  * 
  *                     if parallel_lsp_groups[key] == []:
  *                         del parallel_lsp_groups[key]             # <<<<<<<<<<<<<<
@@ -11968,7 +11968,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
  */
           if (unlikely(PyDict_DelItem(__pyx_v_parallel_lsp_groups, __pyx_v_key) < 0)) __PYX_ERR(0, 596, __pyx_L1_error)
 
-          /* "pyNTM/parallel_link_model.pyx":595
+          /* "pyNTM/parallel_link_model.py":595
  *                             parallel_lsp_groups[key].append(lsp)
  * 
  *                     if parallel_lsp_groups[key] == []:             # <<<<<<<<<<<<<<
@@ -11981,7 +11981,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
     }
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":598
+    /* "pyNTM/parallel_link_model.py":598
  *                         del parallel_lsp_groups[key]
  * 
  *             self._parallel_lsp_groups = parallel_lsp_groups             # <<<<<<<<<<<<<<
@@ -11990,7 +11990,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_parallel_lsp_groups, __pyx_v_parallel_lsp_groups) < 0) __PYX_ERR(0, 598, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":599
+    /* "pyNTM/parallel_link_model.py":599
  * 
  *             self._parallel_lsp_groups = parallel_lsp_groups
  *             return parallel_lsp_groups             # <<<<<<<<<<<<<<
@@ -12002,7 +12002,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
     __pyx_r = __pyx_v_parallel_lsp_groups;
     goto __pyx_L0;
 
-    /* "pyNTM/parallel_link_model.pyx":580
+    /* "pyNTM/parallel_link_model.py":580
  *         """
  * 
  *         if self._parallel_lsp_groups == {}:             # <<<<<<<<<<<<<<
@@ -12011,7 +12011,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":602
+  /* "pyNTM/parallel_link_model.py":602
  * 
  *         else:
  *             return self._parallel_lsp_groups             # <<<<<<<<<<<<<<
@@ -12027,7 +12027,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
     goto __pyx_L0;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":573
+  /* "pyNTM/parallel_link_model.py":573
  *                     interface.reserved_bandwidth += lsp.reserved_bandwidth
  * 
  *     def parallel_lsp_groups(self):             # <<<<<<<<<<<<<<
@@ -12058,7 +12058,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_24p
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":604
+/* "pyNTM/parallel_link_model.py":604
  *             return self._parallel_lsp_groups
  * 
  *     def parallel_demand_groups(self):             # <<<<<<<<<<<<<<
@@ -12111,7 +12111,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
   int __pyx_t_18;
   __Pyx_RefNannySetupContext("parallel_demand_groups", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":611
+  /* "pyNTM/parallel_link_model.py":611
  *         """
  * 
  *         src_node_names = set([dmd.source_node_object.name for dmd in self.demand_objects])             # <<<<<<<<<<<<<<
@@ -12179,7 +12179,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
   __pyx_v_src_node_names = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":612
+  /* "pyNTM/parallel_link_model.py":612
  * 
  *         src_node_names = set([dmd.source_node_object.name for dmd in self.demand_objects])
  *         dest_node_names = set([dmd.dest_node_object.name for dmd in self.demand_objects])             # <<<<<<<<<<<<<<
@@ -12247,7 +12247,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
   __pyx_v_dest_node_names = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":614
+  /* "pyNTM/parallel_link_model.py":614
  *         dest_node_names = set([dmd.dest_node_object.name for dmd in self.demand_objects])
  * 
  *         parallel_demand_groups = {}             # <<<<<<<<<<<<<<
@@ -12259,7 +12259,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
   __pyx_v_parallel_demand_groups = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":616
+  /* "pyNTM/parallel_link_model.py":616
  *         parallel_demand_groups = {}
  * 
  *         for src_node_name in src_node_names:             # <<<<<<<<<<<<<<
@@ -12280,7 +12280,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
     __Pyx_XDECREF_SET(__pyx_v_src_node_name, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":617
+    /* "pyNTM/parallel_link_model.py":617
  * 
  *         for src_node_name in src_node_names:
  *             for dest_node_name in dest_node_names:             # <<<<<<<<<<<<<<
@@ -12301,7 +12301,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
       __Pyx_XDECREF_SET(__pyx_v_dest_node_name, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":618
+      /* "pyNTM/parallel_link_model.py":618
  *         for src_node_name in src_node_names:
  *             for dest_node_name in dest_node_names:
  *                 key = '{}-{}'.format(src_node_name, dest_node_name)             # <<<<<<<<<<<<<<
@@ -12358,7 +12358,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
       __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":619
+      /* "pyNTM/parallel_link_model.py":619
  *             for dest_node_name in dest_node_names:
  *                 key = '{}-{}'.format(src_node_name, dest_node_name)
  *                 parallel_demand_groups[key] = []             # <<<<<<<<<<<<<<
@@ -12370,7 +12370,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
       if (unlikely(PyDict_SetItem(__pyx_v_parallel_demand_groups, __pyx_v_key, __pyx_t_2) < 0)) __PYX_ERR(0, 619, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":620
+      /* "pyNTM/parallel_link_model.py":620
  *                 key = '{}-{}'.format(src_node_name, dest_node_name)
  *                 parallel_demand_groups[key] = []
  *                 for dmd in self.demand_objects:             # <<<<<<<<<<<<<<
@@ -12422,7 +12422,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
         __Pyx_XDECREF_SET(__pyx_v_dmd, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":621
+        /* "pyNTM/parallel_link_model.py":621
  *                 parallel_demand_groups[key] = []
  *                 for dmd in self.demand_objects:
  *                     if (dmd.source_node_object.name == src_node_name and             # <<<<<<<<<<<<<<
@@ -12444,7 +12444,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
           goto __pyx_L14_bool_binop_done;
         }
 
-        /* "pyNTM/parallel_link_model.pyx":622
+        /* "pyNTM/parallel_link_model.py":622
  *                 for dmd in self.demand_objects:
  *                     if (dmd.source_node_object.name == src_node_name and
  *                             dmd.dest_node_object.name == dest_node_name):             # <<<<<<<<<<<<<<
@@ -12463,7 +12463,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
         __pyx_t_16 = __pyx_t_17;
         __pyx_L14_bool_binop_done:;
 
-        /* "pyNTM/parallel_link_model.pyx":621
+        /* "pyNTM/parallel_link_model.py":621
  *                 parallel_demand_groups[key] = []
  *                 for dmd in self.demand_objects:
  *                     if (dmd.source_node_object.name == src_node_name and             # <<<<<<<<<<<<<<
@@ -12472,7 +12472,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
  */
         if (__pyx_t_16) {
 
-          /* "pyNTM/parallel_link_model.pyx":623
+          /* "pyNTM/parallel_link_model.py":623
  *                     if (dmd.source_node_object.name == src_node_name and
  *                             dmd.dest_node_object.name == dest_node_name):
  *                         parallel_demand_groups[key].append(dmd)             # <<<<<<<<<<<<<<
@@ -12484,7 +12484,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
           __pyx_t_18 = __Pyx_PyObject_Append(__pyx_t_2, __pyx_v_dmd); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 623, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-          /* "pyNTM/parallel_link_model.pyx":621
+          /* "pyNTM/parallel_link_model.py":621
  *                 parallel_demand_groups[key] = []
  *                 for dmd in self.demand_objects:
  *                     if (dmd.source_node_object.name == src_node_name and             # <<<<<<<<<<<<<<
@@ -12493,7 +12493,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
  */
         }
 
-        /* "pyNTM/parallel_link_model.pyx":620
+        /* "pyNTM/parallel_link_model.py":620
  *                 key = '{}-{}'.format(src_node_name, dest_node_name)
  *                 parallel_demand_groups[key] = []
  *                 for dmd in self.demand_objects:             # <<<<<<<<<<<<<<
@@ -12503,7 +12503,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
       }
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":625
+      /* "pyNTM/parallel_link_model.py":625
  *                         parallel_demand_groups[key].append(dmd)
  * 
  *                 if parallel_demand_groups[key] == []:             # <<<<<<<<<<<<<<
@@ -12521,7 +12521,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       if (__pyx_t_16) {
 
-        /* "pyNTM/parallel_link_model.pyx":626
+        /* "pyNTM/parallel_link_model.py":626
  * 
  *                 if parallel_demand_groups[key] == []:
  *                     del parallel_demand_groups[key]             # <<<<<<<<<<<<<<
@@ -12530,7 +12530,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
  */
         if (unlikely(PyDict_DelItem(__pyx_v_parallel_demand_groups, __pyx_v_key) < 0)) __PYX_ERR(0, 626, __pyx_L1_error)
 
-        /* "pyNTM/parallel_link_model.pyx":625
+        /* "pyNTM/parallel_link_model.py":625
  *                         parallel_demand_groups[key].append(dmd)
  * 
  *                 if parallel_demand_groups[key] == []:             # <<<<<<<<<<<<<<
@@ -12543,7 +12543,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":628
+  /* "pyNTM/parallel_link_model.py":628
  *                     del parallel_demand_groups[key]
  * 
  *         return parallel_demand_groups             # <<<<<<<<<<<<<<
@@ -12555,7 +12555,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
   __pyx_r = __pyx_v_parallel_demand_groups;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":604
+  /* "pyNTM/parallel_link_model.py":604
  *             return self._parallel_lsp_groups
  * 
  *     def parallel_demand_groups(self):             # <<<<<<<<<<<<<<
@@ -12586,7 +12586,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26p
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":630
+/* "pyNTM/parallel_link_model.py":630
  *         return parallel_demand_groups
  * 
  *     def update_simulation(self):             # <<<<<<<<<<<<<<
@@ -12610,7 +12610,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_29u
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17update_simulation_2generator6(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":651
+/* "pyNTM/parallel_link_model.py":651
  *         # If the interface is not failed, then by definition, the nodes are
  *         # not failed
  *         for interface_object in (interface_object for interface_object in self.interface_objects             # <<<<<<<<<<<<<<
@@ -12720,7 +12720,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17u
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":652
+    /* "pyNTM/parallel_link_model.py":652
  *         # not failed
  *         for interface_object in (interface_object for interface_object in self.interface_objects
  *                                  if interface_object.failed is not True):             # <<<<<<<<<<<<<<
@@ -12734,7 +12734,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17u
     __pyx_t_6 = (__pyx_t_5 != 0);
     if (__pyx_t_6) {
 
-      /* "pyNTM/parallel_link_model.pyx":651
+      /* "pyNTM/parallel_link_model.py":651
  *         # If the interface is not failed, then by definition, the nodes are
  *         # not failed
  *         for interface_object in (interface_object for interface_object in self.interface_objects             # <<<<<<<<<<<<<<
@@ -12761,7 +12761,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17u
       __pyx_t_4 = __pyx_cur_scope->__pyx_t_2;
       if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 651, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":652
+      /* "pyNTM/parallel_link_model.py":652
  *         # not failed
  *         for interface_object in (interface_object for interface_object in self.interface_objects
  *                                  if interface_object.failed is not True):             # <<<<<<<<<<<<<<
@@ -12770,7 +12770,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17u
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":651
+    /* "pyNTM/parallel_link_model.py":651
  *         # If the interface is not failed, then by definition, the nodes are
  *         # not failed
  *         for interface_object in (interface_object for interface_object in self.interface_objects             # <<<<<<<<<<<<<<
@@ -12800,7 +12800,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17u
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17update_simulation_5generator7(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":664
+/* "pyNTM/parallel_link_model.py":664
  * 
  *         # Reset the reserved_bandwidth, traffic on each interface
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -12949,7 +12949,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17u
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17update_simulation_8generator8(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":668
+/* "pyNTM/parallel_link_model.py":668
  *             interface.traffic = 0
  * 
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -13098,7 +13098,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17u
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17update_simulation_11generator9(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":671
+/* "pyNTM/parallel_link_model.py":671
  *             lsp.path = 'Unrouted'
  * 
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -13246,7 +13246,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17u
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":630
+/* "pyNTM/parallel_link_model.py":630
  *         return parallel_demand_groups
  * 
  *     def update_simulation(self):             # <<<<<<<<<<<<<<
@@ -13288,7 +13288,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":640
+  /* "pyNTM/parallel_link_model.py":640
  *         """
  * 
  *         self._parallel_lsp_groups = {}  # Reset the attribute             # <<<<<<<<<<<<<<
@@ -13300,7 +13300,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   if (__Pyx_PyObject_SetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_parallel_lsp_groups, __pyx_t_1) < 0) __PYX_ERR(0, 640, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":643
+  /* "pyNTM/parallel_link_model.py":643
  * 
  *         # This set of interfaces can be used to route traffic
  *         non_failed_interfaces = set()             # <<<<<<<<<<<<<<
@@ -13312,7 +13312,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   __pyx_v_non_failed_interfaces = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":645
+  /* "pyNTM/parallel_link_model.py":645
  *         non_failed_interfaces = set()
  *         # This set of nodes can be used to route traffic
  *         available_nodes = set()             # <<<<<<<<<<<<<<
@@ -13324,7 +13324,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   __pyx_v_available_nodes = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":651
+  /* "pyNTM/parallel_link_model.py":651
  *         # If the interface is not failed, then by definition, the nodes are
  *         # not failed
  *         for interface_object in (interface_object for interface_object in self.interface_objects             # <<<<<<<<<<<<<<
@@ -13376,7 +13376,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
     __Pyx_XDECREF_SET(__pyx_v_interface_object, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":653
+    /* "pyNTM/parallel_link_model.py":653
  *         for interface_object in (interface_object for interface_object in self.interface_objects
  *                                  if interface_object.failed is not True):
  *             non_failed_interfaces.add(interface_object)             # <<<<<<<<<<<<<<
@@ -13385,7 +13385,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
  */
     __pyx_t_5 = PySet_Add(__pyx_v_non_failed_interfaces, __pyx_v_interface_object); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 653, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":654
+    /* "pyNTM/parallel_link_model.py":654
  *                                  if interface_object.failed is not True):
  *             non_failed_interfaces.add(interface_object)
  *             available_nodes.add(interface_object.node_object)             # <<<<<<<<<<<<<<
@@ -13397,7 +13397,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
     __pyx_t_5 = PySet_Add(__pyx_v_available_nodes, __pyx_t_1); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 654, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":655
+    /* "pyNTM/parallel_link_model.py":655
  *             non_failed_interfaces.add(interface_object)
  *             available_nodes.add(interface_object.node_object)
  *             available_nodes.add(interface_object.remote_node_object)             # <<<<<<<<<<<<<<
@@ -13409,7 +13409,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
     __pyx_t_5 = PySet_Add(__pyx_v_available_nodes, __pyx_t_1); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 655, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":651
+    /* "pyNTM/parallel_link_model.py":651
  *         # If the interface is not failed, then by definition, the nodes are
  *         # not failed
  *         for interface_object in (interface_object for interface_object in self.interface_objects             # <<<<<<<<<<<<<<
@@ -13419,7 +13419,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":659
+  /* "pyNTM/parallel_link_model.py":659
  *         # Create a model consisting only of the non-failed interfaces and
  *         # corresponding non-failed (available) nodes
  *         non_failed_interfaces_model = Parallel_Link_Model(non_failed_interfaces,             # <<<<<<<<<<<<<<
@@ -13429,7 +13429,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_Parallel_Link_Model); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 659, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/parallel_link_model.pyx":660
+  /* "pyNTM/parallel_link_model.py":660
  *         # corresponding non-failed (available) nodes
  *         non_failed_interfaces_model = Parallel_Link_Model(non_failed_interfaces,
  *                                                           available_nodes, self.demand_objects,             # <<<<<<<<<<<<<<
@@ -13439,7 +13439,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_demand_objects); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 660, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
 
-  /* "pyNTM/parallel_link_model.pyx":661
+  /* "pyNTM/parallel_link_model.py":661
  *         non_failed_interfaces_model = Parallel_Link_Model(non_failed_interfaces,
  *                                                           available_nodes, self.demand_objects,
  *                                                           self.rsvp_lsp_objects)             # <<<<<<<<<<<<<<
@@ -13506,7 +13506,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   __pyx_v_non_failed_interfaces_model = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":664
+  /* "pyNTM/parallel_link_model.py":664
  * 
  *         # Reset the reserved_bandwidth, traffic on each interface
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -13558,7 +13558,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":665
+    /* "pyNTM/parallel_link_model.py":665
  *         # Reset the reserved_bandwidth, traffic on each interface
  *         for interface in (interface for interface in self.interface_objects):
  *             interface.reserved_bandwidth = 0             # <<<<<<<<<<<<<<
@@ -13567,7 +13567,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface, __pyx_n_s_reserved_bandwidth, __pyx_int_0) < 0) __PYX_ERR(0, 665, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":666
+    /* "pyNTM/parallel_link_model.py":666
  *         for interface in (interface for interface in self.interface_objects):
  *             interface.reserved_bandwidth = 0
  *             interface.traffic = 0             # <<<<<<<<<<<<<<
@@ -13576,7 +13576,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface, __pyx_n_s_traffic, __pyx_int_0) < 0) __PYX_ERR(0, 666, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":664
+    /* "pyNTM/parallel_link_model.py":664
  * 
  *         # Reset the reserved_bandwidth, traffic on each interface
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -13586,7 +13586,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":668
+  /* "pyNTM/parallel_link_model.py":668
  *             interface.traffic = 0
  * 
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -13638,7 +13638,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
     __Pyx_XDECREF_SET(__pyx_v_lsp, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":669
+    /* "pyNTM/parallel_link_model.py":669
  * 
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects):
  *             lsp.path = 'Unrouted'             # <<<<<<<<<<<<<<
@@ -13647,7 +13647,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_lsp, __pyx_n_s_path, __pyx_n_s_Unrouted) < 0) __PYX_ERR(0, 669, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":668
+    /* "pyNTM/parallel_link_model.py":668
  *             interface.traffic = 0
  * 
  *         for lsp in (lsp for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -13657,7 +13657,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":671
+  /* "pyNTM/parallel_link_model.py":671
  *             lsp.path = 'Unrouted'
  * 
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -13709,7 +13709,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
     __Pyx_XDECREF_SET(__pyx_v_demand, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":672
+    /* "pyNTM/parallel_link_model.py":672
  * 
  *         for demand in (demand for demand in self.demand_objects):
  *             demand.path = 'Unrouted'             # <<<<<<<<<<<<<<
@@ -13718,7 +13718,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_demand, __pyx_n_s_path, __pyx_n_s_Unrouted) < 0) __PYX_ERR(0, 672, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":671
+    /* "pyNTM/parallel_link_model.py":671
  *             lsp.path = 'Unrouted'
  * 
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -13728,7 +13728,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":674
+  /* "pyNTM/parallel_link_model.py":674
  *             demand.path = 'Unrouted'
  * 
  *         print("Routing the LSPs . . . ")             # <<<<<<<<<<<<<<
@@ -13737,7 +13737,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_Routing_the_LSPs) < 0) __PYX_ERR(0, 674, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":676
+  /* "pyNTM/parallel_link_model.py":676
  *         print("Routing the LSPs . . . ")
  *         # Route the RSVP LSPs
  *         self = self._route_lsps(non_failed_interfaces_model)             # <<<<<<<<<<<<<<
@@ -13766,7 +13766,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":677
+  /* "pyNTM/parallel_link_model.py":677
  *         # Route the RSVP LSPs
  *         self = self._route_lsps(non_failed_interfaces_model)
  *         print("LSPs routed (if present); routing demands now . . .")             # <<<<<<<<<<<<<<
@@ -13775,7 +13775,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_LSPs_routed_if_present_routing_d) < 0) __PYX_ERR(0, 677, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":679
+  /* "pyNTM/parallel_link_model.py":679
  *         print("LSPs routed (if present); routing demands now . . .")
  *         # Route the demands
  *         self = self._route_demands(self.demand_objects, non_failed_interfaces_model)             # <<<<<<<<<<<<<<
@@ -13838,7 +13838,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   __Pyx_GIVEREF(__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":680
+  /* "pyNTM/parallel_link_model.py":680
  *         # Route the demands
  *         self = self._route_demands(self.demand_objects, non_failed_interfaces_model)
  *         print("Demands routed; validating model . . . ")             # <<<<<<<<<<<<<<
@@ -13847,7 +13847,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_Demands_routed_validating_model) < 0) __PYX_ERR(0, 680, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":682
+  /* "pyNTM/parallel_link_model.py":682
  *         print("Demands routed; validating model . . . ")
  * 
  *         self.validate_model()             # <<<<<<<<<<<<<<
@@ -13873,7 +13873,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":630
+  /* "pyNTM/parallel_link_model.py":630
  *         return parallel_demand_groups
  * 
  *     def update_simulation(self):             # <<<<<<<<<<<<<<
@@ -13907,7 +13907,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28u
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":684
+/* "pyNTM/parallel_link_model.py":684
  *         self.validate_model()
  * 
  *     def _unique_interface_per_node(self):             # <<<<<<<<<<<<<<
@@ -13931,7 +13931,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_31_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26_unique_interface_per_node_2generator10(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":692
+/* "pyNTM/parallel_link_model.py":692
  *         exception_interfaces = set()  # duplicate interfaces
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -14079,7 +14079,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_26_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":684
+/* "pyNTM/parallel_link_model.py":684
  *         self.validate_model()
  * 
  *     def _unique_interface_per_node(self):             # <<<<<<<<<<<<<<
@@ -14125,7 +14125,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":690
+  /* "pyNTM/parallel_link_model.py":690
  *         """
  * 
  *         exception_interfaces = set()  # duplicate interfaces             # <<<<<<<<<<<<<<
@@ -14137,7 +14137,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
   __pyx_v_exception_interfaces = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":692
+  /* "pyNTM/parallel_link_model.py":692
  *         exception_interfaces = set()  # duplicate interfaces
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -14189,7 +14189,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
     __Pyx_XDECREF_SET(__pyx_v_node, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":693
+    /* "pyNTM/parallel_link_model.py":693
  * 
  *         for node in (node for node in self.node_objects):
  *             node_int_list = [interface.name for interface in node.interfaces(self)]             # <<<<<<<<<<<<<<
@@ -14266,7 +14266,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
     __Pyx_XDECREF_SET(__pyx_v_node_int_list, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":694
+    /* "pyNTM/parallel_link_model.py":694
  *         for node in (node for node in self.node_objects):
  *             node_int_list = [interface.name for interface in node.interfaces(self)]
  *             node_int_set = set(node_int_list)             # <<<<<<<<<<<<<<
@@ -14278,7 +14278,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
     __Pyx_XDECREF_SET(__pyx_v_node_int_set, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":696
+    /* "pyNTM/parallel_link_model.py":696
  *             node_int_set = set(node_int_list)
  * 
  *             if len(node_int_list) > len(node_int_set):             # <<<<<<<<<<<<<<
@@ -14290,7 +14290,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
     __pyx_t_11 = ((__pyx_t_8 > __pyx_t_10) != 0);
     if (__pyx_t_11) {
 
-      /* "pyNTM/parallel_link_model.pyx":698
+      /* "pyNTM/parallel_link_model.py":698
  *             if len(node_int_list) > len(node_int_set):
  *                 # Find which ints are duplicate
  *                 for item in node_int_set:             # <<<<<<<<<<<<<<
@@ -14311,7 +14311,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
         __Pyx_XDECREF_SET(__pyx_v_item, __pyx_t_6);
         __pyx_t_6 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":699
+        /* "pyNTM/parallel_link_model.py":699
  *                 # Find which ints are duplicate
  *                 for item in node_int_set:
  *                     node_int_list.remove(item)             # <<<<<<<<<<<<<<
@@ -14324,7 +14324,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
       }
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":701
+      /* "pyNTM/parallel_link_model.py":701
  *                     node_int_list.remove(item)
  *                 # Add the remaining node and interface name to exception_interfaces
  *                 for item in node_int_list:             # <<<<<<<<<<<<<<
@@ -14343,7 +14343,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
         __Pyx_XDECREF_SET(__pyx_v_item, __pyx_t_6);
         __pyx_t_6 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":702
+        /* "pyNTM/parallel_link_model.py":702
  *                 # Add the remaining node and interface name to exception_interfaces
  *                 for item in node_int_list:
  *                     exception_interfaces.add((node, item))             # <<<<<<<<<<<<<<
@@ -14361,7 +14361,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
         __pyx_t_14 = PySet_Add(__pyx_v_exception_interfaces, __pyx_t_6); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 702, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":701
+        /* "pyNTM/parallel_link_model.py":701
  *                     node_int_list.remove(item)
  *                 # Add the remaining node and interface name to exception_interfaces
  *                 for item in node_int_list:             # <<<<<<<<<<<<<<
@@ -14371,7 +14371,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
       }
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":696
+      /* "pyNTM/parallel_link_model.py":696
  *             node_int_set = set(node_int_list)
  * 
  *             if len(node_int_list) > len(node_int_set):             # <<<<<<<<<<<<<<
@@ -14380,7 +14380,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":692
+    /* "pyNTM/parallel_link_model.py":692
  *         exception_interfaces = set()  # duplicate interfaces
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -14390,7 +14390,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":704
+  /* "pyNTM/parallel_link_model.py":704
  *                     exception_interfaces.add((node, item))
  * 
  *         if len(exception_interfaces) > 0:             # <<<<<<<<<<<<<<
@@ -14401,7 +14401,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
   __pyx_t_11 = ((__pyx_t_3 > 0) != 0);
   if (unlikely(__pyx_t_11)) {
 
-    /* "pyNTM/parallel_link_model.pyx":706
+    /* "pyNTM/parallel_link_model.py":706
  *         if len(exception_interfaces) > 0:
  *             message = ("Interface names must be unique per node.  The following"
  *                        " nodes have duplicate interface names {}".format(exception_interfaces))             # <<<<<<<<<<<<<<
@@ -14428,7 +14428,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
     __pyx_v_message = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":707
+    /* "pyNTM/parallel_link_model.py":707
  *             message = ("Interface names must be unique per node.  The following"
  *                        " nodes have duplicate interface names {}".format(exception_interfaces))
  *             raise ModelException(message)             # <<<<<<<<<<<<<<
@@ -14456,7 +14456,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 707, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":704
+    /* "pyNTM/parallel_link_model.py":704
  *                     exception_interfaces.add((node, item))
  * 
  *         if len(exception_interfaces) > 0:             # <<<<<<<<<<<<<<
@@ -14465,7 +14465,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":709
+  /* "pyNTM/parallel_link_model.py":709
  *             raise ModelException(message)
  *         else:
  *             return True             # <<<<<<<<<<<<<<
@@ -14479,7 +14479,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
     goto __pyx_L0;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":684
+  /* "pyNTM/parallel_link_model.py":684
  *         self.validate_model()
  * 
  *     def _unique_interface_per_node(self):             # <<<<<<<<<<<<<<
@@ -14510,7 +14510,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":711
+/* "pyNTM/parallel_link_model.py":711
  *             return True
  * 
  *     def _make_circuits_multidigraph(self, return_exception=True, include_failed_circuits=True):             # <<<<<<<<<<<<<<
@@ -14599,7 +14599,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_33_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27_make_circuits_multidigraph_2generator11(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":726
+/* "pyNTM/parallel_link_model.py":726
  * 
  *         # Determine which interfaces pair up into good circuits in G
  *         graph_interfaces = ((local_node_name, remote_node_name, data) for             # <<<<<<<<<<<<<<
@@ -14667,7 +14667,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27_
   __pyx_L3_first_run:;
   if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 726, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":728
+  /* "pyNTM/parallel_link_model.py":728
  *         graph_interfaces = ((local_node_name, remote_node_name, data) for
  *                             (local_node_name, remote_node_name, data) in
  *                             G.edges(data=True) if G.has_edge(remote_node_name, local_node_name))             # <<<<<<<<<<<<<<
@@ -14778,7 +14778,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27_
       __pyx_L7_unpacking_done:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":727
+    /* "pyNTM/parallel_link_model.py":727
  *         # Determine which interfaces pair up into good circuits in G
  *         graph_interfaces = ((local_node_name, remote_node_name, data) for
  *                             (local_node_name, remote_node_name, data) in             # <<<<<<<<<<<<<<
@@ -14798,7 +14798,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27_
     __Pyx_GIVEREF(__pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":728
+    /* "pyNTM/parallel_link_model.py":728
  *         graph_interfaces = ((local_node_name, remote_node_name, data) for
  *                             (local_node_name, remote_node_name, data) in
  *                             G.edges(data=True) if G.has_edge(remote_node_name, local_node_name))             # <<<<<<<<<<<<<<
@@ -14857,7 +14857,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27_
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_11) {
 
-      /* "pyNTM/parallel_link_model.pyx":726
+      /* "pyNTM/parallel_link_model.py":726
  * 
  *         # Determine which interfaces pair up into good circuits in G
  *         graph_interfaces = ((local_node_name, remote_node_name, data) for             # <<<<<<<<<<<<<<
@@ -14895,7 +14895,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27_
       __pyx_t_5 = __pyx_cur_scope->__pyx_t_2;
       if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 726, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":728
+      /* "pyNTM/parallel_link_model.py":728
  *         graph_interfaces = ((local_node_name, remote_node_name, data) for
  *                             (local_node_name, remote_node_name, data) in
  *                             G.edges(data=True) if G.has_edge(remote_node_name, local_node_name))             # <<<<<<<<<<<<<<
@@ -14904,7 +14904,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":726
+    /* "pyNTM/parallel_link_model.py":726
  * 
  *         # Determine which interfaces pair up into good circuits in G
  *         graph_interfaces = ((local_node_name, remote_node_name, data) for             # <<<<<<<<<<<<<<
@@ -14938,7 +14938,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27_make_circuits_multidigraph_5generator12(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":731
+/* "pyNTM/parallel_link_model.py":731
  * 
  *         # Set interface object in_ckt = False
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -15086,7 +15086,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":711
+/* "pyNTM/parallel_link_model.py":711
  *             return True
  * 
  *     def _make_circuits_multidigraph(self, return_exception=True, include_failed_circuits=True):             # <<<<<<<<<<<<<<
@@ -15145,7 +15145,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":723
+  /* "pyNTM/parallel_link_model.py":723
  *         """
  * 
  *         G = self._make_weighted_network_graph(include_failed_circuits=include_failed_circuits)             # <<<<<<<<<<<<<<
@@ -15165,7 +15165,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
   __pyx_cur_scope->__pyx_v_G = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":726
+  /* "pyNTM/parallel_link_model.py":726
  * 
  *         # Determine which interfaces pair up into good circuits in G
  *         graph_interfaces = ((local_node_name, remote_node_name, data) for             # <<<<<<<<<<<<<<
@@ -15177,7 +15177,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
   __pyx_v_graph_interfaces = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":731
+  /* "pyNTM/parallel_link_model.py":731
  * 
  *         # Set interface object in_ckt = False
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -15229,7 +15229,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":732
+    /* "pyNTM/parallel_link_model.py":732
  *         # Set interface object in_ckt = False
  *         for interface in (interface for interface in self.interface_objects):
  *             interface.in_ckt = False             # <<<<<<<<<<<<<<
@@ -15238,7 +15238,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface, __pyx_n_s_in_ckt, Py_False) < 0) __PYX_ERR(0, 732, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":731
+    /* "pyNTM/parallel_link_model.py":731
  * 
  *         # Set interface object in_ckt = False
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -15248,7 +15248,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":734
+  /* "pyNTM/parallel_link_model.py":734
  *             interface.in_ckt = False
  * 
  *         circuits = set([])             # <<<<<<<<<<<<<<
@@ -15260,7 +15260,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
   __pyx_v_circuits = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":739
+  /* "pyNTM/parallel_link_model.py":739
  *         # get the corresponding interface objects from the model to create
  *         # the Circuit object
  *         for interface in graph_interfaces:             # <<<<<<<<<<<<<<
@@ -15309,7 +15309,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":741
+    /* "pyNTM/parallel_link_model.py":741
  *         for interface in graph_interfaces:
  *             # Get each interface from model for each
  *             try:             # <<<<<<<<<<<<<<
@@ -15325,7 +15325,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       __Pyx_XGOTREF(__pyx_t_8);
       /*try:*/ {
 
-        /* "pyNTM/parallel_link_model.pyx":742
+        /* "pyNTM/parallel_link_model.py":742
  *             # Get each interface from model for each
  *             try:
  *                 int1 = self.get_interface_object_from_nodes(interface[0], interface[1],             # <<<<<<<<<<<<<<
@@ -15347,7 +15347,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         __pyx_t_1 = 0;
         __pyx_t_9 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":743
+        /* "pyNTM/parallel_link_model.py":743
  *             try:
  *                 int1 = self.get_interface_object_from_nodes(interface[0], interface[1],
  *                                                             circuit_id=interface[2]['circuit_id'])[0]             # <<<<<<<<<<<<<<
@@ -15364,7 +15364,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_circuit_id, __pyx_t_11) < 0) __PYX_ERR(0, 743, __pyx_L7_error)
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":742
+        /* "pyNTM/parallel_link_model.py":742
  *             # Get each interface from model for each
  *             try:
  *                 int1 = self.get_interface_object_from_nodes(interface[0], interface[1],             # <<<<<<<<<<<<<<
@@ -15377,7 +15377,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":743
+        /* "pyNTM/parallel_link_model.py":743
  *             try:
  *                 int1 = self.get_interface_object_from_nodes(interface[0], interface[1],
  *                                                             circuit_id=interface[2]['circuit_id'])[0]             # <<<<<<<<<<<<<<
@@ -15390,7 +15390,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         __Pyx_XDECREF_SET(__pyx_v_int1, __pyx_t_9);
         __pyx_t_9 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":741
+        /* "pyNTM/parallel_link_model.py":741
  *         for interface in graph_interfaces:
  *             # Get each interface from model for each
  *             try:             # <<<<<<<<<<<<<<
@@ -15409,7 +15409,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":744
+      /* "pyNTM/parallel_link_model.py":744
  *                 int1 = self.get_interface_object_from_nodes(interface[0], interface[1],
  *                                                             circuit_id=interface[2]['circuit_id'])[0]
  *             except (TypeError, IndexError):             # <<<<<<<<<<<<<<
@@ -15424,7 +15424,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_GOTREF(__pyx_t_10);
 
-        /* "pyNTM/parallel_link_model.pyx":746
+        /* "pyNTM/parallel_link_model.py":746
  *             except (TypeError, IndexError):
  *                 msg = ("No matching Interface Object found: source node {}, dest node {} "
  *                        "circuit_id {} ".format(interface[0], interface[1], interface[2]['circuit_id']))             # <<<<<<<<<<<<<<
@@ -15499,7 +15499,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         __pyx_v_msg = __pyx_t_3;
         __pyx_t_3 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":747
+        /* "pyNTM/parallel_link_model.py":747
  *                 msg = ("No matching Interface Object found: source node {}, dest node {} "
  *                        "circuit_id {} ".format(interface[0], interface[1], interface[2]['circuit_id']))
  *                 raise ModelException(msg)             # <<<<<<<<<<<<<<
@@ -15530,7 +15530,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       goto __pyx_L9_except_error;
       __pyx_L9_except_error:;
 
-      /* "pyNTM/parallel_link_model.pyx":741
+      /* "pyNTM/parallel_link_model.py":741
  *         for interface in graph_interfaces:
  *             # Get each interface from model for each
  *             try:             # <<<<<<<<<<<<<<
@@ -15545,7 +15545,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       __pyx_L14_try_end:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":748
+    /* "pyNTM/parallel_link_model.py":748
  *                        "circuit_id {} ".format(interface[0], interface[1], interface[2]['circuit_id']))
  *                 raise ModelException(msg)
  *             try:             # <<<<<<<<<<<<<<
@@ -15561,7 +15561,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       __Pyx_XGOTREF(__pyx_t_6);
       /*try:*/ {
 
-        /* "pyNTM/parallel_link_model.pyx":749
+        /* "pyNTM/parallel_link_model.py":749
  *                 raise ModelException(msg)
  *             try:
  *                 int2 = self.get_interface_object_from_nodes(interface[1], interface[0],             # <<<<<<<<<<<<<<
@@ -15583,7 +15583,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         __pyx_t_11 = 0;
         __pyx_t_9 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":750
+        /* "pyNTM/parallel_link_model.py":750
  *             try:
  *                 int2 = self.get_interface_object_from_nodes(interface[1], interface[0],
  *                                                             circuit_id=interface[2]['circuit_id'])[0]             # <<<<<<<<<<<<<<
@@ -15600,7 +15600,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_circuit_id, __pyx_t_1) < 0) __PYX_ERR(0, 750, __pyx_L17_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":749
+        /* "pyNTM/parallel_link_model.py":749
  *                 raise ModelException(msg)
  *             try:
  *                 int2 = self.get_interface_object_from_nodes(interface[1], interface[0],             # <<<<<<<<<<<<<<
@@ -15613,7 +15613,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":750
+        /* "pyNTM/parallel_link_model.py":750
  *             try:
  *                 int2 = self.get_interface_object_from_nodes(interface[1], interface[0],
  *                                                             circuit_id=interface[2]['circuit_id'])[0]             # <<<<<<<<<<<<<<
@@ -15626,7 +15626,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         __Pyx_XDECREF_SET(__pyx_v_int2, __pyx_t_9);
         __pyx_t_9 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":748
+        /* "pyNTM/parallel_link_model.py":748
  *                        "circuit_id {} ".format(interface[0], interface[1], interface[2]['circuit_id']))
  *                 raise ModelException(msg)
  *             try:             # <<<<<<<<<<<<<<
@@ -15650,7 +15650,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":751
+      /* "pyNTM/parallel_link_model.py":751
  *                 int2 = self.get_interface_object_from_nodes(interface[1], interface[0],
  *                                                             circuit_id=interface[2]['circuit_id'])[0]
  *             except (TypeError, IndexError):             # <<<<<<<<<<<<<<
@@ -15665,7 +15665,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_GOTREF(__pyx_t_3);
 
-        /* "pyNTM/parallel_link_model.pyx":753
+        /* "pyNTM/parallel_link_model.py":753
  *             except (TypeError, IndexError):
  *                 msg = ("No matching Interface Object found: source node {}, dest node {} "
  *                        "circuit_id {} ".format(interface[1], interface[0], interface[2]['circuit_id']))             # <<<<<<<<<<<<<<
@@ -15740,7 +15740,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
         __pyx_v_msg = __pyx_t_10;
         __pyx_t_10 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":754
+        /* "pyNTM/parallel_link_model.py":754
  *                 msg = ("No matching Interface Object found: source node {}, dest node {} "
  *                        "circuit_id {} ".format(interface[1], interface[0], interface[2]['circuit_id']))
  *                 raise ModelException(msg)             # <<<<<<<<<<<<<<
@@ -15771,7 +15771,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       goto __pyx_L19_except_error;
       __pyx_L19_except_error:;
 
-      /* "pyNTM/parallel_link_model.pyx":748
+      /* "pyNTM/parallel_link_model.py":748
  *                        "circuit_id {} ".format(interface[0], interface[1], interface[2]['circuit_id']))
  *                 raise ModelException(msg)
  *             try:             # <<<<<<<<<<<<<<
@@ -15786,7 +15786,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       __pyx_L24_try_end:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":756
+    /* "pyNTM/parallel_link_model.py":756
  *                 raise ModelException(msg)
  *             # Mark the interfaces as in ckt
  *             if int1.in_ckt is False and int2.in_ckt is False:             # <<<<<<<<<<<<<<
@@ -15812,7 +15812,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
     __pyx_L28_bool_binop_done:;
     if (__pyx_t_18) {
 
-      /* "pyNTM/parallel_link_model.pyx":758
+      /* "pyNTM/parallel_link_model.py":758
  *             if int1.in_ckt is False and int2.in_ckt is False:
  *                 # Mark interface objects as in_ckt = True
  *                 int1.in_ckt = True             # <<<<<<<<<<<<<<
@@ -15821,7 +15821,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
  */
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_int1, __pyx_n_s_in_ckt, Py_True) < 0) __PYX_ERR(0, 758, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":759
+      /* "pyNTM/parallel_link_model.py":759
  *                 # Mark interface objects as in_ckt = True
  *                 int1.in_ckt = True
  *                 int2.in_ckt = True             # <<<<<<<<<<<<<<
@@ -15830,7 +15830,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
  */
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_int2, __pyx_n_s_in_ckt, Py_True) < 0) __PYX_ERR(0, 759, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":761
+      /* "pyNTM/parallel_link_model.py":761
  *                 int2.in_ckt = True
  * 
  *                 ckt = Circuit(int1, int2)             # <<<<<<<<<<<<<<
@@ -15887,7 +15887,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       __Pyx_XDECREF_SET(__pyx_v_ckt, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":762
+      /* "pyNTM/parallel_link_model.py":762
  * 
  *                 ckt = Circuit(int1, int2)
  *                 circuits.add(ckt)             # <<<<<<<<<<<<<<
@@ -15896,7 +15896,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
  */
       __pyx_t_21 = PySet_Add(__pyx_v_circuits, __pyx_v_ckt); if (unlikely(__pyx_t_21 == ((int)-1))) __PYX_ERR(0, 762, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":756
+      /* "pyNTM/parallel_link_model.py":756
  *                 raise ModelException(msg)
  *             # Mark the interfaces as in ckt
  *             if int1.in_ckt is False and int2.in_ckt is False:             # <<<<<<<<<<<<<<
@@ -15905,7 +15905,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":739
+    /* "pyNTM/parallel_link_model.py":739
  *         # get the corresponding interface objects from the model to create
  *         # the Circuit object
  *         for interface in graph_interfaces:             # <<<<<<<<<<<<<<
@@ -15915,7 +15915,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":765
+  /* "pyNTM/parallel_link_model.py":765
  * 
  *         # Find any interfaces that don't have counterpart
  *         exception_ints_not_in_ckt = [(local_node_name, remote_node_name, data)             # <<<<<<<<<<<<<<
@@ -15925,7 +15925,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
   __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 765, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "pyNTM/parallel_link_model.pyx":767
+  /* "pyNTM/parallel_link_model.py":767
  *         exception_ints_not_in_ckt = [(local_node_name, remote_node_name, data)
  *                                      for (local_node_name, remote_node_name, data) in
  *                                      G.edges(data=True) if not (G.has_edge(remote_node_name, local_node_name))]             # <<<<<<<<<<<<<<
@@ -16035,7 +16035,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       __pyx_L33_unpacking_done:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":766
+    /* "pyNTM/parallel_link_model.py":766
  *         # Find any interfaces that don't have counterpart
  *         exception_ints_not_in_ckt = [(local_node_name, remote_node_name, data)
  *                                      for (local_node_name, remote_node_name, data) in             # <<<<<<<<<<<<<<
@@ -16049,7 +16049,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
     __Pyx_XDECREF_SET(__pyx_v_data, __pyx_t_11);
     __pyx_t_11 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":767
+    /* "pyNTM/parallel_link_model.py":767
  *         exception_ints_not_in_ckt = [(local_node_name, remote_node_name, data)
  *                                      for (local_node_name, remote_node_name, data) in
  *                                      G.edges(data=True) if not (G.has_edge(remote_node_name, local_node_name))]             # <<<<<<<<<<<<<<
@@ -16108,7 +16108,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
     __pyx_t_19 = ((!__pyx_t_18) != 0);
     if (__pyx_t_19) {
 
-      /* "pyNTM/parallel_link_model.pyx":765
+      /* "pyNTM/parallel_link_model.py":765
  * 
  *         # Find any interfaces that don't have counterpart
  *         exception_ints_not_in_ckt = [(local_node_name, remote_node_name, data)             # <<<<<<<<<<<<<<
@@ -16129,7 +16129,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_10))) __PYX_ERR(0, 765, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":767
+      /* "pyNTM/parallel_link_model.py":767
  *         exception_ints_not_in_ckt = [(local_node_name, remote_node_name, data)
  *                                      for (local_node_name, remote_node_name, data) in
  *                                      G.edges(data=True) if not (G.has_edge(remote_node_name, local_node_name))]             # <<<<<<<<<<<<<<
@@ -16138,7 +16138,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":766
+    /* "pyNTM/parallel_link_model.py":766
  *         # Find any interfaces that don't have counterpart
  *         exception_ints_not_in_ckt = [(local_node_name, remote_node_name, data)
  *                                      for (local_node_name, remote_node_name, data) in             # <<<<<<<<<<<<<<
@@ -16150,7 +16150,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
   __pyx_v_exception_ints_not_in_ckt = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":769
+  /* "pyNTM/parallel_link_model.py":769
  *                                      G.edges(data=True) if not (G.has_edge(remote_node_name, local_node_name))]
  * 
  *         if len(exception_ints_not_in_ckt) > 0:             # <<<<<<<<<<<<<<
@@ -16161,7 +16161,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
   __pyx_t_19 = ((__pyx_t_4 > 0) != 0);
   if (__pyx_t_19) {
 
-    /* "pyNTM/parallel_link_model.pyx":771
+    /* "pyNTM/parallel_link_model.py":771
  *         if len(exception_ints_not_in_ckt) > 0:
  *             exception_msg = ('WARNING: These interfaces were not matched '
  *                              'into a circuit {}'.format(exception_ints_not_in_ckt))             # <<<<<<<<<<<<<<
@@ -16188,7 +16188,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
     __pyx_v_exception_msg = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":772
+    /* "pyNTM/parallel_link_model.py":772
  *             exception_msg = ('WARNING: These interfaces were not matched '
  *                              'into a circuit {}'.format(exception_ints_not_in_ckt))
  *             if return_exception:             # <<<<<<<<<<<<<<
@@ -16198,7 +16198,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
     __pyx_t_19 = __Pyx_PyObject_IsTrue(__pyx_v_return_exception); if (unlikely(__pyx_t_19 < 0)) __PYX_ERR(0, 772, __pyx_L1_error)
     if (unlikely(__pyx_t_19)) {
 
-      /* "pyNTM/parallel_link_model.pyx":773
+      /* "pyNTM/parallel_link_model.py":773
  *                              'into a circuit {}'.format(exception_ints_not_in_ckt))
  *             if return_exception:
  *                 raise ModelException(exception_msg)             # <<<<<<<<<<<<<<
@@ -16226,7 +16226,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __PYX_ERR(0, 773, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":772
+      /* "pyNTM/parallel_link_model.py":772
  *             exception_msg = ('WARNING: These interfaces were not matched '
  *                              'into a circuit {}'.format(exception_ints_not_in_ckt))
  *             if return_exception:             # <<<<<<<<<<<<<<
@@ -16235,7 +16235,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":775
+    /* "pyNTM/parallel_link_model.py":775
  *                 raise ModelException(exception_msg)
  *             else:
  *                 return {'data': exception_ints_not_in_ckt}             # <<<<<<<<<<<<<<
@@ -16252,7 +16252,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
       goto __pyx_L0;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":769
+    /* "pyNTM/parallel_link_model.py":769
  *                                      G.edges(data=True) if not (G.has_edge(remote_node_name, local_node_name))]
  * 
  *         if len(exception_ints_not_in_ckt) > 0:             # <<<<<<<<<<<<<<
@@ -16261,7 +16261,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":777
+  /* "pyNTM/parallel_link_model.py":777
  *                 return {'data': exception_ints_not_in_ckt}
  * 
  *         self.circuit_objects = circuits             # <<<<<<<<<<<<<<
@@ -16270,7 +16270,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_circuit_objects, __pyx_v_circuits) < 0) __PYX_ERR(0, 777, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":711
+  /* "pyNTM/parallel_link_model.py":711
  *             return True
  * 
  *     def _make_circuits_multidigraph(self, return_exception=True, include_failed_circuits=True):             # <<<<<<<<<<<<<<
@@ -16314,7 +16314,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_32_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":779
+/* "pyNTM/parallel_link_model.py":779
  *         self.circuit_objects = circuits
  * 
  *     def get_interface_object_from_nodes(self, local_node_name, remote_node_name, circuit_id=None):             # <<<<<<<<<<<<<<
@@ -16412,7 +16412,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_35g
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_31get_interface_object_from_nodes_2generator13(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":799
+/* "pyNTM/parallel_link_model.py":799
  *         """
  * 
  *         interface_gen = (interface for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -16560,7 +16560,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_31g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":779
+/* "pyNTM/parallel_link_model.py":779
  *         self.circuit_objects = circuits
  * 
  *     def get_interface_object_from_nodes(self, local_node_name, remote_node_name, circuit_id=None):             # <<<<<<<<<<<<<<
@@ -16597,7 +16597,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":799
+  /* "pyNTM/parallel_link_model.py":799
  *         """
  * 
  *         interface_gen = (interface for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -16609,7 +16609,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
   __pyx_v_interface_gen = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":801
+  /* "pyNTM/parallel_link_model.py":801
  *         interface_gen = (interface for interface in self.interface_objects)
  * 
  *         if circuit_id is None:             # <<<<<<<<<<<<<<
@@ -16620,7 +16620,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "pyNTM/parallel_link_model.pyx":802
+    /* "pyNTM/parallel_link_model.py":802
  * 
  *         if circuit_id is None:
  *             interface_list = [interface for interface in interface_gen if             # <<<<<<<<<<<<<<
@@ -16671,7 +16671,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
       __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":803
+      /* "pyNTM/parallel_link_model.py":803
  *         if circuit_id is None:
  *             interface_list = [interface for interface in interface_gen if
  *                               interface.node_object.name == local_node_name and             # <<<<<<<<<<<<<<
@@ -16693,7 +16693,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
         goto __pyx_L7_bool_binop_done;
       }
 
-      /* "pyNTM/parallel_link_model.pyx":804
+      /* "pyNTM/parallel_link_model.py":804
  *             interface_list = [interface for interface in interface_gen if
  *                               interface.node_object.name == local_node_name and
  *                               interface.remote_node_object.name == remote_node_name]             # <<<<<<<<<<<<<<
@@ -16712,7 +16712,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
       __pyx_t_3 = __pyx_t_2;
       __pyx_L7_bool_binop_done:;
 
-      /* "pyNTM/parallel_link_model.pyx":802
+      /* "pyNTM/parallel_link_model.py":802
  * 
  *         if circuit_id is None:
  *             interface_list = [interface for interface in interface_gen if             # <<<<<<<<<<<<<<
@@ -16727,7 +16727,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
     __pyx_v_interface_list = ((PyObject*)__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":801
+    /* "pyNTM/parallel_link_model.py":801
  *         interface_gen = (interface for interface in self.interface_objects)
  * 
  *         if circuit_id is None:             # <<<<<<<<<<<<<<
@@ -16737,7 +16737,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
     goto __pyx_L3;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":806
+  /* "pyNTM/parallel_link_model.py":806
  *                               interface.remote_node_object.name == remote_node_name]
  *         else:
  *             interface_list = [interface for interface in interface_gen if             # <<<<<<<<<<<<<<
@@ -16789,7 +16789,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
       __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_7);
       __pyx_t_7 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":807
+      /* "pyNTM/parallel_link_model.py":807
  *         else:
  *             interface_list = [interface for interface in interface_gen if
  *                               interface.node_object.name == local_node_name and             # <<<<<<<<<<<<<<
@@ -16811,7 +16811,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
         goto __pyx_L12_bool_binop_done;
       }
 
-      /* "pyNTM/parallel_link_model.pyx":808
+      /* "pyNTM/parallel_link_model.py":808
  *             interface_list = [interface for interface in interface_gen if
  *                               interface.node_object.name == local_node_name and
  *                               interface.remote_node_object.name == remote_node_name and             # <<<<<<<<<<<<<<
@@ -16833,7 +16833,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
         goto __pyx_L12_bool_binop_done;
       }
 
-      /* "pyNTM/parallel_link_model.pyx":809
+      /* "pyNTM/parallel_link_model.py":809
  *                               interface.node_object.name == local_node_name and
  *                               interface.remote_node_object.name == remote_node_name and
  *                               interface.circuit_id == circuit_id]             # <<<<<<<<<<<<<<
@@ -16849,7 +16849,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
       __pyx_t_3 = __pyx_t_2;
       __pyx_L12_bool_binop_done:;
 
-      /* "pyNTM/parallel_link_model.pyx":806
+      /* "pyNTM/parallel_link_model.py":806
  *                               interface.remote_node_object.name == remote_node_name]
  *         else:
  *             interface_list = [interface for interface in interface_gen if             # <<<<<<<<<<<<<<
@@ -16864,7 +16864,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
     __pyx_v_interface_list = ((PyObject*)__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":811
+    /* "pyNTM/parallel_link_model.py":811
  *                               interface.circuit_id == circuit_id]
  * 
  *             if len(interface_list) > 1:             # <<<<<<<<<<<<<<
@@ -16875,7 +16875,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
     __pyx_t_3 = ((__pyx_t_5 > 1) != 0);
     if (__pyx_t_3) {
 
-      /* "pyNTM/parallel_link_model.pyx":812
+      /* "pyNTM/parallel_link_model.py":812
  * 
  *             if len(interface_list) > 1:
  *                 msg = ("There is an internal error with circuit_iding; Interface circuit_ids must be unique"             # <<<<<<<<<<<<<<
@@ -16885,7 +16885,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
       __Pyx_INCREF(__pyx_kp_s_There_is_an_internal_error_with);
       __pyx_v_msg = __pyx_kp_s_There_is_an_internal_error_with;
 
-      /* "pyNTM/parallel_link_model.pyx":815
+      /* "pyNTM/parallel_link_model.py":815
  *                        " per Node and the same circuit_id can only appear in a Parallel_Link_Model object "
  *                        "twice and on separate Nodes")
  *                 return ModelException(msg)             # <<<<<<<<<<<<<<
@@ -16914,7 +16914,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
       __pyx_t_1 = 0;
       goto __pyx_L0;
 
-      /* "pyNTM/parallel_link_model.pyx":811
+      /* "pyNTM/parallel_link_model.py":811
  *                               interface.circuit_id == circuit_id]
  * 
  *             if len(interface_list) > 1:             # <<<<<<<<<<<<<<
@@ -16925,7 +16925,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
   }
   __pyx_L3:;
 
-  /* "pyNTM/parallel_link_model.pyx":816
+  /* "pyNTM/parallel_link_model.py":816
  *                        "twice and on separate Nodes")
  *                 return ModelException(msg)
  *         return interface_list             # <<<<<<<<<<<<<<
@@ -16937,7 +16937,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
   __pyx_r = __pyx_v_interface_list;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":779
+  /* "pyNTM/parallel_link_model.py":779
  *         self.circuit_objects = circuits
  * 
  *     def get_interface_object_from_nodes(self, local_node_name, remote_node_name, circuit_id=None):             # <<<<<<<<<<<<<<
@@ -16964,7 +16964,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_34g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":819
+/* "pyNTM/parallel_link_model.py":819
  * 
  *     @property
  *     def all_interface_circuit_ids(self):             # <<<<<<<<<<<<<<
@@ -16988,7 +16988,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_37a
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_25all_interface_circuit_ids_2generator14(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":823
+/* "pyNTM/parallel_link_model.py":823
  *         Returns all interface circuit_ids
  *         """
  *         return set(interface.circuit_id for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -17122,7 +17122,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_25a
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":819
+/* "pyNTM/parallel_link_model.py":819
  * 
  *     @property
  *     def all_interface_circuit_ids(self):             # <<<<<<<<<<<<<<
@@ -17149,7 +17149,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_36a
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":823
+  /* "pyNTM/parallel_link_model.py":823
  *         Returns all interface circuit_ids
  *         """
  *         return set(interface.circuit_id for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -17166,7 +17166,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_36a
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":819
+  /* "pyNTM/parallel_link_model.py":819
  * 
  *     @property
  *     def all_interface_circuit_ids(self):             # <<<<<<<<<<<<<<
@@ -17187,7 +17187,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_36a
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":825
+/* "pyNTM/parallel_link_model.py":825
  *         return set(interface.circuit_id for interface in self.interface_objects)
  * 
  *     def add_circuit(self, node_a_object, node_b_object, node_a_interface_name,             # <<<<<<<<<<<<<<
@@ -17220,7 +17220,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39a
     values[6] = ((PyObject *)((PyObject *)__pyx_int_1));
     values[7] = ((PyObject *)((PyObject *)__pyx_int_1000));
 
-    /* "pyNTM/parallel_link_model.pyx":827
+    /* "pyNTM/parallel_link_model.py":827
  *     def add_circuit(self, node_a_object, node_b_object, node_a_interface_name,
  *                     node_b_interface_name, cost_intf_a=1, cost_intf_b=1,
  *                     capacity=1000, failed=False, circuit_id=None):             # <<<<<<<<<<<<<<
@@ -17361,7 +17361,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39a
   __pyx_L4_argument_unpacking_done:;
   __pyx_r = __pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38add_circuit(__pyx_self, __pyx_v_self, __pyx_v_node_a_object, __pyx_v_node_b_object, __pyx_v_node_a_interface_name, __pyx_v_node_b_interface_name, __pyx_v_cost_intf_a, __pyx_v_cost_intf_b, __pyx_v_capacity, __pyx_v_failed, __pyx_v_circuit_id);
 
-  /* "pyNTM/parallel_link_model.pyx":825
+  /* "pyNTM/parallel_link_model.py":825
  *         return set(interface.circuit_id for interface in self.interface_objects)
  * 
  *     def add_circuit(self, node_a_object, node_b_object, node_a_interface_name,             # <<<<<<<<<<<<<<
@@ -17396,7 +17396,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   PyObject *__pyx_t_11 = NULL;
   __Pyx_RefNannySetupContext("add_circuit", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":844
+  /* "pyNTM/parallel_link_model.py":844
  *         """
  * 
  *         if circuit_id is None:             # <<<<<<<<<<<<<<
@@ -17407,7 +17407,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "pyNTM/parallel_link_model.pyx":845
+    /* "pyNTM/parallel_link_model.py":845
  * 
  *         if circuit_id is None:
  *             raise ModelException("circuit_id must be specified explicitly")             # <<<<<<<<<<<<<<
@@ -17435,7 +17435,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(0, 845, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":844
+    /* "pyNTM/parallel_link_model.py":844
  *         """
  * 
  *         if circuit_id is None:             # <<<<<<<<<<<<<<
@@ -17444,7 +17444,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":847
+  /* "pyNTM/parallel_link_model.py":847
  *             raise ModelException("circuit_id must be specified explicitly")
  * 
  *         circuit_ids = self.all_interface_circuit_ids             # <<<<<<<<<<<<<<
@@ -17456,7 +17456,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __pyx_v_circuit_ids = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":849
+  /* "pyNTM/parallel_link_model.py":849
  *         circuit_ids = self.all_interface_circuit_ids
  * 
  *         if circuit_id in circuit_ids:             # <<<<<<<<<<<<<<
@@ -17467,7 +17467,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "pyNTM/parallel_link_model.pyx":850
+    /* "pyNTM/parallel_link_model.py":850
  * 
  *         if circuit_id in circuit_ids:
  *             err_msg = "circuit_id value {} is already exists in model".format(circuit_id)             # <<<<<<<<<<<<<<
@@ -17494,7 +17494,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
     __pyx_v_err_msg = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":851
+    /* "pyNTM/parallel_link_model.py":851
  *         if circuit_id in circuit_ids:
  *             err_msg = "circuit_id value {} is already exists in model".format(circuit_id)
  *             raise ModelException(err_msg)             # <<<<<<<<<<<<<<
@@ -17522,7 +17522,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(0, 851, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":849
+    /* "pyNTM/parallel_link_model.py":849
  *         circuit_ids = self.all_interface_circuit_ids
  * 
  *         if circuit_id in circuit_ids:             # <<<<<<<<<<<<<<
@@ -17531,7 +17531,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":853
+  /* "pyNTM/parallel_link_model.py":853
  *             raise ModelException(err_msg)
  * 
  *         int_a = Interface(node_a_interface_name, cost_intf_a, capacity,             # <<<<<<<<<<<<<<
@@ -17541,7 +17541,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_Interface); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 853, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/parallel_link_model.pyx":854
+  /* "pyNTM/parallel_link_model.py":854
  * 
  *         int_a = Interface(node_a_interface_name, cost_intf_a, capacity,
  *                           node_a_object, node_b_object, circuit_id)             # <<<<<<<<<<<<<<
@@ -17608,7 +17608,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __pyx_v_int_a = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":855
+  /* "pyNTM/parallel_link_model.py":855
  *         int_a = Interface(node_a_interface_name, cost_intf_a, capacity,
  *                           node_a_object, node_b_object, circuit_id)
  *         int_b = Interface(node_b_interface_name, cost_intf_b, capacity,             # <<<<<<<<<<<<<<
@@ -17618,7 +17618,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_Interface); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 855, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/parallel_link_model.pyx":856
+  /* "pyNTM/parallel_link_model.py":856
  *                           node_a_object, node_b_object, circuit_id)
  *         int_b = Interface(node_b_interface_name, cost_intf_b, capacity,
  *                           node_b_object, node_a_object, circuit_id)             # <<<<<<<<<<<<<<
@@ -17685,7 +17685,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __pyx_v_int_b = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":858
+  /* "pyNTM/parallel_link_model.py":858
  *                           node_b_object, node_a_object, circuit_id)
  * 
  *         existing_int_keys = set([interface._key for interface in self.interface_objects])             # <<<<<<<<<<<<<<
@@ -17750,7 +17750,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __pyx_v_existing_int_keys = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":860
+  /* "pyNTM/parallel_link_model.py":860
  *         existing_int_keys = set([interface._key for interface in self.interface_objects])
  * 
  *         if int_a._key in existing_int_keys:             # <<<<<<<<<<<<<<
@@ -17764,7 +17764,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "pyNTM/parallel_link_model.pyx":861
+    /* "pyNTM/parallel_link_model.py":861
  * 
  *         if int_a._key in existing_int_keys:
  *             raise ModelException("interface {} on node {} - "             # <<<<<<<<<<<<<<
@@ -17774,7 +17774,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_ModelException); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 861, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
 
-    /* "pyNTM/parallel_link_model.pyx":862
+    /* "pyNTM/parallel_link_model.py":862
  *         if int_a._key in existing_int_keys:
  *             raise ModelException("interface {} on node {} - "
  *                                  "interface already exists in model".format(int_a, node_a_object))             # <<<<<<<<<<<<<<
@@ -17848,7 +17848,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __PYX_ERR(0, 861, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":860
+    /* "pyNTM/parallel_link_model.py":860
  *         existing_int_keys = set([interface._key for interface in self.interface_objects])
  * 
  *         if int_a._key in existing_int_keys:             # <<<<<<<<<<<<<<
@@ -17857,7 +17857,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":863
+  /* "pyNTM/parallel_link_model.py":863
  *             raise ModelException("interface {} on node {} - "
  *                                  "interface already exists in model".format(int_a, node_a_object))
  *         elif int_b._key in existing_int_keys:             # <<<<<<<<<<<<<<
@@ -17871,7 +17871,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "pyNTM/parallel_link_model.pyx":864
+    /* "pyNTM/parallel_link_model.py":864
  *                                  "interface already exists in model".format(int_a, node_a_object))
  *         elif int_b._key in existing_int_keys:
  *             raise ModelException("interface {} on node {} - "             # <<<<<<<<<<<<<<
@@ -17881,7 +17881,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_ModelException); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 864, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
 
-    /* "pyNTM/parallel_link_model.pyx":865
+    /* "pyNTM/parallel_link_model.py":865
  *         elif int_b._key in existing_int_keys:
  *             raise ModelException("interface {} on node {} - "
  *                                  "interface already exists in model".format(int_b, node_b_object))             # <<<<<<<<<<<<<<
@@ -17955,7 +17955,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __PYX_ERR(0, 864, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":863
+    /* "pyNTM/parallel_link_model.py":863
  *             raise ModelException("interface {} on node {} - "
  *                                  "interface already exists in model".format(int_a, node_a_object))
  *         elif int_b._key in existing_int_keys:             # <<<<<<<<<<<<<<
@@ -17964,7 +17964,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":867
+  /* "pyNTM/parallel_link_model.py":867
  *                                  "interface already exists in model".format(int_b, node_b_object))
  * 
  *         self.interface_objects.add(int_a)             # <<<<<<<<<<<<<<
@@ -17993,7 +17993,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":868
+  /* "pyNTM/parallel_link_model.py":868
  * 
  *         self.interface_objects.add(int_a)
  *         self.interface_objects.add(int_b)             # <<<<<<<<<<<<<<
@@ -18022,7 +18022,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":870
+  /* "pyNTM/parallel_link_model.py":870
  *         self.interface_objects.add(int_b)
  * 
  *         self.validate_model()             # <<<<<<<<<<<<<<
@@ -18048,7 +18048,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":825
+  /* "pyNTM/parallel_link_model.py":825
  *         return set(interface.circuit_id for interface in self.interface_objects)
  * 
  *     def add_circuit(self, node_a_object, node_b_object, node_a_interface_name,             # <<<<<<<<<<<<<<
@@ -18080,7 +18080,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_38a
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":872
+/* "pyNTM/parallel_link_model.py":872
  *         self.validate_model()
  * 
  *     def is_node_an_orphan(self, node_object):             # <<<<<<<<<<<<<<
@@ -18161,7 +18161,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_40i
   int __pyx_t_5;
   __Pyx_RefNannySetupContext("is_node_an_orphan", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":874
+  /* "pyNTM/parallel_link_model.py":874
  *     def is_node_an_orphan(self, node_object):
  *         """Determines if a node is in orphan_nodes"""
  *         if node_object in self.get_orphan_node_objects():             # <<<<<<<<<<<<<<
@@ -18190,7 +18190,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_40i
   __pyx_t_5 = (__pyx_t_4 != 0);
   if (__pyx_t_5) {
 
-    /* "pyNTM/parallel_link_model.pyx":875
+    /* "pyNTM/parallel_link_model.py":875
  *         """Determines if a node is in orphan_nodes"""
  *         if node_object in self.get_orphan_node_objects():
  *             return True             # <<<<<<<<<<<<<<
@@ -18202,7 +18202,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_40i
     __pyx_r = Py_True;
     goto __pyx_L0;
 
-    /* "pyNTM/parallel_link_model.pyx":874
+    /* "pyNTM/parallel_link_model.py":874
  *     def is_node_an_orphan(self, node_object):
  *         """Determines if a node is in orphan_nodes"""
  *         if node_object in self.get_orphan_node_objects():             # <<<<<<<<<<<<<<
@@ -18211,7 +18211,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_40i
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":877
+  /* "pyNTM/parallel_link_model.py":877
  *             return True
  *         else:
  *             return False             # <<<<<<<<<<<<<<
@@ -18225,7 +18225,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_40i
     goto __pyx_L0;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":872
+  /* "pyNTM/parallel_link_model.py":872
  *         self.validate_model()
  * 
  *     def is_node_an_orphan(self, node_object):             # <<<<<<<<<<<<<<
@@ -18246,7 +18246,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_40i
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":879
+/* "pyNTM/parallel_link_model.py":879
  *             return False
  * 
  *     def get_orphan_node_objects(self):             # <<<<<<<<<<<<<<
@@ -18285,7 +18285,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_42g
   int __pyx_t_9;
   __Pyx_RefNannySetupContext("get_orphan_node_objects", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":883
+  /* "pyNTM/parallel_link_model.py":883
  *         Returns list of Nodes that have no interfaces
  *         """
  *         orphan_nodes = [node for node in self.node_objects if len(node.interfaces(self)) == 0]             # <<<<<<<<<<<<<<
@@ -18366,7 +18366,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_42g
   __pyx_v_orphan_nodes = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":885
+  /* "pyNTM/parallel_link_model.py":885
  *         orphan_nodes = [node for node in self.node_objects if len(node.interfaces(self)) == 0]
  * 
  *         return orphan_nodes             # <<<<<<<<<<<<<<
@@ -18378,7 +18378,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_42g
   __pyx_r = __pyx_v_orphan_nodes;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":879
+  /* "pyNTM/parallel_link_model.py":879
  *             return False
  * 
  *     def get_orphan_node_objects(self):             # <<<<<<<<<<<<<<
@@ -18403,7 +18403,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_42g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":887
+/* "pyNTM/parallel_link_model.py":887
  *         return orphan_nodes
  * 
  *     def add_node(self, node_object):             # <<<<<<<<<<<<<<
@@ -18475,7 +18475,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_45a
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8add_node_2generator15(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":892
+/* "pyNTM/parallel_link_model.py":892
  *         """
  * 
  *         if node_object.name in (node.name for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -18625,7 +18625,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_8ad
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":887
+/* "pyNTM/parallel_link_model.py":887
  *         return orphan_nodes
  * 
  *     def add_node(self, node_object):             # <<<<<<<<<<<<<<
@@ -18657,7 +18657,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_44a
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":892
+  /* "pyNTM/parallel_link_model.py":892
  *         """
  * 
  *         if node_object.name in (node.name for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -18674,7 +18674,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_44a
   __pyx_t_4 = (__pyx_t_3 != 0);
   if (unlikely(__pyx_t_4)) {
 
-    /* "pyNTM/parallel_link_model.pyx":893
+    /* "pyNTM/parallel_link_model.py":893
  * 
  *         if node_object.name in (node.name for node in self.node_objects):
  *             message = "A node with name {} already exists in the model".format(node_object.name)             # <<<<<<<<<<<<<<
@@ -18704,7 +18704,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_44a
     __pyx_v_message = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":894
+    /* "pyNTM/parallel_link_model.py":894
  *         if node_object.name in (node.name for node in self.node_objects):
  *             message = "A node with name {} already exists in the model".format(node_object.name)
  *             raise ModelException(message)             # <<<<<<<<<<<<<<
@@ -18732,7 +18732,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_44a
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 894, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":892
+    /* "pyNTM/parallel_link_model.py":892
  *         """
  * 
  *         if node_object.name in (node.name for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -18741,7 +18741,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_44a
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":896
+  /* "pyNTM/parallel_link_model.py":896
  *             raise ModelException(message)
  *         else:
  *             self.node_objects.add(node_object)             # <<<<<<<<<<<<<<
@@ -18772,7 +18772,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_44a
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":898
+  /* "pyNTM/parallel_link_model.py":898
  *             self.node_objects.add(node_object)
  * 
  *         self.validate_model()             # <<<<<<<<<<<<<<
@@ -18798,7 +18798,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_44a
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":887
+  /* "pyNTM/parallel_link_model.py":887
  *         return orphan_nodes
  * 
  *     def add_node(self, node_object):             # <<<<<<<<<<<<<<
@@ -18824,7 +18824,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_44a
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":900
+/* "pyNTM/parallel_link_model.py":900
  *         self.validate_model()
  * 
  *     def get_node_object(self, node_name):             # <<<<<<<<<<<<<<
@@ -18910,7 +18910,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_46g
   int __pyx_t_7;
   __Pyx_RefNannySetupContext("get_node_object", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":904
+  /* "pyNTM/parallel_link_model.py":904
  *         Returns a Node object, given a node's name
  *         """
  *         matching_node = [node for node in self.node_objects if node.name == node_name]             # <<<<<<<<<<<<<<
@@ -18977,7 +18977,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_46g
   __pyx_v_matching_node = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":906
+  /* "pyNTM/parallel_link_model.py":906
  *         matching_node = [node for node in self.node_objects if node.name == node_name]
  * 
  *         if len(matching_node) > 0:             # <<<<<<<<<<<<<<
@@ -18988,7 +18988,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_46g
   __pyx_t_7 = ((__pyx_t_4 > 0) != 0);
   if (likely(__pyx_t_7)) {
 
-    /* "pyNTM/parallel_link_model.pyx":907
+    /* "pyNTM/parallel_link_model.py":907
  * 
  *         if len(matching_node) > 0:
  *             return matching_node[0]             # <<<<<<<<<<<<<<
@@ -19002,7 +19002,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_46g
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "pyNTM/parallel_link_model.pyx":906
+    /* "pyNTM/parallel_link_model.py":906
  *         matching_node = [node for node in self.node_objects if node.name == node_name]
  * 
  *         if len(matching_node) > 0:             # <<<<<<<<<<<<<<
@@ -19011,7 +19011,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_46g
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":909
+  /* "pyNTM/parallel_link_model.py":909
  *             return matching_node[0]
  *         else:
  *             message = "No node with name %s exists in the model" % node_name             # <<<<<<<<<<<<<<
@@ -19024,7 +19024,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_46g
     __pyx_v_message = ((PyObject*)__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":910
+    /* "pyNTM/parallel_link_model.py":910
  *         else:
  *             message = "No node with name %s exists in the model" % node_name
  *             raise ModelException(message)             # <<<<<<<<<<<<<<
@@ -19053,7 +19053,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_46g
     __PYX_ERR(0, 910, __pyx_L1_error)
   }
 
-  /* "pyNTM/parallel_link_model.pyx":900
+  /* "pyNTM/parallel_link_model.py":900
  *         self.validate_model()
  * 
  *     def get_node_object(self, node_name):             # <<<<<<<<<<<<<<
@@ -19078,7 +19078,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_46g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":912
+/* "pyNTM/parallel_link_model.py":912
  *             raise ModelException(message)
  * 
  *     def _make_network_interfaces(self, interface_info_list):             # <<<<<<<<<<<<<<
@@ -19179,7 +19179,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
   int __pyx_t_19;
   __Pyx_RefNannySetupContext("_make_network_interfaces", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":921
+  /* "pyNTM/parallel_link_model.py":921
  *                  new Interfaces for Nodes that are not already in the model
  *         """
  *         network_interface_objects = set([])             # <<<<<<<<<<<<<<
@@ -19191,7 +19191,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
   __pyx_v_network_interface_objects = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":922
+  /* "pyNTM/parallel_link_model.py":922
  *         """
  *         network_interface_objects = set([])
  *         network_node_objects = set([])             # <<<<<<<<<<<<<<
@@ -19203,7 +19203,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
   __pyx_v_network_node_objects = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":925
+  /* "pyNTM/parallel_link_model.py":925
  * 
  *         # Create the Interface objects
  *         for interface in interface_info_list:             # <<<<<<<<<<<<<<
@@ -19252,7 +19252,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":926
+    /* "pyNTM/parallel_link_model.py":926
  *         # Create the Interface objects
  *         for interface in interface_info_list:
  *             intf = Interface(interface['name'], interface['cost'],             # <<<<<<<<<<<<<<
@@ -19266,7 +19266,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
     __pyx_t_7 = __Pyx_PyObject_Dict_GetItem(__pyx_v_interface, __pyx_n_s_cost); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 926, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
 
-    /* "pyNTM/parallel_link_model.pyx":927
+    /* "pyNTM/parallel_link_model.py":927
  *         for interface in interface_info_list:
  *             intf = Interface(interface['name'], interface['cost'],
  *                              interface['capacity'], Node(interface['node']),             # <<<<<<<<<<<<<<
@@ -19296,7 +19296,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":928
+    /* "pyNTM/parallel_link_model.py":928
  *             intf = Interface(interface['name'], interface['cost'],
  *                              interface['capacity'], Node(interface['node']),
  *                              Node(interface['remote_node']),             # <<<<<<<<<<<<<<
@@ -19324,7 +19324,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":929
+    /* "pyNTM/parallel_link_model.py":929
  *                              interface['capacity'], Node(interface['node']),
  *                              Node(interface['remote_node']),
  *                              interface['circuit_id'])             # <<<<<<<<<<<<<<
@@ -19405,7 +19405,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
     __Pyx_XDECREF_SET(__pyx_v_intf, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":930
+    /* "pyNTM/parallel_link_model.py":930
  *                              Node(interface['remote_node']),
  *                              interface['circuit_id'])
  *             network_interface_objects.add(intf)             # <<<<<<<<<<<<<<
@@ -19414,7 +19414,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
  */
     __pyx_t_15 = PySet_Add(__pyx_v_network_interface_objects, __pyx_v_intf); if (unlikely(__pyx_t_15 == ((int)-1))) __PYX_ERR(0, 930, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":933
+    /* "pyNTM/parallel_link_model.py":933
  * 
  *             # Check to see if the Interface's Node already exists, if not, add it
  *             node_names = ([node.name for node in self.node_objects])             # <<<<<<<<<<<<<<
@@ -19476,7 +19476,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
     __Pyx_XDECREF_SET(__pyx_v_node_names, ((PyObject*)__pyx_t_4));
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":934
+    /* "pyNTM/parallel_link_model.py":934
  *             # Check to see if the Interface's Node already exists, if not, add it
  *             node_names = ([node.name for node in self.node_objects])
  *             if interface['node'] not in node_names:             # <<<<<<<<<<<<<<
@@ -19490,7 +19490,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
     __pyx_t_19 = (__pyx_t_18 != 0);
     if (__pyx_t_19) {
 
-      /* "pyNTM/parallel_link_model.pyx":935
+      /* "pyNTM/parallel_link_model.py":935
  *             node_names = ([node.name for node in self.node_objects])
  *             if interface['node'] not in node_names:
  *                 network_node_objects.add(Node(interface['node']))             # <<<<<<<<<<<<<<
@@ -19520,7 +19520,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
       __pyx_t_15 = PySet_Add(__pyx_v_network_node_objects, __pyx_t_4); if (unlikely(__pyx_t_15 == ((int)-1))) __PYX_ERR(0, 935, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":934
+      /* "pyNTM/parallel_link_model.py":934
  *             # Check to see if the Interface's Node already exists, if not, add it
  *             node_names = ([node.name for node in self.node_objects])
  *             if interface['node'] not in node_names:             # <<<<<<<<<<<<<<
@@ -19529,7 +19529,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":936
+    /* "pyNTM/parallel_link_model.py":936
  *             if interface['node'] not in node_names:
  *                 network_node_objects.add(Node(interface['node']))
  *             if interface['remote_node'] not in node_names:             # <<<<<<<<<<<<<<
@@ -19543,7 +19543,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
     __pyx_t_18 = (__pyx_t_19 != 0);
     if (__pyx_t_18) {
 
-      /* "pyNTM/parallel_link_model.pyx":937
+      /* "pyNTM/parallel_link_model.py":937
  *                 network_node_objects.add(Node(interface['node']))
  *             if interface['remote_node'] not in node_names:
  *                 network_node_objects.add(Node(interface['remote_node']))             # <<<<<<<<<<<<<<
@@ -19573,7 +19573,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
       __pyx_t_15 = PySet_Add(__pyx_v_network_node_objects, __pyx_t_4); if (unlikely(__pyx_t_15 == ((int)-1))) __PYX_ERR(0, 937, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":936
+      /* "pyNTM/parallel_link_model.py":936
  *             if interface['node'] not in node_names:
  *                 network_node_objects.add(Node(interface['node']))
  *             if interface['remote_node'] not in node_names:             # <<<<<<<<<<<<<<
@@ -19582,7 +19582,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":925
+    /* "pyNTM/parallel_link_model.py":925
  * 
  *         # Create the Interface objects
  *         for interface in interface_info_list:             # <<<<<<<<<<<<<<
@@ -19592,7 +19592,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":939
+  /* "pyNTM/parallel_link_model.py":939
  *                 network_node_objects.add(Node(interface['remote_node']))
  * 
  *         return (network_interface_objects, network_node_objects)             # <<<<<<<<<<<<<<
@@ -19612,7 +19612,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":912
+  /* "pyNTM/parallel_link_model.py":912
  *             raise ModelException(message)
  * 
  *     def _make_network_interfaces(self, interface_info_list):             # <<<<<<<<<<<<<<
@@ -19647,7 +19647,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_48_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":941
+/* "pyNTM/parallel_link_model.py":941
  *         return (network_interface_objects, network_node_objects)
  * 
  *     def add_demand(self, source_node_name, dest_node_name, traffic=0, name='none'):             # <<<<<<<<<<<<<<
@@ -19776,7 +19776,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_50a
   int __pyx_t_9;
   __Pyx_RefNannySetupContext("add_demand", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":951
+  /* "pyNTM/parallel_link_model.py":951
  *         :return: A validated Model object with the new demand
  *         """
  *         source_node_object = self.get_node_object(source_node_name)             # <<<<<<<<<<<<<<
@@ -19803,7 +19803,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_50a
   __pyx_v_source_node_object = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":952
+  /* "pyNTM/parallel_link_model.py":952
  *         """
  *         source_node_object = self.get_node_object(source_node_name)
  *         dest_node_object = self.get_node_object(dest_node_name)             # <<<<<<<<<<<<<<
@@ -19830,7 +19830,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_50a
   __pyx_v_dest_node_object = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":953
+  /* "pyNTM/parallel_link_model.py":953
  *         source_node_object = self.get_node_object(source_node_name)
  *         dest_node_object = self.get_node_object(dest_node_name)
  *         added_demand = Demand(source_node_object, dest_node_object, traffic, name)             # <<<<<<<<<<<<<<
@@ -19893,7 +19893,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_50a
   __pyx_v_added_demand = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":954
+  /* "pyNTM/parallel_link_model.py":954
  *         dest_node_object = self.get_node_object(dest_node_name)
  *         added_demand = Demand(source_node_object, dest_node_object, traffic, name)
  *         if added_demand._key in set([demand._key for demand in self.demand_objects]):             # <<<<<<<<<<<<<<
@@ -19963,7 +19963,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_50a
   __pyx_t_9 = (__pyx_t_8 != 0);
   if (unlikely(__pyx_t_9)) {
 
-    /* "pyNTM/parallel_link_model.pyx":955
+    /* "pyNTM/parallel_link_model.py":955
  *         added_demand = Demand(source_node_object, dest_node_object, traffic, name)
  *         if added_demand._key in set([demand._key for demand in self.demand_objects]):
  *             message = '{} already exists in demand_objects'.format(added_demand)             # <<<<<<<<<<<<<<
@@ -19990,7 +19990,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_50a
     __pyx_v_message = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":956
+    /* "pyNTM/parallel_link_model.py":956
  *         if added_demand._key in set([demand._key for demand in self.demand_objects]):
  *             message = '{} already exists in demand_objects'.format(added_demand)
  *             raise ModelException(message)             # <<<<<<<<<<<<<<
@@ -20018,7 +20018,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_50a
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(0, 956, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":954
+    /* "pyNTM/parallel_link_model.py":954
  *         dest_node_object = self.get_node_object(dest_node_name)
  *         added_demand = Demand(source_node_object, dest_node_object, traffic, name)
  *         if added_demand._key in set([demand._key for demand in self.demand_objects]):             # <<<<<<<<<<<<<<
@@ -20027,7 +20027,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_50a
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":957
+  /* "pyNTM/parallel_link_model.py":957
  *             message = '{} already exists in demand_objects'.format(added_demand)
  *             raise ModelException(message)
  *         self.demand_objects.add(added_demand)             # <<<<<<<<<<<<<<
@@ -20056,7 +20056,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_50a
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":959
+  /* "pyNTM/parallel_link_model.py":959
  *         self.demand_objects.add(added_demand)
  * 
  *         self.validate_model()             # <<<<<<<<<<<<<<
@@ -20082,7 +20082,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_50a
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":941
+  /* "pyNTM/parallel_link_model.py":941
  *         return (network_interface_objects, network_node_objects)
  * 
  *     def add_demand(self, source_node_name, dest_node_name, traffic=0, name='none'):             # <<<<<<<<<<<<<<
@@ -20111,7 +20111,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_50a
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":961
+/* "pyNTM/parallel_link_model.py":961
  *         self.validate_model()
  * 
  *     def add_rsvp_lsp(self, source_node_name, dest_node_name, name):             # <<<<<<<<<<<<<<
@@ -20223,7 +20223,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_52a
   int __pyx_t_9;
   __Pyx_RefNannySetupContext("add_rsvp_lsp", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":971
+  /* "pyNTM/parallel_link_model.py":971
  *         :return: A validated Model with the new RSVP_LSP object
  *         """
  *         source_node_object = self.get_node_object(source_node_name)             # <<<<<<<<<<<<<<
@@ -20250,7 +20250,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_52a
   __pyx_v_source_node_object = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":972
+  /* "pyNTM/parallel_link_model.py":972
  *         """
  *         source_node_object = self.get_node_object(source_node_name)
  *         dest_node_object = self.get_node_object(dest_node_name)             # <<<<<<<<<<<<<<
@@ -20277,7 +20277,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_52a
   __pyx_v_dest_node_object = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":973
+  /* "pyNTM/parallel_link_model.py":973
  *         source_node_object = self.get_node_object(source_node_name)
  *         dest_node_object = self.get_node_object(dest_node_name)
  *         added_lsp = RSVP_LSP(source_node_object, dest_node_object, name)             # <<<<<<<<<<<<<<
@@ -20337,7 +20337,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_52a
   __pyx_v_added_lsp = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":975
+  /* "pyNTM/parallel_link_model.py":975
  *         added_lsp = RSVP_LSP(source_node_object, dest_node_object, name)
  * 
  *         if added_lsp._key in set([lsp._key for lsp in self.rsvp_lsp_objects]):             # <<<<<<<<<<<<<<
@@ -20407,7 +20407,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_52a
   __pyx_t_9 = (__pyx_t_8 != 0);
   if (unlikely(__pyx_t_9)) {
 
-    /* "pyNTM/parallel_link_model.pyx":976
+    /* "pyNTM/parallel_link_model.py":976
  * 
  *         if added_lsp._key in set([lsp._key for lsp in self.rsvp_lsp_objects]):
  *             message = '{} already exists in rsvp_lsp_objects'.format(added_lsp)             # <<<<<<<<<<<<<<
@@ -20434,7 +20434,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_52a
     __pyx_v_message = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":977
+    /* "pyNTM/parallel_link_model.py":977
  *         if added_lsp._key in set([lsp._key for lsp in self.rsvp_lsp_objects]):
  *             message = '{} already exists in rsvp_lsp_objects'.format(added_lsp)
  *             raise ModelException(message)             # <<<<<<<<<<<<<<
@@ -20462,7 +20462,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_52a
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(0, 977, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":975
+    /* "pyNTM/parallel_link_model.py":975
  *         added_lsp = RSVP_LSP(source_node_object, dest_node_object, name)
  * 
  *         if added_lsp._key in set([lsp._key for lsp in self.rsvp_lsp_objects]):             # <<<<<<<<<<<<<<
@@ -20471,7 +20471,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_52a
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":978
+  /* "pyNTM/parallel_link_model.py":978
  *             message = '{} already exists in rsvp_lsp_objects'.format(added_lsp)
  *             raise ModelException(message)
  *         self.rsvp_lsp_objects.add(added_lsp)             # <<<<<<<<<<<<<<
@@ -20500,7 +20500,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_52a
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":980
+  /* "pyNTM/parallel_link_model.py":980
  *         self.rsvp_lsp_objects.add(added_lsp)
  * 
  *         self.validate_model()             # <<<<<<<<<<<<<<
@@ -20526,7 +20526,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_52a
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":961
+  /* "pyNTM/parallel_link_model.py":961
  *         self.validate_model()
  * 
  *     def add_rsvp_lsp(self, source_node_name, dest_node_name, name):             # <<<<<<<<<<<<<<
@@ -20555,7 +20555,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_52a
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":982
+/* "pyNTM/parallel_link_model.py":982
  *         self.validate_model()
  * 
  *     def get_demand_object(self, source_node_name, dest_node_name, demand_name='none'):             # <<<<<<<<<<<<<<
@@ -20653,7 +20653,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_55g
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17get_demand_object_2generator16(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":987
+/* "pyNTM/parallel_link_model.py":987
  *         throws exception if demand not found
  *         """
  *         model_demand_iterator = (demand for demand in self.demand_objects)             # <<<<<<<<<<<<<<
@@ -20801,7 +20801,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_17g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":982
+/* "pyNTM/parallel_link_model.py":982
  *         self.validate_model()
  * 
  *     def get_demand_object(self, source_node_name, dest_node_name, demand_name='none'):             # <<<<<<<<<<<<<<
@@ -20836,7 +20836,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":987
+  /* "pyNTM/parallel_link_model.py":987
  *         throws exception if demand not found
  *         """
  *         model_demand_iterator = (demand for demand in self.demand_objects)             # <<<<<<<<<<<<<<
@@ -20848,7 +20848,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
   __pyx_v_model_demand_iterator = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":989
+  /* "pyNTM/parallel_link_model.py":989
  *         model_demand_iterator = (demand for demand in self.demand_objects)
  * 
  *         demand_to_return = None             # <<<<<<<<<<<<<<
@@ -20858,7 +20858,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
   __Pyx_INCREF(Py_None);
   __pyx_v_demand_to_return = Py_None;
 
-  /* "pyNTM/parallel_link_model.pyx":991
+  /* "pyNTM/parallel_link_model.py":991
  *         demand_to_return = None
  * 
  *         for demand in model_demand_iterator:             # <<<<<<<<<<<<<<
@@ -20907,7 +20907,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
     __Pyx_XDECREF_SET(__pyx_v_demand, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":992
+    /* "pyNTM/parallel_link_model.py":992
  * 
  *         for demand in model_demand_iterator:
  *             if demand.source_node_object.name == source_node_name and \             # <<<<<<<<<<<<<<
@@ -20929,7 +20929,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
       goto __pyx_L6_bool_binop_done;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":993
+    /* "pyNTM/parallel_link_model.py":993
  *         for demand in model_demand_iterator:
  *             if demand.source_node_object.name == source_node_name and \
  *                     demand.dest_node_object.name == dest_node_name and \             # <<<<<<<<<<<<<<
@@ -20951,7 +20951,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
       goto __pyx_L6_bool_binop_done;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":994
+    /* "pyNTM/parallel_link_model.py":994
  *             if demand.source_node_object.name == source_node_name and \
  *                     demand.dest_node_object.name == dest_node_name and \
  *                     demand.name == demand_name:             # <<<<<<<<<<<<<<
@@ -20967,7 +20967,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
     __pyx_t_5 = __pyx_t_7;
     __pyx_L6_bool_binop_done:;
 
-    /* "pyNTM/parallel_link_model.pyx":992
+    /* "pyNTM/parallel_link_model.py":992
  * 
  *         for demand in model_demand_iterator:
  *             if demand.source_node_object.name == source_node_name and \             # <<<<<<<<<<<<<<
@@ -20976,7 +20976,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
  */
     if (__pyx_t_5) {
 
-      /* "pyNTM/parallel_link_model.pyx":995
+      /* "pyNTM/parallel_link_model.py":995
  *                     demand.dest_node_object.name == dest_node_name and \
  *                     demand.name == demand_name:
  *                 demand_to_return = demand             # <<<<<<<<<<<<<<
@@ -20986,7 +20986,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
       __Pyx_INCREF(__pyx_v_demand);
       __Pyx_DECREF_SET(__pyx_v_demand_to_return, __pyx_v_demand);
 
-      /* "pyNTM/parallel_link_model.pyx":996
+      /* "pyNTM/parallel_link_model.py":996
  *                     demand.name == demand_name:
  *                 demand_to_return = demand
  *                 return demand_to_return             # <<<<<<<<<<<<<<
@@ -20999,7 +20999,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       goto __pyx_L0;
 
-      /* "pyNTM/parallel_link_model.pyx":992
+      /* "pyNTM/parallel_link_model.py":992
  * 
  *         for demand in model_demand_iterator:
  *             if demand.source_node_object.name == source_node_name and \             # <<<<<<<<<<<<<<
@@ -21008,7 +21008,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":991
+    /* "pyNTM/parallel_link_model.py":991
  *         demand_to_return = None
  * 
  *         for demand in model_demand_iterator:             # <<<<<<<<<<<<<<
@@ -21018,7 +21018,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":998
+  /* "pyNTM/parallel_link_model.py":998
  *                 return demand_to_return
  * 
  *         if demand_to_return is None:             # <<<<<<<<<<<<<<
@@ -21029,7 +21029,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
   __pyx_t_7 = (__pyx_t_5 != 0);
   if (unlikely(__pyx_t_7)) {
 
-    /* "pyNTM/parallel_link_model.pyx":999
+    /* "pyNTM/parallel_link_model.py":999
  * 
  *         if demand_to_return is None:
  *             raise ModelException('no matching demand')             # <<<<<<<<<<<<<<
@@ -21057,7 +21057,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __PYX_ERR(0, 999, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":998
+    /* "pyNTM/parallel_link_model.py":998
  *                 return demand_to_return
  * 
  *         if demand_to_return is None:             # <<<<<<<<<<<<<<
@@ -21066,7 +21066,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":982
+  /* "pyNTM/parallel_link_model.py":982
  *         self.validate_model()
  * 
  *     def get_demand_object(self, source_node_name, dest_node_name, demand_name='none'):             # <<<<<<<<<<<<<<
@@ -21093,7 +21093,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_54g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1001
+/* "pyNTM/parallel_link_model.py":1001
  *             raise ModelException('no matching demand')
  * 
  *     def get_rsvp_lsp(self, source_node_name, dest_node_name, lsp_name='none'):             # <<<<<<<<<<<<<<
@@ -21191,7 +21191,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_57g
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12get_rsvp_lsp_2generator17(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1014
+/* "pyNTM/parallel_link_model.py":1014
  *         needed_key = (source_node_name, dest_node_name, lsp_name)
  * 
  *         if needed_key not in (lsp._key for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -21342,7 +21342,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12g
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12get_rsvp_lsp_5generator18(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1019
+/* "pyNTM/parallel_link_model.py":1019
  *             raise ModelException(msg)
  *         else:
  *             for lsp in (lsp for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -21490,7 +21490,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_12g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1001
+/* "pyNTM/parallel_link_model.py":1001
  *             raise ModelException('no matching demand')
  * 
  *     def get_rsvp_lsp(self, source_node_name, dest_node_name, lsp_name='none'):             # <<<<<<<<<<<<<<
@@ -21525,7 +21525,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":1012
+  /* "pyNTM/parallel_link_model.py":1012
  *         """
  * 
  *         needed_key = (source_node_name, dest_node_name, lsp_name)             # <<<<<<<<<<<<<<
@@ -21546,7 +21546,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
   __pyx_v_needed_key = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1014
+  /* "pyNTM/parallel_link_model.py":1014
  *         needed_key = (source_node_name, dest_node_name, lsp_name)
  * 
  *         if needed_key not in (lsp._key for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -21560,7 +21560,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (unlikely(__pyx_t_3)) {
 
-    /* "pyNTM/parallel_link_model.pyx":1016
+    /* "pyNTM/parallel_link_model.py":1016
  *         if needed_key not in (lsp._key for lsp in self.rsvp_lsp_objects):
  *             msg = ("LSP with source node %s, dest node %s, and name %s "
  *                    "does not exist in model" % (source_node_name, dest_node_name, lsp_name))             # <<<<<<<<<<<<<<
@@ -21584,7 +21584,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
     __pyx_v_msg = ((PyObject*)__pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1017
+    /* "pyNTM/parallel_link_model.py":1017
  *             msg = ("LSP with source node %s, dest node %s, and name %s "
  *                    "does not exist in model" % (source_node_name, dest_node_name, lsp_name))
  *             raise ModelException(msg)             # <<<<<<<<<<<<<<
@@ -21612,7 +21612,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __PYX_ERR(0, 1017, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1014
+    /* "pyNTM/parallel_link_model.py":1014
  *         needed_key = (source_node_name, dest_node_name, lsp_name)
  * 
  *         if needed_key not in (lsp._key for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -21621,7 +21621,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1019
+  /* "pyNTM/parallel_link_model.py":1019
  *             raise ModelException(msg)
  *         else:
  *             for lsp in (lsp for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -21674,7 +21674,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
       __Pyx_XDECREF_SET(__pyx_v_lsp, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1020
+      /* "pyNTM/parallel_link_model.py":1020
  *         else:
  *             for lsp in (lsp for lsp in self.rsvp_lsp_objects):
  *                 if lsp._key == needed_key:             # <<<<<<<<<<<<<<
@@ -21689,7 +21689,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       if (__pyx_t_3) {
 
-        /* "pyNTM/parallel_link_model.pyx":1021
+        /* "pyNTM/parallel_link_model.py":1021
  *             for lsp in (lsp for lsp in self.rsvp_lsp_objects):
  *                 if lsp._key == needed_key:
  *                     return lsp             # <<<<<<<<<<<<<<
@@ -21702,7 +21702,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         goto __pyx_L0;
 
-        /* "pyNTM/parallel_link_model.pyx":1020
+        /* "pyNTM/parallel_link_model.py":1020
  *         else:
  *             for lsp in (lsp for lsp in self.rsvp_lsp_objects):
  *                 if lsp._key == needed_key:             # <<<<<<<<<<<<<<
@@ -21711,7 +21711,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
  */
       }
 
-      /* "pyNTM/parallel_link_model.pyx":1019
+      /* "pyNTM/parallel_link_model.py":1019
  *             raise ModelException(msg)
  *         else:
  *             for lsp in (lsp for lsp in self.rsvp_lsp_objects):             # <<<<<<<<<<<<<<
@@ -21722,7 +21722,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1001
+  /* "pyNTM/parallel_link_model.py":1001
  *             raise ModelException('no matching demand')
  * 
  *     def get_rsvp_lsp(self, source_node_name, dest_node_name, lsp_name='none'):             # <<<<<<<<<<<<<<
@@ -21749,7 +21749,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_56g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1024
+/* "pyNTM/parallel_link_model.py":1024
  * 
  *     # Interface calls
  *     def get_interface_object(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -21847,7 +21847,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_58g
   int __pyx_t_8;
   __Pyx_RefNannySetupContext("get_interface_object", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1027
+  /* "pyNTM/parallel_link_model.py":1027
  *         """Returns an interface object for specified node name and interface name"""
  * 
  *         self._does_interface_exist(interface_name, node_name)             # <<<<<<<<<<<<<<
@@ -21903,7 +21903,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_58g
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1029
+  /* "pyNTM/parallel_link_model.py":1029
  *         self._does_interface_exist(interface_name, node_name)
  * 
  *         node_object = self.get_node_object(node_name)             # <<<<<<<<<<<<<<
@@ -21930,7 +21930,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_58g
   __pyx_v_node_object = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1031
+  /* "pyNTM/parallel_link_model.py":1031
  *         node_object = self.get_node_object(node_name)
  * 
  *         int_object = [interface for interface in node_object.interfaces(self) if interface.name == interface_name]             # <<<<<<<<<<<<<<
@@ -22012,7 +22012,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_58g
   __pyx_v_int_object = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1032
+  /* "pyNTM/parallel_link_model.py":1032
  * 
  *         int_object = [interface for interface in node_object.interfaces(self) if interface.name == interface_name]
  *         return int_object[0]             # <<<<<<<<<<<<<<
@@ -22026,7 +22026,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_58g
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1024
+  /* "pyNTM/parallel_link_model.py":1024
  * 
  *     # Interface calls
  *     def get_interface_object(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -22051,7 +22051,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_58g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1034
+/* "pyNTM/parallel_link_model.py":1034
  *         return int_object[0]
  * 
  *     def _does_interface_exist(self, interface_name, node_object_name):             # <<<<<<<<<<<<<<
@@ -22133,7 +22133,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_61_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_21_does_interface_exist_2generator19(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1036
+/* "pyNTM/parallel_link_model.py":1036
  *     def _does_interface_exist(self, interface_name, node_object_name):
  *         int_key = (interface_name, node_object_name)
  *         interface_key_iterator = (interface._key for interface in             # <<<<<<<<<<<<<<
@@ -22194,7 +22194,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_21_
   __pyx_L3_first_run:;
   if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1036, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1037
+  /* "pyNTM/parallel_link_model.py":1037
  *         int_key = (interface_name, node_object_name)
  *         interface_key_iterator = (interface._key for interface in
  *                                   self.interface_objects)             # <<<<<<<<<<<<<<
@@ -22249,7 +22249,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_21_
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1036
+    /* "pyNTM/parallel_link_model.py":1036
  *     def _does_interface_exist(self, interface_name, node_object_name):
  *         int_key = (interface_name, node_object_name)
  *         interface_key_iterator = (interface._key for interface in             # <<<<<<<<<<<<<<
@@ -22299,7 +22299,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_21_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1034
+/* "pyNTM/parallel_link_model.py":1034
  *         return int_object[0]
  * 
  *     def _does_interface_exist(self, interface_name, node_object_name):             # <<<<<<<<<<<<<<
@@ -22331,7 +22331,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_60_
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":1035
+  /* "pyNTM/parallel_link_model.py":1035
  * 
  *     def _does_interface_exist(self, interface_name, node_object_name):
  *         int_key = (interface_name, node_object_name)             # <<<<<<<<<<<<<<
@@ -22349,7 +22349,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_60_
   __pyx_v_int_key = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1036
+  /* "pyNTM/parallel_link_model.py":1036
  *     def _does_interface_exist(self, interface_name, node_object_name):
  *         int_key = (interface_name, node_object_name)
  *         interface_key_iterator = (interface._key for interface in             # <<<<<<<<<<<<<<
@@ -22361,7 +22361,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_60_
   __pyx_v_interface_key_iterator = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1039
+  /* "pyNTM/parallel_link_model.py":1039
  *                                   self.interface_objects)
  * 
  *         if int_key not in (interface_key_iterator):             # <<<<<<<<<<<<<<
@@ -22372,7 +22372,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_60_
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (unlikely(__pyx_t_3)) {
 
-    /* "pyNTM/parallel_link_model.pyx":1040
+    /* "pyNTM/parallel_link_model.py":1040
  * 
  *         if int_key not in (interface_key_iterator):
  *             raise ModelException('specified interface does not exist')             # <<<<<<<<<<<<<<
@@ -22400,7 +22400,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_60_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __PYX_ERR(0, 1040, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1039
+    /* "pyNTM/parallel_link_model.py":1039
  *                                   self.interface_objects)
  * 
  *         if int_key not in (interface_key_iterator):             # <<<<<<<<<<<<<<
@@ -22409,7 +22409,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_60_
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1034
+  /* "pyNTM/parallel_link_model.py":1034
  *         return int_object[0]
  * 
  *     def _does_interface_exist(self, interface_name, node_object_name):             # <<<<<<<<<<<<<<
@@ -22435,7 +22435,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_60_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1042
+/* "pyNTM/parallel_link_model.py":1042
  *             raise ModelException('specified interface does not exist')
  * 
  *     def get_circuit_object_from_interface(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -22535,7 +22535,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_62g
   int __pyx_t_10;
   __Pyx_RefNannySetupContext("get_circuit_object_from_interface", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1048
+  /* "pyNTM/parallel_link_model.py":1048
  * 
  *         # Does interface exist?
  *         self._does_interface_exist(interface_name, node_name)             # <<<<<<<<<<<<<<
@@ -22591,7 +22591,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_62g
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1050
+  /* "pyNTM/parallel_link_model.py":1050
  *         self._does_interface_exist(interface_name, node_name)
  * 
  *         interface = self.get_interface_object(interface_name, node_name)             # <<<<<<<<<<<<<<
@@ -22648,7 +22648,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_62g
   __pyx_v_interface = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1052
+  /* "pyNTM/parallel_link_model.py":1052
  *         interface = self.get_interface_object(interface_name, node_name)
  * 
  *         ckts = [ckt for ckt in self.circuit_objects if interface in (ckt.interface_a, ckt.interface_b)]             # <<<<<<<<<<<<<<
@@ -22732,7 +22732,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_62g
   __pyx_v_ckts = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1054
+  /* "pyNTM/parallel_link_model.py":1054
  *         ckts = [ckt for ckt in self.circuit_objects if interface in (ckt.interface_a, ckt.interface_b)]
  * 
  *         return ckts[0]             # <<<<<<<<<<<<<<
@@ -22746,7 +22746,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_62g
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1042
+  /* "pyNTM/parallel_link_model.py":1042
  *             raise ModelException('specified interface does not exist')
  * 
  *     def get_circuit_object_from_interface(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -22772,7 +22772,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_62g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1057
+/* "pyNTM/parallel_link_model.py":1057
  * 
  *     # Convenience calls #####
  *     def get_failed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -22796,7 +22796,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_65g
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28get_failed_interface_objects_2generator20(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1063
+/* "pyNTM/parallel_link_model.py":1063
  *         failed_interfaces = []
  * 
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -22944,7 +22944,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1057
+/* "pyNTM/parallel_link_model.py":1057
  * 
  *     # Convenience calls #####
  *     def get_failed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -22977,7 +22977,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_64g
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":1061
+  /* "pyNTM/parallel_link_model.py":1061
  *         Returns a list of all failed interfaces in the Model
  *         """
  *         failed_interfaces = []             # <<<<<<<<<<<<<<
@@ -22989,7 +22989,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_64g
   __pyx_v_failed_interfaces = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1063
+  /* "pyNTM/parallel_link_model.py":1063
  *         failed_interfaces = []
  * 
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -23041,7 +23041,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_64g
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1064
+    /* "pyNTM/parallel_link_model.py":1064
  * 
  *         for interface in (interface for interface in self.interface_objects):
  *             if interface.failed:             # <<<<<<<<<<<<<<
@@ -23054,7 +23054,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_64g
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_5) {
 
-      /* "pyNTM/parallel_link_model.pyx":1065
+      /* "pyNTM/parallel_link_model.py":1065
  *         for interface in (interface for interface in self.interface_objects):
  *             if interface.failed:
  *                 failed_interfaces.append(interface)             # <<<<<<<<<<<<<<
@@ -23063,7 +23063,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_64g
  */
       __pyx_t_6 = __Pyx_PyList_Append(__pyx_v_failed_interfaces, __pyx_v_interface); if (unlikely(__pyx_t_6 == ((int)-1))) __PYX_ERR(0, 1065, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1064
+      /* "pyNTM/parallel_link_model.py":1064
  * 
  *         for interface in (interface for interface in self.interface_objects):
  *             if interface.failed:             # <<<<<<<<<<<<<<
@@ -23072,7 +23072,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_64g
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1063
+    /* "pyNTM/parallel_link_model.py":1063
  *         failed_interfaces = []
  * 
  *         for interface in (interface for interface in self.interface_objects):             # <<<<<<<<<<<<<<
@@ -23082,7 +23082,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_64g
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1067
+  /* "pyNTM/parallel_link_model.py":1067
  *                 failed_interfaces.append(interface)
  * 
  *         return failed_interfaces             # <<<<<<<<<<<<<<
@@ -23094,7 +23094,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_64g
   __pyx_r = __pyx_v_failed_interfaces;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1057
+  /* "pyNTM/parallel_link_model.py":1057
  * 
  *     # Convenience calls #####
  *     def get_failed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -23117,7 +23117,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_64g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1069
+/* "pyNTM/parallel_link_model.py":1069
  *         return failed_interfaces
  * 
  *     def get_unfailed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -23141,7 +23141,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_67g
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30get_unfailed_interface_objects_2generator21(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1076
+/* "pyNTM/parallel_link_model.py":1076
  *         unfailed_interface_objects = set()
  * 
  *         interface_iter = (interface for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -23289,7 +23289,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1069
+/* "pyNTM/parallel_link_model.py":1069
  *         return failed_interfaces
  * 
  *     def get_unfailed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -23324,7 +23324,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_66g
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":1074
+  /* "pyNTM/parallel_link_model.py":1074
  *         """
  * 
  *         unfailed_interface_objects = set()             # <<<<<<<<<<<<<<
@@ -23336,7 +23336,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_66g
   __pyx_v_unfailed_interface_objects = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1076
+  /* "pyNTM/parallel_link_model.py":1076
  *         unfailed_interface_objects = set()
  * 
  *         interface_iter = (interface for interface in self.interface_objects)             # <<<<<<<<<<<<<<
@@ -23348,7 +23348,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_66g
   __pyx_v_interface_iter = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1078
+  /* "pyNTM/parallel_link_model.py":1078
  *         interface_iter = (interface for interface in self.interface_objects)
  * 
  *         for interface in interface_iter:             # <<<<<<<<<<<<<<
@@ -23397,7 +23397,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_66g
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1079
+    /* "pyNTM/parallel_link_model.py":1079
  * 
  *         for interface in interface_iter:
  *             if not interface.failed:             # <<<<<<<<<<<<<<
@@ -23411,7 +23411,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_66g
     __pyx_t_6 = ((!__pyx_t_5) != 0);
     if (__pyx_t_6) {
 
-      /* "pyNTM/parallel_link_model.pyx":1080
+      /* "pyNTM/parallel_link_model.py":1080
  *         for interface in interface_iter:
  *             if not interface.failed:
  *                 unfailed_interface_objects.add(interface)             # <<<<<<<<<<<<<<
@@ -23420,7 +23420,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_66g
  */
       __pyx_t_7 = PySet_Add(__pyx_v_unfailed_interface_objects, __pyx_v_interface); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 1080, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1079
+      /* "pyNTM/parallel_link_model.py":1079
  * 
  *         for interface in interface_iter:
  *             if not interface.failed:             # <<<<<<<<<<<<<<
@@ -23429,7 +23429,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_66g
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1078
+    /* "pyNTM/parallel_link_model.py":1078
  *         interface_iter = (interface for interface in self.interface_objects)
  * 
  *         for interface in interface_iter:             # <<<<<<<<<<<<<<
@@ -23439,7 +23439,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_66g
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1082
+  /* "pyNTM/parallel_link_model.py":1082
  *                 unfailed_interface_objects.add(interface)
  * 
  *         return unfailed_interface_objects             # <<<<<<<<<<<<<<
@@ -23451,7 +23451,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_66g
   __pyx_r = __pyx_v_unfailed_interface_objects;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1069
+  /* "pyNTM/parallel_link_model.py":1069
  *         return failed_interfaces
  * 
  *     def get_unfailed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -23475,7 +23475,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_66g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1084
+/* "pyNTM/parallel_link_model.py":1084
  *         return unfailed_interface_objects
  * 
  *     def get_unrouted_demand_objects(self):             # <<<<<<<<<<<<<<
@@ -23499,7 +23499,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_69g
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27get_unrouted_demand_objects_2generator22(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1089
+/* "pyNTM/parallel_link_model.py":1089
  *         """
  *         unrouted_demands = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -23647,7 +23647,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1084
+/* "pyNTM/parallel_link_model.py":1084
  *         return unfailed_interface_objects
  * 
  *     def get_unrouted_demand_objects(self):             # <<<<<<<<<<<<<<
@@ -23680,7 +23680,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_68g
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":1088
+  /* "pyNTM/parallel_link_model.py":1088
  *         Returns list of demand objects that cannot be routed
  *         """
  *         unrouted_demands = []             # <<<<<<<<<<<<<<
@@ -23692,7 +23692,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_68g
   __pyx_v_unrouted_demands = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1089
+  /* "pyNTM/parallel_link_model.py":1089
  *         """
  *         unrouted_demands = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -23744,7 +23744,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_68g
     __Pyx_XDECREF_SET(__pyx_v_demand, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1090
+    /* "pyNTM/parallel_link_model.py":1090
  *         unrouted_demands = []
  *         for demand in (demand for demand in self.demand_objects):
  *             if demand.path == "Unrouted":             # <<<<<<<<<<<<<<
@@ -23757,7 +23757,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_68g
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_5) {
 
-      /* "pyNTM/parallel_link_model.pyx":1091
+      /* "pyNTM/parallel_link_model.py":1091
  *         for demand in (demand for demand in self.demand_objects):
  *             if demand.path == "Unrouted":
  *                 unrouted_demands.append(demand)             # <<<<<<<<<<<<<<
@@ -23766,7 +23766,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_68g
  */
       __pyx_t_6 = __Pyx_PyList_Append(__pyx_v_unrouted_demands, __pyx_v_demand); if (unlikely(__pyx_t_6 == ((int)-1))) __PYX_ERR(0, 1091, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1090
+      /* "pyNTM/parallel_link_model.py":1090
  *         unrouted_demands = []
  *         for demand in (demand for demand in self.demand_objects):
  *             if demand.path == "Unrouted":             # <<<<<<<<<<<<<<
@@ -23775,7 +23775,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_68g
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1089
+    /* "pyNTM/parallel_link_model.py":1089
  *         """
  *         unrouted_demands = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -23785,7 +23785,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_68g
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1093
+  /* "pyNTM/parallel_link_model.py":1093
  *                 unrouted_demands.append(demand)
  * 
  *         return unrouted_demands             # <<<<<<<<<<<<<<
@@ -23797,7 +23797,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_68g
   __pyx_r = __pyx_v_unrouted_demands;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1084
+  /* "pyNTM/parallel_link_model.py":1084
  *         return unfailed_interface_objects
  * 
  *     def get_unrouted_demand_objects(self):             # <<<<<<<<<<<<<<
@@ -23820,7 +23820,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_68g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1095
+/* "pyNTM/parallel_link_model.py":1095
  *         return unrouted_demands
  * 
  *     def change_interface_name(self, node_name,             # <<<<<<<<<<<<<<
@@ -23924,7 +23924,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_70c
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("change_interface_name", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1099
+  /* "pyNTM/parallel_link_model.py":1099
  *                               new_interface_name):
  *         """Changes interface name"""
  *         interface_to_edit = self.get_interface_object(current_interface_name, node_name)             # <<<<<<<<<<<<<<
@@ -23981,7 +23981,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_70c
   __pyx_v_interface_to_edit = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1100
+  /* "pyNTM/parallel_link_model.py":1100
  *         """Changes interface name"""
  *         interface_to_edit = self.get_interface_object(current_interface_name, node_name)
  *         interface_to_edit.name = new_interface_name             # <<<<<<<<<<<<<<
@@ -23990,7 +23990,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_70c
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface_to_edit, __pyx_n_s_name, __pyx_v_new_interface_name) < 0) __PYX_ERR(0, 1100, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1102
+  /* "pyNTM/parallel_link_model.py":1102
  *         interface_to_edit.name = new_interface_name
  * 
  *         return interface_to_edit             # <<<<<<<<<<<<<<
@@ -24002,7 +24002,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_70c
   __pyx_r = __pyx_v_interface_to_edit;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1095
+  /* "pyNTM/parallel_link_model.py":1095
  *         return unrouted_demands
  * 
  *     def change_interface_name(self, node_name,             # <<<<<<<<<<<<<<
@@ -24025,7 +24025,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_70c
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1104
+/* "pyNTM/parallel_link_model.py":1104
  *         return interface_to_edit
  * 
  *     def fail_interface(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -24121,7 +24121,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_72f
   int __pyx_t_7;
   __Pyx_RefNannySetupContext("fail_interface", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1108
+  /* "pyNTM/parallel_link_model.py":1108
  * 
  *         # Get the interface object
  *         interface_object = self.get_interface_object(interface_name, node_name)             # <<<<<<<<<<<<<<
@@ -24178,7 +24178,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_72f
   __pyx_v_interface_object = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1111
+  /* "pyNTM/parallel_link_model.py":1111
  * 
  *         # Does interface exist?
  *         if interface_object not in self.interface_objects:             # <<<<<<<<<<<<<<
@@ -24192,7 +24192,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_72f
   __pyx_t_7 = (__pyx_t_6 != 0);
   if (__pyx_t_7) {
 
-    /* "pyNTM/parallel_link_model.pyx":1112
+    /* "pyNTM/parallel_link_model.py":1112
  *         # Does interface exist?
  *         if interface_object not in self.interface_objects:
  *             ModelException('specified interface does not exist')             # <<<<<<<<<<<<<<
@@ -24218,7 +24218,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_72f
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1111
+    /* "pyNTM/parallel_link_model.py":1111
  * 
  *         # Does interface exist?
  *         if interface_object not in self.interface_objects:             # <<<<<<<<<<<<<<
@@ -24227,7 +24227,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_72f
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1115
+  /* "pyNTM/parallel_link_model.py":1115
  * 
  *         # find the remote interface
  *         remote_interface_object = interface_object.get_remote_interface(self)             # <<<<<<<<<<<<<<
@@ -24254,7 +24254,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_72f
   __pyx_v_remote_interface_object = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1117
+  /* "pyNTM/parallel_link_model.py":1117
  *         remote_interface_object = interface_object.get_remote_interface(self)
  * 
  *         remote_interface_object.failed = True             # <<<<<<<<<<<<<<
@@ -24263,7 +24263,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_72f
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_remote_interface_object, __pyx_n_s_failed, Py_True) < 0) __PYX_ERR(0, 1117, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1118
+  /* "pyNTM/parallel_link_model.py":1118
  * 
  *         remote_interface_object.failed = True
  *         interface_object.failed = True             # <<<<<<<<<<<<<<
@@ -24272,7 +24272,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_72f
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface_object, __pyx_n_s_failed, Py_True) < 0) __PYX_ERR(0, 1118, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1104
+  /* "pyNTM/parallel_link_model.py":1104
  *         return interface_to_edit
  * 
  *     def fail_interface(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -24298,7 +24298,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_72f
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1120
+/* "pyNTM/parallel_link_model.py":1120
  *         interface_object.failed = True
  * 
  *     def unfail_interface(self, interface_name, node_name, raise_exception=False):             # <<<<<<<<<<<<<<
@@ -24411,7 +24411,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
   int __pyx_t_8;
   __Pyx_RefNannySetupContext("unfail_interface", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1134
+  /* "pyNTM/parallel_link_model.py":1134
  *         """
  * 
  *         if not (isinstance(raise_exception, bool)):             # <<<<<<<<<<<<<<
@@ -24425,7 +24425,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
   __pyx_t_3 = ((!(__pyx_t_2 != 0)) != 0);
   if (unlikely(__pyx_t_3)) {
 
-    /* "pyNTM/parallel_link_model.pyx":1135
+    /* "pyNTM/parallel_link_model.py":1135
  * 
  *         if not (isinstance(raise_exception, bool)):
  *             message = "raise_exception must be boolean value"             # <<<<<<<<<<<<<<
@@ -24435,7 +24435,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
     __Pyx_INCREF(__pyx_kp_s_raise_exception_must_be_boolean);
     __pyx_v_message = __pyx_kp_s_raise_exception_must_be_boolean;
 
-    /* "pyNTM/parallel_link_model.pyx":1136
+    /* "pyNTM/parallel_link_model.py":1136
  *         if not (isinstance(raise_exception, bool)):
  *             message = "raise_exception must be boolean value"
  *             raise ModelException(message)             # <<<<<<<<<<<<<<
@@ -24463,7 +24463,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __PYX_ERR(0, 1136, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1134
+    /* "pyNTM/parallel_link_model.py":1134
  *         """
  * 
  *         if not (isinstance(raise_exception, bool)):             # <<<<<<<<<<<<<<
@@ -24472,7 +24472,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1139
+  /* "pyNTM/parallel_link_model.py":1139
  * 
  *         # Get the interface object
  *         interface_object = self.get_interface_object(interface_name, node_name)             # <<<<<<<<<<<<<<
@@ -24529,7 +24529,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
   __pyx_v_interface_object = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1142
+  /* "pyNTM/parallel_link_model.py":1142
  * 
  *         # Does interface exist?
  *         if interface_object not in set(self.interface_objects):             # <<<<<<<<<<<<<<
@@ -24546,7 +24546,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
   __pyx_t_2 = (__pyx_t_3 != 0);
   if (__pyx_t_2) {
 
-    /* "pyNTM/parallel_link_model.pyx":1143
+    /* "pyNTM/parallel_link_model.py":1143
  *         # Does interface exist?
  *         if interface_object not in set(self.interface_objects):
  *             ModelException('specified interface does not exist')             # <<<<<<<<<<<<<<
@@ -24572,7 +24572,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1142
+    /* "pyNTM/parallel_link_model.py":1142
  * 
  *         # Does interface exist?
  *         if interface_object not in set(self.interface_objects):             # <<<<<<<<<<<<<<
@@ -24581,7 +24581,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1146
+  /* "pyNTM/parallel_link_model.py":1146
  * 
  *         # Find the remote interface
  *         remote_interface = interface_object.get_remote_interface(self)             # <<<<<<<<<<<<<<
@@ -24608,7 +24608,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
   __pyx_v_remote_interface = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1150
+  /* "pyNTM/parallel_link_model.py":1150
  *         # Ensure local and remote nodes are failed == False and set reservable
  *         # bandwidth on each interface to interface.capacity
  *         if self.get_node_object(interface_object.node_object.name).failed is False and \             # <<<<<<<<<<<<<<
@@ -24650,7 +24650,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
     goto __pyx_L6_bool_binop_done;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1151
+  /* "pyNTM/parallel_link_model.py":1151
  *         # bandwidth on each interface to interface.capacity
  *         if self.get_node_object(interface_object.node_object.name).failed is False and \
  *                 self.get_node_object(remote_interface.node_object.name).failed is False:             # <<<<<<<<<<<<<<
@@ -24689,7 +24689,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
   __pyx_t_2 = __pyx_t_3;
   __pyx_L6_bool_binop_done:;
 
-  /* "pyNTM/parallel_link_model.pyx":1150
+  /* "pyNTM/parallel_link_model.py":1150
  *         # Ensure local and remote nodes are failed == False and set reservable
  *         # bandwidth on each interface to interface.capacity
  *         if self.get_node_object(interface_object.node_object.name).failed is False and \             # <<<<<<<<<<<<<<
@@ -24698,7 +24698,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
  */
   if (__pyx_t_2) {
 
-    /* "pyNTM/parallel_link_model.pyx":1153
+    /* "pyNTM/parallel_link_model.py":1153
  *                 self.get_node_object(remote_interface.node_object.name).failed is False:
  * 
  *             remote_interface.failed = False             # <<<<<<<<<<<<<<
@@ -24707,7 +24707,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_remote_interface, __pyx_n_s_failed, Py_False) < 0) __PYX_ERR(0, 1153, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1154
+    /* "pyNTM/parallel_link_model.py":1154
  * 
  *             remote_interface.failed = False
  *             remote_interface.reserved_bandwidth = 0             # <<<<<<<<<<<<<<
@@ -24716,7 +24716,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_remote_interface, __pyx_n_s_reserved_bandwidth, __pyx_int_0) < 0) __PYX_ERR(0, 1154, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1155
+    /* "pyNTM/parallel_link_model.py":1155
  *             remote_interface.failed = False
  *             remote_interface.reserved_bandwidth = 0
  *             interface_object.failed = False             # <<<<<<<<<<<<<<
@@ -24725,7 +24725,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface_object, __pyx_n_s_failed, Py_False) < 0) __PYX_ERR(0, 1155, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1156
+    /* "pyNTM/parallel_link_model.py":1156
  *             remote_interface.reserved_bandwidth = 0
  *             interface_object.failed = False
  *             interface_object.reserved_bandwidth = 0             # <<<<<<<<<<<<<<
@@ -24734,7 +24734,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_interface_object, __pyx_n_s_reserved_bandwidth, __pyx_int_0) < 0) __PYX_ERR(0, 1156, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1157
+    /* "pyNTM/parallel_link_model.py":1157
  *             interface_object.failed = False
  *             interface_object.reserved_bandwidth = 0
  *             self.validate_model()             # <<<<<<<<<<<<<<
@@ -24760,7 +24760,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1150
+    /* "pyNTM/parallel_link_model.py":1150
  *         # Ensure local and remote nodes are failed == False and set reservable
  *         # bandwidth on each interface to interface.capacity
  *         if self.get_node_object(interface_object.node_object.name).failed is False and \             # <<<<<<<<<<<<<<
@@ -24770,7 +24770,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
     goto __pyx_L5;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1159
+  /* "pyNTM/parallel_link_model.py":1159
  *             self.validate_model()
  *         else:
  *             if raise_exception:             # <<<<<<<<<<<<<<
@@ -24781,7 +24781,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
     __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_raise_exception); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 1159, __pyx_L1_error)
     if (unlikely(__pyx_t_2)) {
 
-      /* "pyNTM/parallel_link_model.pyx":1160
+      /* "pyNTM/parallel_link_model.py":1160
  *         else:
  *             if raise_exception:
  *                 message = ("Local and/or remote node are failed; cannot have "             # <<<<<<<<<<<<<<
@@ -24791,7 +24791,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
       __Pyx_INCREF(__pyx_kp_s_Local_and_or_remote_node_are_fai);
       __pyx_v_message = __pyx_kp_s_Local_and_or_remote_node_are_fai;
 
-      /* "pyNTM/parallel_link_model.pyx":1162
+      /* "pyNTM/parallel_link_model.py":1162
  *                 message = ("Local and/or remote node are failed; cannot have "
  *                            "unfailed interface on failed node.")
  *                 raise ModelException(message)             # <<<<<<<<<<<<<<
@@ -24819,7 +24819,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __PYX_ERR(0, 1162, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1159
+      /* "pyNTM/parallel_link_model.py":1159
  *             self.validate_model()
  *         else:
  *             if raise_exception:             # <<<<<<<<<<<<<<
@@ -24830,7 +24830,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
   }
   __pyx_L5:;
 
-  /* "pyNTM/parallel_link_model.pyx":1120
+  /* "pyNTM/parallel_link_model.py":1120
  *         interface_object.failed = True
  * 
  *     def unfail_interface(self, interface_name, node_name, raise_exception=False):             # <<<<<<<<<<<<<<
@@ -24857,7 +24857,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_74u
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1164
+/* "pyNTM/parallel_link_model.py":1164
  *                 raise ModelException(message)
  * 
  *     def get_all_paths_reservable_bw(self, source_node_name, dest_node_name, include_failed_circuits=True,             # <<<<<<<<<<<<<<
@@ -24981,7 +24981,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_77g
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27get_all_paths_reservable_bw_2generator23(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1197
+/* "pyNTM/parallel_link_model.py":1197
  *         # Remove duplicate paths from digraph_all_paths
  *         # (duplicates can be caused by multiple links between nodes)
  *         digraph_unique_paths = [list(path) for path in set(tuple(path) for path in digraph_all_paths)]             # <<<<<<<<<<<<<<
@@ -25112,7 +25112,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1164
+/* "pyNTM/parallel_link_model.py":1164
  *                 raise ModelException(message)
  * 
  *     def get_all_paths_reservable_bw(self, source_node_name, dest_node_name, include_failed_circuits=True,             # <<<<<<<<<<<<<<
@@ -25153,7 +25153,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
     __Pyx_GOTREF(__pyx_cur_scope);
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1186
+  /* "pyNTM/parallel_link_model.py":1186
  * 
  *         # Define a networkx DiGraph to find the path
  *         G = self._make_weighted_network_graph(include_failed_circuits=include_failed_circuits, needed_bw=needed_bw)             # <<<<<<<<<<<<<<
@@ -25173,7 +25173,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
   __pyx_v_G = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1189
+  /* "pyNTM/parallel_link_model.py":1189
  * 
  *         # Define the Model-style path to be built
  *         converted_path = dict()             # <<<<<<<<<<<<<<
@@ -25185,7 +25185,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
   __pyx_v_converted_path = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1190
+  /* "pyNTM/parallel_link_model.py":1190
  *         # Define the Model-style path to be built
  *         converted_path = dict()
  *         converted_path['path'] = []             # <<<<<<<<<<<<<<
@@ -25197,7 +25197,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
   if (unlikely(PyDict_SetItem(__pyx_v_converted_path, __pyx_n_s_path, __pyx_t_3) < 0)) __PYX_ERR(0, 1190, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1193
+  /* "pyNTM/parallel_link_model.py":1193
  * 
  *         # Find the simple paths in G between source and dest
  *         digraph_all_paths = nx.all_simple_paths(G, source_node_name, dest_node_name, cutoff=cutoff)             # <<<<<<<<<<<<<<
@@ -25232,7 +25232,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
   __pyx_cur_scope->__pyx_v_digraph_all_paths = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1197
+  /* "pyNTM/parallel_link_model.py":1197
  *         # Remove duplicate paths from digraph_all_paths
  *         # (duplicates can be caused by multiple links between nodes)
  *         digraph_unique_paths = [list(path) for path in set(tuple(path) for path in digraph_all_paths)]             # <<<<<<<<<<<<<<
@@ -25269,7 +25269,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
   __pyx_v_digraph_unique_paths = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1199
+  /* "pyNTM/parallel_link_model.py":1199
  *         digraph_unique_paths = [list(path) for path in set(tuple(path) for path in digraph_all_paths)]
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -25285,7 +25285,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
     __Pyx_XGOTREF(__pyx_t_11);
     /*try:*/ {
 
-      /* "pyNTM/parallel_link_model.pyx":1200
+      /* "pyNTM/parallel_link_model.py":1200
  * 
  *         try:
  *             for path in digraph_unique_paths:             # <<<<<<<<<<<<<<
@@ -25304,7 +25304,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
         __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1201
+        /* "pyNTM/parallel_link_model.py":1201
  *         try:
  *             for path in digraph_unique_paths:
  *                 model_path = self._convert_nx_path_to_model_path(path, needed_bw)             # <<<<<<<<<<<<<<
@@ -25361,7 +25361,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
         __Pyx_XDECREF_SET(__pyx_v_model_path, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1202
+        /* "pyNTM/parallel_link_model.py":1202
  *             for path in digraph_unique_paths:
  *                 model_path = self._convert_nx_path_to_model_path(path, needed_bw)
  *                 converted_path['path'].append(model_path)             # <<<<<<<<<<<<<<
@@ -25373,7 +25373,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
         __pyx_t_13 = __Pyx_PyObject_Append(__pyx_t_1, __pyx_v_model_path); if (unlikely(__pyx_t_13 == ((int)-1))) __PYX_ERR(0, 1202, __pyx_L5_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1200
+        /* "pyNTM/parallel_link_model.py":1200
  * 
  *         try:
  *             for path in digraph_unique_paths:             # <<<<<<<<<<<<<<
@@ -25383,7 +25383,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
       }
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1199
+      /* "pyNTM/parallel_link_model.py":1199
  *         digraph_unique_paths = [list(path) for path in set(tuple(path) for path in digraph_all_paths)]
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -25402,7 +25402,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1203
+    /* "pyNTM/parallel_link_model.py":1203
  *                 model_path = self._convert_nx_path_to_model_path(path, needed_bw)
  *                 converted_path['path'].append(model_path)
  *         except BaseException:             # <<<<<<<<<<<<<<
@@ -25417,7 +25417,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GOTREF(__pyx_t_3);
 
-      /* "pyNTM/parallel_link_model.pyx":1204
+      /* "pyNTM/parallel_link_model.py":1204
  *                 converted_path['path'].append(model_path)
  *         except BaseException:
  *             return converted_path             # <<<<<<<<<<<<<<
@@ -25435,7 +25435,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
     goto __pyx_L7_except_error;
     __pyx_L7_except_error:;
 
-    /* "pyNTM/parallel_link_model.pyx":1199
+    /* "pyNTM/parallel_link_model.py":1199
  *         digraph_unique_paths = [list(path) for path in set(tuple(path) for path in digraph_all_paths)]
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -25456,7 +25456,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
     __pyx_L10_try_end:;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1208
+  /* "pyNTM/parallel_link_model.py":1208
  *         # Normalize the path info to get all combinations of with parallel
  *         # interfaces
  *         path_info = self._normalize_multidigraph_paths(converted_path['path'])             # <<<<<<<<<<<<<<
@@ -25486,7 +25486,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
   __pyx_v_path_info = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1209
+  /* "pyNTM/parallel_link_model.py":1209
  *         # interfaces
  *         path_info = self._normalize_multidigraph_paths(converted_path['path'])
  *         return {'path': path_info}             # <<<<<<<<<<<<<<
@@ -25501,7 +25501,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1164
+  /* "pyNTM/parallel_link_model.py":1164
  *                 raise ModelException(message)
  * 
  *     def get_all_paths_reservable_bw(self, source_node_name, dest_node_name, include_failed_circuits=True,             # <<<<<<<<<<<<<<
@@ -25531,7 +25531,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_76g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1211
+/* "pyNTM/parallel_link_model.py":1211
  *         return {'path': path_info}
  * 
  *     def get_shortest_path(self, source_node_name, dest_node_name, needed_bw=0):             # <<<<<<<<<<<<<<
@@ -25651,7 +25651,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
   int __pyx_t_12;
   __Pyx_RefNannySetupContext("get_shortest_path", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1224
+  /* "pyNTM/parallel_link_model.py":1224
  * 
  *         # Define a networkx DiGraph to find the path
  *         G = self._make_weighted_network_graph(include_failed_circuits=False, needed_bw=needed_bw)             # <<<<<<<<<<<<<<
@@ -25671,7 +25671,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
   __pyx_v_G = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1227
+  /* "pyNTM/parallel_link_model.py":1227
  * 
  *         # Define the Model-style path to be built
  *         converted_path = dict()             # <<<<<<<<<<<<<<
@@ -25683,7 +25683,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
   __pyx_v_converted_path = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1228
+  /* "pyNTM/parallel_link_model.py":1228
  *         # Define the Model-style path to be built
  *         converted_path = dict()
  *         converted_path['path'] = []             # <<<<<<<<<<<<<<
@@ -25695,7 +25695,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
   if (unlikely(PyDict_SetItem(__pyx_v_converted_path, __pyx_n_s_path, __pyx_t_3) < 0)) __PYX_ERR(0, 1228, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1229
+  /* "pyNTM/parallel_link_model.py":1229
  *         converted_path = dict()
  *         converted_path['path'] = []
  *         converted_path['cost'] = None             # <<<<<<<<<<<<<<
@@ -25704,7 +25704,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
  */
   if (unlikely(PyDict_SetItem(__pyx_v_converted_path, __pyx_n_s_cost, Py_None) < 0)) __PYX_ERR(0, 1229, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1232
+  /* "pyNTM/parallel_link_model.py":1232
  * 
  *         # Find the shortest paths in G between source and dest
  *         digraph_shortest_paths = nx.all_shortest_paths(G, source_node_name,             # <<<<<<<<<<<<<<
@@ -25717,7 +25717,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1233
+  /* "pyNTM/parallel_link_model.py":1233
  *         # Find the shortest paths in G between source and dest
  *         digraph_shortest_paths = nx.all_shortest_paths(G, source_node_name,
  *                                                        dest_node_name,             # <<<<<<<<<<<<<<
@@ -25736,7 +25736,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
   __Pyx_GIVEREF(__pyx_v_dest_node_name);
   PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_v_dest_node_name);
 
-  /* "pyNTM/parallel_link_model.pyx":1234
+  /* "pyNTM/parallel_link_model.py":1234
  *         digraph_shortest_paths = nx.all_shortest_paths(G, source_node_name,
  *                                                        dest_node_name,
  *                                                        weight='cost')             # <<<<<<<<<<<<<<
@@ -25747,7 +25747,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_weight, __pyx_n_s_cost) < 0) __PYX_ERR(0, 1234, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1232
+  /* "pyNTM/parallel_link_model.py":1232
  * 
  *         # Find the shortest paths in G between source and dest
  *         digraph_shortest_paths = nx.all_shortest_paths(G, source_node_name,             # <<<<<<<<<<<<<<
@@ -25762,7 +25762,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
   __pyx_v_digraph_shortest_paths = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1238
+  /* "pyNTM/parallel_link_model.py":1238
  *         # Get shortest path(s) from source to destination; this may include paths
  *         # that have multiple links between nodes
  *         try:             # <<<<<<<<<<<<<<
@@ -25778,7 +25778,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
     __Pyx_XGOTREF(__pyx_t_7);
     /*try:*/ {
 
-      /* "pyNTM/parallel_link_model.pyx":1239
+      /* "pyNTM/parallel_link_model.py":1239
  *         # that have multiple links between nodes
  *         try:
  *             for path in digraph_shortest_paths:             # <<<<<<<<<<<<<<
@@ -25827,7 +25827,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
         __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1240
+        /* "pyNTM/parallel_link_model.py":1240
  *         try:
  *             for path in digraph_shortest_paths:
  *                 model_path = self._convert_nx_path_to_model_path(path, needed_bw)             # <<<<<<<<<<<<<<
@@ -25884,7 +25884,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
         __Pyx_XDECREF_SET(__pyx_v_model_path, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1241
+        /* "pyNTM/parallel_link_model.py":1241
  *             for path in digraph_shortest_paths:
  *                 model_path = self._convert_nx_path_to_model_path(path, needed_bw)
  *                 converted_path['path'].append(model_path)             # <<<<<<<<<<<<<<
@@ -25896,7 +25896,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
         __pyx_t_12 = __Pyx_PyObject_Append(__pyx_t_1, __pyx_v_model_path); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 1241, __pyx_L3_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1242
+        /* "pyNTM/parallel_link_model.py":1242
  *                 model_path = self._convert_nx_path_to_model_path(path, needed_bw)
  *                 converted_path['path'].append(model_path)
  *                 converted_path['cost'] = nx.shortest_path_length(G, source_node_name, dest_node_name, weight='cost')             # <<<<<<<<<<<<<<
@@ -25930,7 +25930,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
         if (unlikely(PyDict_SetItem(__pyx_v_converted_path, __pyx_n_s_cost, __pyx_t_2) < 0)) __PYX_ERR(0, 1242, __pyx_L3_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1239
+        /* "pyNTM/parallel_link_model.py":1239
  *         # that have multiple links between nodes
  *         try:
  *             for path in digraph_shortest_paths:             # <<<<<<<<<<<<<<
@@ -25940,7 +25940,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
       }
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1238
+      /* "pyNTM/parallel_link_model.py":1238
  *         # Get shortest path(s) from source to destination; this may include paths
  *         # that have multiple links between nodes
  *         try:             # <<<<<<<<<<<<<<
@@ -25959,7 +25959,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1243
+    /* "pyNTM/parallel_link_model.py":1243
  *                 converted_path['path'].append(model_path)
  *                 converted_path['cost'] = nx.shortest_path_length(G, source_node_name, dest_node_name, weight='cost')
  *         except BaseException:             # <<<<<<<<<<<<<<
@@ -25974,7 +25974,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GOTREF(__pyx_t_11);
 
-      /* "pyNTM/parallel_link_model.pyx":1244
+      /* "pyNTM/parallel_link_model.py":1244
  *                 converted_path['cost'] = nx.shortest_path_length(G, source_node_name, dest_node_name, weight='cost')
  *         except BaseException:
  *             return converted_path             # <<<<<<<<<<<<<<
@@ -25992,7 +25992,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "pyNTM/parallel_link_model.pyx":1238
+    /* "pyNTM/parallel_link_model.py":1238
  *         # Get shortest path(s) from source to destination; this may include paths
  *         # that have multiple links between nodes
  *         try:             # <<<<<<<<<<<<<<
@@ -26013,7 +26013,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
     __pyx_L8_try_end:;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1248
+  /* "pyNTM/parallel_link_model.py":1248
  *         # Normalize the path info to get all combinations of with parallel
  *         # interfaces
  *         path_info = self._normalize_multidigraph_paths(converted_path['path'])             # <<<<<<<<<<<<<<
@@ -26043,7 +26043,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
   __pyx_v_path_info = __pyx_t_11;
   __pyx_t_11 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1250
+  /* "pyNTM/parallel_link_model.py":1250
  *         path_info = self._normalize_multidigraph_paths(converted_path['path'])
  * 
  *         return {'cost': converted_path['cost'], 'path': path_info}             # <<<<<<<<<<<<<<
@@ -26062,7 +26062,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
   __pyx_t_11 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1211
+  /* "pyNTM/parallel_link_model.py":1211
  *         return {'path': path_info}
  * 
  *     def get_shortest_path(self, source_node_name, dest_node_name, needed_bw=0):             # <<<<<<<<<<<<<<
@@ -26091,7 +26091,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_78g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1252
+/* "pyNTM/parallel_link_model.py":1252
  *         return {'cost': converted_path['cost'], 'path': path_info}
  * 
  *     def get_shortest_path_for_routed_lsp(self, source_node_name, dest_node_name, lsp, needed_bw):             # <<<<<<<<<<<<<<
@@ -26218,7 +26218,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
   int __pyx_t_12;
   __Pyx_RefNannySetupContext("get_shortest_path_for_routed_lsp", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1267
+  /* "pyNTM/parallel_link_model.py":1267
  * 
  *         # Define a networkx DiGraph to find the path
  *         G = self._make_weighted_network_graph_routed_lsp(lsp, needed_bw=needed_bw)             # <<<<<<<<<<<<<<
@@ -26243,7 +26243,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
   __pyx_v_G = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1270
+  /* "pyNTM/parallel_link_model.py":1270
  * 
  *         # Define the Model-style path to be built
  *         converted_path = dict()             # <<<<<<<<<<<<<<
@@ -26255,7 +26255,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
   __pyx_v_converted_path = ((PyObject*)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1271
+  /* "pyNTM/parallel_link_model.py":1271
  *         # Define the Model-style path to be built
  *         converted_path = dict()
  *         converted_path['path'] = []             # <<<<<<<<<<<<<<
@@ -26267,7 +26267,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
   if (unlikely(PyDict_SetItem(__pyx_v_converted_path, __pyx_n_s_path, __pyx_t_4) < 0)) __PYX_ERR(0, 1271, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1272
+  /* "pyNTM/parallel_link_model.py":1272
  *         converted_path = dict()
  *         converted_path['path'] = []
  *         converted_path['cost'] = None             # <<<<<<<<<<<<<<
@@ -26276,7 +26276,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
  */
   if (unlikely(PyDict_SetItem(__pyx_v_converted_path, __pyx_n_s_cost, Py_None) < 0)) __PYX_ERR(0, 1272, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1275
+  /* "pyNTM/parallel_link_model.py":1275
  * 
  *         # Find the shortest paths in G between source and dest
  *         digraph_shortest_paths = nx.all_shortest_paths(G, source_node_name, dest_node_name, weight='cost')             # <<<<<<<<<<<<<<
@@ -26310,7 +26310,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
   __pyx_v_digraph_shortest_paths = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1277
+  /* "pyNTM/parallel_link_model.py":1277
  *         digraph_shortest_paths = nx.all_shortest_paths(G, source_node_name, dest_node_name, weight='cost')
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -26326,7 +26326,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
     __Pyx_XGOTREF(__pyx_t_7);
     /*try:*/ {
 
-      /* "pyNTM/parallel_link_model.pyx":1278
+      /* "pyNTM/parallel_link_model.py":1278
  * 
  *         try:
  *             for path in digraph_shortest_paths:             # <<<<<<<<<<<<<<
@@ -26375,7 +26375,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
         __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1279
+        /* "pyNTM/parallel_link_model.py":1279
  *         try:
  *             for path in digraph_shortest_paths:
  *                 model_path = self._convert_nx_path_to_model_path_routed_lsp(path, needed_bw, lsp)             # <<<<<<<<<<<<<<
@@ -26435,7 +26435,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
         __Pyx_XDECREF_SET(__pyx_v_model_path, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1280
+        /* "pyNTM/parallel_link_model.py":1280
  *             for path in digraph_shortest_paths:
  *                 model_path = self._convert_nx_path_to_model_path_routed_lsp(path, needed_bw, lsp)
  *                 converted_path['path'].append(model_path)             # <<<<<<<<<<<<<<
@@ -26447,7 +26447,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
         __pyx_t_12 = __Pyx_PyObject_Append(__pyx_t_2, __pyx_v_model_path); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 1280, __pyx_L3_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1281
+        /* "pyNTM/parallel_link_model.py":1281
  *                 model_path = self._convert_nx_path_to_model_path_routed_lsp(path, needed_bw, lsp)
  *                 converted_path['path'].append(model_path)
  *                 converted_path['cost'] = nx.shortest_path_length(G, source_node_name, dest_node_name, weight='cost')             # <<<<<<<<<<<<<<
@@ -26481,7 +26481,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
         if (unlikely(PyDict_SetItem(__pyx_v_converted_path, __pyx_n_s_cost, __pyx_t_3) < 0)) __PYX_ERR(0, 1281, __pyx_L3_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1278
+        /* "pyNTM/parallel_link_model.py":1278
  * 
  *         try:
  *             for path in digraph_shortest_paths:             # <<<<<<<<<<<<<<
@@ -26491,7 +26491,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
       }
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1277
+      /* "pyNTM/parallel_link_model.py":1277
  *         digraph_shortest_paths = nx.all_shortest_paths(G, source_node_name, dest_node_name, weight='cost')
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -26510,7 +26510,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1282
+    /* "pyNTM/parallel_link_model.py":1282
  *                 converted_path['path'].append(model_path)
  *                 converted_path['cost'] = nx.shortest_path_length(G, source_node_name, dest_node_name, weight='cost')
  *         except BaseException:             # <<<<<<<<<<<<<<
@@ -26525,7 +26525,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_GOTREF(__pyx_t_11);
 
-      /* "pyNTM/parallel_link_model.pyx":1283
+      /* "pyNTM/parallel_link_model.py":1283
  *                 converted_path['cost'] = nx.shortest_path_length(G, source_node_name, dest_node_name, weight='cost')
  *         except BaseException:
  *             return converted_path             # <<<<<<<<<<<<<<
@@ -26543,7 +26543,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "pyNTM/parallel_link_model.pyx":1277
+    /* "pyNTM/parallel_link_model.py":1277
  *         digraph_shortest_paths = nx.all_shortest_paths(G, source_node_name, dest_node_name, weight='cost')
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -26564,7 +26564,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
     __pyx_L8_try_end:;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1287
+  /* "pyNTM/parallel_link_model.py":1287
  *         # Normalize the path info to get all combinations of with parallel
  *         # interfaces
  *         path_info = self._normalize_multidigraph_paths(converted_path['path'])             # <<<<<<<<<<<<<<
@@ -26594,7 +26594,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
   __pyx_v_path_info = __pyx_t_11;
   __pyx_t_11 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1289
+  /* "pyNTM/parallel_link_model.py":1289
  *         path_info = self._normalize_multidigraph_paths(converted_path['path'])
  * 
  *         return {'cost': converted_path['cost'], 'path': path_info}             # <<<<<<<<<<<<<<
@@ -26613,7 +26613,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
   __pyx_t_11 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1252
+  /* "pyNTM/parallel_link_model.py":1252
  *         return {'cost': converted_path['cost'], 'path': path_info}
  * 
  *     def get_shortest_path_for_routed_lsp(self, source_node_name, dest_node_name, lsp, needed_bw):             # <<<<<<<<<<<<<<
@@ -26642,7 +26642,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_80g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1291
+/* "pyNTM/parallel_link_model.py":1291
  *         return {'cost': converted_path['cost'], 'path': path_info}
  * 
  *     def _normalize_multidigraph_paths(self, path_info):             # <<<<<<<<<<<<<<
@@ -26729,7 +26729,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_82_
   int __pyx_t_8;
   __Pyx_RefNannySetupContext("_normalize_multidigraph_paths", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1340
+  /* "pyNTM/parallel_link_model.py":1340
  *         """
  *         # List to hold unique path(s)
  *         path_list = []             # <<<<<<<<<<<<<<
@@ -26741,7 +26741,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_82_
   __pyx_v_path_list = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1342
+  /* "pyNTM/parallel_link_model.py":1342
  *         path_list = []
  * 
  *         for path in path_info:             # <<<<<<<<<<<<<<
@@ -26790,7 +26790,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_82_
     __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1343
+    /* "pyNTM/parallel_link_model.py":1343
  * 
  *         for path in path_info:
  *             path = list(itertools.product(*path))             # <<<<<<<<<<<<<<
@@ -26814,7 +26814,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_82_
     __Pyx_DECREF_SET(__pyx_v_path, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1344
+    /* "pyNTM/parallel_link_model.py":1344
  *         for path in path_info:
  *             path = list(itertools.product(*path))
  *             for path_option in path:             # <<<<<<<<<<<<<<
@@ -26833,7 +26833,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_82_
       __Pyx_XDECREF_SET(__pyx_v_path_option, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1345
+      /* "pyNTM/parallel_link_model.py":1345
  *             path = list(itertools.product(*path))
  *             for path_option in path:
  *                 path_list.append(list(path_option))             # <<<<<<<<<<<<<<
@@ -26845,7 +26845,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_82_
       __pyx_t_8 = __Pyx_PyList_Append(__pyx_v_path_list, __pyx_t_6); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 1345, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1344
+      /* "pyNTM/parallel_link_model.py":1344
  *         for path in path_info:
  *             path = list(itertools.product(*path))
  *             for path_option in path:             # <<<<<<<<<<<<<<
@@ -26855,7 +26855,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_82_
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1342
+    /* "pyNTM/parallel_link_model.py":1342
  *         path_list = []
  * 
  *         for path in path_info:             # <<<<<<<<<<<<<<
@@ -26865,7 +26865,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_82_
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1347
+  /* "pyNTM/parallel_link_model.py":1347
  *                 path_list.append(list(path_option))
  * 
  *         return path_list             # <<<<<<<<<<<<<<
@@ -26877,7 +26877,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_82_
   __pyx_r = __pyx_v_path_list;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1291
+  /* "pyNTM/parallel_link_model.py":1291
  *         return {'cost': converted_path['cost'], 'path': path_info}
  * 
  *     def _normalize_multidigraph_paths(self, path_info):             # <<<<<<<<<<<<<<
@@ -26902,7 +26902,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_82_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1349
+/* "pyNTM/parallel_link_model.py":1349
  *         return path_list
  * 
  *     def _convert_nx_path_to_model_path(self, nx_graph_path, needed_bw):             # <<<<<<<<<<<<<<
@@ -27008,7 +27008,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
   int __pyx_t_13;
   __Pyx_RefNannySetupContext("_convert_nx_path_to_model_path", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1373
+  /* "pyNTM/parallel_link_model.py":1373
  * 
  *         # Define a model-style path to build
  *         model_path = []             # <<<<<<<<<<<<<<
@@ -27020,7 +27020,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
   __pyx_v_model_path = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1376
+  /* "pyNTM/parallel_link_model.py":1376
  * 
  *         # look at each hop in the path
  *         for hop in nx_graph_path:             # <<<<<<<<<<<<<<
@@ -27069,7 +27069,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
     __Pyx_XDECREF_SET(__pyx_v_hop, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1377
+    /* "pyNTM/parallel_link_model.py":1377
  *         # look at each hop in the path
  *         for hop in nx_graph_path:
  *             current_hop_index = nx_graph_path.index(hop)             # <<<<<<<<<<<<<<
@@ -27096,7 +27096,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
     __Pyx_XDECREF_SET(__pyx_v_current_hop_index, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1378
+    /* "pyNTM/parallel_link_model.py":1378
  *         for hop in nx_graph_path:
  *             current_hop_index = nx_graph_path.index(hop)
  *             next_hop_index = current_hop_index + 1             # <<<<<<<<<<<<<<
@@ -27108,7 +27108,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
     __Pyx_XDECREF_SET(__pyx_v_next_hop_index, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1379
+    /* "pyNTM/parallel_link_model.py":1379
  *             current_hop_index = nx_graph_path.index(hop)
  *             next_hop_index = current_hop_index + 1
  *             if next_hop_index < len(nx_graph_path):             # <<<<<<<<<<<<<<
@@ -27124,7 +27124,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_8) {
 
-      /* "pyNTM/parallel_link_model.pyx":1380
+      /* "pyNTM/parallel_link_model.py":1380
  *             next_hop_index = current_hop_index + 1
  *             if next_hop_index < len(nx_graph_path):
  *                 next_hop = nx_graph_path[next_hop_index]             # <<<<<<<<<<<<<<
@@ -27136,7 +27136,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
       __Pyx_XDECREF_SET(__pyx_v_next_hop, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1382
+      /* "pyNTM/parallel_link_model.py":1382
  *                 next_hop = nx_graph_path[next_hop_index]
  * 
  *                 interface = [interface for interface in self.get_interface_object_from_nodes(hop, next_hop) if             # <<<<<<<<<<<<<<
@@ -27235,7 +27235,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
         __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1383
+        /* "pyNTM/parallel_link_model.py":1383
  * 
  *                 interface = [interface for interface in self.get_interface_object_from_nodes(hop, next_hop) if
  *                              interface.reservable_bandwidth >= needed_bw]             # <<<<<<<<<<<<<<
@@ -27249,7 +27249,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
         __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_11); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 1383, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1382
+        /* "pyNTM/parallel_link_model.py":1382
  *                 next_hop = nx_graph_path[next_hop_index]
  * 
  *                 interface = [interface for interface in self.get_interface_object_from_nodes(hop, next_hop) if             # <<<<<<<<<<<<<<
@@ -27264,7 +27264,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
       __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1385
+      /* "pyNTM/parallel_link_model.py":1385
  *                              interface.reservable_bandwidth >= needed_bw]
  * 
  *                 model_path.append(interface)             # <<<<<<<<<<<<<<
@@ -27273,7 +27273,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
  */
       __pyx_t_13 = __Pyx_PyList_Append(__pyx_v_model_path, __pyx_v_interface); if (unlikely(__pyx_t_13 == ((int)-1))) __PYX_ERR(0, 1385, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1379
+      /* "pyNTM/parallel_link_model.py":1379
  *             current_hop_index = nx_graph_path.index(hop)
  *             next_hop_index = current_hop_index + 1
  *             if next_hop_index < len(nx_graph_path):             # <<<<<<<<<<<<<<
@@ -27282,7 +27282,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1376
+    /* "pyNTM/parallel_link_model.py":1376
  * 
  *         # look at each hop in the path
  *         for hop in nx_graph_path:             # <<<<<<<<<<<<<<
@@ -27292,7 +27292,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1387
+  /* "pyNTM/parallel_link_model.py":1387
  *                 model_path.append(interface)
  * 
  *         return model_path             # <<<<<<<<<<<<<<
@@ -27304,7 +27304,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
   __pyx_r = __pyx_v_model_path;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1349
+  /* "pyNTM/parallel_link_model.py":1349
  *         return path_list
  * 
  *     def _convert_nx_path_to_model_path(self, nx_graph_path, needed_bw):             # <<<<<<<<<<<<<<
@@ -27334,7 +27334,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_84_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1389
+/* "pyNTM/parallel_link_model.py":1389
  *         return model_path
  * 
  *     def _convert_nx_path_to_model_path_routed_lsp(self, nx_graph_path, needed_bw, lsp):             # <<<<<<<<<<<<<<
@@ -27454,7 +27454,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
   Py_ssize_t __pyx_t_15;
   __Pyx_RefNannySetupContext("_convert_nx_path_to_model_path_routed_lsp", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1418
+  /* "pyNTM/parallel_link_model.py":1418
  * 
  *         # Define a model-style path to build
  *         model_path = []             # <<<<<<<<<<<<<<
@@ -27466,7 +27466,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
   __pyx_v_model_path = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1421
+  /* "pyNTM/parallel_link_model.py":1421
  * 
  *         # look at each hop in the path
  *         for hop in nx_graph_path:             # <<<<<<<<<<<<<<
@@ -27515,7 +27515,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
     __Pyx_XDECREF_SET(__pyx_v_hop, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1422
+    /* "pyNTM/parallel_link_model.py":1422
  *         # look at each hop in the path
  *         for hop in nx_graph_path:
  *             current_hop_index = nx_graph_path.index(hop)             # <<<<<<<<<<<<<<
@@ -27542,7 +27542,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
     __Pyx_XDECREF_SET(__pyx_v_current_hop_index, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1423
+    /* "pyNTM/parallel_link_model.py":1423
  *         for hop in nx_graph_path:
  *             current_hop_index = nx_graph_path.index(hop)
  *             next_hop_index = current_hop_index + 1             # <<<<<<<<<<<<<<
@@ -27554,7 +27554,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
     __Pyx_XDECREF_SET(__pyx_v_next_hop_index, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1424
+    /* "pyNTM/parallel_link_model.py":1424
  *             current_hop_index = nx_graph_path.index(hop)
  *             next_hop_index = current_hop_index + 1
  *             if next_hop_index < len(nx_graph_path):             # <<<<<<<<<<<<<<
@@ -27570,7 +27570,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_8) {
 
-      /* "pyNTM/parallel_link_model.pyx":1425
+      /* "pyNTM/parallel_link_model.py":1425
  *             next_hop_index = current_hop_index + 1
  *             if next_hop_index < len(nx_graph_path):
  *                 next_hop = nx_graph_path[next_hop_index]             # <<<<<<<<<<<<<<
@@ -27582,7 +27582,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
       __Pyx_XDECREF_SET(__pyx_v_next_hop, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1426
+      /* "pyNTM/parallel_link_model.py":1426
  *             if next_hop_index < len(nx_graph_path):
  *                 next_hop = nx_graph_path[next_hop_index]
  *                 for interface in self.get_interface_object_from_nodes(hop, next_hop):             # <<<<<<<<<<<<<<
@@ -27679,7 +27679,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
         __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1430
+        /* "pyNTM/parallel_link_model.py":1430
  *                     # any of those interfaces are in the current path for lsp; if they are,
  *                     # see if any of them could handle the additional_needed_bandwidth for lsp
  *                     hop_interface_list = []             # <<<<<<<<<<<<<<
@@ -27691,7 +27691,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
         __Pyx_XDECREF_SET(__pyx_v_hop_interface_list, ((PyObject*)__pyx_t_5));
         __pyx_t_5 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1431
+        /* "pyNTM/parallel_link_model.py":1431
  *                     # see if any of them could handle the additional_needed_bandwidth for lsp
  *                     hop_interface_list = []
  *                     if (interface in lsp.path['interfaces'] and             # <<<<<<<<<<<<<<
@@ -27712,7 +27712,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
           goto __pyx_L9_bool_binop_done;
         }
 
-        /* "pyNTM/parallel_link_model.pyx":1432
+        /* "pyNTM/parallel_link_model.py":1432
  *                     hop_interface_list = []
  *                     if (interface in lsp.path['interfaces'] and
  *                             (interface.reservable_bandwidth + lsp.reserved_bandwidth >= needed_bw)):             # <<<<<<<<<<<<<<
@@ -27734,7 +27734,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
         __pyx_t_8 = __pyx_t_13;
         __pyx_L9_bool_binop_done:;
 
-        /* "pyNTM/parallel_link_model.pyx":1431
+        /* "pyNTM/parallel_link_model.py":1431
  *                     # see if any of them could handle the additional_needed_bandwidth for lsp
  *                     hop_interface_list = []
  *                     if (interface in lsp.path['interfaces'] and             # <<<<<<<<<<<<<<
@@ -27743,7 +27743,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
  */
         if (__pyx_t_8) {
 
-          /* "pyNTM/parallel_link_model.pyx":1433
+          /* "pyNTM/parallel_link_model.py":1433
  *                     if (interface in lsp.path['interfaces'] and
  *                             (interface.reservable_bandwidth + lsp.reserved_bandwidth >= needed_bw)):
  *                         hop_interface_list.append(interface)             # <<<<<<<<<<<<<<
@@ -27752,7 +27752,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
  */
           __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_hop_interface_list, __pyx_v_interface); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 1433, __pyx_L1_error)
 
-          /* "pyNTM/parallel_link_model.pyx":1431
+          /* "pyNTM/parallel_link_model.py":1431
  *                     # see if any of them could handle the additional_needed_bandwidth for lsp
  *                     hop_interface_list = []
  *                     if (interface in lsp.path['interfaces'] and             # <<<<<<<<<<<<<<
@@ -27762,7 +27762,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
           goto __pyx_L8;
         }
 
-        /* "pyNTM/parallel_link_model.pyx":1435
+        /* "pyNTM/parallel_link_model.py":1435
  *                         hop_interface_list.append(interface)
  * 
  *                     elif interface.reservable_bandwidth >= needed_bw:             # <<<<<<<<<<<<<<
@@ -27777,7 +27777,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         if (__pyx_t_8) {
 
-          /* "pyNTM/parallel_link_model.pyx":1439
+          /* "pyNTM/parallel_link_model.py":1439
  *                         # accommodate the needed_bw, then add that interface
  *                         # to model_path
  *                         hop_interface_list.append(interface)             # <<<<<<<<<<<<<<
@@ -27786,7 +27786,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
  */
           __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_hop_interface_list, __pyx_v_interface); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 1439, __pyx_L1_error)
 
-          /* "pyNTM/parallel_link_model.pyx":1435
+          /* "pyNTM/parallel_link_model.py":1435
  *                         hop_interface_list.append(interface)
  * 
  *                     elif interface.reservable_bandwidth >= needed_bw:             # <<<<<<<<<<<<<<
@@ -27796,7 +27796,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
         }
         __pyx_L8:;
 
-        /* "pyNTM/parallel_link_model.pyx":1441
+        /* "pyNTM/parallel_link_model.py":1441
  *                         hop_interface_list.append(interface)
  * 
  *                     if len(hop_interface_list) > 0:             # <<<<<<<<<<<<<<
@@ -27807,7 +27807,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
         __pyx_t_8 = ((__pyx_t_15 > 0) != 0);
         if (__pyx_t_8) {
 
-          /* "pyNTM/parallel_link_model.pyx":1442
+          /* "pyNTM/parallel_link_model.py":1442
  * 
  *                     if len(hop_interface_list) > 0:
  *                         model_path.append(hop_interface_list)             # <<<<<<<<<<<<<<
@@ -27816,7 +27816,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
  */
           __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_model_path, __pyx_v_hop_interface_list); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 1442, __pyx_L1_error)
 
-          /* "pyNTM/parallel_link_model.pyx":1441
+          /* "pyNTM/parallel_link_model.py":1441
  *                         hop_interface_list.append(interface)
  * 
  *                     if len(hop_interface_list) > 0:             # <<<<<<<<<<<<<<
@@ -27825,7 +27825,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
  */
         }
 
-        /* "pyNTM/parallel_link_model.pyx":1426
+        /* "pyNTM/parallel_link_model.py":1426
  *             if next_hop_index < len(nx_graph_path):
  *                 next_hop = nx_graph_path[next_hop_index]
  *                 for interface in self.get_interface_object_from_nodes(hop, next_hop):             # <<<<<<<<<<<<<<
@@ -27835,7 +27835,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
       }
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1424
+      /* "pyNTM/parallel_link_model.py":1424
  *             current_hop_index = nx_graph_path.index(hop)
  *             next_hop_index = current_hop_index + 1
  *             if next_hop_index < len(nx_graph_path):             # <<<<<<<<<<<<<<
@@ -27844,7 +27844,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1421
+    /* "pyNTM/parallel_link_model.py":1421
  * 
  *         # look at each hop in the path
  *         for hop in nx_graph_path:             # <<<<<<<<<<<<<<
@@ -27854,7 +27854,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1443
+  /* "pyNTM/parallel_link_model.py":1443
  *                     if len(hop_interface_list) > 0:
  *                         model_path.append(hop_interface_list)
  *         return model_path             # <<<<<<<<<<<<<<
@@ -27866,7 +27866,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
   __pyx_r = __pyx_v_model_path;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1389
+  /* "pyNTM/parallel_link_model.py":1389
  *         return model_path
  * 
  *     def _convert_nx_path_to_model_path_routed_lsp(self, nx_graph_path, needed_bw, lsp):             # <<<<<<<<<<<<<<
@@ -27896,7 +27896,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_86_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1446
+/* "pyNTM/parallel_link_model.py":1446
  * 
  *     # NODE CALLS ######
  *     def get_node_interfaces(self, node_name):             # <<<<<<<<<<<<<<
@@ -27976,7 +27976,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_88g
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("get_node_interfaces", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1448
+  /* "pyNTM/parallel_link_model.py":1448
  *     def get_node_interfaces(self, node_name):
  *         """Returns list of interfaces on specified node name"""
  *         return Node(node_name).interfaces(self)             # <<<<<<<<<<<<<<
@@ -28023,7 +28023,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_88g
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1446
+  /* "pyNTM/parallel_link_model.py":1446
  * 
  *     # NODE CALLS ######
  *     def get_node_interfaces(self, node_name):             # <<<<<<<<<<<<<<
@@ -28045,7 +28045,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_88g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1450
+/* "pyNTM/parallel_link_model.py":1450
  *         return Node(node_name).interfaces(self)
  * 
  *     def fail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -28117,7 +28117,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_91f
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_9fail_node_2generator24(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1454
+/* "pyNTM/parallel_link_model.py":1454
  * 
  *         # Find node's interfaces and fail them
  *         ints_to_fail_iterator = (interface for interface in             # <<<<<<<<<<<<<<
@@ -28179,7 +28179,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_9fa
   __pyx_L3_first_run:;
   if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1454, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1455
+  /* "pyNTM/parallel_link_model.py":1455
  *         # Find node's interfaces and fail them
  *         ints_to_fail_iterator = (interface for interface in
  *                                  self.get_node_interfaces(node_name))             # <<<<<<<<<<<<<<
@@ -28250,7 +28250,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_9fa
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1454
+    /* "pyNTM/parallel_link_model.py":1454
  * 
  *         # Find node's interfaces and fail them
  *         ints_to_fail_iterator = (interface for interface in             # <<<<<<<<<<<<<<
@@ -28299,7 +28299,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_9fa
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1450
+/* "pyNTM/parallel_link_model.py":1450
  *         return Node(node_name).interfaces(self)
  * 
  *     def fail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -28338,7 +28338,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_90f
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_node_name);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_node_name);
 
-  /* "pyNTM/parallel_link_model.pyx":1454
+  /* "pyNTM/parallel_link_model.py":1454
  * 
  *         # Find node's interfaces and fail them
  *         ints_to_fail_iterator = (interface for interface in             # <<<<<<<<<<<<<<
@@ -28350,7 +28350,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_90f
   __pyx_v_ints_to_fail_iterator = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1457
+  /* "pyNTM/parallel_link_model.py":1457
  *                                  self.get_node_interfaces(node_name))
  * 
  *         for interface in ints_to_fail_iterator:             # <<<<<<<<<<<<<<
@@ -28399,7 +28399,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_90f
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1458
+    /* "pyNTM/parallel_link_model.py":1458
  * 
  *         for interface in ints_to_fail_iterator:
  *             self.fail_interface(interface.name, node_name)             # <<<<<<<<<<<<<<
@@ -28459,7 +28459,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_90f
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1457
+    /* "pyNTM/parallel_link_model.py":1457
  *                                  self.get_node_interfaces(node_name))
  * 
  *         for interface in ints_to_fail_iterator:             # <<<<<<<<<<<<<<
@@ -28469,7 +28469,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_90f
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1461
+  /* "pyNTM/parallel_link_model.py":1461
  * 
  *         # Change the failed property on the specified node
  *         self.get_node_object(node_name).failed = True             # <<<<<<<<<<<<<<
@@ -28496,7 +28496,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_90f
   if (__Pyx_PyObject_SetAttrStr(__pyx_t_1, __pyx_n_s_failed, Py_True) < 0) __PYX_ERR(0, 1461, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1450
+  /* "pyNTM/parallel_link_model.py":1450
  *         return Node(node_name).interfaces(self)
  * 
  *     def fail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -28525,7 +28525,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_90f
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1463
+/* "pyNTM/parallel_link_model.py":1463
  *         self.get_node_object(node_name).failed = True
  * 
  *     def unfail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -28597,7 +28597,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_93u
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_11unfail_node_2generator25(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1470
+/* "pyNTM/parallel_link_model.py":1470
  * 
  *         # Find node's interfaces and unfail them
  *         ints_to_unfail_iterator = (interface for interface in self.get_node_interfaces(node_name))             # <<<<<<<<<<<<<<
@@ -28763,7 +28763,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_11u
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1463
+/* "pyNTM/parallel_link_model.py":1463
  *         self.get_node_object(node_name).failed = True
  * 
  *     def unfail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -28806,7 +28806,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_node_name);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_node_name);
 
-  /* "pyNTM/parallel_link_model.pyx":1467
+  /* "pyNTM/parallel_link_model.py":1467
  * 
  *         # Change the failed property on the specified node;
  *         self.get_node_object(node_name).failed = False             # <<<<<<<<<<<<<<
@@ -28833,7 +28833,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
   if (__Pyx_PyObject_SetAttrStr(__pyx_t_1, __pyx_n_s_failed, Py_False) < 0) __PYX_ERR(0, 1467, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1470
+  /* "pyNTM/parallel_link_model.py":1470
  * 
  *         # Find node's interfaces and unfail them
  *         ints_to_unfail_iterator = (interface for interface in self.get_node_interfaces(node_name))             # <<<<<<<<<<<<<<
@@ -28845,7 +28845,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
   __pyx_v_ints_to_unfail_iterator = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1472
+  /* "pyNTM/parallel_link_model.py":1472
  *         ints_to_unfail_iterator = (interface for interface in self.get_node_interfaces(node_name))
  * 
  *         for interface in ints_to_unfail_iterator:             # <<<<<<<<<<<<<<
@@ -28894,7 +28894,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1475
+    /* "pyNTM/parallel_link_model.py":1475
  * 
  *             # Unfail the interfaces if the remote node is not failed
  *             if not interface.remote_node_object.failed:             # <<<<<<<<<<<<<<
@@ -28911,7 +28911,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
     __pyx_t_7 = ((!__pyx_t_6) != 0);
     if (__pyx_t_7) {
 
-      /* "pyNTM/parallel_link_model.pyx":1477
+      /* "pyNTM/parallel_link_model.py":1477
  *             if not interface.remote_node_object.failed:
  *                 # Unfail the specific interface
  *                 self.unfail_interface(interface.name, node_name, False)             # <<<<<<<<<<<<<<
@@ -28974,7 +28974,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1480
+      /* "pyNTM/parallel_link_model.py":1480
  * 
  *                 # Unfail the remote interface
  *                 remote_int = interface.get_remote_interface(self)             # <<<<<<<<<<<<<<
@@ -29001,7 +29001,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
       __Pyx_XDECREF_SET(__pyx_v_remote_int, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1481
+      /* "pyNTM/parallel_link_model.py":1481
  *                 # Unfail the remote interface
  *                 remote_int = interface.get_remote_interface(self)
  *                 self.unfail_interface(remote_int.name,             # <<<<<<<<<<<<<<
@@ -29013,7 +29013,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
       __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_remote_int, __pyx_n_s_name); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 1481, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
 
-      /* "pyNTM/parallel_link_model.pyx":1482
+      /* "pyNTM/parallel_link_model.py":1482
  *                 remote_int = interface.get_remote_interface(self)
  *                 self.unfail_interface(remote_int.name,
  *                                       remote_int.node_object.name, False)             # <<<<<<<<<<<<<<
@@ -29079,7 +29079,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1475
+      /* "pyNTM/parallel_link_model.py":1475
  * 
  *             # Unfail the interfaces if the remote node is not failed
  *             if not interface.remote_node_object.failed:             # <<<<<<<<<<<<<<
@@ -29088,7 +29088,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1472
+    /* "pyNTM/parallel_link_model.py":1472
  *         ints_to_unfail_iterator = (interface for interface in self.get_node_interfaces(node_name))
  * 
  *         for interface in ints_to_unfail_iterator:             # <<<<<<<<<<<<<<
@@ -29098,7 +29098,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1463
+  /* "pyNTM/parallel_link_model.py":1463
  *         self.get_node_object(node_name).failed = True
  * 
  *     def unfail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -29129,7 +29129,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_92u
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1484
+/* "pyNTM/parallel_link_model.py":1484
  *                                       remote_int.node_object.name, False)
  * 
  *     def get_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -29153,7 +29153,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_95g
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_23get_failed_node_objects_2generator26(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1490
+/* "pyNTM/parallel_link_model.py":1490
  *         failed_nodes = []
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -29301,7 +29301,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_23g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1484
+/* "pyNTM/parallel_link_model.py":1484
  *                                       remote_int.node_object.name, False)
  * 
  *     def get_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -29338,7 +29338,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_94g
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":1488
+  /* "pyNTM/parallel_link_model.py":1488
  *         Returns a list of all failed nodes
  *         """
  *         failed_nodes = []             # <<<<<<<<<<<<<<
@@ -29350,7 +29350,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_94g
   __pyx_v_failed_nodes = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1490
+  /* "pyNTM/parallel_link_model.py":1490
  *         failed_nodes = []
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -29402,7 +29402,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_94g
     __Pyx_XDECREF_SET(__pyx_v_node, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1491
+    /* "pyNTM/parallel_link_model.py":1491
  * 
  *         for node in (node for node in self.node_objects):
  *             if node.failed:             # <<<<<<<<<<<<<<
@@ -29415,7 +29415,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_94g
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_5) {
 
-      /* "pyNTM/parallel_link_model.pyx":1492
+      /* "pyNTM/parallel_link_model.py":1492
  *         for node in (node for node in self.node_objects):
  *             if node.failed:
  *                 node_object = self.get_node_object(node.name)             # <<<<<<<<<<<<<<
@@ -29445,7 +29445,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_94g
       __Pyx_XDECREF_SET(__pyx_v_node_object, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1493
+      /* "pyNTM/parallel_link_model.py":1493
  *             if node.failed:
  *                 node_object = self.get_node_object(node.name)
  *                 failed_nodes.append(node_object)             # <<<<<<<<<<<<<<
@@ -29454,7 +29454,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_94g
  */
       __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_failed_nodes, __pyx_v_node_object); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 1493, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1491
+      /* "pyNTM/parallel_link_model.py":1491
  * 
  *         for node in (node for node in self.node_objects):
  *             if node.failed:             # <<<<<<<<<<<<<<
@@ -29463,7 +29463,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_94g
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1490
+    /* "pyNTM/parallel_link_model.py":1490
  *         failed_nodes = []
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -29473,7 +29473,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_94g
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1495
+  /* "pyNTM/parallel_link_model.py":1495
  *                 failed_nodes.append(node_object)
  * 
  *         return failed_nodes             # <<<<<<<<<<<<<<
@@ -29485,7 +29485,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_94g
   __pyx_r = __pyx_v_failed_nodes;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1484
+  /* "pyNTM/parallel_link_model.py":1484
  *                                       remote_int.node_object.name, False)
  * 
  *     def get_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -29512,7 +29512,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_94g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1497
+/* "pyNTM/parallel_link_model.py":1497
  *         return failed_nodes
  * 
  *     def get_non_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -29536,7 +29536,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_97g
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27get_non_failed_node_objects_2generator27(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1501
+/* "pyNTM/parallel_link_model.py":1501
  *         non_failed_nodes = []
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -29684,7 +29684,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_27g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1497
+/* "pyNTM/parallel_link_model.py":1497
  *         return failed_nodes
  * 
  *     def get_non_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -29722,7 +29722,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_96g
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":1499
+  /* "pyNTM/parallel_link_model.py":1499
  *     def get_non_failed_node_objects(self):
  *         """Returns a list of all failed nodes"""
  *         non_failed_nodes = []             # <<<<<<<<<<<<<<
@@ -29734,7 +29734,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_96g
   __pyx_v_non_failed_nodes = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1501
+  /* "pyNTM/parallel_link_model.py":1501
  *         non_failed_nodes = []
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -29786,7 +29786,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_96g
     __Pyx_XDECREF_SET(__pyx_v_node, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1502
+    /* "pyNTM/parallel_link_model.py":1502
  * 
  *         for node in (node for node in self.node_objects):
  *             if not node.failed:             # <<<<<<<<<<<<<<
@@ -29800,7 +29800,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_96g
     __pyx_t_6 = ((!__pyx_t_5) != 0);
     if (__pyx_t_6) {
 
-      /* "pyNTM/parallel_link_model.pyx":1503
+      /* "pyNTM/parallel_link_model.py":1503
  *         for node in (node for node in self.node_objects):
  *             if not node.failed:
  *                 node_object = self.get_node_object(node.name)             # <<<<<<<<<<<<<<
@@ -29830,7 +29830,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_96g
       __Pyx_XDECREF_SET(__pyx_v_node_object, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1504
+      /* "pyNTM/parallel_link_model.py":1504
  *             if not node.failed:
  *                 node_object = self.get_node_object(node.name)
  *                 non_failed_nodes.append(node_object)             # <<<<<<<<<<<<<<
@@ -29839,7 +29839,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_96g
  */
       __pyx_t_10 = __Pyx_PyList_Append(__pyx_v_non_failed_nodes, __pyx_v_node_object); if (unlikely(__pyx_t_10 == ((int)-1))) __PYX_ERR(0, 1504, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1502
+      /* "pyNTM/parallel_link_model.py":1502
  * 
  *         for node in (node for node in self.node_objects):
  *             if not node.failed:             # <<<<<<<<<<<<<<
@@ -29848,7 +29848,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_96g
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1501
+    /* "pyNTM/parallel_link_model.py":1501
  *         non_failed_nodes = []
  * 
  *         for node in (node for node in self.node_objects):             # <<<<<<<<<<<<<<
@@ -29858,7 +29858,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_96g
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1506
+  /* "pyNTM/parallel_link_model.py":1506
  *                 non_failed_nodes.append(node_object)
  * 
  *         return non_failed_nodes             # <<<<<<<<<<<<<<
@@ -29870,7 +29870,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_96g
   __pyx_r = __pyx_v_non_failed_nodes;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1497
+  /* "pyNTM/parallel_link_model.py":1497
  *         return failed_nodes
  * 
  *     def get_non_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -29897,7 +29897,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_96g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1569
+/* "pyNTM/parallel_link_model.py":1569
  *     #         print()
  * 
  *     def _make_weighted_network_graph(self, include_failed_circuits=True, needed_bw=0, rsvp_required=False):             # <<<<<<<<<<<<<<
@@ -29999,7 +29999,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_99_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_make_weighted_network_graph_2generator28(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1587
+/* "pyNTM/parallel_link_model.py":1587
  *         # Get all the edges that meet 'failed' and 'reservable_bw' criteria
  *         if include_failed_circuits is False:
  *             considered_interfaces = (interface for interface in self.interface_objects             # <<<<<<<<<<<<<<
@@ -30111,7 +30111,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1588
+    /* "pyNTM/parallel_link_model.py":1588
  *         if include_failed_circuits is False:
  *             considered_interfaces = (interface for interface in self.interface_objects
  *                                      if (interface.failed is False and             # <<<<<<<<<<<<<<
@@ -30129,7 +30129,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
       goto __pyx_L7_bool_binop_done;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1589
+    /* "pyNTM/parallel_link_model.py":1589
  *             considered_interfaces = (interface for interface in self.interface_objects
  *                                      if (interface.failed is False and
  *                                          interface.reservable_bandwidth >= needed_bw))             # <<<<<<<<<<<<<<
@@ -30146,7 +30146,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
     __pyx_t_5 = __pyx_t_7;
     __pyx_L7_bool_binop_done:;
 
-    /* "pyNTM/parallel_link_model.pyx":1588
+    /* "pyNTM/parallel_link_model.py":1588
  *         if include_failed_circuits is False:
  *             considered_interfaces = (interface for interface in self.interface_objects
  *                                      if (interface.failed is False and             # <<<<<<<<<<<<<<
@@ -30155,7 +30155,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
  */
     if (__pyx_t_5) {
 
-      /* "pyNTM/parallel_link_model.pyx":1587
+      /* "pyNTM/parallel_link_model.py":1587
  *         # Get all the edges that meet 'failed' and 'reservable_bw' criteria
  *         if include_failed_circuits is False:
  *             considered_interfaces = (interface for interface in self.interface_objects             # <<<<<<<<<<<<<<
@@ -30182,7 +30182,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
       __pyx_t_4 = __pyx_cur_scope->__pyx_t_2;
       if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1587, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1588
+      /* "pyNTM/parallel_link_model.py":1588
  *         if include_failed_circuits is False:
  *             considered_interfaces = (interface for interface in self.interface_objects
  *                                      if (interface.failed is False and             # <<<<<<<<<<<<<<
@@ -30191,7 +30191,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1587
+    /* "pyNTM/parallel_link_model.py":1587
  *         # Get all the edges that meet 'failed' and 'reservable_bw' criteria
  *         if include_failed_circuits is False:
  *             considered_interfaces = (interface for interface in self.interface_objects             # <<<<<<<<<<<<<<
@@ -30222,7 +30222,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_make_weighted_network_graph_5generator29(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1591
+/* "pyNTM/parallel_link_model.py":1591
  *                                          interface.reservable_bandwidth >= needed_bw))
  *         elif include_failed_circuits is True:
  *             considered_interfaces = (interface for interface in self.interface_objects             # <<<<<<<<<<<<<<
@@ -30332,7 +30332,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1592
+    /* "pyNTM/parallel_link_model.py":1592
  *         elif include_failed_circuits is True:
  *             considered_interfaces = (interface for interface in self.interface_objects
  *                                      if interface.reservable_bandwidth >= needed_bw)             # <<<<<<<<<<<<<<
@@ -30348,7 +30348,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_6) {
 
-      /* "pyNTM/parallel_link_model.pyx":1591
+      /* "pyNTM/parallel_link_model.py":1591
  *                                          interface.reservable_bandwidth >= needed_bw))
  *         elif include_failed_circuits is True:
  *             considered_interfaces = (interface for interface in self.interface_objects             # <<<<<<<<<<<<<<
@@ -30375,7 +30375,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
       __pyx_t_4 = __pyx_cur_scope->__pyx_t_2;
       if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1591, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1592
+      /* "pyNTM/parallel_link_model.py":1592
  *         elif include_failed_circuits is True:
  *             considered_interfaces = (interface for interface in self.interface_objects
  *                                      if interface.reservable_bandwidth >= needed_bw)             # <<<<<<<<<<<<<<
@@ -30384,7 +30384,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1591
+    /* "pyNTM/parallel_link_model.py":1591
  *                                          interface.reservable_bandwidth >= needed_bw))
  *         elif include_failed_circuits is True:
  *             considered_interfaces = (interface for interface in self.interface_objects             # <<<<<<<<<<<<<<
@@ -30415,7 +30415,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_make_weighted_network_graph_8generator30(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1595
+/* "pyNTM/parallel_link_model.py":1595
  * 
  *         if rsvp_required is True:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -30481,7 +30481,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
   __pyx_L3_first_run:;
   if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1595, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1598
+  /* "pyNTM/parallel_link_model.py":1598
  *                            interface.remote_node_object.name,
  *                            {'cost': interface.cost, 'circuit_id': interface.circuit_id})
  *                           for interface in considered_interfaces             # <<<<<<<<<<<<<<
@@ -30533,7 +30533,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
     __Pyx_GIVEREF(__pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1599
+    /* "pyNTM/parallel_link_model.py":1599
  *                            {'cost': interface.cost, 'circuit_id': interface.circuit_id})
  *                           for interface in considered_interfaces
  *                           if interface.rsvp_enabled is True)             # <<<<<<<<<<<<<<
@@ -30547,7 +30547,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
     __pyx_t_6 = (__pyx_t_5 != 0);
     if (__pyx_t_6) {
 
-      /* "pyNTM/parallel_link_model.pyx":1595
+      /* "pyNTM/parallel_link_model.py":1595
  * 
  *         if rsvp_required is True:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -30560,7 +30560,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1596
+      /* "pyNTM/parallel_link_model.py":1596
  *         if rsvp_required is True:
  *             edge_names = ((interface.node_object.name,
  *                            interface.remote_node_object.name,             # <<<<<<<<<<<<<<
@@ -30573,7 +30573,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1597
+      /* "pyNTM/parallel_link_model.py":1597
  *             edge_names = ((interface.node_object.name,
  *                            interface.remote_node_object.name,
  *                            {'cost': interface.cost, 'circuit_id': interface.circuit_id})             # <<<<<<<<<<<<<<
@@ -30591,7 +30591,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
       if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_circuit_id, __pyx_t_9) < 0) __PYX_ERR(0, 1597, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1595
+      /* "pyNTM/parallel_link_model.py":1595
  * 
  *         if rsvp_required is True:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -30629,7 +30629,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
       __pyx_t_3 = __pyx_cur_scope->__pyx_t_2;
       if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1595, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1599
+      /* "pyNTM/parallel_link_model.py":1599
  *                            {'cost': interface.cost, 'circuit_id': interface.circuit_id})
  *                           for interface in considered_interfaces
  *                           if interface.rsvp_enabled is True)             # <<<<<<<<<<<<<<
@@ -30638,7 +30638,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1598
+    /* "pyNTM/parallel_link_model.py":1598
  *                            interface.remote_node_object.name,
  *                            {'cost': interface.cost, 'circuit_id': interface.circuit_id})
  *                           for interface in considered_interfaces             # <<<<<<<<<<<<<<
@@ -30649,7 +30649,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
 
-  /* "pyNTM/parallel_link_model.pyx":1595
+  /* "pyNTM/parallel_link_model.py":1595
  * 
  *         if rsvp_required is True:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -30679,7 +30679,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_make_weighted_network_graph_11generator31(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1601
+/* "pyNTM/parallel_link_model.py":1601
  *                           if interface.rsvp_enabled is True)
  *         else:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -30743,7 +30743,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
   __pyx_L3_first_run:;
   if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1601, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1604
+  /* "pyNTM/parallel_link_model.py":1604
  *                            interface.remote_node_object.name,
  *                            {'cost': interface.cost, 'circuit_id': interface.circuit_id})
  *                           for interface in considered_interfaces)             # <<<<<<<<<<<<<<
@@ -30795,7 +30795,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
     __Pyx_GIVEREF(__pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1601
+    /* "pyNTM/parallel_link_model.py":1601
  *                           if interface.rsvp_enabled is True)
  *         else:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -30808,7 +30808,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1602
+    /* "pyNTM/parallel_link_model.py":1602
  *         else:
  *             edge_names = ((interface.node_object.name,
  *                            interface.remote_node_object.name,             # <<<<<<<<<<<<<<
@@ -30821,7 +30821,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1603
+    /* "pyNTM/parallel_link_model.py":1603
  *             edge_names = ((interface.node_object.name,
  *                            interface.remote_node_object.name,
  *                            {'cost': interface.cost, 'circuit_id': interface.circuit_id})             # <<<<<<<<<<<<<<
@@ -30839,7 +30839,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
     if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_circuit_id, __pyx_t_7) < 0) __PYX_ERR(0, 1603, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1601
+    /* "pyNTM/parallel_link_model.py":1601
  *                           if interface.rsvp_enabled is True)
  *         else:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -30877,7 +30877,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
     __pyx_t_3 = __pyx_cur_scope->__pyx_t_2;
     if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1601, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1604
+    /* "pyNTM/parallel_link_model.py":1604
  *                            interface.remote_node_object.name,
  *                            {'cost': interface.cost, 'circuit_id': interface.circuit_id})
  *                           for interface in considered_interfaces)             # <<<<<<<<<<<<<<
@@ -30888,7 +30888,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
 
-  /* "pyNTM/parallel_link_model.pyx":1601
+  /* "pyNTM/parallel_link_model.py":1601
  *                           if interface.rsvp_enabled is True)
  *         else:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -30918,7 +30918,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_make_weighted_network_graph_14generator32(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1610
+/* "pyNTM/parallel_link_model.py":1610
  * 
  *         # Add all the nodes
  *         node_name_iterator = (node.name for node in self.node_objects)             # <<<<<<<<<<<<<<
@@ -31068,7 +31068,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1569
+/* "pyNTM/parallel_link_model.py":1569
  *     #         print()
  * 
  *     def _make_weighted_network_graph(self, include_failed_circuits=True, needed_bw=0, rsvp_required=False):             # <<<<<<<<<<<<<<
@@ -31104,7 +31104,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_needed_bw);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_needed_bw);
 
-  /* "pyNTM/parallel_link_model.pyx":1583
+  /* "pyNTM/parallel_link_model.py":1583
  *         """
  * 
  *         G = nx.MultiDiGraph()             # <<<<<<<<<<<<<<
@@ -31134,7 +31134,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   __pyx_v_G = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1586
+  /* "pyNTM/parallel_link_model.py":1586
  * 
  *         # Get all the edges that meet 'failed' and 'reservable_bw' criteria
  *         if include_failed_circuits is False:             # <<<<<<<<<<<<<<
@@ -31145,7 +31145,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   __pyx_t_5 = (__pyx_t_4 != 0);
   if (__pyx_t_5) {
 
-    /* "pyNTM/parallel_link_model.pyx":1587
+    /* "pyNTM/parallel_link_model.py":1587
  *         # Get all the edges that meet 'failed' and 'reservable_bw' criteria
  *         if include_failed_circuits is False:
  *             considered_interfaces = (interface for interface in self.interface_objects             # <<<<<<<<<<<<<<
@@ -31158,7 +31158,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
     __pyx_cur_scope->__pyx_v_considered_interfaces = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1586
+    /* "pyNTM/parallel_link_model.py":1586
  * 
  *         # Get all the edges that meet 'failed' and 'reservable_bw' criteria
  *         if include_failed_circuits is False:             # <<<<<<<<<<<<<<
@@ -31168,7 +31168,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
     goto __pyx_L3;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1590
+  /* "pyNTM/parallel_link_model.py":1590
  *                                      if (interface.failed is False and
  *                                          interface.reservable_bandwidth >= needed_bw))
  *         elif include_failed_circuits is True:             # <<<<<<<<<<<<<<
@@ -31179,7 +31179,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   __pyx_t_4 = (__pyx_t_5 != 0);
   if (__pyx_t_4) {
 
-    /* "pyNTM/parallel_link_model.pyx":1591
+    /* "pyNTM/parallel_link_model.py":1591
  *                                          interface.reservable_bandwidth >= needed_bw))
  *         elif include_failed_circuits is True:
  *             considered_interfaces = (interface for interface in self.interface_objects             # <<<<<<<<<<<<<<
@@ -31192,7 +31192,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
     __pyx_cur_scope->__pyx_v_considered_interfaces = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1590
+    /* "pyNTM/parallel_link_model.py":1590
  *                                      if (interface.failed is False and
  *                                          interface.reservable_bandwidth >= needed_bw))
  *         elif include_failed_circuits is True:             # <<<<<<<<<<<<<<
@@ -31202,7 +31202,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   }
   __pyx_L3:;
 
-  /* "pyNTM/parallel_link_model.pyx":1594
+  /* "pyNTM/parallel_link_model.py":1594
  *                                      if interface.reservable_bandwidth >= needed_bw)
  * 
  *         if rsvp_required is True:             # <<<<<<<<<<<<<<
@@ -31213,7 +31213,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   __pyx_t_5 = (__pyx_t_4 != 0);
   if (__pyx_t_5) {
 
-    /* "pyNTM/parallel_link_model.pyx":1595
+    /* "pyNTM/parallel_link_model.py":1595
  * 
  *         if rsvp_required is True:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -31225,7 +31225,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
     __pyx_v_edge_names = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1594
+    /* "pyNTM/parallel_link_model.py":1594
  *                                      if interface.reservable_bandwidth >= needed_bw)
  * 
  *         if rsvp_required is True:             # <<<<<<<<<<<<<<
@@ -31235,7 +31235,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
     goto __pyx_L4;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1601
+  /* "pyNTM/parallel_link_model.py":1601
  *                           if interface.rsvp_enabled is True)
  *         else:
  *             edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -31250,7 +31250,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   }
   __pyx_L4:;
 
-  /* "pyNTM/parallel_link_model.pyx":1607
+  /* "pyNTM/parallel_link_model.py":1607
  * 
  *         # Add edges to networkx DiGraph
  *         G.add_edges_from(edge_names)             # <<<<<<<<<<<<<<
@@ -31276,7 +31276,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1610
+  /* "pyNTM/parallel_link_model.py":1610
  * 
  *         # Add all the nodes
  *         node_name_iterator = (node.name for node in self.node_objects)             # <<<<<<<<<<<<<<
@@ -31288,7 +31288,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   __pyx_v_node_name_iterator = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1611
+  /* "pyNTM/parallel_link_model.py":1611
  *         # Add all the nodes
  *         node_name_iterator = (node.name for node in self.node_objects)
  *         G.add_nodes_from(node_name_iterator)             # <<<<<<<<<<<<<<
@@ -31314,7 +31314,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1613
+  /* "pyNTM/parallel_link_model.py":1613
  *         G.add_nodes_from(node_name_iterator)
  * 
  *         return G             # <<<<<<<<<<<<<<
@@ -31326,7 +31326,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   __pyx_r = __pyx_v_G;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1569
+  /* "pyNTM/parallel_link_model.py":1569
  *     #         print()
  * 
  *     def _make_weighted_network_graph(self, include_failed_circuits=True, needed_bw=0, rsvp_required=False):             # <<<<<<<<<<<<<<
@@ -31351,7 +31351,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_98_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1615
+/* "pyNTM/parallel_link_model.py":1615
  *         return G
  * 
  *     def _make_weighted_network_graph_routed_lsp(self, lsp, needed_bw=0):             # <<<<<<<<<<<<<<
@@ -31438,7 +31438,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_101
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_make_weighted_network_graph_routed_lsp_2generator33(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1632
+/* "pyNTM/parallel_link_model.py":1632
  *         lsp_path_interfaces = lsp.path['interfaces']
  * 
  *         eligible_interface_generator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -31548,7 +31548,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1633
+    /* "pyNTM/parallel_link_model.py":1633
  * 
  *         eligible_interface_generator = (interface for interface in self.interface_objects if
  *                                         interface.failed is False)             # <<<<<<<<<<<<<<
@@ -31561,7 +31561,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_6 = (__pyx_t_5 != 0);
 
-    /* "pyNTM/parallel_link_model.pyx":1632
+    /* "pyNTM/parallel_link_model.py":1632
  *         lsp_path_interfaces = lsp.path['interfaces']
  * 
  *         eligible_interface_generator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -31612,7 +31612,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_make_weighted_network_graph_routed_lsp_5generator34(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1650
+/* "pyNTM/parallel_link_model.py":1650
  * 
  *         # Get edge names in eligible_interfaces
  *         edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -31678,7 +31678,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_
   __pyx_L3_first_run:;
   if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 1650, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1652
+  /* "pyNTM/parallel_link_model.py":1652
  *         edge_names = ((interface.node_object.name,
  *                        interface.remote_node_object.name, interface.cost)
  *                       for interface in eligible_interfaces)             # <<<<<<<<<<<<<<
@@ -31702,7 +31702,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_
     __Pyx_GIVEREF(__pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1650
+    /* "pyNTM/parallel_link_model.py":1650
  * 
  *         # Get edge names in eligible_interfaces
  *         edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -31715,7 +31715,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1651
+    /* "pyNTM/parallel_link_model.py":1651
  *         # Get edge names in eligible_interfaces
  *         edge_names = ((interface.node_object.name,
  *                        interface.remote_node_object.name, interface.cost)             # <<<<<<<<<<<<<<
@@ -31730,7 +31730,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_
     __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_interface, __pyx_n_s_cost); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1651, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
 
-    /* "pyNTM/parallel_link_model.pyx":1650
+    /* "pyNTM/parallel_link_model.py":1650
  * 
  *         # Get edge names in eligible_interfaces
  *         edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -31795,7 +31795,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_make_weighted_network_graph_routed_lsp_8generator35(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1662
+/* "pyNTM/parallel_link_model.py":1662
  * 
  *         # Add all the nodes
  *         node_name_iterator = (node.name for node in self.node_objects)             # <<<<<<<<<<<<<<
@@ -31945,7 +31945,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_39_
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1615
+/* "pyNTM/parallel_link_model.py":1615
  *         return G
  * 
  *     def _make_weighted_network_graph_routed_lsp(self, lsp, needed_bw=0):             # <<<<<<<<<<<<<<
@@ -31986,7 +31986,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":1630
+  /* "pyNTM/parallel_link_model.py":1630
  * 
  *         # The Interfaces that the lsp is routed over currently
  *         lsp_path_interfaces = lsp.path['interfaces']             # <<<<<<<<<<<<<<
@@ -32001,7 +32001,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   __pyx_v_lsp_path_interfaces = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1632
+  /* "pyNTM/parallel_link_model.py":1632
  *         lsp_path_interfaces = lsp.path['interfaces']
  * 
  *         eligible_interface_generator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -32013,7 +32013,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   __pyx_v_eligible_interface_generator = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1635
+  /* "pyNTM/parallel_link_model.py":1635
  *                                         interface.failed is False)
  * 
  *         eligible_interfaces = set()             # <<<<<<<<<<<<<<
@@ -32026,7 +32026,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   __pyx_cur_scope->__pyx_v_eligible_interfaces = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1639
+  /* "pyNTM/parallel_link_model.py":1639
  *         # Find only the interfaces that are not failed and that have
  *         # enough reservable_bandwidth
  *         for interface in eligible_interface_generator:             # <<<<<<<<<<<<<<
@@ -32075,7 +32075,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1641
+    /* "pyNTM/parallel_link_model.py":1641
  *         for interface in eligible_interface_generator:
  *             # Add back the lsp's reserved bandwidth to Interfaces already in its path
  *             if interface in lsp_path_interfaces:             # <<<<<<<<<<<<<<
@@ -32086,7 +32086,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
     __pyx_t_6 = (__pyx_t_5 != 0);
     if (__pyx_t_6) {
 
-      /* "pyNTM/parallel_link_model.pyx":1642
+      /* "pyNTM/parallel_link_model.py":1642
  *             # Add back the lsp's reserved bandwidth to Interfaces already in its path
  *             if interface in lsp_path_interfaces:
  *                 effective_reservable_bw = interface.reservable_bandwidth + lsp.reserved_bandwidth             # <<<<<<<<<<<<<<
@@ -32104,7 +32104,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
       __Pyx_XDECREF_SET(__pyx_v_effective_reservable_bw, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1641
+      /* "pyNTM/parallel_link_model.py":1641
  *         for interface in eligible_interface_generator:
  *             # Add back the lsp's reserved bandwidth to Interfaces already in its path
  *             if interface in lsp_path_interfaces:             # <<<<<<<<<<<<<<
@@ -32114,7 +32114,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
       goto __pyx_L5;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1644
+    /* "pyNTM/parallel_link_model.py":1644
  *                 effective_reservable_bw = interface.reservable_bandwidth + lsp.reserved_bandwidth
  *             else:
  *                 effective_reservable_bw = interface.reservable_bandwidth             # <<<<<<<<<<<<<<
@@ -32129,7 +32129,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
     }
     __pyx_L5:;
 
-    /* "pyNTM/parallel_link_model.pyx":1646
+    /* "pyNTM/parallel_link_model.py":1646
  *                 effective_reservable_bw = interface.reservable_bandwidth
  * 
  *             if effective_reservable_bw >= needed_bw:             # <<<<<<<<<<<<<<
@@ -32141,7 +32141,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     if (__pyx_t_6) {
 
-      /* "pyNTM/parallel_link_model.pyx":1647
+      /* "pyNTM/parallel_link_model.py":1647
  * 
  *             if effective_reservable_bw >= needed_bw:
  *                 eligible_interfaces.add(interface)             # <<<<<<<<<<<<<<
@@ -32150,7 +32150,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
  */
       __pyx_t_9 = PySet_Add(__pyx_cur_scope->__pyx_v_eligible_interfaces, __pyx_v_interface); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 1647, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1646
+      /* "pyNTM/parallel_link_model.py":1646
  *                 effective_reservable_bw = interface.reservable_bandwidth
  * 
  *             if effective_reservable_bw >= needed_bw:             # <<<<<<<<<<<<<<
@@ -32159,7 +32159,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1639
+    /* "pyNTM/parallel_link_model.py":1639
  *         # Find only the interfaces that are not failed and that have
  *         # enough reservable_bandwidth
  *         for interface in eligible_interface_generator:             # <<<<<<<<<<<<<<
@@ -32169,7 +32169,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1650
+  /* "pyNTM/parallel_link_model.py":1650
  * 
  *         # Get edge names in eligible_interfaces
  *         edge_names = ((interface.node_object.name,             # <<<<<<<<<<<<<<
@@ -32181,7 +32181,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   __pyx_v_edge_names = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1656
+  /* "pyNTM/parallel_link_model.py":1656
  *         # Make a new graph with the eligible interfaces (interfaces
  *         # with enough effective_reservable_bw)
  *         G = nx.MultiDiGraph()             # <<<<<<<<<<<<<<
@@ -32211,7 +32211,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   __pyx_v_G = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1659
+  /* "pyNTM/parallel_link_model.py":1659
  * 
  *         # Add edges to networkx MultiDiGraph
  *         G.add_weighted_edges_from(edge_names, weight='cost')             # <<<<<<<<<<<<<<
@@ -32235,7 +32235,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1662
+  /* "pyNTM/parallel_link_model.py":1662
  * 
  *         # Add all the nodes
  *         node_name_iterator = (node.name for node in self.node_objects)             # <<<<<<<<<<<<<<
@@ -32247,7 +32247,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   __pyx_v_node_name_iterator = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1663
+  /* "pyNTM/parallel_link_model.py":1663
  *         # Add all the nodes
  *         node_name_iterator = (node.name for node in self.node_objects)
  *         G.add_nodes_from(node_name_iterator)             # <<<<<<<<<<<<<<
@@ -32273,7 +32273,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1665
+  /* "pyNTM/parallel_link_model.py":1665
  *         G.add_nodes_from(node_name_iterator)
  * 
  *         return G             # <<<<<<<<<<<<<<
@@ -32285,7 +32285,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   __pyx_r = __pyx_v_G;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1615
+  /* "pyNTM/parallel_link_model.py":1615
  *         return G
  * 
  *     def _make_weighted_network_graph_routed_lsp(self, lsp, needed_bw=0):             # <<<<<<<<<<<<<<
@@ -32315,7 +32315,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_100
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1668
+/* "pyNTM/parallel_link_model.py":1668
  * 
  *     @classmethod
  *     def load_model_file(cls, data_file):             # <<<<<<<<<<<<<<
@@ -32437,7 +32437,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   PyObject *__pyx_t_21 = NULL;
   __Pyx_RefNannySetupContext("load_model_file", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1765
+  /* "pyNTM/parallel_link_model.py":1765
  *         # TODO - add support for SRLGs
  * 
  *         interface_set = set()             # <<<<<<<<<<<<<<
@@ -32449,7 +32449,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_interface_set = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1766
+  /* "pyNTM/parallel_link_model.py":1766
  * 
  *         interface_set = set()
  *         node_set = set()             # <<<<<<<<<<<<<<
@@ -32461,7 +32461,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_node_set = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1767
+  /* "pyNTM/parallel_link_model.py":1767
  *         interface_set = set()
  *         node_set = set()
  *         demand_set = set()             # <<<<<<<<<<<<<<
@@ -32473,7 +32473,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_demand_set = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1768
+  /* "pyNTM/parallel_link_model.py":1768
  *         node_set = set()
  *         demand_set = set()
  *         lsp_set = set()             # <<<<<<<<<<<<<<
@@ -32485,7 +32485,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_lsp_set = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1771
+  /* "pyNTM/parallel_link_model.py":1771
  * 
  *         # Open the file with the data, read it, and split it into lines
  *         with open(data_file, 'r') as f:             # <<<<<<<<<<<<<<
@@ -32538,7 +32538,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
           __pyx_v_f = __pyx_t_4;
           __pyx_t_4 = 0;
 
-          /* "pyNTM/parallel_link_model.pyx":1772
+          /* "pyNTM/parallel_link_model.py":1772
  *         # Open the file with the data, read it, and split it into lines
  *         with open(data_file, 'r') as f:
  *             data = f.read()             # <<<<<<<<<<<<<<
@@ -32565,7 +32565,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
           __pyx_v_data = __pyx_t_4;
           __pyx_t_4 = 0;
 
-          /* "pyNTM/parallel_link_model.pyx":1771
+          /* "pyNTM/parallel_link_model.py":1771
  * 
  *         # Open the file with the data, read it, and split it into lines
  *         with open(data_file, 'r') as f:             # <<<<<<<<<<<<<<
@@ -32646,7 +32646,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     __pyx_L16:;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1774
+  /* "pyNTM/parallel_link_model.py":1774
  *             data = f.read()
  * 
  *         lines = data.splitlines()             # <<<<<<<<<<<<<<
@@ -32674,7 +32674,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_lines = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1778
+  /* "pyNTM/parallel_link_model.py":1778
  *         # Define the Interfaces from the data and extract the presence of
  *         # Nodes from the Interface data
  *         int_info_begin_index = 2             # <<<<<<<<<<<<<<
@@ -32683,7 +32683,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
  */
   __pyx_v_int_info_begin_index = 2;
 
-  /* "pyNTM/parallel_link_model.pyx":1779
+  /* "pyNTM/parallel_link_model.py":1779
  *         # Nodes from the Interface data
  *         int_info_begin_index = 2
  *         int_info_end_index = find_end_index(int_info_begin_index, lines)             # <<<<<<<<<<<<<<
@@ -32744,7 +32744,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_int_info_end_index = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1782
+  /* "pyNTM/parallel_link_model.py":1782
  * 
  *         # Check that each circuit_id appears exactly 2 times
  *         circuit_id_list = []             # <<<<<<<<<<<<<<
@@ -32756,7 +32756,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_circuit_id_list = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1783
+  /* "pyNTM/parallel_link_model.py":1783
  *         # Check that each circuit_id appears exactly 2 times
  *         circuit_id_list = []
  *         for line in lines[int_info_begin_index:int_info_end_index]:             # <<<<<<<<<<<<<<
@@ -32808,7 +32808,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     __Pyx_XDECREF_SET(__pyx_v_line, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1784
+    /* "pyNTM/parallel_link_model.py":1784
  *         circuit_id_list = []
  *         for line in lines[int_info_begin_index:int_info_end_index]:
  *             try:             # <<<<<<<<<<<<<<
@@ -32824,7 +32824,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       __Pyx_XGOTREF(__pyx_t_7);
       /*try:*/ {
 
-        /* "pyNTM/parallel_link_model.pyx":1785
+        /* "pyNTM/parallel_link_model.py":1785
  *         for line in lines[int_info_begin_index:int_info_end_index]:
  *             try:
  *                 circuit_id_item = line.split()[5]             # <<<<<<<<<<<<<<
@@ -32854,7 +32854,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
         __Pyx_XDECREF_SET(__pyx_v_circuit_id_item, __pyx_t_13);
         __pyx_t_13 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1786
+        /* "pyNTM/parallel_link_model.py":1786
  *             try:
  *                 circuit_id_item = line.split()[5]
  *                 circuit_id_list.append(circuit_id_item)             # <<<<<<<<<<<<<<
@@ -32863,7 +32863,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
  */
         __pyx_t_16 = __Pyx_PyList_Append(__pyx_v_circuit_id_list, __pyx_v_circuit_id_item); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 1786, __pyx_L19_error)
 
-        /* "pyNTM/parallel_link_model.pyx":1784
+        /* "pyNTM/parallel_link_model.py":1784
  *         circuit_id_list = []
  *         for line in lines[int_info_begin_index:int_info_end_index]:
  *             try:             # <<<<<<<<<<<<<<
@@ -32881,7 +32881,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1787
+      /* "pyNTM/parallel_link_model.py":1787
  *                 circuit_id_item = line.split()[5]
  *                 circuit_id_list.append(circuit_id_item)
  *             except IndexError:             # <<<<<<<<<<<<<<
@@ -32896,7 +32896,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       goto __pyx_L21_except_error;
       __pyx_L21_except_error:;
 
-      /* "pyNTM/parallel_link_model.pyx":1784
+      /* "pyNTM/parallel_link_model.py":1784
  *         circuit_id_list = []
  *         for line in lines[int_info_begin_index:int_info_end_index]:
  *             try:             # <<<<<<<<<<<<<<
@@ -32916,7 +32916,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       __pyx_L26_try_end:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1783
+    /* "pyNTM/parallel_link_model.py":1783
  *         # Check that each circuit_id appears exactly 2 times
  *         circuit_id_list = []
  *         for line in lines[int_info_begin_index:int_info_end_index]:             # <<<<<<<<<<<<<<
@@ -32926,7 +32926,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1790
+  /* "pyNTM/parallel_link_model.py":1790
  *                 pass
  * 
  *         bad_circuit_ids = [{'circuit_id': item, 'appearances': circuit_id_list.count(item)} for item             # <<<<<<<<<<<<<<
@@ -32937,7 +32937,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_14 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1791
+  /* "pyNTM/parallel_link_model.py":1791
  * 
  *         bad_circuit_ids = [{'circuit_id': item, 'appearances': circuit_id_list.count(item)} for item
  *                            in set(circuit_id_list) if circuit_id_list.count(item) != 2]             # <<<<<<<<<<<<<<
@@ -32947,7 +32947,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_t_1 = PySet_New(__pyx_v_circuit_id_list); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1791, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/parallel_link_model.pyx":1790
+  /* "pyNTM/parallel_link_model.py":1790
  *                 pass
  * 
  *         bad_circuit_ids = [{'circuit_id': item, 'appearances': circuit_id_list.count(item)} for item             # <<<<<<<<<<<<<<
@@ -32962,7 +32962,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_t_4 = 0;
   while (1) {
 
-    /* "pyNTM/parallel_link_model.pyx":1791
+    /* "pyNTM/parallel_link_model.py":1791
  * 
  *         bad_circuit_ids = [{'circuit_id': item, 'appearances': circuit_id_list.count(item)} for item
  *                            in set(circuit_id_list) if circuit_id_list.count(item) != 2]             # <<<<<<<<<<<<<<
@@ -32974,7 +32974,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     if (unlikely(__pyx_t_18 == -1)) __PYX_ERR(0, 1791, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
 
-    /* "pyNTM/parallel_link_model.pyx":1790
+    /* "pyNTM/parallel_link_model.py":1790
  *                 pass
  * 
  *         bad_circuit_ids = [{'circuit_id': item, 'appearances': circuit_id_list.count(item)} for item             # <<<<<<<<<<<<<<
@@ -32984,7 +32984,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     __Pyx_XDECREF_SET(__pyx_v_item, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1791
+    /* "pyNTM/parallel_link_model.py":1791
  * 
  *         bad_circuit_ids = [{'circuit_id': item, 'appearances': circuit_id_list.count(item)} for item
  *                            in set(circuit_id_list) if circuit_id_list.count(item) != 2]             # <<<<<<<<<<<<<<
@@ -33000,7 +33000,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_11) {
 
-      /* "pyNTM/parallel_link_model.pyx":1790
+      /* "pyNTM/parallel_link_model.py":1790
  *                 pass
  * 
  *         bad_circuit_ids = [{'circuit_id': item, 'appearances': circuit_id_list.count(item)} for item             # <<<<<<<<<<<<<<
@@ -33017,7 +33017,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_1))) __PYX_ERR(0, 1790, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1791
+      /* "pyNTM/parallel_link_model.py":1791
  * 
  *         bad_circuit_ids = [{'circuit_id': item, 'appearances': circuit_id_list.count(item)} for item
  *                            in set(circuit_id_list) if circuit_id_list.count(item) != 2]             # <<<<<<<<<<<<<<
@@ -33030,7 +33030,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_bad_circuit_ids = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1793
+  /* "pyNTM/parallel_link_model.py":1793
  *                            in set(circuit_id_list) if circuit_id_list.count(item) != 2]
  * 
  *         if len(bad_circuit_ids) != 0:             # <<<<<<<<<<<<<<
@@ -33041,7 +33041,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_t_11 = ((__pyx_t_17 != 0) != 0);
   if (unlikely(__pyx_t_11)) {
 
-    /* "pyNTM/parallel_link_model.pyx":1795
+    /* "pyNTM/parallel_link_model.py":1795
  *         if len(bad_circuit_ids) != 0:
  *             msg = ("Each circuit_id value must appear exactly twice; the following circuit_id values "
  *                    "do not meet that criteria: {}".format(bad_circuit_ids))             # <<<<<<<<<<<<<<
@@ -33068,7 +33068,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     __pyx_v_msg = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1796
+    /* "pyNTM/parallel_link_model.py":1796
  *             msg = ("Each circuit_id value must appear exactly twice; the following circuit_id values "
  *                    "do not meet that criteria: {}".format(bad_circuit_ids))
  *             raise ModelException(msg)             # <<<<<<<<<<<<<<
@@ -33096,7 +33096,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 1796, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1793
+    /* "pyNTM/parallel_link_model.py":1793
  *                            in set(circuit_id_list) if circuit_id_list.count(item) != 2]
  * 
  *         if len(bad_circuit_ids) != 0:             # <<<<<<<<<<<<<<
@@ -33105,7 +33105,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1798
+  /* "pyNTM/parallel_link_model.py":1798
  *             raise ModelException(msg)
  * 
  *         interface_set, node_set = cls._extract_interface_data_and_implied_nodes(int_info_begin_index,             # <<<<<<<<<<<<<<
@@ -33117,7 +33117,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_int_info_begin_index); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1798, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/parallel_link_model.pyx":1799
+  /* "pyNTM/parallel_link_model.py":1799
  * 
  *         interface_set, node_set = cls._extract_interface_data_and_implied_nodes(int_info_begin_index,
  *                                                                                 int_info_end_index, lines)             # <<<<<<<<<<<<<<
@@ -33221,7 +33221,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     __pyx_L32_unpacking_done:;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1798
+  /* "pyNTM/parallel_link_model.py":1798
  *             raise ModelException(msg)
  * 
  *         interface_set, node_set = cls._extract_interface_data_and_implied_nodes(int_info_begin_index,             # <<<<<<<<<<<<<<
@@ -33233,7 +33233,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __Pyx_DECREF_SET(__pyx_v_node_set, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1802
+  /* "pyNTM/parallel_link_model.py":1802
  * 
  *         # Define the explicit nodes info from the file
  *         nodes_info_begin_index = int_info_end_index + 3             # <<<<<<<<<<<<<<
@@ -33245,7 +33245,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_nodes_info_begin_index = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1803
+  /* "pyNTM/parallel_link_model.py":1803
  *         # Define the explicit nodes info from the file
  *         nodes_info_begin_index = int_info_end_index + 3
  *         nodes_info_end_index = find_end_index(nodes_info_begin_index, lines)             # <<<<<<<<<<<<<<
@@ -33302,7 +33302,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_nodes_info_end_index = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1804
+  /* "pyNTM/parallel_link_model.py":1804
  *         nodes_info_begin_index = int_info_end_index + 3
  *         nodes_info_end_index = find_end_index(nodes_info_begin_index, lines)
  *         node_lines = lines[nodes_info_begin_index:nodes_info_end_index]             # <<<<<<<<<<<<<<
@@ -33314,7 +33314,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_node_lines = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1805
+  /* "pyNTM/parallel_link_model.py":1805
  *         nodes_info_end_index = find_end_index(nodes_info_begin_index, lines)
  *         node_lines = lines[nodes_info_begin_index:nodes_info_end_index]
  *         for node_line in node_lines:             # <<<<<<<<<<<<<<
@@ -33363,7 +33363,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     __Pyx_XDECREF_SET(__pyx_v_node_line, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1806
+    /* "pyNTM/parallel_link_model.py":1806
  *         node_lines = lines[nodes_info_begin_index:nodes_info_end_index]
  *         for node_line in node_lines:
  *             cls._add_node_from_data(demand_set, interface_set, lines, lsp_set, node_line, node_set)             # <<<<<<<<<<<<<<
@@ -33431,7 +33431,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1805
+    /* "pyNTM/parallel_link_model.py":1805
  *         nodes_info_end_index = find_end_index(nodes_info_begin_index, lines)
  *         node_lines = lines[nodes_info_begin_index:nodes_info_end_index]
  *         for node_line in node_lines:             # <<<<<<<<<<<<<<
@@ -33441,7 +33441,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1809
+  /* "pyNTM/parallel_link_model.py":1809
  * 
  *         # Define the demands info
  *         demands_info_begin_index = nodes_info_end_index + 3             # <<<<<<<<<<<<<<
@@ -33453,7 +33453,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_demands_info_begin_index = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1810
+  /* "pyNTM/parallel_link_model.py":1810
  *         # Define the demands info
  *         demands_info_begin_index = nodes_info_end_index + 3
  *         demands_info_end_index = find_end_index(demands_info_begin_index, lines)             # <<<<<<<<<<<<<<
@@ -33510,7 +33510,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_demands_info_end_index = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1813
+  /* "pyNTM/parallel_link_model.py":1813
  *         # There may or may not be LSPs in the model, so if there are not,
  *         # set the demands_info_end_index as the last line in the file
  *         if not demands_info_end_index:             # <<<<<<<<<<<<<<
@@ -33521,7 +33521,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_t_10 = ((!__pyx_t_11) != 0);
   if (__pyx_t_10) {
 
-    /* "pyNTM/parallel_link_model.pyx":1814
+    /* "pyNTM/parallel_link_model.py":1814
  *         # set the demands_info_end_index as the last line in the file
  *         if not demands_info_end_index:
  *             demands_info_end_index = len(lines)             # <<<<<<<<<<<<<<
@@ -33534,7 +33534,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     __Pyx_DECREF_SET(__pyx_v_demands_info_end_index, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1813
+    /* "pyNTM/parallel_link_model.py":1813
  *         # There may or may not be LSPs in the model, so if there are not,
  *         # set the demands_info_end_index as the last line in the file
  *         if not demands_info_end_index:             # <<<<<<<<<<<<<<
@@ -33543,7 +33543,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1816
+  /* "pyNTM/parallel_link_model.py":1816
  *             demands_info_end_index = len(lines)
  * 
  *         demands_lines = lines[demands_info_begin_index:demands_info_end_index]             # <<<<<<<<<<<<<<
@@ -33555,7 +33555,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_v_demands_lines = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1818
+  /* "pyNTM/parallel_link_model.py":1818
  *         demands_lines = lines[demands_info_begin_index:demands_info_end_index]
  * 
  *         for demand_line in demands_lines:             # <<<<<<<<<<<<<<
@@ -33604,7 +33604,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
     __Pyx_XDECREF_SET(__pyx_v_demand_line, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1819
+    /* "pyNTM/parallel_link_model.py":1819
  * 
  *         for demand_line in demands_lines:
  *             try:             # <<<<<<<<<<<<<<
@@ -33620,7 +33620,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       __Pyx_XGOTREF(__pyx_t_3);
       /*try:*/ {
 
-        /* "pyNTM/parallel_link_model.pyx":1820
+        /* "pyNTM/parallel_link_model.py":1820
  *         for demand_line in demands_lines:
  *             try:
  *                 cls._add_demand_from_data(demand_line, demand_set, lines, node_set)             # <<<<<<<<<<<<<<
@@ -33682,7 +33682,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1819
+        /* "pyNTM/parallel_link_model.py":1819
  * 
  *         for demand_line in demands_lines:
  *             try:             # <<<<<<<<<<<<<<
@@ -33700,7 +33700,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1821
+      /* "pyNTM/parallel_link_model.py":1821
  *             try:
  *                 cls._add_demand_from_data(demand_line, demand_set, lines, node_set)
  *             except ModelException as e:             # <<<<<<<<<<<<<<
@@ -33723,7 +33723,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
         __Pyx_INCREF(__pyx_t_4);
         __pyx_v_e = __pyx_t_4;
 
-        /* "pyNTM/parallel_link_model.pyx":1822
+        /* "pyNTM/parallel_link_model.py":1822
  *                 cls._add_demand_from_data(demand_line, demand_set, lines, node_set)
  *             except ModelException as e:
  *                 err_msg = e.args[0]             # <<<<<<<<<<<<<<
@@ -33738,7 +33738,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
         __pyx_v_err_msg = __pyx_t_20;
         __pyx_t_20 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1823
+        /* "pyNTM/parallel_link_model.py":1823
  *             except ModelException as e:
  *                 err_msg = e.args[0]
  *                 raise ModelException(err_msg)             # <<<<<<<<<<<<<<
@@ -33769,7 +33769,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       goto __pyx_L40_except_error;
       __pyx_L40_except_error:;
 
-      /* "pyNTM/parallel_link_model.pyx":1819
+      /* "pyNTM/parallel_link_model.py":1819
  * 
  *         for demand_line in demands_lines:
  *             try:             # <<<<<<<<<<<<<<
@@ -33784,7 +33784,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       __pyx_L45_try_end:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1818
+    /* "pyNTM/parallel_link_model.py":1818
  *         demands_lines = lines[demands_info_begin_index:demands_info_end_index]
  * 
  *         for demand_line in demands_lines:             # <<<<<<<<<<<<<<
@@ -33794,7 +33794,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1828
+  /* "pyNTM/parallel_link_model.py":1828
  *         # If the demands_info_end_index is the same as the length of the
  *         # lines list, then there is no LSP section
  *         if demands_info_end_index != len(lines):             # <<<<<<<<<<<<<<
@@ -33810,7 +33810,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (__pyx_t_10) {
 
-    /* "pyNTM/parallel_link_model.pyx":1829
+    /* "pyNTM/parallel_link_model.py":1829
  *         # lines list, then there is no LSP section
  *         if demands_info_end_index != len(lines):
  *             try:             # <<<<<<<<<<<<<<
@@ -33826,7 +33826,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       __Pyx_XGOTREF(__pyx_t_7);
       /*try:*/ {
 
-        /* "pyNTM/parallel_link_model.pyx":1830
+        /* "pyNTM/parallel_link_model.py":1830
  *         if demands_info_end_index != len(lines):
  *             try:
  *                 cls._add_lsp_from_data(demands_info_end_index, lines, lsp_set, node_set)             # <<<<<<<<<<<<<<
@@ -33888,7 +33888,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1829
+        /* "pyNTM/parallel_link_model.py":1829
  *         # lines list, then there is no LSP section
  *         if demands_info_end_index != len(lines):
  *             try:             # <<<<<<<<<<<<<<
@@ -33909,7 +33909,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1831
+      /* "pyNTM/parallel_link_model.py":1831
  *             try:
  *                 cls._add_lsp_from_data(demands_info_end_index, lines, lsp_set, node_set)
  *             except ModelException as e:             # <<<<<<<<<<<<<<
@@ -33932,7 +33932,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
         __Pyx_INCREF(__pyx_t_2);
         __pyx_v_e = __pyx_t_2;
 
-        /* "pyNTM/parallel_link_model.pyx":1832
+        /* "pyNTM/parallel_link_model.py":1832
  *                 cls._add_lsp_from_data(demands_info_end_index, lines, lsp_set, node_set)
  *             except ModelException as e:
  *                 err_msg = e.args[0]             # <<<<<<<<<<<<<<
@@ -33947,7 +33947,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
         __pyx_v_err_msg = __pyx_t_20;
         __pyx_t_20 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1833
+        /* "pyNTM/parallel_link_model.py":1833
  *             except ModelException as e:
  *                 err_msg = e.args[0]
  *                 raise ModelException(err_msg)             # <<<<<<<<<<<<<<
@@ -33978,7 +33978,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       goto __pyx_L51_except_error;
       __pyx_L51_except_error:;
 
-      /* "pyNTM/parallel_link_model.pyx":1829
+      /* "pyNTM/parallel_link_model.py":1829
  *         # lines list, then there is no LSP section
  *         if demands_info_end_index != len(lines):
  *             try:             # <<<<<<<<<<<<<<
@@ -33993,7 +33993,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
       __pyx_L54_try_end:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1828
+    /* "pyNTM/parallel_link_model.py":1828
  *         # If the demands_info_end_index is the same as the length of the
  *         # lines list, then there is no LSP section
  *         if demands_info_end_index != len(lines):             # <<<<<<<<<<<<<<
@@ -34002,7 +34002,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1835
+  /* "pyNTM/parallel_link_model.py":1835
  *                 raise ModelException(err_msg)
  * 
  *         return cls(interface_set, node_set, demand_set, lsp_set)             # <<<<<<<<<<<<<<
@@ -34066,7 +34066,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1668
+  /* "pyNTM/parallel_link_model.py":1668
  * 
  *     @classmethod
  *     def load_model_file(cls, data_file):             # <<<<<<<<<<<<<<
@@ -34115,7 +34115,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_102
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1838
+/* "pyNTM/parallel_link_model.py":1838
  * 
  *     @classmethod
  *     def _add_lsp_from_data(cls, demands_info_end_index, lines, lsp_set, node_set):  # TODO - same as model             # <<<<<<<<<<<<<<
@@ -34255,7 +34255,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
   int __pyx_t_18;
   __Pyx_RefNannySetupContext("_add_lsp_from_data", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1839
+  /* "pyNTM/parallel_link_model.py":1839
  *     @classmethod
  *     def _add_lsp_from_data(cls, demands_info_end_index, lines, lsp_set, node_set):  # TODO - same as model
  *         lsp_info_begin_index = demands_info_end_index + 3             # <<<<<<<<<<<<<<
@@ -34267,7 +34267,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
   __pyx_v_lsp_info_begin_index = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1840
+  /* "pyNTM/parallel_link_model.py":1840
  *     def _add_lsp_from_data(cls, demands_info_end_index, lines, lsp_set, node_set):  # TODO - same as model
  *         lsp_info_begin_index = demands_info_end_index + 3
  *         lsp_lines = lines[lsp_info_begin_index:]             # <<<<<<<<<<<<<<
@@ -34279,7 +34279,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
   __pyx_v_lsp_lines = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1841
+  /* "pyNTM/parallel_link_model.py":1841
  *         lsp_info_begin_index = demands_info_end_index + 3
  *         lsp_lines = lines[lsp_info_begin_index:]
  *         for lsp_line in lsp_lines:             # <<<<<<<<<<<<<<
@@ -34328,7 +34328,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
     __Pyx_XDECREF_SET(__pyx_v_lsp_line, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1842
+    /* "pyNTM/parallel_link_model.py":1842
  *         lsp_lines = lines[lsp_info_begin_index:]
  *         for lsp_line in lsp_lines:
  *             lsp_info = lsp_line.split()             # <<<<<<<<<<<<<<
@@ -34355,7 +34355,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
     __Pyx_XDECREF_SET(__pyx_v_lsp_info, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1843
+    /* "pyNTM/parallel_link_model.py":1843
  *         for lsp_line in lsp_lines:
  *             lsp_info = lsp_line.split()
  *             source = lsp_info[0]             # <<<<<<<<<<<<<<
@@ -34367,7 +34367,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
     __Pyx_XDECREF_SET(__pyx_v_source, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1844
+    /* "pyNTM/parallel_link_model.py":1844
  *             lsp_info = lsp_line.split()
  *             source = lsp_info[0]
  *             try:             # <<<<<<<<<<<<<<
@@ -34383,7 +34383,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       __Pyx_XGOTREF(__pyx_t_9);
       /*try:*/ {
 
-        /* "pyNTM/parallel_link_model.pyx":1845
+        /* "pyNTM/parallel_link_model.py":1845
  *             source = lsp_info[0]
  *             try:
  *                 source_node = [node for node in node_set if node.name == source][0]             # <<<<<<<<<<<<<<
@@ -34450,7 +34450,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
         __Pyx_XDECREF_SET(__pyx_v_source_node, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1844
+        /* "pyNTM/parallel_link_model.py":1844
  *             lsp_info = lsp_line.split()
  *             source = lsp_info[0]
  *             try:             # <<<<<<<<<<<<<<
@@ -34468,7 +34468,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1846
+      /* "pyNTM/parallel_link_model.py":1846
  *             try:
  *                 source_node = [node for node in node_set if node.name == source][0]
  *             except IndexError:             # <<<<<<<<<<<<<<
@@ -34483,7 +34483,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_GOTREF(__pyx_t_12);
 
-        /* "pyNTM/parallel_link_model.pyx":1847
+        /* "pyNTM/parallel_link_model.py":1847
  *                 source_node = [node for node in node_set if node.name == source][0]
  *             except IndexError:
  *                 err_msg = "No Node with name {} in Model; {}".format(source, lsp_info)             # <<<<<<<<<<<<<<
@@ -34540,7 +34540,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
         __pyx_v_err_msg = __pyx_t_6;
         __pyx_t_6 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1848
+        /* "pyNTM/parallel_link_model.py":1848
  *             except IndexError:
  *                 err_msg = "No Node with name {} in Model; {}".format(source, lsp_info)
  *                 raise ModelException(err_msg)             # <<<<<<<<<<<<<<
@@ -34571,7 +34571,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       goto __pyx_L7_except_error;
       __pyx_L7_except_error:;
 
-      /* "pyNTM/parallel_link_model.pyx":1844
+      /* "pyNTM/parallel_link_model.py":1844
  *             lsp_info = lsp_line.split()
  *             source = lsp_info[0]
  *             try:             # <<<<<<<<<<<<<<
@@ -34586,7 +34586,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       __pyx_L12_try_end:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1849
+    /* "pyNTM/parallel_link_model.py":1849
  *                 err_msg = "No Node with name {} in Model; {}".format(source, lsp_info)
  *                 raise ModelException(err_msg)
  *             dest = lsp_info[1]             # <<<<<<<<<<<<<<
@@ -34598,7 +34598,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
     __Pyx_XDECREF_SET(__pyx_v_dest, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1850
+    /* "pyNTM/parallel_link_model.py":1850
  *                 raise ModelException(err_msg)
  *             dest = lsp_info[1]
  *             try:             # <<<<<<<<<<<<<<
@@ -34614,7 +34614,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       __Pyx_XGOTREF(__pyx_t_7);
       /*try:*/ {
 
-        /* "pyNTM/parallel_link_model.pyx":1851
+        /* "pyNTM/parallel_link_model.py":1851
  *             dest = lsp_info[1]
  *             try:
  *                 dest_node = [node for node in node_set if node.name == dest][0]             # <<<<<<<<<<<<<<
@@ -34681,7 +34681,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
         __Pyx_XDECREF_SET(__pyx_v_dest_node, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1850
+        /* "pyNTM/parallel_link_model.py":1850
  *                 raise ModelException(err_msg)
  *             dest = lsp_info[1]
  *             try:             # <<<<<<<<<<<<<<
@@ -34702,7 +34702,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1852
+      /* "pyNTM/parallel_link_model.py":1852
  *             try:
  *                 dest_node = [node for node in node_set if node.name == dest][0]
  *             except IndexError:             # <<<<<<<<<<<<<<
@@ -34717,7 +34717,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_GOTREF(__pyx_t_6);
 
-        /* "pyNTM/parallel_link_model.pyx":1853
+        /* "pyNTM/parallel_link_model.py":1853
  *                 dest_node = [node for node in node_set if node.name == dest][0]
  *             except IndexError:
  *                 err_msg = "No Node with name {} in Model; {}".format(dest, lsp_info)             # <<<<<<<<<<<<<<
@@ -34774,7 +34774,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
         __pyx_v_err_msg = __pyx_t_5;
         __pyx_t_5 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1854
+        /* "pyNTM/parallel_link_model.py":1854
  *             except IndexError:
  *                 err_msg = "No Node with name {} in Model; {}".format(dest, lsp_info)
  *                 raise ModelException(err_msg)             # <<<<<<<<<<<<<<
@@ -34805,7 +34805,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       goto __pyx_L20_except_error;
       __pyx_L20_except_error:;
 
-      /* "pyNTM/parallel_link_model.pyx":1850
+      /* "pyNTM/parallel_link_model.py":1850
  *                 raise ModelException(err_msg)
  *             dest = lsp_info[1]
  *             try:             # <<<<<<<<<<<<<<
@@ -34820,7 +34820,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       __pyx_L25_try_end:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1855
+    /* "pyNTM/parallel_link_model.py":1855
  *                 err_msg = "No Node with name {} in Model; {}".format(dest, lsp_info)
  *                 raise ModelException(err_msg)
  *             name = lsp_info[2]             # <<<<<<<<<<<<<<
@@ -34832,7 +34832,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
     __Pyx_XDECREF_SET(__pyx_v_name, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1856
+    /* "pyNTM/parallel_link_model.py":1856
  *                 raise ModelException(err_msg)
  *             name = lsp_info[2]
  *             try:             # <<<<<<<<<<<<<<
@@ -34848,7 +34848,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       __Pyx_XGOTREF(__pyx_t_9);
       /*try:*/ {
 
-        /* "pyNTM/parallel_link_model.pyx":1857
+        /* "pyNTM/parallel_link_model.py":1857
  *             name = lsp_info[2]
  *             try:
  *                 configured_setup_bw = lsp_info[3]             # <<<<<<<<<<<<<<
@@ -34860,7 +34860,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
         __Pyx_XDECREF_SET(__pyx_v_configured_setup_bw, __pyx_t_6);
         __pyx_t_6 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":1856
+        /* "pyNTM/parallel_link_model.py":1856
  *                 raise ModelException(err_msg)
  *             name = lsp_info[2]
  *             try:             # <<<<<<<<<<<<<<
@@ -34881,7 +34881,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1858
+      /* "pyNTM/parallel_link_model.py":1858
  *             try:
  *                 configured_setup_bw = lsp_info[3]
  *             except IndexError:             # <<<<<<<<<<<<<<
@@ -34896,7 +34896,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_GOTREF(__pyx_t_4);
 
-        /* "pyNTM/parallel_link_model.pyx":1859
+        /* "pyNTM/parallel_link_model.py":1859
  *                 configured_setup_bw = lsp_info[3]
  *             except IndexError:
  *                 configured_setup_bw = None             # <<<<<<<<<<<<<<
@@ -34913,7 +34913,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       goto __pyx_L33_except_error;
       __pyx_L33_except_error:;
 
-      /* "pyNTM/parallel_link_model.pyx":1856
+      /* "pyNTM/parallel_link_model.py":1856
  *                 raise ModelException(err_msg)
  *             name = lsp_info[2]
  *             try:             # <<<<<<<<<<<<<<
@@ -34933,7 +34933,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       __pyx_L38_try_end:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1860
+    /* "pyNTM/parallel_link_model.py":1860
  *             except IndexError:
  *                 configured_setup_bw = None
  *             new_lsp = RSVP_LSP(source_node, dest_node, name, configured_setup_bandwidth=configured_setup_bw)             # <<<<<<<<<<<<<<
@@ -34964,7 +34964,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
     __Pyx_XDECREF_SET(__pyx_v_new_lsp, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1862
+    /* "pyNTM/parallel_link_model.py":1862
  *             new_lsp = RSVP_LSP(source_node, dest_node, name, configured_setup_bandwidth=configured_setup_bw)
  * 
  *             if new_lsp._key not in set([lsp._key for lsp in lsp_set]):             # <<<<<<<<<<<<<<
@@ -35031,7 +35031,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
     __pyx_t_18 = (__pyx_t_13 != 0);
     if (__pyx_t_18) {
 
-      /* "pyNTM/parallel_link_model.pyx":1863
+      /* "pyNTM/parallel_link_model.py":1863
  * 
  *             if new_lsp._key not in set([lsp._key for lsp in lsp_set]):
  *                 lsp_set.add(new_lsp)             # <<<<<<<<<<<<<<
@@ -35057,7 +35057,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1862
+      /* "pyNTM/parallel_link_model.py":1862
  *             new_lsp = RSVP_LSP(source_node, dest_node, name, configured_setup_bandwidth=configured_setup_bw)
  * 
  *             if new_lsp._key not in set([lsp._key for lsp in lsp_set]):             # <<<<<<<<<<<<<<
@@ -35067,7 +35067,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
       goto __pyx_L41;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1865
+    /* "pyNTM/parallel_link_model.py":1865
  *                 lsp_set.add(new_lsp)
  *             else:
  *                 print("{} already exists in model; disregarding line {}".format(new_lsp, lines.index(lsp_line)))             # <<<<<<<<<<<<<<
@@ -35146,7 +35146,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
     }
     __pyx_L41:;
 
-    /* "pyNTM/parallel_link_model.pyx":1841
+    /* "pyNTM/parallel_link_model.py":1841
  *         lsp_info_begin_index = demands_info_end_index + 3
  *         lsp_lines = lines[lsp_info_begin_index:]
  *         for lsp_line in lsp_lines:             # <<<<<<<<<<<<<<
@@ -35156,7 +35156,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1838
+  /* "pyNTM/parallel_link_model.py":1838
  * 
  *     @classmethod
  *     def _add_lsp_from_data(cls, demands_info_end_index, lines, lsp_set, node_set):  # TODO - same as model             # <<<<<<<<<<<<<<
@@ -35198,7 +35198,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_104
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1868
+/* "pyNTM/parallel_link_model.py":1868
  * 
  *     @classmethod
  *     def _add_demand_from_data(cls, demand_line, demand_set, lines, node_set):  # same as Model call             # <<<<<<<<<<<<<<
@@ -35333,7 +35333,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   int __pyx_t_15;
   __Pyx_RefNannySetupContext("_add_demand_from_data", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1869
+  /* "pyNTM/parallel_link_model.py":1869
  *     @classmethod
  *     def _add_demand_from_data(cls, demand_line, demand_set, lines, node_set):  # same as Model call
  *         demand_info = demand_line.split()             # <<<<<<<<<<<<<<
@@ -35360,7 +35360,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   __pyx_v_demand_info = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1870
+  /* "pyNTM/parallel_link_model.py":1870
  *     def _add_demand_from_data(cls, demand_line, demand_set, lines, node_set):  # same as Model call
  *         demand_info = demand_line.split()
  *         source = demand_info[0]             # <<<<<<<<<<<<<<
@@ -35372,7 +35372,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   __pyx_v_source = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1871
+  /* "pyNTM/parallel_link_model.py":1871
  *         demand_info = demand_line.split()
  *         source = demand_info[0]
  *         try:             # <<<<<<<<<<<<<<
@@ -35388,7 +35388,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     __Pyx_XGOTREF(__pyx_t_6);
     /*try:*/ {
 
-      /* "pyNTM/parallel_link_model.pyx":1872
+      /* "pyNTM/parallel_link_model.py":1872
  *         source = demand_info[0]
  *         try:
  *             source_node = [node for node in node_set if node.name == source][0]             # <<<<<<<<<<<<<<
@@ -35455,7 +35455,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
       __pyx_v_source_node = __pyx_t_2;
       __pyx_t_2 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1871
+      /* "pyNTM/parallel_link_model.py":1871
  *         demand_info = demand_line.split()
  *         source = demand_info[0]
  *         try:             # <<<<<<<<<<<<<<
@@ -35473,7 +35473,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1873
+    /* "pyNTM/parallel_link_model.py":1873
  *         try:
  *             source_node = [node for node in node_set if node.name == source][0]
  *         except IndexError:             # <<<<<<<<<<<<<<
@@ -35488,7 +35488,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GOTREF(__pyx_t_9);
 
-      /* "pyNTM/parallel_link_model.pyx":1874
+      /* "pyNTM/parallel_link_model.py":1874
  *             source_node = [node for node in node_set if node.name == source][0]
  *         except IndexError:
  *             err_msg = "No Node with name {} in Model; {}".format(source, demand_info)             # <<<<<<<<<<<<<<
@@ -35545,7 +35545,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
       __pyx_v_err_msg = __pyx_t_3;
       __pyx_t_3 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1875
+      /* "pyNTM/parallel_link_model.py":1875
  *         except IndexError:
  *             err_msg = "No Node with name {} in Model; {}".format(source, demand_info)
  *             raise ModelException(err_msg)             # <<<<<<<<<<<<<<
@@ -35576,7 +35576,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "pyNTM/parallel_link_model.pyx":1871
+    /* "pyNTM/parallel_link_model.py":1871
  *         demand_info = demand_line.split()
  *         source = demand_info[0]
  *         try:             # <<<<<<<<<<<<<<
@@ -35591,7 +35591,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     __pyx_L8_try_end:;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1876
+  /* "pyNTM/parallel_link_model.py":1876
  *             err_msg = "No Node with name {} in Model; {}".format(source, demand_info)
  *             raise ModelException(err_msg)
  *         dest = demand_info[1]             # <<<<<<<<<<<<<<
@@ -35603,7 +35603,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   __pyx_v_dest = __pyx_t_9;
   __pyx_t_9 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1877
+  /* "pyNTM/parallel_link_model.py":1877
  *             raise ModelException(err_msg)
  *         dest = demand_info[1]
  *         try:             # <<<<<<<<<<<<<<
@@ -35619,7 +35619,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     __Pyx_XGOTREF(__pyx_t_4);
     /*try:*/ {
 
-      /* "pyNTM/parallel_link_model.pyx":1878
+      /* "pyNTM/parallel_link_model.py":1878
  *         dest = demand_info[1]
  *         try:
  *             dest_node = [node for node in node_set if node.name == dest][0]             # <<<<<<<<<<<<<<
@@ -35686,7 +35686,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
       __pyx_v_dest_node = __pyx_t_1;
       __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1877
+      /* "pyNTM/parallel_link_model.py":1877
  *             raise ModelException(err_msg)
  *         dest = demand_info[1]
  *         try:             # <<<<<<<<<<<<<<
@@ -35707,7 +35707,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1879
+    /* "pyNTM/parallel_link_model.py":1879
  *         try:
  *             dest_node = [node for node in node_set if node.name == dest][0]
  *         except IndexError:             # <<<<<<<<<<<<<<
@@ -35722,7 +35722,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_GOTREF(__pyx_t_3);
 
-      /* "pyNTM/parallel_link_model.pyx":1880
+      /* "pyNTM/parallel_link_model.py":1880
  *             dest_node = [node for node in node_set if node.name == dest][0]
  *         except IndexError:
  *             err_msg = "No Node with name {} in Model; {}".format(dest, demand_info)             # <<<<<<<<<<<<<<
@@ -35779,7 +35779,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
       __pyx_v_err_msg = __pyx_t_2;
       __pyx_t_2 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1881
+      /* "pyNTM/parallel_link_model.py":1881
  *         except IndexError:
  *             err_msg = "No Node with name {} in Model; {}".format(dest, demand_info)
  *             raise ModelException(err_msg)             # <<<<<<<<<<<<<<
@@ -35810,7 +35810,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     goto __pyx_L16_except_error;
     __pyx_L16_except_error:;
 
-    /* "pyNTM/parallel_link_model.pyx":1877
+    /* "pyNTM/parallel_link_model.py":1877
  *             raise ModelException(err_msg)
  *         dest = demand_info[1]
  *         try:             # <<<<<<<<<<<<<<
@@ -35825,7 +35825,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     __pyx_L19_try_end:;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1883
+  /* "pyNTM/parallel_link_model.py":1883
  *             raise ModelException(err_msg)
  * 
  *         traffic = int(demand_info[2])             # <<<<<<<<<<<<<<
@@ -35840,7 +35840,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   __pyx_v_traffic = __pyx_t_9;
   __pyx_t_9 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1884
+  /* "pyNTM/parallel_link_model.py":1884
  * 
  *         traffic = int(demand_info[2])
  *         name = demand_info[3]             # <<<<<<<<<<<<<<
@@ -35852,7 +35852,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   __pyx_v_name = __pyx_t_9;
   __pyx_t_9 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1885
+  /* "pyNTM/parallel_link_model.py":1885
  *         traffic = int(demand_info[2])
  *         name = demand_info[3]
  *         if name == '':             # <<<<<<<<<<<<<<
@@ -35862,7 +35862,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   __pyx_t_10 = (__Pyx_PyString_Equals(__pyx_v_name, __pyx_kp_s__3, Py_EQ)); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 1885, __pyx_L1_error)
   if (__pyx_t_10) {
 
-    /* "pyNTM/parallel_link_model.pyx":1886
+    /* "pyNTM/parallel_link_model.py":1886
  *         name = demand_info[3]
  *         if name == '':
  *             demand_name = 'none'             # <<<<<<<<<<<<<<
@@ -35872,7 +35872,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     __Pyx_INCREF(__pyx_n_s_none);
     __pyx_v_demand_name = __pyx_n_s_none;
 
-    /* "pyNTM/parallel_link_model.pyx":1885
+    /* "pyNTM/parallel_link_model.py":1885
  *         traffic = int(demand_info[2])
  *         name = demand_info[3]
  *         if name == '':             # <<<<<<<<<<<<<<
@@ -35882,7 +35882,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     goto __pyx_L25;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1888
+  /* "pyNTM/parallel_link_model.py":1888
  *             demand_name = 'none'
  *         else:
  *             demand_name = name             # <<<<<<<<<<<<<<
@@ -35895,7 +35895,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   }
   __pyx_L25:;
 
-  /* "pyNTM/parallel_link_model.pyx":1889
+  /* "pyNTM/parallel_link_model.py":1889
  *         else:
  *             demand_name = name
  *         new_demand = Demand(source_node, dest_node, traffic, demand_name)             # <<<<<<<<<<<<<<
@@ -35958,7 +35958,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   __pyx_v_new_demand = __pyx_t_9;
   __pyx_t_9 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1890
+  /* "pyNTM/parallel_link_model.py":1890
  *             demand_name = name
  *         new_demand = Demand(source_node, dest_node, traffic, demand_name)
  *         if new_demand._key not in set([dmd._key for dmd in demand_set]):             # <<<<<<<<<<<<<<
@@ -36025,7 +36025,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   __pyx_t_15 = (__pyx_t_10 != 0);
   if (__pyx_t_15) {
 
-    /* "pyNTM/parallel_link_model.pyx":1891
+    /* "pyNTM/parallel_link_model.py":1891
  *         new_demand = Demand(source_node, dest_node, traffic, demand_name)
  *         if new_demand._key not in set([dmd._key for dmd in demand_set]):
  *             demand_set.add(new_demand)             # <<<<<<<<<<<<<<
@@ -36051,7 +36051,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1890
+    /* "pyNTM/parallel_link_model.py":1890
  *             demand_name = name
  *         new_demand = Demand(source_node, dest_node, traffic, demand_name)
  *         if new_demand._key not in set([dmd._key for dmd in demand_set]):             # <<<<<<<<<<<<<<
@@ -36061,7 +36061,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     goto __pyx_L26;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1893
+  /* "pyNTM/parallel_link_model.py":1893
  *             demand_set.add(new_demand)
  *         else:
  *             print("{} already exists in model; disregarding line {}".format(new_demand,             # <<<<<<<<<<<<<<
@@ -36072,7 +36072,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
     __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_already_exists_in_model_disrega, __pyx_n_s_format); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 1893, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
 
-    /* "pyNTM/parallel_link_model.pyx":1894
+    /* "pyNTM/parallel_link_model.py":1894
  *         else:
  *             print("{} already exists in model; disregarding line {}".format(new_demand,
  *                                                                             lines.index(demand_line)))             # <<<<<<<<<<<<<<
@@ -36148,7 +36148,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   }
   __pyx_L26:;
 
-  /* "pyNTM/parallel_link_model.pyx":1868
+  /* "pyNTM/parallel_link_model.py":1868
  * 
  *     @classmethod
  *     def _add_demand_from_data(cls, demand_line, demand_set, lines, node_set):  # same as Model call             # <<<<<<<<<<<<<<
@@ -36187,7 +36187,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_106
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1897
+/* "pyNTM/parallel_link_model.py":1897
  * 
  *     @classmethod
  *     def _add_node_from_data(cls, demand_set, interface_set, lines, lsp_set, node_line, node_set):             # <<<<<<<<<<<<<<
@@ -36336,7 +36336,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
   int __pyx_t_12;
   __Pyx_RefNannySetupContext("_add_node_from_data", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1898
+  /* "pyNTM/parallel_link_model.py":1898
  *     @classmethod
  *     def _add_node_from_data(cls, demand_set, interface_set, lines, lsp_set, node_line, node_set):
  *         node_info = node_line.split()             # <<<<<<<<<<<<<<
@@ -36363,7 +36363,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
   __pyx_v_node_info = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1899
+  /* "pyNTM/parallel_link_model.py":1899
  *     def _add_node_from_data(cls, demand_set, interface_set, lines, lsp_set, node_line, node_set):
  *         node_info = node_line.split()
  *         node_name = node_info[0]             # <<<<<<<<<<<<<<
@@ -36375,7 +36375,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
   __pyx_v_node_name = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1900
+  /* "pyNTM/parallel_link_model.py":1900
  *         node_info = node_line.split()
  *         node_name = node_info[0]
  *         try:             # <<<<<<<<<<<<<<
@@ -36391,7 +36391,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
     __Pyx_XGOTREF(__pyx_t_6);
     /*try:*/ {
 
-      /* "pyNTM/parallel_link_model.pyx":1901
+      /* "pyNTM/parallel_link_model.py":1901
  *         node_name = node_info[0]
  *         try:
  *             node_lat = int(node_info[2])             # <<<<<<<<<<<<<<
@@ -36406,7 +36406,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
       __pyx_v_node_lat = __pyx_t_2;
       __pyx_t_2 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1900
+      /* "pyNTM/parallel_link_model.py":1900
  *         node_info = node_line.split()
  *         node_name = node_info[0]
  *         try:             # <<<<<<<<<<<<<<
@@ -36423,7 +36423,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1902
+    /* "pyNTM/parallel_link_model.py":1902
  *         try:
  *             node_lat = int(node_info[2])
  *         except (ValueError, IndexError):             # <<<<<<<<<<<<<<
@@ -36438,7 +36438,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GOTREF(__pyx_t_3);
 
-      /* "pyNTM/parallel_link_model.pyx":1903
+      /* "pyNTM/parallel_link_model.py":1903
  *             node_lat = int(node_info[2])
  *         except (ValueError, IndexError):
  *             node_lat = 0             # <<<<<<<<<<<<<<
@@ -36455,7 +36455,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "pyNTM/parallel_link_model.pyx":1900
+    /* "pyNTM/parallel_link_model.py":1900
  *         node_info = node_line.split()
  *         node_name = node_info[0]
  *         try:             # <<<<<<<<<<<<<<
@@ -36475,7 +36475,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
     __pyx_L8_try_end:;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1904
+  /* "pyNTM/parallel_link_model.py":1904
  *         except (ValueError, IndexError):
  *             node_lat = 0
  *         try:             # <<<<<<<<<<<<<<
@@ -36491,7 +36491,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
     __Pyx_XGOTREF(__pyx_t_4);
     /*try:*/ {
 
-      /* "pyNTM/parallel_link_model.pyx":1905
+      /* "pyNTM/parallel_link_model.py":1905
  *             node_lat = 0
  *         try:
  *             node_lon = int(node_info[1])             # <<<<<<<<<<<<<<
@@ -36506,7 +36506,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
       __pyx_v_node_lon = __pyx_t_1;
       __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1904
+      /* "pyNTM/parallel_link_model.py":1904
  *         except (ValueError, IndexError):
  *             node_lat = 0
  *         try:             # <<<<<<<<<<<<<<
@@ -36523,7 +36523,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1906
+    /* "pyNTM/parallel_link_model.py":1906
  *         try:
  *             node_lon = int(node_info[1])
  *         except (ValueError, IndexError):             # <<<<<<<<<<<<<<
@@ -36538,7 +36538,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_GOTREF(__pyx_t_2);
 
-      /* "pyNTM/parallel_link_model.pyx":1907
+      /* "pyNTM/parallel_link_model.py":1907
  *             node_lon = int(node_info[1])
  *         except (ValueError, IndexError):
  *             node_lon = 0             # <<<<<<<<<<<<<<
@@ -36555,7 +36555,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
     goto __pyx_L13_except_error;
     __pyx_L13_except_error:;
 
-    /* "pyNTM/parallel_link_model.pyx":1904
+    /* "pyNTM/parallel_link_model.py":1904
  *         except (ValueError, IndexError):
  *             node_lat = 0
  *         try:             # <<<<<<<<<<<<<<
@@ -36575,7 +36575,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
     __pyx_L16_try_end:;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1908
+  /* "pyNTM/parallel_link_model.py":1908
  *         except (ValueError, IndexError):
  *             node_lon = 0
  *         new_node = Node(node_name)             # <<<<<<<<<<<<<<
@@ -36602,7 +36602,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
   __pyx_v_new_node = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1909
+  /* "pyNTM/parallel_link_model.py":1909
  *             node_lon = 0
  *         new_node = Node(node_name)
  *         if new_node.name not in set([node.name for node in node_set]):  # Pick up orphan nodes             # <<<<<<<<<<<<<<
@@ -36669,7 +36669,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
   __pyx_t_12 = (__pyx_t_11 != 0);
   if (__pyx_t_12) {
 
-    /* "pyNTM/parallel_link_model.pyx":1910
+    /* "pyNTM/parallel_link_model.py":1910
  *         new_node = Node(node_name)
  *         if new_node.name not in set([node.name for node in node_set]):  # Pick up orphan nodes
  *             node_set.add(new_node)             # <<<<<<<<<<<<<<
@@ -36695,7 +36695,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1911
+    /* "pyNTM/parallel_link_model.py":1911
  *         if new_node.name not in set([node.name for node in node_set]):  # Pick up orphan nodes
  *             node_set.add(new_node)
  *             new_node.lat = node_lat             # <<<<<<<<<<<<<<
@@ -36704,7 +36704,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_new_node, __pyx_n_s_lat, __pyx_v_node_lat) < 0) __PYX_ERR(0, 1911, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1912
+    /* "pyNTM/parallel_link_model.py":1912
  *             node_set.add(new_node)
  *             new_node.lat = node_lat
  *             new_node.lon = node_lon             # <<<<<<<<<<<<<<
@@ -36713,7 +36713,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_new_node, __pyx_n_s_lon, __pyx_v_node_lon) < 0) __PYX_ERR(0, 1912, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1909
+    /* "pyNTM/parallel_link_model.py":1909
  *             node_lon = 0
  *         new_node = Node(node_name)
  *         if new_node.name not in set([node.name for node in node_set]):  # Pick up orphan nodes             # <<<<<<<<<<<<<<
@@ -36723,7 +36723,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
     goto __pyx_L19;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":1914
+  /* "pyNTM/parallel_link_model.py":1914
  *             new_node.lon = node_lon
  *         else:
  *             existing_node = cls(interface_set, node_set, demand_set, lsp_set).get_node_object(node_name=node_name)             # <<<<<<<<<<<<<<
@@ -36796,7 +36796,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
     __pyx_v_existing_node = __pyx_t_10;
     __pyx_t_10 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1915
+    /* "pyNTM/parallel_link_model.py":1915
  *         else:
  *             existing_node = cls(interface_set, node_set, demand_set, lsp_set).get_node_object(node_name=node_name)
  *             existing_node.lat = node_lat             # <<<<<<<<<<<<<<
@@ -36805,7 +36805,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_existing_node, __pyx_n_s_lat, __pyx_v_node_lat) < 0) __PYX_ERR(0, 1915, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":1916
+    /* "pyNTM/parallel_link_model.py":1916
  *             existing_node = cls(interface_set, node_set, demand_set, lsp_set).get_node_object(node_name=node_name)
  *             existing_node.lat = node_lat
  *             existing_node.lon = node_lon             # <<<<<<<<<<<<<<
@@ -36816,7 +36816,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
   }
   __pyx_L19:;
 
-  /* "pyNTM/parallel_link_model.pyx":1897
+  /* "pyNTM/parallel_link_model.py":1897
  * 
  *     @classmethod
  *     def _add_node_from_data(cls, demand_set, interface_set, lines, lsp_set, node_line, node_set):             # <<<<<<<<<<<<<<
@@ -36847,7 +36847,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_108
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1919
+/* "pyNTM/parallel_link_model.py":1919
  * 
  *     @classmethod
  *     def _extract_interface_data_and_implied_nodes(cls, int_info_begin_index, int_info_end_index, lines):             # <<<<<<<<<<<<<<
@@ -36983,7 +36983,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
   int __pyx_t_21;
   __Pyx_RefNannySetupContext("_extract_interface_data_and_implied_nodes", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1930
+  /* "pyNTM/parallel_link_model.py":1930
  *         """
  * 
  *         interface_set = set()             # <<<<<<<<<<<<<<
@@ -36995,7 +36995,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
   __pyx_v_interface_set = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1931
+  /* "pyNTM/parallel_link_model.py":1931
  * 
  *         interface_set = set()
  *         node_set = set()             # <<<<<<<<<<<<<<
@@ -37007,7 +37007,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
   __pyx_v_node_set = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1932
+  /* "pyNTM/parallel_link_model.py":1932
  *         interface_set = set()
  *         node_set = set()
  *         interface_lines = lines[int_info_begin_index:int_info_end_index]             # <<<<<<<<<<<<<<
@@ -37019,7 +37019,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
   __pyx_v_interface_lines = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1934
+  /* "pyNTM/parallel_link_model.py":1934
  *         interface_lines = lines[int_info_begin_index:int_info_end_index]
  *         # Add the Interfaces to a set
  *         for interface_line in interface_lines:             # <<<<<<<<<<<<<<
@@ -37068,7 +37068,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     __Pyx_XDECREF_SET(__pyx_v_interface_line, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1936
+    /* "pyNTM/parallel_link_model.py":1936
  *         for interface_line in interface_lines:
  *             # Read interface characteristics
  *             if len(interface_line.split()) == 6:             # <<<<<<<<<<<<<<
@@ -37097,7 +37097,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     __pyx_t_8 = ((__pyx_t_7 == 6) != 0);
     if (__pyx_t_8) {
 
-      /* "pyNTM/parallel_link_model.pyx":1937
+      /* "pyNTM/parallel_link_model.py":1937
  *             # Read interface characteristics
  *             if len(interface_line.split()) == 6:
  *                 [node_name, remote_node_name, name, cost, capacity, circuit_id] = interface_line.split()             # <<<<<<<<<<<<<<
@@ -37199,7 +37199,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __Pyx_XDECREF_SET(__pyx_v_circuit_id, __pyx_t_12);
       __pyx_t_12 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1938
+      /* "pyNTM/parallel_link_model.py":1938
  *             if len(interface_line.split()) == 6:
  *                 [node_name, remote_node_name, name, cost, capacity, circuit_id] = interface_line.split()
  *                 rsvp_enabled_bool = True             # <<<<<<<<<<<<<<
@@ -37208,7 +37208,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
  */
       __pyx_v_rsvp_enabled_bool = 1;
 
-      /* "pyNTM/parallel_link_model.pyx":1939
+      /* "pyNTM/parallel_link_model.py":1939
  *                 [node_name, remote_node_name, name, cost, capacity, circuit_id] = interface_line.split()
  *                 rsvp_enabled_bool = True
  *                 percent_reservable_bandwidth = 100             # <<<<<<<<<<<<<<
@@ -37218,7 +37218,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __Pyx_INCREF(__pyx_int_100);
       __Pyx_XDECREF_SET(__pyx_v_percent_reservable_bandwidth, __pyx_int_100);
 
-      /* "pyNTM/parallel_link_model.pyx":1936
+      /* "pyNTM/parallel_link_model.py":1936
  *         for interface_line in interface_lines:
  *             # Read interface characteristics
  *             if len(interface_line.split()) == 6:             # <<<<<<<<<<<<<<
@@ -37228,7 +37228,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       goto __pyx_L5;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1940
+    /* "pyNTM/parallel_link_model.py":1940
  *                 rsvp_enabled_bool = True
  *                 percent_reservable_bandwidth = 100
  *             elif len(interface_line.split()) == 7:             # <<<<<<<<<<<<<<
@@ -37257,7 +37257,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     __pyx_t_8 = ((__pyx_t_7 == 7) != 0);
     if (__pyx_t_8) {
 
-      /* "pyNTM/parallel_link_model.pyx":1941
+      /* "pyNTM/parallel_link_model.py":1941
  *                 percent_reservable_bandwidth = 100
  *             elif len(interface_line.split()) == 7:
  *                 [node_name, remote_node_name, name, cost, capacity, circuit_id, rsvp_enabled] = interface_line.split()             # <<<<<<<<<<<<<<
@@ -37364,7 +37364,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __Pyx_XDECREF_SET(__pyx_v_rsvp_enabled, __pyx_t_13);
       __pyx_t_13 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1942
+      /* "pyNTM/parallel_link_model.py":1942
  *             elif len(interface_line.split()) == 7:
  *                 [node_name, remote_node_name, name, cost, capacity, circuit_id, rsvp_enabled] = interface_line.split()
  *                 if rsvp_enabled in [True, 'T', 'True', 'true']:             # <<<<<<<<<<<<<<
@@ -37400,7 +37400,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __pyx_t_16 = (__pyx_t_8 != 0);
       if (__pyx_t_16) {
 
-        /* "pyNTM/parallel_link_model.pyx":1943
+        /* "pyNTM/parallel_link_model.py":1943
  *                 [node_name, remote_node_name, name, cost, capacity, circuit_id, rsvp_enabled] = interface_line.split()
  *                 if rsvp_enabled in [True, 'T', 'True', 'true']:
  *                     rsvp_enabled_bool = True             # <<<<<<<<<<<<<<
@@ -37409,7 +37409,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
  */
         __pyx_v_rsvp_enabled_bool = 1;
 
-        /* "pyNTM/parallel_link_model.pyx":1942
+        /* "pyNTM/parallel_link_model.py":1942
  *             elif len(interface_line.split()) == 7:
  *                 [node_name, remote_node_name, name, cost, capacity, circuit_id, rsvp_enabled] = interface_line.split()
  *                 if rsvp_enabled in [True, 'T', 'True', 'true']:             # <<<<<<<<<<<<<<
@@ -37419,7 +37419,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
         goto __pyx_L10;
       }
 
-      /* "pyNTM/parallel_link_model.pyx":1945
+      /* "pyNTM/parallel_link_model.py":1945
  *                     rsvp_enabled_bool = True
  *                 else:
  *                     rsvp_enabled_bool = False             # <<<<<<<<<<<<<<
@@ -37431,7 +37431,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       }
       __pyx_L10:;
 
-      /* "pyNTM/parallel_link_model.pyx":1946
+      /* "pyNTM/parallel_link_model.py":1946
  *                 else:
  *                     rsvp_enabled_bool = False
  *                 percent_reservable_bandwidth = 100             # <<<<<<<<<<<<<<
@@ -37441,7 +37441,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __Pyx_INCREF(__pyx_int_100);
       __Pyx_XDECREF_SET(__pyx_v_percent_reservable_bandwidth, __pyx_int_100);
 
-      /* "pyNTM/parallel_link_model.pyx":1940
+      /* "pyNTM/parallel_link_model.py":1940
  *                 rsvp_enabled_bool = True
  *                 percent_reservable_bandwidth = 100
  *             elif len(interface_line.split()) == 7:             # <<<<<<<<<<<<<<
@@ -37451,7 +37451,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       goto __pyx_L5;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1947
+    /* "pyNTM/parallel_link_model.py":1947
  *                     rsvp_enabled_bool = False
  *                 percent_reservable_bandwidth = 100
  *             elif len(interface_line.split()) >= 8:             # <<<<<<<<<<<<<<
@@ -37480,7 +37480,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     __pyx_t_16 = ((__pyx_t_7 >= 8) != 0);
     if (likely(__pyx_t_16)) {
 
-      /* "pyNTM/parallel_link_model.pyx":1949
+      /* "pyNTM/parallel_link_model.py":1949
  *             elif len(interface_line.split()) >= 8:
  *                 [node_name, remote_node_name, name, cost, capacity, circuit_id, rsvp_enabled,
  *                  percent_reservable_bandwidth] = interface_line.split()             # <<<<<<<<<<<<<<
@@ -37576,7 +37576,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
         __pyx_L16_unpacking_done:;
       }
 
-      /* "pyNTM/parallel_link_model.pyx":1948
+      /* "pyNTM/parallel_link_model.py":1948
  *                 percent_reservable_bandwidth = 100
  *             elif len(interface_line.split()) >= 8:
  *                 [node_name, remote_node_name, name, cost, capacity, circuit_id, rsvp_enabled,             # <<<<<<<<<<<<<<
@@ -37600,7 +37600,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __Pyx_XDECREF_SET(__pyx_v_percent_reservable_bandwidth, __pyx_t_15);
       __pyx_t_15 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1950
+      /* "pyNTM/parallel_link_model.py":1950
  *                 [node_name, remote_node_name, name, cost, capacity, circuit_id, rsvp_enabled,
  *                  percent_reservable_bandwidth] = interface_line.split()
  *                 if rsvp_enabled in [True, 'T', 'True', 'true']:             # <<<<<<<<<<<<<<
@@ -37636,7 +37636,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __pyx_t_8 = (__pyx_t_16 != 0);
       if (__pyx_t_8) {
 
-        /* "pyNTM/parallel_link_model.pyx":1951
+        /* "pyNTM/parallel_link_model.py":1951
  *                  percent_reservable_bandwidth] = interface_line.split()
  *                 if rsvp_enabled in [True, 'T', 'True', 'true']:
  *                     rsvp_enabled_bool = True             # <<<<<<<<<<<<<<
@@ -37645,7 +37645,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
  */
         __pyx_v_rsvp_enabled_bool = 1;
 
-        /* "pyNTM/parallel_link_model.pyx":1950
+        /* "pyNTM/parallel_link_model.py":1950
  *                 [node_name, remote_node_name, name, cost, capacity, circuit_id, rsvp_enabled,
  *                  percent_reservable_bandwidth] = interface_line.split()
  *                 if rsvp_enabled in [True, 'T', 'True', 'true']:             # <<<<<<<<<<<<<<
@@ -37655,7 +37655,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
         goto __pyx_L17;
       }
 
-      /* "pyNTM/parallel_link_model.pyx":1953
+      /* "pyNTM/parallel_link_model.py":1953
  *                     rsvp_enabled_bool = True
  *                 else:
  *                     rsvp_enabled_bool = False             # <<<<<<<<<<<<<<
@@ -37667,7 +37667,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       }
       __pyx_L17:;
 
-      /* "pyNTM/parallel_link_model.pyx":1947
+      /* "pyNTM/parallel_link_model.py":1947
  *                     rsvp_enabled_bool = False
  *                 percent_reservable_bandwidth = 100
  *             elif len(interface_line.split()) >= 8:             # <<<<<<<<<<<<<<
@@ -37677,7 +37677,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       goto __pyx_L5;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1955
+    /* "pyNTM/parallel_link_model.py":1955
  *                     rsvp_enabled_bool = False
  *             else:
  *                 msg = ("node_name, remote_node_name, name, cost, capacity, circuit_id "             # <<<<<<<<<<<<<<
@@ -37686,7 +37686,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
  */
     /*else*/ {
 
-      /* "pyNTM/parallel_link_model.pyx":1956
+      /* "pyNTM/parallel_link_model.py":1956
  *             else:
  *                 msg = ("node_name, remote_node_name, name, cost, capacity, circuit_id "
  *                        "must be defined for line {}, line index {}".format(interface_line,             # <<<<<<<<<<<<<<
@@ -37696,7 +37696,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_node_name_remote_node_name_name, __pyx_n_s_format); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 1956, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
 
-      /* "pyNTM/parallel_link_model.pyx":1957
+      /* "pyNTM/parallel_link_model.py":1957
  *                 msg = ("node_name, remote_node_name, name, cost, capacity, circuit_id "
  *                        "must be defined for line {}, line index {}".format(interface_line,
  *                                                                            lines.index(interface_line)))             # <<<<<<<<<<<<<<
@@ -37770,7 +37770,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __pyx_v_msg = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1958
+      /* "pyNTM/parallel_link_model.py":1958
  *                        "must be defined for line {}, line index {}".format(interface_line,
  *                                                                            lines.index(interface_line)))
  *                 raise ModelException(msg)             # <<<<<<<<<<<<<<
@@ -37800,7 +37800,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     }
     __pyx_L5:;
 
-    /* "pyNTM/parallel_link_model.pyx":1960
+    /* "pyNTM/parallel_link_model.py":1960
  *                 raise ModelException(msg)
  * 
  *             new_interface = Interface(name, int(cost), int(capacity), Node(node_name),             # <<<<<<<<<<<<<<
@@ -37831,7 +37831,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1961
+    /* "pyNTM/parallel_link_model.py":1961
  * 
  *             new_interface = Interface(name, int(cost), int(capacity), Node(node_name),
  *                                       Node(remote_node_name), circuit_id, rsvp_enabled_bool,             # <<<<<<<<<<<<<<
@@ -37858,7 +37858,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     __pyx_t_6 = __Pyx_PyBool_FromLong(__pyx_v_rsvp_enabled_bool); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 1961, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
 
-    /* "pyNTM/parallel_link_model.pyx":1962
+    /* "pyNTM/parallel_link_model.py":1962
  *             new_interface = Interface(name, int(cost), int(capacity), Node(node_name),
  *                                       Node(remote_node_name), circuit_id, rsvp_enabled_bool,
  *                                       float(percent_reservable_bandwidth))             # <<<<<<<<<<<<<<
@@ -37945,7 +37945,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     __Pyx_XDECREF_SET(__pyx_v_new_interface, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1964
+    /* "pyNTM/parallel_link_model.py":1964
  *                                       float(percent_reservable_bandwidth))
  * 
  *             if new_interface._key not in set([interface._key for interface in interface_set]):             # <<<<<<<<<<<<<<
@@ -37984,7 +37984,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     __pyx_t_16 = (__pyx_t_8 != 0);
     if (__pyx_t_16) {
 
-      /* "pyNTM/parallel_link_model.pyx":1965
+      /* "pyNTM/parallel_link_model.py":1965
  * 
  *             if new_interface._key not in set([interface._key for interface in interface_set]):
  *                 interface_set.add(new_interface)             # <<<<<<<<<<<<<<
@@ -37993,7 +37993,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
  */
       __pyx_t_21 = PySet_Add(__pyx_v_interface_set, __pyx_v_new_interface); if (unlikely(__pyx_t_21 == ((int)-1))) __PYX_ERR(0, 1965, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1964
+      /* "pyNTM/parallel_link_model.py":1964
  *                                       float(percent_reservable_bandwidth))
  * 
  *             if new_interface._key not in set([interface._key for interface in interface_set]):             # <<<<<<<<<<<<<<
@@ -38003,7 +38003,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       goto __pyx_L22;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1967
+    /* "pyNTM/parallel_link_model.py":1967
  *                 interface_set.add(new_interface)
  *             else:
  *                 print("{} already exists in model; disregarding line {}".format(new_interface,             # <<<<<<<<<<<<<<
@@ -38014,7 +38014,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_already_exists_in_model_disrega, __pyx_n_s_format); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1967, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
 
-      /* "pyNTM/parallel_link_model.pyx":1968
+      /* "pyNTM/parallel_link_model.py":1968
  *             else:
  *                 print("{} already exists in model; disregarding line {}".format(new_interface,
  *                                                                                 lines.index(interface_line)))             # <<<<<<<<<<<<<<
@@ -38090,7 +38090,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     }
     __pyx_L22:;
 
-    /* "pyNTM/parallel_link_model.pyx":1971
+    /* "pyNTM/parallel_link_model.py":1971
  * 
  *             # Derive Nodes from the Interface data
  *             if node_name not in set([node.name for node in node_set]):             # <<<<<<<<<<<<<<
@@ -38126,7 +38126,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     __pyx_t_8 = (__pyx_t_16 != 0);
     if (__pyx_t_8) {
 
-      /* "pyNTM/parallel_link_model.pyx":1972
+      /* "pyNTM/parallel_link_model.py":1972
  *             # Derive Nodes from the Interface data
  *             if node_name not in set([node.name for node in node_set]):
  *                 node_set.add(new_interface.node_object)             # <<<<<<<<<<<<<<
@@ -38138,7 +38138,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __pyx_t_21 = PySet_Add(__pyx_v_node_set, __pyx_t_4); if (unlikely(__pyx_t_21 == ((int)-1))) __PYX_ERR(0, 1972, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1971
+      /* "pyNTM/parallel_link_model.py":1971
  * 
  *             # Derive Nodes from the Interface data
  *             if node_name not in set([node.name for node in node_set]):             # <<<<<<<<<<<<<<
@@ -38147,7 +38147,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1973
+    /* "pyNTM/parallel_link_model.py":1973
  *             if node_name not in set([node.name for node in node_set]):
  *                 node_set.add(new_interface.node_object)
  *             if remote_node_name not in set([node.name for node in node_set]):             # <<<<<<<<<<<<<<
@@ -38183,7 +38183,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
     __pyx_t_16 = (__pyx_t_8 != 0);
     if (__pyx_t_16) {
 
-      /* "pyNTM/parallel_link_model.pyx":1974
+      /* "pyNTM/parallel_link_model.py":1974
  *                 node_set.add(new_interface.node_object)
  *             if remote_node_name not in set([node.name for node in node_set]):
  *                 node_set.add(new_interface.remote_node_object)             # <<<<<<<<<<<<<<
@@ -38195,7 +38195,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
       __pyx_t_21 = PySet_Add(__pyx_v_node_set, __pyx_t_17); if (unlikely(__pyx_t_21 == ((int)-1))) __PYX_ERR(0, 1974, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":1973
+      /* "pyNTM/parallel_link_model.py":1973
  *             if node_name not in set([node.name for node in node_set]):
  *                 node_set.add(new_interface.node_object)
  *             if remote_node_name not in set([node.name for node in node_set]):             # <<<<<<<<<<<<<<
@@ -38204,7 +38204,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1934
+    /* "pyNTM/parallel_link_model.py":1934
  *         interface_lines = lines[int_info_begin_index:int_info_end_index]
  *         # Add the Interfaces to a set
  *         for interface_line in interface_lines:             # <<<<<<<<<<<<<<
@@ -38214,7 +38214,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1976
+  /* "pyNTM/parallel_link_model.py":1976
  *                 node_set.add(new_interface.remote_node_object)
  * 
  *         return interface_set, node_set             # <<<<<<<<<<<<<<
@@ -38234,7 +38234,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1919
+  /* "pyNTM/parallel_link_model.py":1919
  * 
  *     @classmethod
  *     def _extract_interface_data_and_implied_nodes(cls, int_info_begin_index, int_info_end_index, lines):             # <<<<<<<<<<<<<<
@@ -38279,7 +38279,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_110
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1978
+/* "pyNTM/parallel_link_model.py":1978
  *         return interface_set, node_set
  * 
  *     def get_demand_objects_source_node(self, source_node_name):             # <<<<<<<<<<<<<<
@@ -38351,7 +38351,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_113
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30get_demand_objects_source_node_2generator36(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1984
+/* "pyNTM/parallel_link_model.py":1984
  * 
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -38499,7 +38499,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_30g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1978
+/* "pyNTM/parallel_link_model.py":1978
  *         return interface_set, node_set
  * 
  *     def get_demand_objects_source_node(self, source_node_name):             # <<<<<<<<<<<<<<
@@ -38533,7 +38533,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_112
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":1983
+  /* "pyNTM/parallel_link_model.py":1983
  *         """
  * 
  *         demand_list = []             # <<<<<<<<<<<<<<
@@ -38545,7 +38545,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_112
   __pyx_v_demand_list = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1984
+  /* "pyNTM/parallel_link_model.py":1984
  * 
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -38597,7 +38597,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_112
     __Pyx_XDECREF_SET(__pyx_v_demand, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1985
+    /* "pyNTM/parallel_link_model.py":1985
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):
  *             if demand.source_node_object.name == source_node_name:             # <<<<<<<<<<<<<<
@@ -38615,7 +38615,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_112
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_6) {
 
-      /* "pyNTM/parallel_link_model.pyx":1986
+      /* "pyNTM/parallel_link_model.py":1986
  *         for demand in (demand for demand in self.demand_objects):
  *             if demand.source_node_object.name == source_node_name:
  *                 demand_list.append(demand)             # <<<<<<<<<<<<<<
@@ -38624,7 +38624,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_112
  */
       __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_demand_list, __pyx_v_demand); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 1986, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1985
+      /* "pyNTM/parallel_link_model.py":1985
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):
  *             if demand.source_node_object.name == source_node_name:             # <<<<<<<<<<<<<<
@@ -38633,7 +38633,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_112
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1984
+    /* "pyNTM/parallel_link_model.py":1984
  * 
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -38643,7 +38643,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_112
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1988
+  /* "pyNTM/parallel_link_model.py":1988
  *                 demand_list.append(demand)
  * 
  *         return demand_list             # <<<<<<<<<<<<<<
@@ -38655,7 +38655,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_112
   __pyx_r = __pyx_v_demand_list;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1978
+  /* "pyNTM/parallel_link_model.py":1978
  *         return interface_set, node_set
  * 
  *     def get_demand_objects_source_node(self, source_node_name):             # <<<<<<<<<<<<<<
@@ -38679,7 +38679,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_112
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1990
+/* "pyNTM/parallel_link_model.py":1990
  *         return demand_list
  * 
  *     def get_demand_objects_dest_node(self, dest_node_name):             # <<<<<<<<<<<<<<
@@ -38751,7 +38751,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_115
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28get_demand_objects_dest_node_2generator37(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":1994
+/* "pyNTM/parallel_link_model.py":1994
  *         destination node """
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -38899,7 +38899,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_28g
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":1990
+/* "pyNTM/parallel_link_model.py":1990
  *         return demand_list
  * 
  *     def get_demand_objects_dest_node(self, dest_node_name):             # <<<<<<<<<<<<<<
@@ -38933,7 +38933,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_114
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":1993
+  /* "pyNTM/parallel_link_model.py":1993
  *         """Returns list of demands objects originating at the
  *         destination node """
  *         demand_list = []             # <<<<<<<<<<<<<<
@@ -38945,7 +38945,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_114
   __pyx_v_demand_list = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1994
+  /* "pyNTM/parallel_link_model.py":1994
  *         destination node """
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -38997,7 +38997,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_114
     __Pyx_XDECREF_SET(__pyx_v_demand, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":1995
+    /* "pyNTM/parallel_link_model.py":1995
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):
  *             if demand.dest_node_object.name == dest_node_name:             # <<<<<<<<<<<<<<
@@ -39015,7 +39015,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_114
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_6) {
 
-      /* "pyNTM/parallel_link_model.pyx":1996
+      /* "pyNTM/parallel_link_model.py":1996
  *         for demand in (demand for demand in self.demand_objects):
  *             if demand.dest_node_object.name == dest_node_name:
  *                 demand_list.append(demand)             # <<<<<<<<<<<<<<
@@ -39024,7 +39024,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_114
  */
       __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_demand_list, __pyx_v_demand); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 1996, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":1995
+      /* "pyNTM/parallel_link_model.py":1995
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):
  *             if demand.dest_node_object.name == dest_node_name:             # <<<<<<<<<<<<<<
@@ -39033,7 +39033,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_114
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":1994
+    /* "pyNTM/parallel_link_model.py":1994
  *         destination node """
  *         demand_list = []
  *         for demand in (demand for demand in self.demand_objects):             # <<<<<<<<<<<<<<
@@ -39043,7 +39043,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_114
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1998
+  /* "pyNTM/parallel_link_model.py":1998
  *                 demand_list.append(demand)
  * 
  *         return demand_list             # <<<<<<<<<<<<<<
@@ -39055,7 +39055,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_114
   __pyx_r = __pyx_v_demand_list;
   goto __pyx_L0;
 
-  /* "pyNTM/parallel_link_model.pyx":1990
+  /* "pyNTM/parallel_link_model.py":1990
  *         return demand_list
  * 
  *     def get_demand_objects_dest_node(self, dest_node_name):             # <<<<<<<<<<<<<<
@@ -39079,7 +39079,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_114
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":2001
+/* "pyNTM/parallel_link_model.py":2001
  * 
  *     # ### SRLG Calls ### #
  *     def get_srlg_object(self, srlg_name, raise_exception=True):             # <<<<<<<<<<<<<<
@@ -39180,7 +39180,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_116
   int __pyx_t_7;
   __Pyx_RefNannySetupContext("get_srlg_object", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":2010
+  /* "pyNTM/parallel_link_model.py":2010
  *         """
  * 
  *         srlg_already_in_model = [srlg for srlg in self.srlg_objects if srlg.name == srlg_name]             # <<<<<<<<<<<<<<
@@ -39247,7 +39247,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_116
   __pyx_v_srlg_already_in_model = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2012
+  /* "pyNTM/parallel_link_model.py":2012
  *         srlg_already_in_model = [srlg for srlg in self.srlg_objects if srlg.name == srlg_name]
  * 
  *         if len(srlg_already_in_model) == 1:             # <<<<<<<<<<<<<<
@@ -39258,7 +39258,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_116
   __pyx_t_7 = ((__pyx_t_4 == 1) != 0);
   if (__pyx_t_7) {
 
-    /* "pyNTM/parallel_link_model.pyx":2013
+    /* "pyNTM/parallel_link_model.py":2013
  * 
  *         if len(srlg_already_in_model) == 1:
  *             return srlg_already_in_model[0]  # There will only be one SRLG with srlg_name             # <<<<<<<<<<<<<<
@@ -39272,7 +39272,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_116
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "pyNTM/parallel_link_model.pyx":2012
+    /* "pyNTM/parallel_link_model.py":2012
  *         srlg_already_in_model = [srlg for srlg in self.srlg_objects if srlg.name == srlg_name]
  * 
  *         if len(srlg_already_in_model) == 1:             # <<<<<<<<<<<<<<
@@ -39281,7 +39281,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_116
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":2015
+  /* "pyNTM/parallel_link_model.py":2015
  *             return srlg_already_in_model[0]  # There will only be one SRLG with srlg_name
  *         else:
  *             if raise_exception:             # <<<<<<<<<<<<<<
@@ -39292,7 +39292,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_116
     __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_v_raise_exception); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 2015, __pyx_L1_error)
     if (unlikely(__pyx_t_7)) {
 
-      /* "pyNTM/parallel_link_model.pyx":2016
+      /* "pyNTM/parallel_link_model.py":2016
  *         else:
  *             if raise_exception:
  *                 msg = "No SRLG with name {} exists in Model".format(srlg_name)             # <<<<<<<<<<<<<<
@@ -39319,7 +39319,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_116
       __pyx_v_msg = __pyx_t_1;
       __pyx_t_1 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":2017
+      /* "pyNTM/parallel_link_model.py":2017
  *             if raise_exception:
  *                 msg = "No SRLG with name {} exists in Model".format(srlg_name)
  *                 raise ModelException(msg)             # <<<<<<<<<<<<<<
@@ -39347,7 +39347,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_116
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __PYX_ERR(0, 2017, __pyx_L1_error)
 
-      /* "pyNTM/parallel_link_model.pyx":2015
+      /* "pyNTM/parallel_link_model.py":2015
  *             return srlg_already_in_model[0]  # There will only be one SRLG with srlg_name
  *         else:
  *             if raise_exception:             # <<<<<<<<<<<<<<
@@ -39356,7 +39356,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_116
  */
     }
 
-    /* "pyNTM/parallel_link_model.pyx":2019
+    /* "pyNTM/parallel_link_model.py":2019
  *                 raise ModelException(msg)
  *             else:
  *                 return None             # <<<<<<<<<<<<<<
@@ -39370,7 +39370,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_116
     }
   }
 
-  /* "pyNTM/parallel_link_model.pyx":2001
+  /* "pyNTM/parallel_link_model.py":2001
  * 
  *     # ### SRLG Calls ### #
  *     def get_srlg_object(self, srlg_name, raise_exception=True):             # <<<<<<<<<<<<<<
@@ -39395,7 +39395,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_116
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":2021
+/* "pyNTM/parallel_link_model.py":2021
  *                 return None
  * 
  *     def fail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -39467,7 +39467,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_119
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_9fail_srlg_2generator38(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":2031
+/* "pyNTM/parallel_link_model.py":2031
  * 
  *         # Find SRLG's Nodes to fail
  *         nodes_to_fail_iterator = (node for node in self.node_objects if node in srlg_to_fail.node_objects)             # <<<<<<<<<<<<<<
@@ -39626,7 +39626,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_9fa
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_9fail_srlg_5generator39(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":2037
+/* "pyNTM/parallel_link_model.py":2037
  * 
  *         # Find SRLG's Interfaces to fail
  *         interfaces_to_fail_iterator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -39736,7 +39736,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_9fa
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":2038
+    /* "pyNTM/parallel_link_model.py":2038
  *         # Find SRLG's Interfaces to fail
  *         interfaces_to_fail_iterator = (interface for interface in self.interface_objects if
  *                                        interface in srlg_to_fail.interface_objects)             # <<<<<<<<<<<<<<
@@ -39750,7 +39750,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_9fa
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_6 = (__pyx_t_5 != 0);
 
-    /* "pyNTM/parallel_link_model.pyx":2037
+    /* "pyNTM/parallel_link_model.py":2037
  * 
  *         # Find SRLG's Interfaces to fail
  *         interfaces_to_fail_iterator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -39800,7 +39800,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_9fa
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":2021
+/* "pyNTM/parallel_link_model.py":2021
  *                 return None
  * 
  *     def fail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -39839,7 +39839,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":2028
+  /* "pyNTM/parallel_link_model.py":2028
  *         """
  * 
  *         srlg_to_fail = self.get_srlg_object(srlg_name)             # <<<<<<<<<<<<<<
@@ -39867,7 +39867,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
   __pyx_cur_scope->__pyx_v_srlg_to_fail = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2031
+  /* "pyNTM/parallel_link_model.py":2031
  * 
  *         # Find SRLG's Nodes to fail
  *         nodes_to_fail_iterator = (node for node in self.node_objects if node in srlg_to_fail.node_objects)             # <<<<<<<<<<<<<<
@@ -39879,7 +39879,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
   __pyx_v_nodes_to_fail_iterator = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2033
+  /* "pyNTM/parallel_link_model.py":2033
  *         nodes_to_fail_iterator = (node for node in self.node_objects if node in srlg_to_fail.node_objects)
  * 
  *         for node in nodes_to_fail_iterator:             # <<<<<<<<<<<<<<
@@ -39928,7 +39928,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
     __Pyx_XDECREF_SET(__pyx_v_node, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":2034
+    /* "pyNTM/parallel_link_model.py":2034
  * 
  *         for node in nodes_to_fail_iterator:
  *             self.fail_node(node.name)             # <<<<<<<<<<<<<<
@@ -39957,7 +39957,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":2033
+    /* "pyNTM/parallel_link_model.py":2033
  *         nodes_to_fail_iterator = (node for node in self.node_objects if node in srlg_to_fail.node_objects)
  * 
  *         for node in nodes_to_fail_iterator:             # <<<<<<<<<<<<<<
@@ -39967,7 +39967,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2037
+  /* "pyNTM/parallel_link_model.py":2037
  * 
  *         # Find SRLG's Interfaces to fail
  *         interfaces_to_fail_iterator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -39979,7 +39979,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
   __pyx_v_interfaces_to_fail_iterator = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2040
+  /* "pyNTM/parallel_link_model.py":2040
  *                                        interface in srlg_to_fail.interface_objects)
  * 
  *         for interface in interfaces_to_fail_iterator:             # <<<<<<<<<<<<<<
@@ -40028,7 +40028,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":2041
+    /* "pyNTM/parallel_link_model.py":2041
  * 
  *         for interface in interfaces_to_fail_iterator:
  *             self.fail_interface(interface.name, interface.node_object.name)             # <<<<<<<<<<<<<<
@@ -40095,7 +40095,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":2040
+    /* "pyNTM/parallel_link_model.py":2040
  *                                        interface in srlg_to_fail.interface_objects)
  * 
  *         for interface in interfaces_to_fail_iterator:             # <<<<<<<<<<<<<<
@@ -40105,7 +40105,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2044
+  /* "pyNTM/parallel_link_model.py":2044
  * 
  *         # Change the failed property on the specified srlg
  *         srlg_to_fail.failed = True             # <<<<<<<<<<<<<<
@@ -40114,7 +40114,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_cur_scope->__pyx_v_srlg_to_fail, __pyx_n_s_failed, Py_True) < 0) __PYX_ERR(0, 2044, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":2021
+  /* "pyNTM/parallel_link_model.py":2021
  *                 return None
  * 
  *     def fail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -40146,7 +40146,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_118
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":2046
+/* "pyNTM/parallel_link_model.py":2046
  *         srlg_to_fail.failed = True
  * 
  *     def unfail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -40218,7 +40218,7 @@ static PyObject *__pyx_pw_5pyNTM_19parallel_link_model_19Parallel_Link_Model_121
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_11unfail_srlg_2generator40(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":2059
+/* "pyNTM/parallel_link_model.py":2059
  * 
  *         # Find SRLG's Nodes to unfail
  *         nodes_to_unfail_iterator = (node for node in self.node_objects if node in srlg_to_unfail.node_objects)             # <<<<<<<<<<<<<<
@@ -40377,7 +40377,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_11u
 }
 static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_11unfail_srlg_5generator41(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/parallel_link_model.pyx":2070
+/* "pyNTM/parallel_link_model.py":2070
  * 
  *         # Find SRLG's Interfaces to unfail
  *         interfaces_to_unfail_iterator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -40487,7 +40487,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_11u
     __Pyx_GIVEREF(__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":2071
+    /* "pyNTM/parallel_link_model.py":2071
  *         # Find SRLG's Interfaces to unfail
  *         interfaces_to_unfail_iterator = (interface for interface in self.interface_objects if
  *                                          interface in srlg_to_unfail.interface_objects)             # <<<<<<<<<<<<<<
@@ -40501,7 +40501,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_11u
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_6 = (__pyx_t_5 != 0);
 
-    /* "pyNTM/parallel_link_model.pyx":2070
+    /* "pyNTM/parallel_link_model.py":2070
  * 
  *         # Find SRLG's Interfaces to unfail
  *         interfaces_to_unfail_iterator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -40551,7 +40551,7 @@ static PyObject *__pyx_gb_5pyNTM_19parallel_link_model_19Parallel_Link_Model_11u
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":2046
+/* "pyNTM/parallel_link_model.py":2046
  *         srlg_to_fail.failed = True
  * 
  *     def unfail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -40593,7 +40593,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
 
-  /* "pyNTM/parallel_link_model.pyx":2053
+  /* "pyNTM/parallel_link_model.py":2053
  *         """
  * 
  *         srlg_to_unfail = self.get_srlg_object(srlg_name)             # <<<<<<<<<<<<<<
@@ -40621,7 +40621,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
   __pyx_cur_scope->__pyx_v_srlg_to_unfail = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2056
+  /* "pyNTM/parallel_link_model.py":2056
  * 
  *         # Change the failed property on the specified srlg
  *         srlg_to_unfail.failed = False             # <<<<<<<<<<<<<<
@@ -40630,7 +40630,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_cur_scope->__pyx_v_srlg_to_unfail, __pyx_n_s_failed, Py_False) < 0) __PYX_ERR(0, 2056, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":2059
+  /* "pyNTM/parallel_link_model.py":2059
  * 
  *         # Find SRLG's Nodes to unfail
  *         nodes_to_unfail_iterator = (node for node in self.node_objects if node in srlg_to_unfail.node_objects)             # <<<<<<<<<<<<<<
@@ -40642,7 +40642,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
   __pyx_v_nodes_to_unfail_iterator = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2063
+  /* "pyNTM/parallel_link_model.py":2063
  *         # Node will stay failed if it's part of another SRLG that is still failed;
  *         # in that case, the unfail_node will create an exception; ignore that exception
  *         for node in nodes_to_unfail_iterator:             # <<<<<<<<<<<<<<
@@ -40691,7 +40691,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
     __Pyx_XDECREF_SET(__pyx_v_node, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":2064
+    /* "pyNTM/parallel_link_model.py":2064
  *         # in that case, the unfail_node will create an exception; ignore that exception
  *         for node in nodes_to_unfail_iterator:
  *             try:             # <<<<<<<<<<<<<<
@@ -40707,7 +40707,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
       __Pyx_XGOTREF(__pyx_t_8);
       /*try:*/ {
 
-        /* "pyNTM/parallel_link_model.pyx":2065
+        /* "pyNTM/parallel_link_model.py":2065
  *         for node in nodes_to_unfail_iterator:
  *             try:
  *                 self.unfail_node(node.name)             # <<<<<<<<<<<<<<
@@ -40736,7 +40736,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":2064
+        /* "pyNTM/parallel_link_model.py":2064
  *         # in that case, the unfail_node will create an exception; ignore that exception
  *         for node in nodes_to_unfail_iterator:
  *             try:             # <<<<<<<<<<<<<<
@@ -40754,7 +40754,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":2066
+      /* "pyNTM/parallel_link_model.py":2066
  *             try:
  *                 self.unfail_node(node.name)
  *             except ModelException:             # <<<<<<<<<<<<<<
@@ -40775,7 +40775,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
       goto __pyx_L7_except_error;
       __pyx_L7_except_error:;
 
-      /* "pyNTM/parallel_link_model.pyx":2064
+      /* "pyNTM/parallel_link_model.py":2064
  *         # in that case, the unfail_node will create an exception; ignore that exception
  *         for node in nodes_to_unfail_iterator:
  *             try:             # <<<<<<<<<<<<<<
@@ -40795,7 +40795,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
       __pyx_L12_try_end:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":2063
+    /* "pyNTM/parallel_link_model.py":2063
  *         # Node will stay failed if it's part of another SRLG that is still failed;
  *         # in that case, the unfail_node will create an exception; ignore that exception
  *         for node in nodes_to_unfail_iterator:             # <<<<<<<<<<<<<<
@@ -40805,7 +40805,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2070
+  /* "pyNTM/parallel_link_model.py":2070
  * 
  *         # Find SRLG's Interfaces to unfail
  *         interfaces_to_unfail_iterator = (interface for interface in self.interface_objects if             # <<<<<<<<<<<<<<
@@ -40817,7 +40817,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
   __pyx_v_interfaces_to_unfail_iterator = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2076
+  /* "pyNTM/parallel_link_model.py":2076
  *         # if the local/remote Node is failed;  in that case, the unfail_interface
  *         # will create an exception; ignore that exception
  *         for interface in interfaces_to_unfail_iterator:             # <<<<<<<<<<<<<<
@@ -40866,7 +40866,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_9);
     __pyx_t_9 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":2077
+    /* "pyNTM/parallel_link_model.py":2077
  *         # will create an exception; ignore that exception
  *         for interface in interfaces_to_unfail_iterator:
  *             try:             # <<<<<<<<<<<<<<
@@ -40882,7 +40882,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
       __Pyx_XGOTREF(__pyx_t_6);
       /*try:*/ {
 
-        /* "pyNTM/parallel_link_model.pyx":2078
+        /* "pyNTM/parallel_link_model.py":2078
  *         for interface in interfaces_to_unfail_iterator:
  *             try:
  *                 self.unfail_interface(interface.name, interface.node_object.name)             # <<<<<<<<<<<<<<
@@ -40949,7 +40949,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-        /* "pyNTM/parallel_link_model.pyx":2077
+        /* "pyNTM/parallel_link_model.py":2077
  *         # will create an exception; ignore that exception
  *         for interface in interfaces_to_unfail_iterator:
  *             try:             # <<<<<<<<<<<<<<
@@ -40969,7 +40969,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "pyNTM/parallel_link_model.pyx":2079
+      /* "pyNTM/parallel_link_model.py":2079
  *             try:
  *                 self.unfail_interface(interface.name, interface.node_object.name)
  *             except ModelException:             # <<<<<<<<<<<<<<
@@ -40990,7 +40990,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
       goto __pyx_L17_except_error;
       __pyx_L17_except_error:;
 
-      /* "pyNTM/parallel_link_model.pyx":2077
+      /* "pyNTM/parallel_link_model.py":2077
  *         # will create an exception; ignore that exception
  *         for interface in interfaces_to_unfail_iterator:
  *             try:             # <<<<<<<<<<<<<<
@@ -41010,7 +41010,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
       __pyx_L22_try_end:;
     }
 
-    /* "pyNTM/parallel_link_model.pyx":2076
+    /* "pyNTM/parallel_link_model.py":2076
  *         # if the local/remote Node is failed;  in that case, the unfail_interface
  *         # will create an exception; ignore that exception
  *         for interface in interfaces_to_unfail_iterator:             # <<<<<<<<<<<<<<
@@ -41020,7 +41020,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2046
+  /* "pyNTM/parallel_link_model.py":2046
  *         srlg_to_fail.failed = True
  * 
  *     def unfail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -41052,7 +41052,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_120
   return __pyx_r;
 }
 
-/* "pyNTM/parallel_link_model.pyx":2082
+/* "pyNTM/parallel_link_model.py":2082
  *                 pass
  * 
  *     def add_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -41139,7 +41139,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_122
   int __pyx_t_10;
   __Pyx_RefNannySetupContext("add_srlg", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":2089
+  /* "pyNTM/parallel_link_model.py":2089
  *         """
  * 
  *         if srlg_name in set([srlg.name for srlg in self.srlg_objects]):             # <<<<<<<<<<<<<<
@@ -41206,7 +41206,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_122
   __pyx_t_7 = (__pyx_t_6 != 0);
   if (unlikely(__pyx_t_7)) {
 
-    /* "pyNTM/parallel_link_model.pyx":2090
+    /* "pyNTM/parallel_link_model.py":2090
  * 
  *         if srlg_name in set([srlg.name for srlg in self.srlg_objects]):
  *             raise ModelException("SRLG with name {} already exists in Model".format(srlg_name))             # <<<<<<<<<<<<<<
@@ -41252,7 +41252,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_122
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(0, 2090, __pyx_L1_error)
 
-    /* "pyNTM/parallel_link_model.pyx":2089
+    /* "pyNTM/parallel_link_model.py":2089
  *         """
  * 
  *         if srlg_name in set([srlg.name for srlg in self.srlg_objects]):             # <<<<<<<<<<<<<<
@@ -41261,7 +41261,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_122
  */
   }
 
-  /* "pyNTM/parallel_link_model.pyx":2092
+  /* "pyNTM/parallel_link_model.py":2092
  *             raise ModelException("SRLG with name {} already exists in Model".format(srlg_name))
  *         else:
  *             srlg = SRLG(srlg_name, self)             # <<<<<<<<<<<<<<
@@ -41318,7 +41318,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_122
     __pyx_v_srlg = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "pyNTM/parallel_link_model.pyx":2093
+    /* "pyNTM/parallel_link_model.py":2093
  *         else:
  *             srlg = SRLG(srlg_name, self)
  *             self.srlg_objects.add(srlg)             # <<<<<<<<<<<<<<
@@ -41346,7 +41346,7 @@ static PyObject *__pyx_pf_5pyNTM_19parallel_link_model_19Parallel_Link_Model_122
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
 
-  /* "pyNTM/parallel_link_model.pyx":2082
+  /* "pyNTM/parallel_link_model.py":2082
  *                 pass
  * 
  *     def add_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -49665,7 +49665,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_optimize_parallel_lsp_group_res, __pyx_k_optimize_parallel_lsp_group_res, sizeof(__pyx_k_optimize_parallel_lsp_group_res), 0, 0, 1, 1},
   {&__pyx_n_s_orphan_nodes, __pyx_k_orphan_nodes, sizeof(__pyx_k_orphan_nodes), 0, 0, 1, 1},
   {&__pyx_n_s_parallel_demand_groups, __pyx_k_parallel_demand_groups, sizeof(__pyx_k_parallel_demand_groups), 0, 0, 1, 1},
-  {&__pyx_kp_s_parallel_link_model_pyx, __pyx_k_parallel_link_model_pyx, sizeof(__pyx_k_parallel_link_model_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_parallel_lsp_groups, __pyx_k_parallel_lsp_groups, sizeof(__pyx_k_parallel_lsp_groups), 0, 0, 1, 1},
   {&__pyx_n_s_parallel_lsp_groups_2, __pyx_k_parallel_lsp_groups_2, sizeof(__pyx_k_parallel_lsp_groups_2), 0, 0, 1, 1},
   {&__pyx_n_s_path, __pyx_k_path, sizeof(__pyx_k_path), 0, 0, 1, 1},
@@ -49683,6 +49682,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_product, __pyx_k_product, sizeof(__pyx_k_product), 0, 0, 1, 1},
   {&__pyx_n_s_property, __pyx_k_property, sizeof(__pyx_k_property), 0, 0, 1, 1},
   {&__pyx_n_s_pyNTM_parallel_link_model, __pyx_k_pyNTM_parallel_link_model, sizeof(__pyx_k_pyNTM_parallel_link_model), 0, 0, 1, 1},
+  {&__pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_k_pyNTM_parallel_link_model_py, sizeof(__pyx_k_pyNTM_parallel_link_model_py), 0, 0, 1, 0},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_r, __pyx_k_r, sizeof(__pyx_k_r), 0, 0, 1, 1},
   {&__pyx_n_s_raise_exception, __pyx_k_raise_exception, sizeof(__pyx_k_raise_exception), 0, 0, 1, 1},
@@ -49788,7 +49788,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pyNTM/parallel_link_model.pyx":1771
+  /* "pyNTM/parallel_link_model.py":1771
  * 
  *         # Open the file with the data, read it, and split it into lines
  *         with open(data_file, 'r') as f:             # <<<<<<<<<<<<<<
@@ -49799,7 +49799,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "pyNTM/parallel_link_model.pyx":32
+  /* "pyNTM/parallel_link_model.py":32
  * 
  * 
  * class Parallel_Link_Model(object):             # <<<<<<<<<<<<<<
@@ -49810,7 +49810,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "pyNTM/parallel_link_model.pyx":57
+  /* "pyNTM/parallel_link_model.py":57
  *     """
  * 
  *     def __init__(self, interface_objects=set(), node_objects=set(),             # <<<<<<<<<<<<<<
@@ -49820,9 +49820,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__5 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_interface_objects, __pyx_n_s_node_objects, __pyx_n_s_demand_objects, __pyx_n_s_rsvp_lsp_objects); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
-  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_init, 57, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_init, 57, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 57, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":67
+  /* "pyNTM/parallel_link_model.py":67
  *         self._parallel_lsp_groups = {}
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -49832,9 +49832,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__7 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
-  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_repr, 67, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_repr, 67, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 67, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":74
+  /* "pyNTM/parallel_link_model.py":74
  *                                                 len(self.rsvp_lsp_objects))
  * 
  *     def add_network_interfaces_from_list(self, network_interfaces):             # <<<<<<<<<<<<<<
@@ -49844,9 +49844,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__9 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_network_interfaces, __pyx_n_s_new_interface_objects, __pyx_n_s_new_node_objects); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
-  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_add_network_interfaces_from_list, 74, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 74, __pyx_L1_error)
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_add_network_interfaces_from_list, 74, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 74, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":95
+  /* "pyNTM/parallel_link_model.py":95
  *         self.validate_model()
  * 
  *     def _make_int_info_dict(self):             # <<<<<<<<<<<<<<
@@ -49856,9 +49856,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__11 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_keys, __pyx_n_s_int_info, __pyx_n_s_lsp, __pyx_n_s_interface, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_key_2, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 95, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
-  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_make_int_info_dict, 95, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_make_int_info_dict, 95, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 95, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":112
+  /* "pyNTM/parallel_link_model.py":112
  *         return int_info
  * 
  *     def validate_model(self):             # <<<<<<<<<<<<<<
@@ -49868,9 +49868,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__13 = PyTuple_Pack(21, __pyx_n_s_self, __pyx_n_s_circuits, __pyx_n_s_int_info, __pyx_n_s_int_res_bw_too_high, __pyx_n_s_int_res_bw_sum_error, __pyx_n_s_error_data, __pyx_n_s_interface, __pyx_n_s_unique_interfaces_per_node, __pyx_n_s_circuits_with_mismatched_interfa, __pyx_n_s_ckt, __pyx_n_s_int_status_error_dict, __pyx_n_s_srlg_errors, __pyx_n_s_srlg, __pyx_n_s_nodes_in_srlg_but_srlg_not_in_no, __pyx_n_s_node, __pyx_n_s_node_names, __pyx_n_s_node_dict, __pyx_n_s_message, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 21, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_validate_model, 112, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 21, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_validate_model, 112, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 112, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":197
+  /* "pyNTM/parallel_link_model.py":197
  *             return self
  * 
  *     def _validate_circuit_interface_capacity(self, circuits_with_mismatched_interface_capacity, ckt):             # <<<<<<<<<<<<<<
@@ -49880,9 +49880,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__15 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_circuits_with_mismatched_interfa, __pyx_n_s_ckt, __pyx_n_s_int1, __pyx_n_s_int2); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 197, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
-  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_validate_circuit_interface_capa, 197, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 197, __pyx_L1_error)
+  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_validate_circuit_interface_capa, 197, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 197, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":215
+  /* "pyNTM/parallel_link_model.py":215
  *             circuits_with_mismatched_interface_capacity.append(ckt)
  * 
  *     def _reserved_bw_error_checks(self, int_info, int_res_bw_sum_error, int_res_bw_too_high, interface):             # <<<<<<<<<<<<<<
@@ -49892,9 +49892,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__17 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_int_info, __pyx_n_s_int_res_bw_sum_error, __pyx_n_s_int_res_bw_too_high, __pyx_n_s_interface); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
-  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_reserved_bw_error_checks, 215, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_reserved_bw_error_checks, 215, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 215, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":247
+  /* "pyNTM/parallel_link_model.py":247
  *             int_res_bw_sum_error.add((interface, interface.reserved_bandwidth, tuple(interface.lsps(self))))
  * 
  *     def _demand_traffic_per_int(self, demand):  # common between model and parallel_link_model             # <<<<<<<<<<<<<<
@@ -49904,9 +49904,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__19 = PyTuple_Pack(20, __pyx_n_s_self, __pyx_n_s_demand, __pyx_n_s_shortest_path_int_list, __pyx_n_s_path, __pyx_n_s_shortest_path_int_set, __pyx_n_s_unique_next_hops, __pyx_n_s_interface, __pyx_n_s_shortest_path_info, __pyx_n_s_path_counter, __pyx_n_s_traffic_splits_per_interface, __pyx_n_s_path_key, __pyx_n_s_total_splits, __pyx_n_s_max_split, __pyx_n_s_path_traffic, __pyx_n_s_traff_per_int, __pyx_n_s_info, __pyx_n_s_intf, __pyx_n_s_split, __pyx_n_s_interface, __pyx_n_s_traffic); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 247, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_demand_traffic_per_int, 247, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_demand_traffic_per_int, 247, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 247, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":395
+  /* "pyNTM/parallel_link_model.py":395
  *         return traff_per_int
  * 
  *     def _update_interface_utilization(self):  # common between model and parallel_link_model             # <<<<<<<<<<<<<<
@@ -49916,9 +49916,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__21 = PyTuple_Pack(16, __pyx_n_s_self, __pyx_n_s_interface_object, __pyx_n_s_routed_demand_object_generator, __pyx_n_s_demand_object, __pyx_n_s_routed_lsp_generator, __pyx_n_s_lsps_for_demand, __pyx_n_s_lsp, __pyx_n_s_num_routed_lsps_for_demand, __pyx_n_s_traffic_per_demand_path, __pyx_n_s_lsp_path_interfaces, __pyx_n_s_interface, __pyx_n_s_demand_traffic_per_int_2, __pyx_n_s_traffic_from_demand, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_update_interface_utilization, 395, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 395, __pyx_L1_error)
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_update_interface_utilization, 395, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 395, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":461
+  /* "pyNTM/parallel_link_model.py":461
  *         return self
  * 
  *     def _route_demands(self, demands, input_model):             # <<<<<<<<<<<<<<
@@ -49928,9 +49928,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__23 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_demands, __pyx_n_s_input_model, __pyx_n_s_demand_object); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_route_demands, 461, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_route_demands, 461, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 461, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":473
+  /* "pyNTM/parallel_link_model.py":473
  *         return self._update_interface_utilization()
  * 
  *     def _route_lsps(self, input_model):             # <<<<<<<<<<<<<<
@@ -49940,9 +49940,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__25 = PyTuple_Pack(13, __pyx_n_s_self, __pyx_n_s_input_model, __pyx_n_s_parallel_lsp_groups_2, __pyx_n_s_parallel_demand_groups, __pyx_n_s_counter, __pyx_n_s_group, __pyx_n_s_lsps, __pyx_n_s_traff_on_each_group_lsp, __pyx_n_s_dmds_on_lsp_group, __pyx_n_s_traffic_in_demand_group, __pyx_n_s_lsp, __pyx_n_s_routed_lsps_in_group, __pyx_n_s_dmd); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 473, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(2, 0, 13, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_route_lsps, 473, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(2, 0, 13, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_route_lsps, 473, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 473, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":529
+  /* "pyNTM/parallel_link_model.py":529
  *         return self
  * 
  *     def _optimize_parallel_lsp_group_res_bw(self, input_model, routed_lsps_in_group, traffic_in_demand_group):             # <<<<<<<<<<<<<<
@@ -49952,9 +49952,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__27 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_input_model, __pyx_n_s_routed_lsps_in_group, __pyx_n_s_traffic_in_demand_group, __pyx_n_s_setup_bandwidth_optimized, __pyx_n_s_lsp, __pyx_n_s_lsp_path_interfaces_before, __pyx_n_s_lsp_res_bw_before, __pyx_n_s_interface); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_optimize_parallel_lsp_group_res, 529, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 529, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_optimize_parallel_lsp_group_res, 529, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 529, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":573
+  /* "pyNTM/parallel_link_model.py":573
  *                     interface.reserved_bandwidth += lsp.reserved_bandwidth
  * 
  *     def parallel_lsp_groups(self):             # <<<<<<<<<<<<<<
@@ -49964,9 +49964,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__29 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_src_node_names, __pyx_n_s_dest_node_names, __pyx_n_s_parallel_lsp_groups_2, __pyx_n_s_src_node_name, __pyx_n_s_dest_node_name, __pyx_n_s_key_2, __pyx_n_s_lsp); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 573, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_parallel_lsp_groups_2, 573, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 573, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_parallel_lsp_groups_2, 573, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 573, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":604
+  /* "pyNTM/parallel_link_model.py":604
  *             return self._parallel_lsp_groups
  * 
  *     def parallel_demand_groups(self):             # <<<<<<<<<<<<<<
@@ -49976,9 +49976,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__31 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_src_node_names, __pyx_n_s_dest_node_names, __pyx_n_s_parallel_demand_groups, __pyx_n_s_src_node_name, __pyx_n_s_dest_node_name, __pyx_n_s_key_2, __pyx_n_s_dmd); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 604, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__31);
   __Pyx_GIVEREF(__pyx_tuple__31);
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_parallel_demand_groups, 604, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 604, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_parallel_demand_groups, 604, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 604, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":630
+  /* "pyNTM/parallel_link_model.py":630
  *         return parallel_demand_groups
  * 
  *     def update_simulation(self):             # <<<<<<<<<<<<<<
@@ -49988,9 +49988,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__33 = PyTuple_Pack(13, __pyx_n_s_self, __pyx_n_s_non_failed_interfaces, __pyx_n_s_available_nodes, __pyx_n_s_interface_object, __pyx_n_s_non_failed_interfaces_model, __pyx_n_s_interface, __pyx_n_s_lsp, __pyx_n_s_demand, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 630, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
-  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(1, 0, 13, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_update_simulation, 630, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 630, __pyx_L1_error)
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(1, 0, 13, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_update_simulation, 630, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 630, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":684
+  /* "pyNTM/parallel_link_model.py":684
  *         self.validate_model()
  * 
  *     def _unique_interface_per_node(self):             # <<<<<<<<<<<<<<
@@ -50000,9 +50000,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__35 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_exception_interfaces, __pyx_n_s_node, __pyx_n_s_node_int_list, __pyx_n_s_node_int_set, __pyx_n_s_item, __pyx_n_s_message, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_interface); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 684, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__35);
   __Pyx_GIVEREF(__pyx_tuple__35);
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(1, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_unique_interface_per_node, 684, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(1, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_unique_interface_per_node, 684, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 684, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":711
+  /* "pyNTM/parallel_link_model.py":711
  *             return True
  * 
  *     def _make_circuits_multidigraph(self, return_exception=True, include_failed_circuits=True):             # <<<<<<<<<<<<<<
@@ -50012,12 +50012,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__37 = PyTuple_Pack(19, __pyx_n_s_self, __pyx_n_s_return_exception, __pyx_n_s_include_failed_circuits, __pyx_n_s_G, __pyx_n_s_graph_interfaces, __pyx_n_s_interface, __pyx_n_s_circuits, __pyx_n_s_int1, __pyx_n_s_msg, __pyx_n_s_int2, __pyx_n_s_ckt, __pyx_n_s_exception_ints_not_in_ckt, __pyx_n_s_exception_msg, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_local_node_name, __pyx_n_s_remote_node_name, __pyx_n_s_data); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 711, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(3, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_make_circuits_multidigraph, 711, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 711, __pyx_L1_error)
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(3, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_make_circuits_multidigraph, 711, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 711, __pyx_L1_error)
   __pyx_tuple__39 = PyTuple_Pack(2, ((PyObject *)Py_True), ((PyObject *)Py_True)); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 711, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__39);
   __Pyx_GIVEREF(__pyx_tuple__39);
 
-  /* "pyNTM/parallel_link_model.pyx":779
+  /* "pyNTM/parallel_link_model.py":779
  *         self.circuit_objects = circuits
  * 
  *     def get_interface_object_from_nodes(self, local_node_name, remote_node_name, circuit_id=None):             # <<<<<<<<<<<<<<
@@ -50027,12 +50027,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__40 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_local_node_name, __pyx_n_s_remote_node_name, __pyx_n_s_circuit_id, __pyx_n_s_interface_gen, __pyx_n_s_interface_list, __pyx_n_s_msg, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_interface); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 779, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__40);
   __Pyx_GIVEREF(__pyx_tuple__40);
-  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(4, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_interface_object_from_nodes, 779, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 779, __pyx_L1_error)
+  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(4, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_interface_object_from_nodes, 779, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 779, __pyx_L1_error)
   __pyx_tuple__42 = PyTuple_Pack(1, ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 779, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__42);
   __Pyx_GIVEREF(__pyx_tuple__42);
 
-  /* "pyNTM/parallel_link_model.pyx":819
+  /* "pyNTM/parallel_link_model.py":819
  * 
  *     @property
  *     def all_interface_circuit_ids(self):             # <<<<<<<<<<<<<<
@@ -50042,9 +50042,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__43 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 819, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__43);
   __Pyx_GIVEREF(__pyx_tuple__43);
-  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_all_interface_circuit_ids, 819, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 819, __pyx_L1_error)
+  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_all_interface_circuit_ids, 819, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 819, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":825
+  /* "pyNTM/parallel_link_model.py":825
  *         return set(interface.circuit_id for interface in self.interface_objects)
  * 
  *     def add_circuit(self, node_a_object, node_b_object, node_a_interface_name,             # <<<<<<<<<<<<<<
@@ -50054,12 +50054,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__45 = PyTuple_Pack(16, __pyx_n_s_self, __pyx_n_s_node_a_object, __pyx_n_s_node_b_object, __pyx_n_s_node_a_interface_name, __pyx_n_s_node_b_interface_name, __pyx_n_s_cost_intf_a, __pyx_n_s_cost_intf_b, __pyx_n_s_capacity, __pyx_n_s_failed, __pyx_n_s_circuit_id, __pyx_n_s_circuit_ids, __pyx_n_s_err_msg, __pyx_n_s_int_a, __pyx_n_s_int_b, __pyx_n_s_existing_int_keys, __pyx_n_s_interface); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 825, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__45);
   __Pyx_GIVEREF(__pyx_tuple__45);
-  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(10, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_add_circuit, 825, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 825, __pyx_L1_error)
+  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(10, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_add_circuit, 825, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 825, __pyx_L1_error)
   __pyx_tuple__47 = PyTuple_Pack(5, ((PyObject *)__pyx_int_1), ((PyObject *)__pyx_int_1), ((PyObject *)__pyx_int_1000), ((PyObject *)Py_False), ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__47)) __PYX_ERR(0, 825, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__47);
   __Pyx_GIVEREF(__pyx_tuple__47);
 
-  /* "pyNTM/parallel_link_model.pyx":872
+  /* "pyNTM/parallel_link_model.py":872
  *         self.validate_model()
  * 
  *     def is_node_an_orphan(self, node_object):             # <<<<<<<<<<<<<<
@@ -50069,9 +50069,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__48 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_node_object); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 872, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__48);
   __Pyx_GIVEREF(__pyx_tuple__48);
-  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_is_node_an_orphan, 872, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 872, __pyx_L1_error)
+  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_is_node_an_orphan, 872, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 872, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":879
+  /* "pyNTM/parallel_link_model.py":879
  *             return False
  * 
  *     def get_orphan_node_objects(self):             # <<<<<<<<<<<<<<
@@ -50081,9 +50081,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__50 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_orphan_nodes, __pyx_n_s_node); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 879, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__50);
   __Pyx_GIVEREF(__pyx_tuple__50);
-  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_orphan_node_objects, 879, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 879, __pyx_L1_error)
+  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_orphan_node_objects, 879, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 879, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":887
+  /* "pyNTM/parallel_link_model.py":887
  *         return orphan_nodes
  * 
  *     def add_node(self, node_object):             # <<<<<<<<<<<<<<
@@ -50093,9 +50093,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__52 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_node_object, __pyx_n_s_message, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 887, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__52);
   __Pyx_GIVEREF(__pyx_tuple__52);
-  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_add_node, 887, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 887, __pyx_L1_error)
+  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_add_node, 887, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 887, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":900
+  /* "pyNTM/parallel_link_model.py":900
  *         self.validate_model()
  * 
  *     def get_node_object(self, node_name):             # <<<<<<<<<<<<<<
@@ -50105,9 +50105,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__54 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_node_name, __pyx_n_s_matching_node, __pyx_n_s_message, __pyx_n_s_node); if (unlikely(!__pyx_tuple__54)) __PYX_ERR(0, 900, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__54);
   __Pyx_GIVEREF(__pyx_tuple__54);
-  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_node_object, 900, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 900, __pyx_L1_error)
+  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_node_object, 900, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 900, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":912
+  /* "pyNTM/parallel_link_model.py":912
  *             raise ModelException(message)
  * 
  *     def _make_network_interfaces(self, interface_info_list):             # <<<<<<<<<<<<<<
@@ -50117,9 +50117,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__56 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_interface_info_list, __pyx_n_s_network_interface_objects, __pyx_n_s_network_node_objects, __pyx_n_s_interface, __pyx_n_s_intf, __pyx_n_s_node_names, __pyx_n_s_node); if (unlikely(!__pyx_tuple__56)) __PYX_ERR(0, 912, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__56);
   __Pyx_GIVEREF(__pyx_tuple__56);
-  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__56, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_make_network_interfaces, 912, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 912, __pyx_L1_error)
+  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__56, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_make_network_interfaces, 912, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 912, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":941
+  /* "pyNTM/parallel_link_model.py":941
  *         return (network_interface_objects, network_node_objects)
  * 
  *     def add_demand(self, source_node_name, dest_node_name, traffic=0, name='none'):             # <<<<<<<<<<<<<<
@@ -50129,12 +50129,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__58 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_source_node_name, __pyx_n_s_dest_node_name, __pyx_n_s_traffic, __pyx_n_s_name, __pyx_n_s_source_node_object, __pyx_n_s_dest_node_object, __pyx_n_s_added_demand, __pyx_n_s_message, __pyx_n_s_demand); if (unlikely(!__pyx_tuple__58)) __PYX_ERR(0, 941, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__58);
   __Pyx_GIVEREF(__pyx_tuple__58);
-  __pyx_codeobj__59 = (PyObject*)__Pyx_PyCode_New(5, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__58, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_add_demand, 941, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__59)) __PYX_ERR(0, 941, __pyx_L1_error)
+  __pyx_codeobj__59 = (PyObject*)__Pyx_PyCode_New(5, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__58, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_add_demand, 941, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__59)) __PYX_ERR(0, 941, __pyx_L1_error)
   __pyx_tuple__60 = PyTuple_Pack(2, ((PyObject *)__pyx_int_0), ((PyObject*)__pyx_n_s_none)); if (unlikely(!__pyx_tuple__60)) __PYX_ERR(0, 941, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__60);
   __Pyx_GIVEREF(__pyx_tuple__60);
 
-  /* "pyNTM/parallel_link_model.pyx":961
+  /* "pyNTM/parallel_link_model.py":961
  *         self.validate_model()
  * 
  *     def add_rsvp_lsp(self, source_node_name, dest_node_name, name):             # <<<<<<<<<<<<<<
@@ -50144,9 +50144,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__61 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_source_node_name, __pyx_n_s_dest_node_name, __pyx_n_s_name, __pyx_n_s_source_node_object, __pyx_n_s_dest_node_object, __pyx_n_s_added_lsp, __pyx_n_s_message, __pyx_n_s_lsp); if (unlikely(!__pyx_tuple__61)) __PYX_ERR(0, 961, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__61);
   __Pyx_GIVEREF(__pyx_tuple__61);
-  __pyx_codeobj__62 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__61, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_add_rsvp_lsp, 961, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__62)) __PYX_ERR(0, 961, __pyx_L1_error)
+  __pyx_codeobj__62 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__61, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_add_rsvp_lsp, 961, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__62)) __PYX_ERR(0, 961, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":982
+  /* "pyNTM/parallel_link_model.py":982
  *         self.validate_model()
  * 
  *     def get_demand_object(self, source_node_name, dest_node_name, demand_name='none'):             # <<<<<<<<<<<<<<
@@ -50156,12 +50156,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__63 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_source_node_name, __pyx_n_s_dest_node_name, __pyx_n_s_demand_name, __pyx_n_s_model_demand_iterator, __pyx_n_s_demand_to_return, __pyx_n_s_demand, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__63)) __PYX_ERR(0, 982, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__63);
   __Pyx_GIVEREF(__pyx_tuple__63);
-  __pyx_codeobj__64 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__63, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_demand_object, 982, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__64)) __PYX_ERR(0, 982, __pyx_L1_error)
+  __pyx_codeobj__64 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__63, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_demand_object, 982, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__64)) __PYX_ERR(0, 982, __pyx_L1_error)
   __pyx_tuple__65 = PyTuple_Pack(1, ((PyObject*)__pyx_n_s_none)); if (unlikely(!__pyx_tuple__65)) __PYX_ERR(0, 982, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__65);
   __Pyx_GIVEREF(__pyx_tuple__65);
 
-  /* "pyNTM/parallel_link_model.pyx":1001
+  /* "pyNTM/parallel_link_model.py":1001
  *             raise ModelException('no matching demand')
  * 
  *     def get_rsvp_lsp(self, source_node_name, dest_node_name, lsp_name='none'):             # <<<<<<<<<<<<<<
@@ -50171,12 +50171,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__66 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_source_node_name, __pyx_n_s_dest_node_name, __pyx_n_s_lsp_name, __pyx_n_s_needed_key, __pyx_n_s_msg, __pyx_n_s_lsp, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__66)) __PYX_ERR(0, 1001, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__66);
   __Pyx_GIVEREF(__pyx_tuple__66);
-  __pyx_codeobj__67 = (PyObject*)__Pyx_PyCode_New(4, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__66, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_rsvp_lsp, 1001, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__67)) __PYX_ERR(0, 1001, __pyx_L1_error)
+  __pyx_codeobj__67 = (PyObject*)__Pyx_PyCode_New(4, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__66, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_rsvp_lsp, 1001, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__67)) __PYX_ERR(0, 1001, __pyx_L1_error)
   __pyx_tuple__68 = PyTuple_Pack(1, ((PyObject*)__pyx_n_s_none)); if (unlikely(!__pyx_tuple__68)) __PYX_ERR(0, 1001, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__68);
   __Pyx_GIVEREF(__pyx_tuple__68);
 
-  /* "pyNTM/parallel_link_model.pyx":1024
+  /* "pyNTM/parallel_link_model.py":1024
  * 
  *     # Interface calls
  *     def get_interface_object(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -50186,9 +50186,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__69 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_interface_name, __pyx_n_s_node_name, __pyx_n_s_node_object, __pyx_n_s_int_object, __pyx_n_s_interface); if (unlikely(!__pyx_tuple__69)) __PYX_ERR(0, 1024, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__69);
   __Pyx_GIVEREF(__pyx_tuple__69);
-  __pyx_codeobj__70 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__69, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_interface_object, 1024, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__70)) __PYX_ERR(0, 1024, __pyx_L1_error)
+  __pyx_codeobj__70 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__69, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_interface_object, 1024, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__70)) __PYX_ERR(0, 1024, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1034
+  /* "pyNTM/parallel_link_model.py":1034
  *         return int_object[0]
  * 
  *     def _does_interface_exist(self, interface_name, node_object_name):             # <<<<<<<<<<<<<<
@@ -50198,9 +50198,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__71 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_interface_name, __pyx_n_s_node_object_name, __pyx_n_s_int_key, __pyx_n_s_interface_key_iterator, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__71)) __PYX_ERR(0, 1034, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__71);
   __Pyx_GIVEREF(__pyx_tuple__71);
-  __pyx_codeobj__72 = (PyObject*)__Pyx_PyCode_New(3, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__71, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_does_interface_exist, 1034, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__72)) __PYX_ERR(0, 1034, __pyx_L1_error)
+  __pyx_codeobj__72 = (PyObject*)__Pyx_PyCode_New(3, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__71, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_does_interface_exist, 1034, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__72)) __PYX_ERR(0, 1034, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1042
+  /* "pyNTM/parallel_link_model.py":1042
  *             raise ModelException('specified interface does not exist')
  * 
  *     def get_circuit_object_from_interface(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -50210,9 +50210,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__73 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_interface_name, __pyx_n_s_node_name, __pyx_n_s_interface, __pyx_n_s_ckts, __pyx_n_s_ckt); if (unlikely(!__pyx_tuple__73)) __PYX_ERR(0, 1042, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__73);
   __Pyx_GIVEREF(__pyx_tuple__73);
-  __pyx_codeobj__74 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__73, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_circuit_object_from_interfac, 1042, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__74)) __PYX_ERR(0, 1042, __pyx_L1_error)
+  __pyx_codeobj__74 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__73, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_circuit_object_from_interfac, 1042, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__74)) __PYX_ERR(0, 1042, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1057
+  /* "pyNTM/parallel_link_model.py":1057
  * 
  *     # Convenience calls #####
  *     def get_failed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -50222,9 +50222,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__75 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_failed_interfaces, __pyx_n_s_interface, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__75)) __PYX_ERR(0, 1057, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__75);
   __Pyx_GIVEREF(__pyx_tuple__75);
-  __pyx_codeobj__76 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__75, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_failed_interface_objects, 1057, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__76)) __PYX_ERR(0, 1057, __pyx_L1_error)
+  __pyx_codeobj__76 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__75, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_failed_interface_objects, 1057, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__76)) __PYX_ERR(0, 1057, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1069
+  /* "pyNTM/parallel_link_model.py":1069
  *         return failed_interfaces
  * 
  *     def get_unfailed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -50234,9 +50234,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__77 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_unfailed_interface_objects, __pyx_n_s_interface_iter, __pyx_n_s_interface, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__77)) __PYX_ERR(0, 1069, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__77);
   __Pyx_GIVEREF(__pyx_tuple__77);
-  __pyx_codeobj__78 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__77, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_unfailed_interface_objects, 1069, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__78)) __PYX_ERR(0, 1069, __pyx_L1_error)
+  __pyx_codeobj__78 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__77, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_unfailed_interface_objects, 1069, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__78)) __PYX_ERR(0, 1069, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1084
+  /* "pyNTM/parallel_link_model.py":1084
  *         return unfailed_interface_objects
  * 
  *     def get_unrouted_demand_objects(self):             # <<<<<<<<<<<<<<
@@ -50246,9 +50246,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__79 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_unrouted_demands, __pyx_n_s_demand, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__79)) __PYX_ERR(0, 1084, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__79);
   __Pyx_GIVEREF(__pyx_tuple__79);
-  __pyx_codeobj__80 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__79, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_unrouted_demand_objects, 1084, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__80)) __PYX_ERR(0, 1084, __pyx_L1_error)
+  __pyx_codeobj__80 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__79, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_unrouted_demand_objects, 1084, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__80)) __PYX_ERR(0, 1084, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1095
+  /* "pyNTM/parallel_link_model.py":1095
  *         return unrouted_demands
  * 
  *     def change_interface_name(self, node_name,             # <<<<<<<<<<<<<<
@@ -50258,9 +50258,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__81 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_node_name, __pyx_n_s_current_interface_name, __pyx_n_s_new_interface_name, __pyx_n_s_interface_to_edit); if (unlikely(!__pyx_tuple__81)) __PYX_ERR(0, 1095, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__81);
   __Pyx_GIVEREF(__pyx_tuple__81);
-  __pyx_codeobj__82 = (PyObject*)__Pyx_PyCode_New(4, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__81, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_change_interface_name, 1095, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__82)) __PYX_ERR(0, 1095, __pyx_L1_error)
+  __pyx_codeobj__82 = (PyObject*)__Pyx_PyCode_New(4, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__81, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_change_interface_name, 1095, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__82)) __PYX_ERR(0, 1095, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1104
+  /* "pyNTM/parallel_link_model.py":1104
  *         return interface_to_edit
  * 
  *     def fail_interface(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -50270,9 +50270,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__83 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_interface_name, __pyx_n_s_node_name, __pyx_n_s_interface_object, __pyx_n_s_remote_interface_object); if (unlikely(!__pyx_tuple__83)) __PYX_ERR(0, 1104, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__83);
   __Pyx_GIVEREF(__pyx_tuple__83);
-  __pyx_codeobj__84 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__83, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_fail_interface, 1104, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__84)) __PYX_ERR(0, 1104, __pyx_L1_error)
+  __pyx_codeobj__84 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__83, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_fail_interface, 1104, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__84)) __PYX_ERR(0, 1104, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1120
+  /* "pyNTM/parallel_link_model.py":1120
  *         interface_object.failed = True
  * 
  *     def unfail_interface(self, interface_name, node_name, raise_exception=False):             # <<<<<<<<<<<<<<
@@ -50282,12 +50282,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__85 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_interface_name, __pyx_n_s_node_name, __pyx_n_s_raise_exception, __pyx_n_s_message, __pyx_n_s_interface_object, __pyx_n_s_remote_interface); if (unlikely(!__pyx_tuple__85)) __PYX_ERR(0, 1120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__85);
   __Pyx_GIVEREF(__pyx_tuple__85);
-  __pyx_codeobj__86 = (PyObject*)__Pyx_PyCode_New(4, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__85, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_unfail_interface, 1120, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__86)) __PYX_ERR(0, 1120, __pyx_L1_error)
+  __pyx_codeobj__86 = (PyObject*)__Pyx_PyCode_New(4, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__85, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_unfail_interface, 1120, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__86)) __PYX_ERR(0, 1120, __pyx_L1_error)
   __pyx_tuple__87 = PyTuple_Pack(1, ((PyObject *)Py_False)); if (unlikely(!__pyx_tuple__87)) __PYX_ERR(0, 1120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__87);
   __Pyx_GIVEREF(__pyx_tuple__87);
 
-  /* "pyNTM/parallel_link_model.pyx":1164
+  /* "pyNTM/parallel_link_model.py":1164
  *                 raise ModelException(message)
  * 
  *     def get_all_paths_reservable_bw(self, source_node_name, dest_node_name, include_failed_circuits=True,             # <<<<<<<<<<<<<<
@@ -50297,12 +50297,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__88 = PyTuple_Pack(15, __pyx_n_s_self, __pyx_n_s_source_node_name, __pyx_n_s_dest_node_name, __pyx_n_s_include_failed_circuits, __pyx_n_s_cutoff, __pyx_n_s_needed_bw, __pyx_n_s_G, __pyx_n_s_converted_path, __pyx_n_s_digraph_all_paths, __pyx_n_s_digraph_unique_paths, __pyx_n_s_path, __pyx_n_s_model_path, __pyx_n_s_path_info, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__88)) __PYX_ERR(0, 1164, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__88);
   __Pyx_GIVEREF(__pyx_tuple__88);
-  __pyx_codeobj__89 = (PyObject*)__Pyx_PyCode_New(6, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__88, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_all_paths_reservable_bw, 1164, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__89)) __PYX_ERR(0, 1164, __pyx_L1_error)
+  __pyx_codeobj__89 = (PyObject*)__Pyx_PyCode_New(6, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__88, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_all_paths_reservable_bw, 1164, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__89)) __PYX_ERR(0, 1164, __pyx_L1_error)
   __pyx_tuple__90 = PyTuple_Pack(3, ((PyObject *)Py_True), ((PyObject *)__pyx_int_10), ((PyObject *)__pyx_int_0)); if (unlikely(!__pyx_tuple__90)) __PYX_ERR(0, 1164, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__90);
   __Pyx_GIVEREF(__pyx_tuple__90);
 
-  /* "pyNTM/parallel_link_model.pyx":1211
+  /* "pyNTM/parallel_link_model.py":1211
  *         return {'path': path_info}
  * 
  *     def get_shortest_path(self, source_node_name, dest_node_name, needed_bw=0):             # <<<<<<<<<<<<<<
@@ -50312,12 +50312,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__91 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_source_node_name, __pyx_n_s_dest_node_name, __pyx_n_s_needed_bw, __pyx_n_s_G, __pyx_n_s_converted_path, __pyx_n_s_digraph_shortest_paths, __pyx_n_s_path, __pyx_n_s_model_path, __pyx_n_s_path_info); if (unlikely(!__pyx_tuple__91)) __PYX_ERR(0, 1211, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__91);
   __Pyx_GIVEREF(__pyx_tuple__91);
-  __pyx_codeobj__92 = (PyObject*)__Pyx_PyCode_New(4, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__91, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_shortest_path, 1211, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__92)) __PYX_ERR(0, 1211, __pyx_L1_error)
+  __pyx_codeobj__92 = (PyObject*)__Pyx_PyCode_New(4, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__91, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_shortest_path, 1211, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__92)) __PYX_ERR(0, 1211, __pyx_L1_error)
   __pyx_tuple__93 = PyTuple_Pack(1, ((PyObject *)__pyx_int_0)); if (unlikely(!__pyx_tuple__93)) __PYX_ERR(0, 1211, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__93);
   __Pyx_GIVEREF(__pyx_tuple__93);
 
-  /* "pyNTM/parallel_link_model.pyx":1252
+  /* "pyNTM/parallel_link_model.py":1252
  *         return {'cost': converted_path['cost'], 'path': path_info}
  * 
  *     def get_shortest_path_for_routed_lsp(self, source_node_name, dest_node_name, lsp, needed_bw):             # <<<<<<<<<<<<<<
@@ -50327,9 +50327,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__94 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_source_node_name, __pyx_n_s_dest_node_name, __pyx_n_s_lsp, __pyx_n_s_needed_bw, __pyx_n_s_G, __pyx_n_s_converted_path, __pyx_n_s_digraph_shortest_paths, __pyx_n_s_path, __pyx_n_s_model_path, __pyx_n_s_path_info); if (unlikely(!__pyx_tuple__94)) __PYX_ERR(0, 1252, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__94);
   __Pyx_GIVEREF(__pyx_tuple__94);
-  __pyx_codeobj__95 = (PyObject*)__Pyx_PyCode_New(5, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__94, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_shortest_path_for_routed_lsp, 1252, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__95)) __PYX_ERR(0, 1252, __pyx_L1_error)
+  __pyx_codeobj__95 = (PyObject*)__Pyx_PyCode_New(5, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__94, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_shortest_path_for_routed_lsp, 1252, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__95)) __PYX_ERR(0, 1252, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1291
+  /* "pyNTM/parallel_link_model.py":1291
  *         return {'cost': converted_path['cost'], 'path': path_info}
  * 
  *     def _normalize_multidigraph_paths(self, path_info):             # <<<<<<<<<<<<<<
@@ -50339,9 +50339,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__96 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_path_info, __pyx_n_s_path_list, __pyx_n_s_path, __pyx_n_s_path_option); if (unlikely(!__pyx_tuple__96)) __PYX_ERR(0, 1291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__96);
   __Pyx_GIVEREF(__pyx_tuple__96);
-  __pyx_codeobj__97 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__96, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_normalize_multidigraph_paths, 1291, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__97)) __PYX_ERR(0, 1291, __pyx_L1_error)
+  __pyx_codeobj__97 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__96, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_normalize_multidigraph_paths, 1291, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__97)) __PYX_ERR(0, 1291, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1349
+  /* "pyNTM/parallel_link_model.py":1349
  *         return path_list
  * 
  *     def _convert_nx_path_to_model_path(self, nx_graph_path, needed_bw):             # <<<<<<<<<<<<<<
@@ -50351,9 +50351,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__98 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_nx_graph_path, __pyx_n_s_needed_bw, __pyx_n_s_model_path, __pyx_n_s_hop, __pyx_n_s_current_hop_index, __pyx_n_s_next_hop_index, __pyx_n_s_next_hop, __pyx_n_s_interface); if (unlikely(!__pyx_tuple__98)) __PYX_ERR(0, 1349, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__98);
   __Pyx_GIVEREF(__pyx_tuple__98);
-  __pyx_codeobj__99 = (PyObject*)__Pyx_PyCode_New(3, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__98, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_convert_nx_path_to_model_path, 1349, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__99)) __PYX_ERR(0, 1349, __pyx_L1_error)
+  __pyx_codeobj__99 = (PyObject*)__Pyx_PyCode_New(3, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__98, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_convert_nx_path_to_model_path, 1349, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__99)) __PYX_ERR(0, 1349, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1389
+  /* "pyNTM/parallel_link_model.py":1389
  *         return model_path
  * 
  *     def _convert_nx_path_to_model_path_routed_lsp(self, nx_graph_path, needed_bw, lsp):             # <<<<<<<<<<<<<<
@@ -50363,9 +50363,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__100 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_nx_graph_path, __pyx_n_s_needed_bw, __pyx_n_s_lsp, __pyx_n_s_model_path, __pyx_n_s_hop, __pyx_n_s_current_hop_index, __pyx_n_s_next_hop_index, __pyx_n_s_next_hop, __pyx_n_s_interface, __pyx_n_s_hop_interface_list); if (unlikely(!__pyx_tuple__100)) __PYX_ERR(0, 1389, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__100);
   __Pyx_GIVEREF(__pyx_tuple__100);
-  __pyx_codeobj__101 = (PyObject*)__Pyx_PyCode_New(4, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__100, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_convert_nx_path_to_model_path_r, 1389, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__101)) __PYX_ERR(0, 1389, __pyx_L1_error)
+  __pyx_codeobj__101 = (PyObject*)__Pyx_PyCode_New(4, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__100, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_convert_nx_path_to_model_path_r, 1389, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__101)) __PYX_ERR(0, 1389, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1446
+  /* "pyNTM/parallel_link_model.py":1446
  * 
  *     # NODE CALLS ######
  *     def get_node_interfaces(self, node_name):             # <<<<<<<<<<<<<<
@@ -50375,9 +50375,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__102 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_node_name); if (unlikely(!__pyx_tuple__102)) __PYX_ERR(0, 1446, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__102);
   __Pyx_GIVEREF(__pyx_tuple__102);
-  __pyx_codeobj__103 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__102, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_node_interfaces, 1446, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__103)) __PYX_ERR(0, 1446, __pyx_L1_error)
+  __pyx_codeobj__103 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__102, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_node_interfaces, 1446, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__103)) __PYX_ERR(0, 1446, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1450
+  /* "pyNTM/parallel_link_model.py":1450
  *         return Node(node_name).interfaces(self)
  * 
  *     def fail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -50387,9 +50387,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__104 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_node_name, __pyx_n_s_ints_to_fail_iterator, __pyx_n_s_interface, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__104)) __PYX_ERR(0, 1450, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__104);
   __Pyx_GIVEREF(__pyx_tuple__104);
-  __pyx_codeobj__105 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__104, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_fail_node, 1450, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__105)) __PYX_ERR(0, 1450, __pyx_L1_error)
+  __pyx_codeobj__105 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__104, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_fail_node, 1450, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__105)) __PYX_ERR(0, 1450, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1463
+  /* "pyNTM/parallel_link_model.py":1463
  *         self.get_node_object(node_name).failed = True
  * 
  *     def unfail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -50399,9 +50399,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__106 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_node_name, __pyx_n_s_ints_to_unfail_iterator, __pyx_n_s_interface, __pyx_n_s_remote_int, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__106)) __PYX_ERR(0, 1463, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__106);
   __Pyx_GIVEREF(__pyx_tuple__106);
-  __pyx_codeobj__107 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__106, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_unfail_node, 1463, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__107)) __PYX_ERR(0, 1463, __pyx_L1_error)
+  __pyx_codeobj__107 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__106, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_unfail_node, 1463, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__107)) __PYX_ERR(0, 1463, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1484
+  /* "pyNTM/parallel_link_model.py":1484
  *                                       remote_int.node_object.name, False)
  * 
  *     def get_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -50411,9 +50411,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__108 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_failed_nodes, __pyx_n_s_node, __pyx_n_s_node_object, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__108)) __PYX_ERR(0, 1484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__108);
   __Pyx_GIVEREF(__pyx_tuple__108);
-  __pyx_codeobj__109 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__108, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_failed_node_objects, 1484, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__109)) __PYX_ERR(0, 1484, __pyx_L1_error)
+  __pyx_codeobj__109 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__108, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_failed_node_objects, 1484, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__109)) __PYX_ERR(0, 1484, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1497
+  /* "pyNTM/parallel_link_model.py":1497
  *         return failed_nodes
  * 
  *     def get_non_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -50423,9 +50423,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__110 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_non_failed_nodes, __pyx_n_s_node, __pyx_n_s_node_object, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__110)) __PYX_ERR(0, 1497, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__110);
   __Pyx_GIVEREF(__pyx_tuple__110);
-  __pyx_codeobj__111 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__110, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_non_failed_node_objects, 1497, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__111)) __PYX_ERR(0, 1497, __pyx_L1_error)
+  __pyx_codeobj__111 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__110, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_non_failed_node_objects, 1497, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__111)) __PYX_ERR(0, 1497, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1569
+  /* "pyNTM/parallel_link_model.py":1569
  *     #         print()
  * 
  *     def _make_weighted_network_graph(self, include_failed_circuits=True, needed_bw=0, rsvp_required=False):             # <<<<<<<<<<<<<<
@@ -50435,12 +50435,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__112 = PyTuple_Pack(14, __pyx_n_s_self, __pyx_n_s_include_failed_circuits, __pyx_n_s_needed_bw, __pyx_n_s_rsvp_required, __pyx_n_s_G, __pyx_n_s_considered_interfaces, __pyx_n_s_edge_names, __pyx_n_s_node_name_iterator, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__112)) __PYX_ERR(0, 1569, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__112);
   __Pyx_GIVEREF(__pyx_tuple__112);
-  __pyx_codeobj__113 = (PyObject*)__Pyx_PyCode_New(4, 0, 14, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__112, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_make_weighted_network_graph, 1569, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__113)) __PYX_ERR(0, 1569, __pyx_L1_error)
+  __pyx_codeobj__113 = (PyObject*)__Pyx_PyCode_New(4, 0, 14, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__112, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_make_weighted_network_graph, 1569, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__113)) __PYX_ERR(0, 1569, __pyx_L1_error)
   __pyx_tuple__114 = PyTuple_Pack(3, ((PyObject *)Py_True), ((PyObject *)__pyx_int_0), ((PyObject *)Py_False)); if (unlikely(!__pyx_tuple__114)) __PYX_ERR(0, 1569, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__114);
   __Pyx_GIVEREF(__pyx_tuple__114);
 
-  /* "pyNTM/parallel_link_model.pyx":1615
+  /* "pyNTM/parallel_link_model.py":1615
  *         return G
  * 
  *     def _make_weighted_network_graph_routed_lsp(self, lsp, needed_bw=0):             # <<<<<<<<<<<<<<
@@ -50450,12 +50450,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__115 = PyTuple_Pack(15, __pyx_n_s_self, __pyx_n_s_lsp, __pyx_n_s_needed_bw, __pyx_n_s_lsp_path_interfaces, __pyx_n_s_eligible_interface_generator, __pyx_n_s_eligible_interfaces, __pyx_n_s_interface, __pyx_n_s_effective_reservable_bw, __pyx_n_s_edge_names, __pyx_n_s_G, __pyx_n_s_node_name_iterator, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__115)) __PYX_ERR(0, 1615, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__115);
   __Pyx_GIVEREF(__pyx_tuple__115);
-  __pyx_codeobj__116 = (PyObject*)__Pyx_PyCode_New(3, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__115, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_make_weighted_network_graph_rou, 1615, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__116)) __PYX_ERR(0, 1615, __pyx_L1_error)
+  __pyx_codeobj__116 = (PyObject*)__Pyx_PyCode_New(3, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__115, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_make_weighted_network_graph_rou, 1615, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__116)) __PYX_ERR(0, 1615, __pyx_L1_error)
   __pyx_tuple__117 = PyTuple_Pack(1, ((PyObject *)__pyx_int_0)); if (unlikely(!__pyx_tuple__117)) __PYX_ERR(0, 1615, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__117);
   __Pyx_GIVEREF(__pyx_tuple__117);
 
-  /* "pyNTM/parallel_link_model.pyx":1668
+  /* "pyNTM/parallel_link_model.py":1668
  * 
  *     @classmethod
  *     def load_model_file(cls, data_file):             # <<<<<<<<<<<<<<
@@ -50465,9 +50465,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__118 = PyTuple_Pack(27, __pyx_n_s_cls, __pyx_n_s_data_file, __pyx_n_s_interface_set, __pyx_n_s_node_set, __pyx_n_s_demand_set, __pyx_n_s_lsp_set, __pyx_n_s_f, __pyx_n_s_data, __pyx_n_s_lines, __pyx_n_s_int_info_begin_index, __pyx_n_s_int_info_end_index, __pyx_n_s_circuit_id_list, __pyx_n_s_line, __pyx_n_s_circuit_id_item, __pyx_n_s_bad_circuit_ids, __pyx_n_s_msg, __pyx_n_s_nodes_info_begin_index, __pyx_n_s_nodes_info_end_index, __pyx_n_s_node_lines, __pyx_n_s_node_line, __pyx_n_s_demands_info_begin_index, __pyx_n_s_demands_info_end_index, __pyx_n_s_demands_lines, __pyx_n_s_demand_line, __pyx_n_s_e, __pyx_n_s_err_msg, __pyx_n_s_item); if (unlikely(!__pyx_tuple__118)) __PYX_ERR(0, 1668, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__118);
   __Pyx_GIVEREF(__pyx_tuple__118);
-  __pyx_codeobj__119 = (PyObject*)__Pyx_PyCode_New(2, 0, 27, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__118, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_load_model_file, 1668, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__119)) __PYX_ERR(0, 1668, __pyx_L1_error)
+  __pyx_codeobj__119 = (PyObject*)__Pyx_PyCode_New(2, 0, 27, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__118, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_load_model_file, 1668, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__119)) __PYX_ERR(0, 1668, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1838
+  /* "pyNTM/parallel_link_model.py":1838
  * 
  *     @classmethod
  *     def _add_lsp_from_data(cls, demands_info_end_index, lines, lsp_set, node_set):  # TODO - same as model             # <<<<<<<<<<<<<<
@@ -50477,9 +50477,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__120 = PyTuple_Pack(19, __pyx_n_s_cls, __pyx_n_s_demands_info_end_index, __pyx_n_s_lines, __pyx_n_s_lsp_set, __pyx_n_s_node_set, __pyx_n_s_lsp_info_begin_index, __pyx_n_s_lsp_lines, __pyx_n_s_lsp_line, __pyx_n_s_lsp_info, __pyx_n_s_source, __pyx_n_s_source_node, __pyx_n_s_err_msg, __pyx_n_s_dest, __pyx_n_s_dest_node, __pyx_n_s_name, __pyx_n_s_configured_setup_bw, __pyx_n_s_new_lsp, __pyx_n_s_node, __pyx_n_s_lsp); if (unlikely(!__pyx_tuple__120)) __PYX_ERR(0, 1838, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__120);
   __Pyx_GIVEREF(__pyx_tuple__120);
-  __pyx_codeobj__121 = (PyObject*)__Pyx_PyCode_New(5, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__120, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_add_lsp_from_data, 1838, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__121)) __PYX_ERR(0, 1838, __pyx_L1_error)
+  __pyx_codeobj__121 = (PyObject*)__Pyx_PyCode_New(5, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__120, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_add_lsp_from_data, 1838, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__121)) __PYX_ERR(0, 1838, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1868
+  /* "pyNTM/parallel_link_model.py":1868
  * 
  *     @classmethod
  *     def _add_demand_from_data(cls, demand_line, demand_set, lines, node_set):  # same as Model call             # <<<<<<<<<<<<<<
@@ -50489,9 +50489,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__122 = PyTuple_Pack(17, __pyx_n_s_cls, __pyx_n_s_demand_line, __pyx_n_s_demand_set, __pyx_n_s_lines, __pyx_n_s_node_set, __pyx_n_s_demand_info, __pyx_n_s_source, __pyx_n_s_source_node, __pyx_n_s_err_msg, __pyx_n_s_dest, __pyx_n_s_dest_node, __pyx_n_s_traffic, __pyx_n_s_name, __pyx_n_s_demand_name, __pyx_n_s_new_demand, __pyx_n_s_node, __pyx_n_s_dmd); if (unlikely(!__pyx_tuple__122)) __PYX_ERR(0, 1868, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__122);
   __Pyx_GIVEREF(__pyx_tuple__122);
-  __pyx_codeobj__123 = (PyObject*)__Pyx_PyCode_New(5, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__122, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_add_demand_from_data, 1868, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__123)) __PYX_ERR(0, 1868, __pyx_L1_error)
+  __pyx_codeobj__123 = (PyObject*)__Pyx_PyCode_New(5, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__122, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_add_demand_from_data, 1868, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__123)) __PYX_ERR(0, 1868, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1897
+  /* "pyNTM/parallel_link_model.py":1897
  * 
  *     @classmethod
  *     def _add_node_from_data(cls, demand_set, interface_set, lines, lsp_set, node_line, node_set):             # <<<<<<<<<<<<<<
@@ -50501,9 +50501,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__124 = PyTuple_Pack(14, __pyx_n_s_cls, __pyx_n_s_demand_set, __pyx_n_s_interface_set, __pyx_n_s_lines, __pyx_n_s_lsp_set, __pyx_n_s_node_line, __pyx_n_s_node_set, __pyx_n_s_node_info, __pyx_n_s_node_name, __pyx_n_s_node_lat, __pyx_n_s_node_lon, __pyx_n_s_new_node, __pyx_n_s_existing_node, __pyx_n_s_node); if (unlikely(!__pyx_tuple__124)) __PYX_ERR(0, 1897, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__124);
   __Pyx_GIVEREF(__pyx_tuple__124);
-  __pyx_codeobj__125 = (PyObject*)__Pyx_PyCode_New(7, 0, 14, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__124, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_add_node_from_data, 1897, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__125)) __PYX_ERR(0, 1897, __pyx_L1_error)
+  __pyx_codeobj__125 = (PyObject*)__Pyx_PyCode_New(7, 0, 14, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__124, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_add_node_from_data, 1897, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__125)) __PYX_ERR(0, 1897, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1919
+  /* "pyNTM/parallel_link_model.py":1919
  * 
  *     @classmethod
  *     def _extract_interface_data_and_implied_nodes(cls, int_info_begin_index, int_info_end_index, lines):             # <<<<<<<<<<<<<<
@@ -50513,9 +50513,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__126 = PyTuple_Pack(21, __pyx_n_s_cls, __pyx_n_s_int_info_begin_index, __pyx_n_s_int_info_end_index, __pyx_n_s_lines, __pyx_n_s_interface_set, __pyx_n_s_node_set, __pyx_n_s_interface_lines, __pyx_n_s_interface_line, __pyx_n_s_node_name, __pyx_n_s_remote_node_name, __pyx_n_s_name, __pyx_n_s_cost, __pyx_n_s_capacity, __pyx_n_s_circuit_id, __pyx_n_s_rsvp_enabled_bool, __pyx_n_s_percent_reservable_bandwidth, __pyx_n_s_rsvp_enabled, __pyx_n_s_msg, __pyx_n_s_new_interface, __pyx_n_s_interface, __pyx_n_s_node); if (unlikely(!__pyx_tuple__126)) __PYX_ERR(0, 1919, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__126);
   __Pyx_GIVEREF(__pyx_tuple__126);
-  __pyx_codeobj__127 = (PyObject*)__Pyx_PyCode_New(4, 0, 21, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__126, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_extract_interface_data_and_impl, 1919, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__127)) __PYX_ERR(0, 1919, __pyx_L1_error)
+  __pyx_codeobj__127 = (PyObject*)__Pyx_PyCode_New(4, 0, 21, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__126, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_extract_interface_data_and_impl, 1919, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__127)) __PYX_ERR(0, 1919, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1978
+  /* "pyNTM/parallel_link_model.py":1978
  *         return interface_set, node_set
  * 
  *     def get_demand_objects_source_node(self, source_node_name):             # <<<<<<<<<<<<<<
@@ -50525,9 +50525,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__128 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_source_node_name, __pyx_n_s_demand_list, __pyx_n_s_demand, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__128)) __PYX_ERR(0, 1978, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__128);
   __Pyx_GIVEREF(__pyx_tuple__128);
-  __pyx_codeobj__129 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__128, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_demand_objects_source_node, 1978, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__129)) __PYX_ERR(0, 1978, __pyx_L1_error)
+  __pyx_codeobj__129 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__128, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_demand_objects_source_node, 1978, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__129)) __PYX_ERR(0, 1978, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":1990
+  /* "pyNTM/parallel_link_model.py":1990
  *         return demand_list
  * 
  *     def get_demand_objects_dest_node(self, dest_node_name):             # <<<<<<<<<<<<<<
@@ -50537,9 +50537,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__130 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_dest_node_name, __pyx_n_s_demand_list, __pyx_n_s_demand, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__130)) __PYX_ERR(0, 1990, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__130);
   __Pyx_GIVEREF(__pyx_tuple__130);
-  __pyx_codeobj__131 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__130, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_demand_objects_dest_node, 1990, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__131)) __PYX_ERR(0, 1990, __pyx_L1_error)
+  __pyx_codeobj__131 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__130, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_demand_objects_dest_node, 1990, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__131)) __PYX_ERR(0, 1990, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":2001
+  /* "pyNTM/parallel_link_model.py":2001
  * 
  *     # ### SRLG Calls ### #
  *     def get_srlg_object(self, srlg_name, raise_exception=True):             # <<<<<<<<<<<<<<
@@ -50549,12 +50549,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__132 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_srlg_name, __pyx_n_s_raise_exception, __pyx_n_s_srlg_already_in_model, __pyx_n_s_msg, __pyx_n_s_srlg); if (unlikely(!__pyx_tuple__132)) __PYX_ERR(0, 2001, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__132);
   __Pyx_GIVEREF(__pyx_tuple__132);
-  __pyx_codeobj__133 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__132, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_get_srlg_object, 2001, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__133)) __PYX_ERR(0, 2001, __pyx_L1_error)
+  __pyx_codeobj__133 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__132, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_get_srlg_object, 2001, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__133)) __PYX_ERR(0, 2001, __pyx_L1_error)
   __pyx_tuple__134 = PyTuple_Pack(1, ((PyObject *)Py_True)); if (unlikely(!__pyx_tuple__134)) __PYX_ERR(0, 2001, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__134);
   __Pyx_GIVEREF(__pyx_tuple__134);
 
-  /* "pyNTM/parallel_link_model.pyx":2021
+  /* "pyNTM/parallel_link_model.py":2021
  *                 return None
  * 
  *     def fail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -50564,9 +50564,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__135 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_srlg_name, __pyx_n_s_srlg_to_fail, __pyx_n_s_nodes_to_fail_iterator, __pyx_n_s_node, __pyx_n_s_interfaces_to_fail_iterator, __pyx_n_s_interface, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__135)) __PYX_ERR(0, 2021, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__135);
   __Pyx_GIVEREF(__pyx_tuple__135);
-  __pyx_codeobj__136 = (PyObject*)__Pyx_PyCode_New(2, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__135, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_fail_srlg, 2021, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__136)) __PYX_ERR(0, 2021, __pyx_L1_error)
+  __pyx_codeobj__136 = (PyObject*)__Pyx_PyCode_New(2, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__135, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_fail_srlg, 2021, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__136)) __PYX_ERR(0, 2021, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":2046
+  /* "pyNTM/parallel_link_model.py":2046
  *         srlg_to_fail.failed = True
  * 
  *     def unfail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -50576,9 +50576,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__137 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_srlg_name, __pyx_n_s_srlg_to_unfail, __pyx_n_s_nodes_to_unfail_iterator, __pyx_n_s_node, __pyx_n_s_interfaces_to_unfail_iterator, __pyx_n_s_interface, __pyx_n_s_genexpr, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__137)) __PYX_ERR(0, 2046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__137);
   __Pyx_GIVEREF(__pyx_tuple__137);
-  __pyx_codeobj__138 = (PyObject*)__Pyx_PyCode_New(2, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__137, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_unfail_srlg, 2046, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__138)) __PYX_ERR(0, 2046, __pyx_L1_error)
+  __pyx_codeobj__138 = (PyObject*)__Pyx_PyCode_New(2, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__137, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_unfail_srlg, 2046, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__138)) __PYX_ERR(0, 2046, __pyx_L1_error)
 
-  /* "pyNTM/parallel_link_model.pyx":2082
+  /* "pyNTM/parallel_link_model.py":2082
  *                 pass
  * 
  *     def add_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -50588,7 +50588,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__139 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_srlg_name, __pyx_n_s_srlg); if (unlikely(!__pyx_tuple__139)) __PYX_ERR(0, 2082, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__139);
   __Pyx_GIVEREF(__pyx_tuple__139);
-  __pyx_codeobj__140 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__139, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_parallel_link_model_pyx, __pyx_n_s_add_srlg, 2082, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__140)) __PYX_ERR(0, 2082, __pyx_L1_error)
+  __pyx_codeobj__140 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__139, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_parallel_link_model_py, __pyx_n_s_add_srlg, 2082, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__140)) __PYX_ERR(0, 2082, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -51426,7 +51426,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "pyNTM/parallel_link_model.pyx":10
+  /* "pyNTM/parallel_link_model.py":10
  * """
  * 
  * from pprint import pprint             # <<<<<<<<<<<<<<
@@ -51447,7 +51447,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":12
+  /* "pyNTM/parallel_link_model.py":12
  * from pprint import pprint
  * 
  * import itertools             # <<<<<<<<<<<<<<
@@ -51459,7 +51459,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_itertools, __pyx_t_2) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":13
+  /* "pyNTM/parallel_link_model.py":13
  * 
  * import itertools
  * import networkx as nx             # <<<<<<<<<<<<<<
@@ -51471,7 +51471,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_nx, __pyx_t_2) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":15
+  /* "pyNTM/parallel_link_model.py":15
  * import networkx as nx
  * 
  * from .circuit import Circuit             # <<<<<<<<<<<<<<
@@ -51492,7 +51492,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":16
+  /* "pyNTM/parallel_link_model.py":16
  * 
  * from .circuit import Circuit
  * from .demand import Demand             # <<<<<<<<<<<<<<
@@ -51513,7 +51513,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":17
+  /* "pyNTM/parallel_link_model.py":17
  * from .circuit import Circuit
  * from .demand import Demand
  * from .interface import Interface             # <<<<<<<<<<<<<<
@@ -51534,7 +51534,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":18
+  /* "pyNTM/parallel_link_model.py":18
  * from .demand import Demand
  * from .interface import Interface
  * from .exceptions import ModelException             # <<<<<<<<<<<<<<
@@ -51555,7 +51555,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":19
+  /* "pyNTM/parallel_link_model.py":19
  * from .interface import Interface
  * from .exceptions import ModelException
  * from .utilities import find_end_index             # <<<<<<<<<<<<<<
@@ -51576,7 +51576,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":20
+  /* "pyNTM/parallel_link_model.py":20
  * from .exceptions import ModelException
  * from .utilities import find_end_index
  * from .node import Node             # <<<<<<<<<<<<<<
@@ -51597,7 +51597,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":21
+  /* "pyNTM/parallel_link_model.py":21
  * from .utilities import find_end_index
  * from .node import Node
  * from .rsvp import RSVP_LSP             # <<<<<<<<<<<<<<
@@ -51618,7 +51618,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":22
+  /* "pyNTM/parallel_link_model.py":22
  * from .node import Node
  * from .rsvp import RSVP_LSP
  * from .srlg import SRLG             # <<<<<<<<<<<<<<
@@ -51639,7 +51639,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":32
+  /* "pyNTM/parallel_link_model.py":32
  * 
  * 
  * class Parallel_Link_Model(object):             # <<<<<<<<<<<<<<
@@ -51651,7 +51651,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_1 = __Pyx_Py3MetaclassPrepare(__pyx_t_2, __pyx_tuple__4, __pyx_n_s_Parallel_Link_Model, __pyx_n_s_Parallel_Link_Model, (PyObject *) NULL, __pyx_n_s_pyNTM_parallel_link_model, __pyx_kp_s_A_network_model_object_consistin); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 32, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "pyNTM/parallel_link_model.pyx":57
+  /* "pyNTM/parallel_link_model.py":57
  *     """
  * 
  *     def __init__(self, interface_objects=set(), node_objects=set(),             # <<<<<<<<<<<<<<
@@ -51685,7 +51685,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":67
+  /* "pyNTM/parallel_link_model.py":67
  *         self._parallel_lsp_groups = {}
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -51697,7 +51697,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_repr, __pyx_t_3) < 0) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":74
+  /* "pyNTM/parallel_link_model.py":74
  *                                                 len(self.rsvp_lsp_objects))
  * 
  *     def add_network_interfaces_from_list(self, network_interfaces):             # <<<<<<<<<<<<<<
@@ -51709,7 +51709,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_add_network_interfaces_from_list, __pyx_t_3) < 0) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":95
+  /* "pyNTM/parallel_link_model.py":95
  *         self.validate_model()
  * 
  *     def _make_int_info_dict(self):             # <<<<<<<<<<<<<<
@@ -51721,7 +51721,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_make_int_info_dict, __pyx_t_3) < 0) __PYX_ERR(0, 95, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":112
+  /* "pyNTM/parallel_link_model.py":112
  *         return int_info
  * 
  *     def validate_model(self):             # <<<<<<<<<<<<<<
@@ -51733,7 +51733,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_validate_model, __pyx_t_3) < 0) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":197
+  /* "pyNTM/parallel_link_model.py":197
  *             return self
  * 
  *     def _validate_circuit_interface_capacity(self, circuits_with_mismatched_interface_capacity, ckt):             # <<<<<<<<<<<<<<
@@ -51745,7 +51745,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_validate_circuit_interface_capa, __pyx_t_3) < 0) __PYX_ERR(0, 197, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":215
+  /* "pyNTM/parallel_link_model.py":215
  *             circuits_with_mismatched_interface_capacity.append(ckt)
  * 
  *     def _reserved_bw_error_checks(self, int_info, int_res_bw_sum_error, int_res_bw_too_high, interface):             # <<<<<<<<<<<<<<
@@ -51757,7 +51757,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_reserved_bw_error_checks, __pyx_t_3) < 0) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":247
+  /* "pyNTM/parallel_link_model.py":247
  *             int_res_bw_sum_error.add((interface, interface.reserved_bandwidth, tuple(interface.lsps(self))))
  * 
  *     def _demand_traffic_per_int(self, demand):  # common between model and parallel_link_model             # <<<<<<<<<<<<<<
@@ -51769,7 +51769,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_demand_traffic_per_int, __pyx_t_3) < 0) __PYX_ERR(0, 247, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":395
+  /* "pyNTM/parallel_link_model.py":395
  *         return traff_per_int
  * 
  *     def _update_interface_utilization(self):  # common between model and parallel_link_model             # <<<<<<<<<<<<<<
@@ -51781,7 +51781,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_update_interface_utilization, __pyx_t_3) < 0) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":461
+  /* "pyNTM/parallel_link_model.py":461
  *         return self
  * 
  *     def _route_demands(self, demands, input_model):             # <<<<<<<<<<<<<<
@@ -51793,7 +51793,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_route_demands, __pyx_t_3) < 0) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":473
+  /* "pyNTM/parallel_link_model.py":473
  *         return self._update_interface_utilization()
  * 
  *     def _route_lsps(self, input_model):             # <<<<<<<<<<<<<<
@@ -51805,7 +51805,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_route_lsps, __pyx_t_3) < 0) __PYX_ERR(0, 473, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":529
+  /* "pyNTM/parallel_link_model.py":529
  *         return self
  * 
  *     def _optimize_parallel_lsp_group_res_bw(self, input_model, routed_lsps_in_group, traffic_in_demand_group):             # <<<<<<<<<<<<<<
@@ -51817,7 +51817,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_optimize_parallel_lsp_group_res, __pyx_t_3) < 0) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":573
+  /* "pyNTM/parallel_link_model.py":573
  *                     interface.reserved_bandwidth += lsp.reserved_bandwidth
  * 
  *     def parallel_lsp_groups(self):             # <<<<<<<<<<<<<<
@@ -51829,7 +51829,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_parallel_lsp_groups_2, __pyx_t_3) < 0) __PYX_ERR(0, 573, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":604
+  /* "pyNTM/parallel_link_model.py":604
  *             return self._parallel_lsp_groups
  * 
  *     def parallel_demand_groups(self):             # <<<<<<<<<<<<<<
@@ -51841,7 +51841,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_parallel_demand_groups, __pyx_t_3) < 0) __PYX_ERR(0, 604, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":630
+  /* "pyNTM/parallel_link_model.py":630
  *         return parallel_demand_groups
  * 
  *     def update_simulation(self):             # <<<<<<<<<<<<<<
@@ -51853,7 +51853,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_update_simulation, __pyx_t_3) < 0) __PYX_ERR(0, 630, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":684
+  /* "pyNTM/parallel_link_model.py":684
  *         self.validate_model()
  * 
  *     def _unique_interface_per_node(self):             # <<<<<<<<<<<<<<
@@ -51865,7 +51865,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_unique_interface_per_node, __pyx_t_3) < 0) __PYX_ERR(0, 684, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":711
+  /* "pyNTM/parallel_link_model.py":711
  *             return True
  * 
  *     def _make_circuits_multidigraph(self, return_exception=True, include_failed_circuits=True):             # <<<<<<<<<<<<<<
@@ -51878,7 +51878,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_make_circuits_multidigraph, __pyx_t_3) < 0) __PYX_ERR(0, 711, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":779
+  /* "pyNTM/parallel_link_model.py":779
  *         self.circuit_objects = circuits
  * 
  *     def get_interface_object_from_nodes(self, local_node_name, remote_node_name, circuit_id=None):             # <<<<<<<<<<<<<<
@@ -51891,7 +51891,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_interface_object_from_nodes, __pyx_t_3) < 0) __PYX_ERR(0, 779, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":819
+  /* "pyNTM/parallel_link_model.py":819
  * 
  *     @property
  *     def all_interface_circuit_ids(self):             # <<<<<<<<<<<<<<
@@ -51901,7 +51901,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_19parallel_link_model_19Parallel_Link_Model_37all_interface_circuit_ids, 0, __pyx_n_s_Parallel_Link_Model_all_interfac_2, NULL, __pyx_n_s_pyNTM_parallel_link_model, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 819, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/parallel_link_model.pyx":818
+  /* "pyNTM/parallel_link_model.py":818
  *         return interface_list
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -51914,7 +51914,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_all_interface_circuit_ids, __pyx_t_4) < 0) __PYX_ERR(0, 819, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":825
+  /* "pyNTM/parallel_link_model.py":825
  *         return set(interface.circuit_id for interface in self.interface_objects)
  * 
  *     def add_circuit(self, node_a_object, node_b_object, node_a_interface_name,             # <<<<<<<<<<<<<<
@@ -51927,7 +51927,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_add_circuit, __pyx_t_4) < 0) __PYX_ERR(0, 825, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":872
+  /* "pyNTM/parallel_link_model.py":872
  *         self.validate_model()
  * 
  *     def is_node_an_orphan(self, node_object):             # <<<<<<<<<<<<<<
@@ -51939,7 +51939,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_is_node_an_orphan, __pyx_t_4) < 0) __PYX_ERR(0, 872, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":879
+  /* "pyNTM/parallel_link_model.py":879
  *             return False
  * 
  *     def get_orphan_node_objects(self):             # <<<<<<<<<<<<<<
@@ -51951,7 +51951,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_orphan_node_objects, __pyx_t_4) < 0) __PYX_ERR(0, 879, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":887
+  /* "pyNTM/parallel_link_model.py":887
  *         return orphan_nodes
  * 
  *     def add_node(self, node_object):             # <<<<<<<<<<<<<<
@@ -51963,7 +51963,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_add_node, __pyx_t_4) < 0) __PYX_ERR(0, 887, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":900
+  /* "pyNTM/parallel_link_model.py":900
  *         self.validate_model()
  * 
  *     def get_node_object(self, node_name):             # <<<<<<<<<<<<<<
@@ -51975,7 +51975,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_node_object, __pyx_t_4) < 0) __PYX_ERR(0, 900, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":912
+  /* "pyNTM/parallel_link_model.py":912
  *             raise ModelException(message)
  * 
  *     def _make_network_interfaces(self, interface_info_list):             # <<<<<<<<<<<<<<
@@ -51987,7 +51987,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_make_network_interfaces, __pyx_t_4) < 0) __PYX_ERR(0, 912, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":941
+  /* "pyNTM/parallel_link_model.py":941
  *         return (network_interface_objects, network_node_objects)
  * 
  *     def add_demand(self, source_node_name, dest_node_name, traffic=0, name='none'):             # <<<<<<<<<<<<<<
@@ -52000,7 +52000,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_add_demand, __pyx_t_4) < 0) __PYX_ERR(0, 941, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":961
+  /* "pyNTM/parallel_link_model.py":961
  *         self.validate_model()
  * 
  *     def add_rsvp_lsp(self, source_node_name, dest_node_name, name):             # <<<<<<<<<<<<<<
@@ -52012,7 +52012,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_add_rsvp_lsp, __pyx_t_4) < 0) __PYX_ERR(0, 961, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":982
+  /* "pyNTM/parallel_link_model.py":982
  *         self.validate_model()
  * 
  *     def get_demand_object(self, source_node_name, dest_node_name, demand_name='none'):             # <<<<<<<<<<<<<<
@@ -52025,7 +52025,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_demand_object, __pyx_t_4) < 0) __PYX_ERR(0, 982, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1001
+  /* "pyNTM/parallel_link_model.py":1001
  *             raise ModelException('no matching demand')
  * 
  *     def get_rsvp_lsp(self, source_node_name, dest_node_name, lsp_name='none'):             # <<<<<<<<<<<<<<
@@ -52038,7 +52038,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_rsvp_lsp, __pyx_t_4) < 0) __PYX_ERR(0, 1001, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1024
+  /* "pyNTM/parallel_link_model.py":1024
  * 
  *     # Interface calls
  *     def get_interface_object(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -52050,7 +52050,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_interface_object, __pyx_t_4) < 0) __PYX_ERR(0, 1024, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1034
+  /* "pyNTM/parallel_link_model.py":1034
  *         return int_object[0]
  * 
  *     def _does_interface_exist(self, interface_name, node_object_name):             # <<<<<<<<<<<<<<
@@ -52062,7 +52062,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_does_interface_exist, __pyx_t_4) < 0) __PYX_ERR(0, 1034, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1042
+  /* "pyNTM/parallel_link_model.py":1042
  *             raise ModelException('specified interface does not exist')
  * 
  *     def get_circuit_object_from_interface(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -52074,7 +52074,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_circuit_object_from_interfac, __pyx_t_4) < 0) __PYX_ERR(0, 1042, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1057
+  /* "pyNTM/parallel_link_model.py":1057
  * 
  *     # Convenience calls #####
  *     def get_failed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -52086,7 +52086,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_failed_interface_objects, __pyx_t_4) < 0) __PYX_ERR(0, 1057, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1069
+  /* "pyNTM/parallel_link_model.py":1069
  *         return failed_interfaces
  * 
  *     def get_unfailed_interface_objects(self):             # <<<<<<<<<<<<<<
@@ -52098,7 +52098,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_unfailed_interface_objects, __pyx_t_4) < 0) __PYX_ERR(0, 1069, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1084
+  /* "pyNTM/parallel_link_model.py":1084
  *         return unfailed_interface_objects
  * 
  *     def get_unrouted_demand_objects(self):             # <<<<<<<<<<<<<<
@@ -52110,7 +52110,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_unrouted_demand_objects, __pyx_t_4) < 0) __PYX_ERR(0, 1084, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1095
+  /* "pyNTM/parallel_link_model.py":1095
  *         return unrouted_demands
  * 
  *     def change_interface_name(self, node_name,             # <<<<<<<<<<<<<<
@@ -52122,7 +52122,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_change_interface_name, __pyx_t_4) < 0) __PYX_ERR(0, 1095, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1104
+  /* "pyNTM/parallel_link_model.py":1104
  *         return interface_to_edit
  * 
  *     def fail_interface(self, interface_name, node_name):             # <<<<<<<<<<<<<<
@@ -52134,7 +52134,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_fail_interface, __pyx_t_4) < 0) __PYX_ERR(0, 1104, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1120
+  /* "pyNTM/parallel_link_model.py":1120
  *         interface_object.failed = True
  * 
  *     def unfail_interface(self, interface_name, node_name, raise_exception=False):             # <<<<<<<<<<<<<<
@@ -52147,7 +52147,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_unfail_interface, __pyx_t_4) < 0) __PYX_ERR(0, 1120, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1164
+  /* "pyNTM/parallel_link_model.py":1164
  *                 raise ModelException(message)
  * 
  *     def get_all_paths_reservable_bw(self, source_node_name, dest_node_name, include_failed_circuits=True,             # <<<<<<<<<<<<<<
@@ -52160,7 +52160,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_all_paths_reservable_bw, __pyx_t_4) < 0) __PYX_ERR(0, 1164, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1211
+  /* "pyNTM/parallel_link_model.py":1211
  *         return {'path': path_info}
  * 
  *     def get_shortest_path(self, source_node_name, dest_node_name, needed_bw=0):             # <<<<<<<<<<<<<<
@@ -52173,7 +52173,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_shortest_path, __pyx_t_4) < 0) __PYX_ERR(0, 1211, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1252
+  /* "pyNTM/parallel_link_model.py":1252
  *         return {'cost': converted_path['cost'], 'path': path_info}
  * 
  *     def get_shortest_path_for_routed_lsp(self, source_node_name, dest_node_name, lsp, needed_bw):             # <<<<<<<<<<<<<<
@@ -52185,7 +52185,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_shortest_path_for_routed_lsp, __pyx_t_4) < 0) __PYX_ERR(0, 1252, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1291
+  /* "pyNTM/parallel_link_model.py":1291
  *         return {'cost': converted_path['cost'], 'path': path_info}
  * 
  *     def _normalize_multidigraph_paths(self, path_info):             # <<<<<<<<<<<<<<
@@ -52197,7 +52197,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_normalize_multidigraph_paths, __pyx_t_4) < 0) __PYX_ERR(0, 1291, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1349
+  /* "pyNTM/parallel_link_model.py":1349
  *         return path_list
  * 
  *     def _convert_nx_path_to_model_path(self, nx_graph_path, needed_bw):             # <<<<<<<<<<<<<<
@@ -52209,7 +52209,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_convert_nx_path_to_model_path, __pyx_t_4) < 0) __PYX_ERR(0, 1349, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1389
+  /* "pyNTM/parallel_link_model.py":1389
  *         return model_path
  * 
  *     def _convert_nx_path_to_model_path_routed_lsp(self, nx_graph_path, needed_bw, lsp):             # <<<<<<<<<<<<<<
@@ -52221,7 +52221,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_convert_nx_path_to_model_path_r, __pyx_t_4) < 0) __PYX_ERR(0, 1389, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1446
+  /* "pyNTM/parallel_link_model.py":1446
  * 
  *     # NODE CALLS ######
  *     def get_node_interfaces(self, node_name):             # <<<<<<<<<<<<<<
@@ -52233,7 +52233,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_node_interfaces, __pyx_t_4) < 0) __PYX_ERR(0, 1446, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1450
+  /* "pyNTM/parallel_link_model.py":1450
  *         return Node(node_name).interfaces(self)
  * 
  *     def fail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -52245,7 +52245,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_fail_node, __pyx_t_4) < 0) __PYX_ERR(0, 1450, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1463
+  /* "pyNTM/parallel_link_model.py":1463
  *         self.get_node_object(node_name).failed = True
  * 
  *     def unfail_node(self, node_name):             # <<<<<<<<<<<<<<
@@ -52257,7 +52257,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_unfail_node, __pyx_t_4) < 0) __PYX_ERR(0, 1463, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1484
+  /* "pyNTM/parallel_link_model.py":1484
  *                                       remote_int.node_object.name, False)
  * 
  *     def get_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -52269,7 +52269,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_failed_node_objects, __pyx_t_4) < 0) __PYX_ERR(0, 1484, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1497
+  /* "pyNTM/parallel_link_model.py":1497
  *         return failed_nodes
  * 
  *     def get_non_failed_node_objects(self):             # <<<<<<<<<<<<<<
@@ -52281,7 +52281,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_non_failed_node_objects, __pyx_t_4) < 0) __PYX_ERR(0, 1497, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1569
+  /* "pyNTM/parallel_link_model.py":1569
  *     #         print()
  * 
  *     def _make_weighted_network_graph(self, include_failed_circuits=True, needed_bw=0, rsvp_required=False):             # <<<<<<<<<<<<<<
@@ -52294,7 +52294,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_make_weighted_network_graph, __pyx_t_4) < 0) __PYX_ERR(0, 1569, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1615
+  /* "pyNTM/parallel_link_model.py":1615
  *         return G
  * 
  *     def _make_weighted_network_graph_routed_lsp(self, lsp, needed_bw=0):             # <<<<<<<<<<<<<<
@@ -52307,7 +52307,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_make_weighted_network_graph_rou, __pyx_t_4) < 0) __PYX_ERR(0, 1615, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1668
+  /* "pyNTM/parallel_link_model.py":1668
  * 
  *     @classmethod
  *     def load_model_file(cls, data_file):             # <<<<<<<<<<<<<<
@@ -52317,7 +52317,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_19parallel_link_model_19Parallel_Link_Model_103load_model_file, __Pyx_CYFUNCTION_CLASSMETHOD, __pyx_n_s_Parallel_Link_Model_load_model_f, NULL, __pyx_n_s_pyNTM_parallel_link_model, __pyx_d, ((PyObject *)__pyx_codeobj__119)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1668, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/parallel_link_model.pyx":1667
+  /* "pyNTM/parallel_link_model.py":1667
  *         return G
  * 
  *     @classmethod             # <<<<<<<<<<<<<<
@@ -52330,7 +52330,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_load_model_file, __pyx_t_3) < 0) __PYX_ERR(0, 1668, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1838
+  /* "pyNTM/parallel_link_model.py":1838
  * 
  *     @classmethod
  *     def _add_lsp_from_data(cls, demands_info_end_index, lines, lsp_set, node_set):  # TODO - same as model             # <<<<<<<<<<<<<<
@@ -52340,7 +52340,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_19parallel_link_model_19Parallel_Link_Model_105_add_lsp_from_data, __Pyx_CYFUNCTION_CLASSMETHOD, __pyx_n_s_Parallel_Link_Model__add_lsp_fro, NULL, __pyx_n_s_pyNTM_parallel_link_model, __pyx_d, ((PyObject *)__pyx_codeobj__121)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1838, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/parallel_link_model.pyx":1837
+  /* "pyNTM/parallel_link_model.py":1837
  *         return cls(interface_set, node_set, demand_set, lsp_set)
  * 
  *     @classmethod             # <<<<<<<<<<<<<<
@@ -52353,7 +52353,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_add_lsp_from_data, __pyx_t_4) < 0) __PYX_ERR(0, 1838, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1868
+  /* "pyNTM/parallel_link_model.py":1868
  * 
  *     @classmethod
  *     def _add_demand_from_data(cls, demand_line, demand_set, lines, node_set):  # same as Model call             # <<<<<<<<<<<<<<
@@ -52363,7 +52363,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_19parallel_link_model_19Parallel_Link_Model_107_add_demand_from_data, __Pyx_CYFUNCTION_CLASSMETHOD, __pyx_n_s_Parallel_Link_Model__add_demand, NULL, __pyx_n_s_pyNTM_parallel_link_model, __pyx_d, ((PyObject *)__pyx_codeobj__123)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1868, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/parallel_link_model.pyx":1867
+  /* "pyNTM/parallel_link_model.py":1867
  *                 print("{} already exists in model; disregarding line {}".format(new_lsp, lines.index(lsp_line)))
  * 
  *     @classmethod             # <<<<<<<<<<<<<<
@@ -52376,7 +52376,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_add_demand_from_data, __pyx_t_3) < 0) __PYX_ERR(0, 1868, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1897
+  /* "pyNTM/parallel_link_model.py":1897
  * 
  *     @classmethod
  *     def _add_node_from_data(cls, demand_set, interface_set, lines, lsp_set, node_line, node_set):             # <<<<<<<<<<<<<<
@@ -52386,7 +52386,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_19parallel_link_model_19Parallel_Link_Model_109_add_node_from_data, __Pyx_CYFUNCTION_CLASSMETHOD, __pyx_n_s_Parallel_Link_Model__add_node_fr, NULL, __pyx_n_s_pyNTM_parallel_link_model, __pyx_d, ((PyObject *)__pyx_codeobj__125)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1897, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/parallel_link_model.pyx":1896
+  /* "pyNTM/parallel_link_model.py":1896
  *                                                                             lines.index(demand_line)))
  * 
  *     @classmethod             # <<<<<<<<<<<<<<
@@ -52399,7 +52399,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_add_node_from_data, __pyx_t_4) < 0) __PYX_ERR(0, 1897, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1919
+  /* "pyNTM/parallel_link_model.py":1919
  * 
  *     @classmethod
  *     def _extract_interface_data_and_implied_nodes(cls, int_info_begin_index, int_info_end_index, lines):             # <<<<<<<<<<<<<<
@@ -52409,7 +52409,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_19parallel_link_model_19Parallel_Link_Model_111_extract_interface_data_and_implied_nodes, __Pyx_CYFUNCTION_CLASSMETHOD, __pyx_n_s_Parallel_Link_Model__extract_int, NULL, __pyx_n_s_pyNTM_parallel_link_model, __pyx_d, ((PyObject *)__pyx_codeobj__127)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1919, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/parallel_link_model.pyx":1918
+  /* "pyNTM/parallel_link_model.py":1918
  *             existing_node.lon = node_lon
  * 
  *     @classmethod             # <<<<<<<<<<<<<<
@@ -52422,7 +52422,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_extract_interface_data_and_impl, __pyx_t_3) < 0) __PYX_ERR(0, 1919, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1978
+  /* "pyNTM/parallel_link_model.py":1978
  *         return interface_set, node_set
  * 
  *     def get_demand_objects_source_node(self, source_node_name):             # <<<<<<<<<<<<<<
@@ -52434,7 +52434,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_demand_objects_source_node, __pyx_t_3) < 0) __PYX_ERR(0, 1978, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1990
+  /* "pyNTM/parallel_link_model.py":1990
  *         return demand_list
  * 
  *     def get_demand_objects_dest_node(self, dest_node_name):             # <<<<<<<<<<<<<<
@@ -52446,7 +52446,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_demand_objects_dest_node, __pyx_t_3) < 0) __PYX_ERR(0, 1990, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2001
+  /* "pyNTM/parallel_link_model.py":2001
  * 
  *     # ### SRLG Calls ### #
  *     def get_srlg_object(self, srlg_name, raise_exception=True):             # <<<<<<<<<<<<<<
@@ -52459,7 +52459,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_get_srlg_object, __pyx_t_3) < 0) __PYX_ERR(0, 2001, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2021
+  /* "pyNTM/parallel_link_model.py":2021
  *                 return None
  * 
  *     def fail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -52471,7 +52471,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_fail_srlg, __pyx_t_3) < 0) __PYX_ERR(0, 2021, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2046
+  /* "pyNTM/parallel_link_model.py":2046
  *         srlg_to_fail.failed = True
  * 
  *     def unfail_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -52483,7 +52483,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_unfail_srlg, __pyx_t_3) < 0) __PYX_ERR(0, 2046, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":2082
+  /* "pyNTM/parallel_link_model.py":2082
  *                 pass
  * 
  *     def add_srlg(self, srlg_name):             # <<<<<<<<<<<<<<
@@ -52495,7 +52495,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_1, __pyx_n_s_add_srlg, __pyx_t_3) < 0) __PYX_ERR(0, 2082, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":32
+  /* "pyNTM/parallel_link_model.py":32
  * 
  * 
  * class Parallel_Link_Model(object):             # <<<<<<<<<<<<<<
@@ -52509,7 +52509,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/parallel_link_model.pyx":1
+  /* "pyNTM/parallel_link_model.py":1
  * """BETA - This model type allows multiple links/parallel links between 2 nodes.             # <<<<<<<<<<<<<<
  * 
  * There may be a performance impact in this model variant.

@@ -5,7 +5,7 @@
     "distutils": {
         "name": "pyNTM.node",
         "sources": [
-            "node.pyx"
+            "pyNTM/node.py"
         ]
     },
     "module_name": "pyNTM.node"
@@ -813,14 +813,14 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "node.pyx",
+  "pyNTM/node.py",
 };
 
 /*--- Type declarations ---*/
 struct __pyx_obj_5pyNTM_4node___pyx_scope_struct__interfaces;
 struct __pyx_obj_5pyNTM_4node___pyx_scope_struct_1_genexpr;
 
-/* "pyNTM/node.pyx":99
+/* "pyNTM/node.py":99
  *             raise ValueError("lon attribute must be integer or float.")
  * 
  *     def interfaces(self, model):             # <<<<<<<<<<<<<<
@@ -833,7 +833,7 @@ struct __pyx_obj_5pyNTM_4node___pyx_scope_struct__interfaces {
 };
 
 
-/* "pyNTM/node.pyx":108
+/* "pyNTM/node.py":108
  *         adjacency_list = []
  * 
  *         interface_iterator = (interface for interface in model.interface_objects)             # <<<<<<<<<<<<<<
@@ -1432,7 +1432,6 @@ static const char __pyx_k_Node_lon[] = "Node.lon";
 static const char __pyx_k_failed_2[] = "failed";
 static const char __pyx_k_get_srlg[] = "get_srlg";
 static const char __pyx_k_new_srlg[] = "new_srlg";
-static const char __pyx_k_node_pyx[] = "node.pyx";
 static const char __pyx_k_property[] = "property";
 static const char __pyx_k_qualname[] = "__qualname__";
 static const char __pyx_k_Node___eq[] = "Node.__eq__";
@@ -1457,6 +1456,7 @@ static const char __pyx_k_node_object[] = "node_object";
 static const char __pyx_k_failed_srlgs[] = "failed_srlgs";
 static const char __pyx_k_node_objects[] = "node_objects";
 static const char __pyx_k_srlg_objects[] = "srlg_objects";
+static const char __pyx_k_pyNTM_node_py[] = "pyNTM/node.py";
 static const char __pyx_k_ModelException[] = "ModelException";
 static const char __pyx_k_adjacency_list[] = "adjacency_list";
 static const char __pyx_k_adjacent_nodes[] = "adjacent_nodes";
@@ -1551,12 +1551,12 @@ static PyObject *__pyx_n_s_name_2;
 static PyObject *__pyx_n_s_new_srlg;
 static PyObject *__pyx_n_s_node_object;
 static PyObject *__pyx_n_s_node_objects;
-static PyObject *__pyx_kp_s_node_pyx;
 static PyObject *__pyx_n_s_object;
 static PyObject *__pyx_n_s_other_node;
 static PyObject *__pyx_n_s_prepare;
 static PyObject *__pyx_n_s_property;
 static PyObject *__pyx_n_s_pyNTM_node;
+static PyObject *__pyx_kp_s_pyNTM_node_py;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_remote_node_object;
 static PyObject *__pyx_n_s_remove;
@@ -1634,7 +1634,7 @@ static PyObject *__pyx_codeobj__37;
 static PyObject *__pyx_codeobj__39;
 /* Late includes */
 
-/* "pyNTM/node.pyx":16
+/* "pyNTM/node.py":16
  *     """
  * 
  *     def __init__(self, name, lat=0, lon=0):             # <<<<<<<<<<<<<<
@@ -1741,7 +1741,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
   int __pyx_t_4;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "pyNTM/node.pyx":17
+  /* "pyNTM/node.py":17
  * 
  *     def __init__(self, name, lat=0, lon=0):
  *         self.name = name             # <<<<<<<<<<<<<<
@@ -1750,7 +1750,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_name, __pyx_v_name) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":18
+  /* "pyNTM/node.py":18
  *     def __init__(self, name, lat=0, lon=0):
  *         self.name = name
  *         self._failed = False             # <<<<<<<<<<<<<<
@@ -1759,7 +1759,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed, Py_False) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":19
+  /* "pyNTM/node.py":19
  *         self.name = name
  *         self._failed = False
  *         self._lat = lat             # <<<<<<<<<<<<<<
@@ -1768,7 +1768,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lat_2, __pyx_v_lat) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":20
+  /* "pyNTM/node.py":20
  *         self._failed = False
  *         self._lat = lat
  *         self._lon = lon             # <<<<<<<<<<<<<<
@@ -1777,7 +1777,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lon_2, __pyx_v_lon) < 0) __PYX_ERR(0, 20, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":21
+  /* "pyNTM/node.py":21
  *         self._lat = lat
  *         self._lon = lon
  *         self._srlgs = set()             # <<<<<<<<<<<<<<
@@ -1789,7 +1789,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_srlgs, __pyx_t_1) < 0) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/node.pyx":24
+  /* "pyNTM/node.py":24
  * 
  *         # Validate lat, lon values
  *         if not(isinstance(lat, float)) and not(isinstance(lat, int)):             # <<<<<<<<<<<<<<
@@ -1809,7 +1809,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
   __pyx_L4_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
-    /* "pyNTM/node.pyx":25
+    /* "pyNTM/node.py":25
  *         # Validate lat, lon values
  *         if not(isinstance(lat, float)) and not(isinstance(lat, int)):
  *             raise ValueError('lat must be a float value')             # <<<<<<<<<<<<<<
@@ -1822,7 +1822,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __PYX_ERR(0, 25, __pyx_L1_error)
 
-    /* "pyNTM/node.pyx":24
+    /* "pyNTM/node.py":24
  * 
  *         # Validate lat, lon values
  *         if not(isinstance(lat, float)) and not(isinstance(lat, int)):             # <<<<<<<<<<<<<<
@@ -1831,7 +1831,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "pyNTM/node.pyx":26
+  /* "pyNTM/node.py":26
  *         if not(isinstance(lat, float)) and not(isinstance(lat, int)):
  *             raise ValueError('lat must be a float value')
  *         if not(isinstance(lon, float)) and not(isinstance(lon, int)):             # <<<<<<<<<<<<<<
@@ -1851,7 +1851,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
   __pyx_L7_bool_binop_done:;
   if (unlikely(__pyx_t_2)) {
 
-    /* "pyNTM/node.pyx":27
+    /* "pyNTM/node.py":27
  *             raise ValueError('lat must be a float value')
  *         if not(isinstance(lon, float)) and not(isinstance(lon, int)):
  *             raise ValueError('lon must be a float value')             # <<<<<<<<<<<<<<
@@ -1864,7 +1864,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __PYX_ERR(0, 27, __pyx_L1_error)
 
-    /* "pyNTM/node.pyx":26
+    /* "pyNTM/node.py":26
  *         if not(isinstance(lat, float)) and not(isinstance(lat, int)):
  *             raise ValueError('lat must be a float value')
  *         if not(isinstance(lon, float)) and not(isinstance(lon, int)):             # <<<<<<<<<<<<<<
@@ -1873,7 +1873,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "pyNTM/node.pyx":16
+  /* "pyNTM/node.py":16
  *     """
  * 
  *     def __init__(self, name, lat=0, lon=0):             # <<<<<<<<<<<<<<
@@ -1894,7 +1894,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node___init__(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":29
+/* "pyNTM/node.py":29
  *             raise ValueError('lon must be a float value')
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -1923,7 +1923,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_2__repr__(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "pyNTM/node.pyx":30
+  /* "pyNTM/node.py":30
  * 
  *     def __repr__(self):
  *         return 'Node(%r)' % self.name             # <<<<<<<<<<<<<<
@@ -1940,7 +1940,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_2__repr__(CYTHON_UNUSED PyObject *_
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/node.pyx":29
+  /* "pyNTM/node.py":29
  *             raise ValueError('lon must be a float value')
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -1960,7 +1960,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_2__repr__(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":38
+/* "pyNTM/node.py":38
  *     # focus on the Node.name equivalency and and __hash__ to focus on the
  *     # hash of the Node.name will make equivalency testing possible
  *     def __eq__(self, other_node):             # <<<<<<<<<<<<<<
@@ -2038,7 +2038,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_4__eq__(CYTHON_UNUSED PyObject *__p
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("__eq__", 0);
 
-  /* "pyNTM/node.pyx":39
+  /* "pyNTM/node.py":39
  *     # hash of the Node.name will make equivalency testing possible
  *     def __eq__(self, other_node):
  *         return self.__dict__ == other_node.__dict__             # <<<<<<<<<<<<<<
@@ -2057,7 +2057,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_4__eq__(CYTHON_UNUSED PyObject *__p
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/node.pyx":38
+  /* "pyNTM/node.py":38
  *     # focus on the Node.name equivalency and and __hash__ to focus on the
  *     # hash of the Node.name will make equivalency testing possible
  *     def __eq__(self, other_node):             # <<<<<<<<<<<<<<
@@ -2078,7 +2078,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_4__eq__(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":41
+/* "pyNTM/node.py":41
  *         return self.__dict__ == other_node.__dict__
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -2107,7 +2107,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_6__hash__(CYTHON_UNUSED PyObject *_
   Py_hash_t __pyx_t_2;
   __Pyx_RefNannySetupContext("__hash__", 0);
 
-  /* "pyNTM/node.pyx":43
+  /* "pyNTM/node.py":43
  *     def __hash__(self):
  *         # return hash(tuple(sorted(self.__dict__.items())))
  *         return hash(self.name)             # <<<<<<<<<<<<<<
@@ -2125,7 +2125,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_6__hash__(CYTHON_UNUSED PyObject *_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/node.pyx":41
+  /* "pyNTM/node.py":41
  *         return self.__dict__ == other_node.__dict__
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -2144,7 +2144,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_6__hash__(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":45
+/* "pyNTM/node.py":45
  *         return hash(self.name)
  * 
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -2172,7 +2172,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_8_key(CYTHON_UNUSED PyObject *__pyx
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("_key", 0);
 
-  /* "pyNTM/node.pyx":46
+  /* "pyNTM/node.py":46
  * 
  *     def _key(self):
  *         return self.name             # <<<<<<<<<<<<<<
@@ -2186,7 +2186,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_8_key(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/node.pyx":45
+  /* "pyNTM/node.py":45
  *         return hash(self.name)
  * 
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -2205,7 +2205,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_8_key(CYTHON_UNUSED PyObject *__pyx
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":49
+/* "pyNTM/node.py":49
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -2234,7 +2234,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_10failed(CYTHON_UNUSED PyObject *__
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("failed", 0);
 
-  /* "pyNTM/node.pyx":55
+  /* "pyNTM/node.py":55
  *         :return: Boolean - is node failed?
  *         """
  *         return self._failed             # <<<<<<<<<<<<<<
@@ -2248,7 +2248,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_10failed(CYTHON_UNUSED PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/node.pyx":49
+  /* "pyNTM/node.py":49
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -2267,7 +2267,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_10failed(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":58
+/* "pyNTM/node.py":58
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -2351,7 +2351,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
   PyObject *(*__pyx_t_7)(PyObject *);
   __Pyx_RefNannySetupContext("failed", 0);
 
-  /* "pyNTM/node.pyx":59
+  /* "pyNTM/node.py":59
  *     @failed.setter
  *     def failed(self, status):
  *         if not isinstance(status, bool):             # <<<<<<<<<<<<<<
@@ -2365,7 +2365,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
   __pyx_t_3 = ((!(__pyx_t_2 != 0)) != 0);
   if (unlikely(__pyx_t_3)) {
 
-    /* "pyNTM/node.pyx":60
+    /* "pyNTM/node.py":60
  *     def failed(self, status):
  *         if not isinstance(status, bool):
  *             raise ModelException('must be boolean')             # <<<<<<<<<<<<<<
@@ -2393,7 +2393,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __PYX_ERR(0, 60, __pyx_L1_error)
 
-    /* "pyNTM/node.pyx":59
+    /* "pyNTM/node.py":59
  *     @failed.setter
  *     def failed(self, status):
  *         if not isinstance(status, bool):             # <<<<<<<<<<<<<<
@@ -2402,7 +2402,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "pyNTM/node.pyx":62
+  /* "pyNTM/node.py":62
  *             raise ModelException('must be boolean')
  * 
  *         if status is False:  # False means Node would not be failed             # <<<<<<<<<<<<<<
@@ -2413,7 +2413,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
   __pyx_t_2 = (__pyx_t_3 != 0);
   if (__pyx_t_2) {
 
-    /* "pyNTM/node.pyx":65
+    /* "pyNTM/node.py":65
  *             # Check for any SRLGs with self as a member and get status
  *             # of each SRLG
  *             failed_srlgs = [srlg for srlg in self.srlgs if srlg.failed is True]             # <<<<<<<<<<<<<<
@@ -2479,7 +2479,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
     __pyx_v_failed_srlgs = ((PyObject*)__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pyNTM/node.pyx":66
+    /* "pyNTM/node.py":66
  *             # of each SRLG
  *             failed_srlgs = [srlg for srlg in self.srlgs if srlg.failed is True]
  *             if len(failed_srlgs) > 0:             # <<<<<<<<<<<<<<
@@ -2490,7 +2490,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
     __pyx_t_3 = ((__pyx_t_6 > 0) != 0);
     if (unlikely(__pyx_t_3)) {
 
-      /* "pyNTM/node.pyx":67
+      /* "pyNTM/node.py":67
  *             failed_srlgs = [srlg for srlg in self.srlgs if srlg.failed is True]
  *             if len(failed_srlgs) > 0:
  *                 self._failed = True             # <<<<<<<<<<<<<<
@@ -2499,7 +2499,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
  */
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed, Py_True) < 0) __PYX_ERR(0, 67, __pyx_L1_error)
 
-      /* "pyNTM/node.pyx":68
+      /* "pyNTM/node.py":68
  *             if len(failed_srlgs) > 0:
  *                 self._failed = True
  *                 raise ModelException("Node must be failed since it is a member of one or more SRLGs that are failed")             # <<<<<<<<<<<<<<
@@ -2527,7 +2527,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __PYX_ERR(0, 68, __pyx_L1_error)
 
-      /* "pyNTM/node.pyx":66
+      /* "pyNTM/node.py":66
  *             # of each SRLG
  *             failed_srlgs = [srlg for srlg in self.srlgs if srlg.failed is True]
  *             if len(failed_srlgs) > 0:             # <<<<<<<<<<<<<<
@@ -2536,7 +2536,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
  */
     }
 
-    /* "pyNTM/node.pyx":70
+    /* "pyNTM/node.py":70
  *                 raise ModelException("Node must be failed since it is a member of one or more SRLGs that are failed")
  *             else:
  *                 self._failed = False             # <<<<<<<<<<<<<<
@@ -2547,7 +2547,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed, Py_False) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
     }
 
-    /* "pyNTM/node.pyx":62
+    /* "pyNTM/node.py":62
  *             raise ModelException('must be boolean')
  * 
  *         if status is False:  # False means Node would not be failed             # <<<<<<<<<<<<<<
@@ -2557,7 +2557,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
     goto __pyx_L4;
   }
 
-  /* "pyNTM/node.pyx":73
+  /* "pyNTM/node.py":73
  * 
  *         else:
  *             self._failed = True             # <<<<<<<<<<<<<<
@@ -2569,7 +2569,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
   }
   __pyx_L4:;
 
-  /* "pyNTM/node.pyx":58
+  /* "pyNTM/node.py":58
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -2594,7 +2594,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_12failed(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":76
+/* "pyNTM/node.py":76
  * 
  *     @property
  *     def lat(self):             # <<<<<<<<<<<<<<
@@ -2623,7 +2623,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_14lat(CYTHON_UNUSED PyObject *__pyx
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("lat", 0);
 
-  /* "pyNTM/node.pyx":78
+  /* "pyNTM/node.py":78
  *     def lat(self):
  *         """Latitude or y-coordinate of Node on a plot"""
  *         return self._lat             # <<<<<<<<<<<<<<
@@ -2637,7 +2637,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_14lat(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/node.pyx":76
+  /* "pyNTM/node.py":76
  * 
  *     @property
  *     def lat(self):             # <<<<<<<<<<<<<<
@@ -2656,7 +2656,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_14lat(CYTHON_UNUSED PyObject *__pyx
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":81
+/* "pyNTM/node.py":81
  * 
  *     @lat.setter
  *     def lat(self, status):             # <<<<<<<<<<<<<<
@@ -2735,7 +2735,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_16lat(CYTHON_UNUSED PyObject *__pyx
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("lat", 0);
 
-  /* "pyNTM/node.pyx":82
+  /* "pyNTM/node.py":82
  *     @lat.setter
  *     def lat(self, status):
  *         if isinstance(status, float) or isinstance(status, int):             # <<<<<<<<<<<<<<
@@ -2755,7 +2755,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_16lat(CYTHON_UNUSED PyObject *__pyx
   __pyx_L4_bool_binop_done:;
   if (likely(__pyx_t_1)) {
 
-    /* "pyNTM/node.pyx":83
+    /* "pyNTM/node.py":83
  *     def lat(self, status):
  *         if isinstance(status, float) or isinstance(status, int):
  *             self._lat = status             # <<<<<<<<<<<<<<
@@ -2764,7 +2764,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_16lat(CYTHON_UNUSED PyObject *__pyx
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lat_2, __pyx_v_status) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
 
-    /* "pyNTM/node.pyx":82
+    /* "pyNTM/node.py":82
  *     @lat.setter
  *     def lat(self, status):
  *         if isinstance(status, float) or isinstance(status, int):             # <<<<<<<<<<<<<<
@@ -2774,7 +2774,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_16lat(CYTHON_UNUSED PyObject *__pyx
     goto __pyx_L3;
   }
 
-  /* "pyNTM/node.pyx":85
+  /* "pyNTM/node.py":85
  *             self._lat = status
  *         else:
  *             raise ValueError("lat attribute must be integer or float.")             # <<<<<<<<<<<<<<
@@ -2790,7 +2790,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_16lat(CYTHON_UNUSED PyObject *__pyx
   }
   __pyx_L3:;
 
-  /* "pyNTM/node.pyx":81
+  /* "pyNTM/node.py":81
  * 
  *     @lat.setter
  *     def lat(self, status):             # <<<<<<<<<<<<<<
@@ -2811,7 +2811,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_16lat(CYTHON_UNUSED PyObject *__pyx
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":88
+/* "pyNTM/node.py":88
  * 
  *     @property
  *     def lon(self):             # <<<<<<<<<<<<<<
@@ -2840,7 +2840,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_18lon(CYTHON_UNUSED PyObject *__pyx
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("lon", 0);
 
-  /* "pyNTM/node.pyx":90
+  /* "pyNTM/node.py":90
  *     def lon(self):
  *         """Longitude or x-coordinate of Node on a plot"""
  *         return self._lon             # <<<<<<<<<<<<<<
@@ -2854,7 +2854,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_18lon(CYTHON_UNUSED PyObject *__pyx
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/node.pyx":88
+  /* "pyNTM/node.py":88
  * 
  *     @property
  *     def lon(self):             # <<<<<<<<<<<<<<
@@ -2873,7 +2873,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_18lon(CYTHON_UNUSED PyObject *__pyx
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":93
+/* "pyNTM/node.py":93
  * 
  *     @lon.setter
  *     def lon(self, status):             # <<<<<<<<<<<<<<
@@ -2952,7 +2952,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_20lon(CYTHON_UNUSED PyObject *__pyx
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("lon", 0);
 
-  /* "pyNTM/node.pyx":94
+  /* "pyNTM/node.py":94
  *     @lon.setter
  *     def lon(self, status):
  *         if isinstance(status, float) or isinstance(status, int):             # <<<<<<<<<<<<<<
@@ -2972,7 +2972,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_20lon(CYTHON_UNUSED PyObject *__pyx
   __pyx_L4_bool_binop_done:;
   if (likely(__pyx_t_1)) {
 
-    /* "pyNTM/node.pyx":95
+    /* "pyNTM/node.py":95
  *     def lon(self, status):
  *         if isinstance(status, float) or isinstance(status, int):
  *             self._lon = status             # <<<<<<<<<<<<<<
@@ -2981,7 +2981,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_20lon(CYTHON_UNUSED PyObject *__pyx
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lon_2, __pyx_v_status) < 0) __PYX_ERR(0, 95, __pyx_L1_error)
 
-    /* "pyNTM/node.pyx":94
+    /* "pyNTM/node.py":94
  *     @lon.setter
  *     def lon(self, status):
  *         if isinstance(status, float) or isinstance(status, int):             # <<<<<<<<<<<<<<
@@ -2991,7 +2991,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_20lon(CYTHON_UNUSED PyObject *__pyx
     goto __pyx_L3;
   }
 
-  /* "pyNTM/node.pyx":97
+  /* "pyNTM/node.py":97
  *             self._lon = status
  *         else:
  *             raise ValueError("lon attribute must be integer or float.")             # <<<<<<<<<<<<<<
@@ -3007,7 +3007,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_20lon(CYTHON_UNUSED PyObject *__pyx
   }
   __pyx_L3:;
 
-  /* "pyNTM/node.pyx":93
+  /* "pyNTM/node.py":93
  * 
  *     @lon.setter
  *     def lon(self, status):             # <<<<<<<<<<<<<<
@@ -3028,7 +3028,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_20lon(CYTHON_UNUSED PyObject *__pyx
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":99
+/* "pyNTM/node.py":99
  *             raise ValueError("lon attribute must be integer or float.")
  * 
  *     def interfaces(self, model):             # <<<<<<<<<<<<<<
@@ -3100,7 +3100,7 @@ static PyObject *__pyx_pw_5pyNTM_4node_4Node_23interfaces(PyObject *__pyx_self, 
 }
 static PyObject *__pyx_gb_5pyNTM_4node_4Node_10interfaces_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "pyNTM/node.pyx":108
+/* "pyNTM/node.py":108
  *         adjacency_list = []
  * 
  *         interface_iterator = (interface for interface in model.interface_objects)             # <<<<<<<<<<<<<<
@@ -3248,7 +3248,7 @@ static PyObject *__pyx_gb_5pyNTM_4node_4Node_10interfaces_2generator(__pyx_Corou
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":99
+/* "pyNTM/node.py":99
  *             raise ValueError("lon attribute must be integer or float.")
  * 
  *     def interfaces(self, model):             # <<<<<<<<<<<<<<
@@ -3284,7 +3284,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_22interfaces(CYTHON_UNUSED PyObject
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_model);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_model);
 
-  /* "pyNTM/node.pyx":106
+  /* "pyNTM/node.py":106
  *         :return adjacency_list: (list) list of interfaces on the given node
  *         """
  *         adjacency_list = []             # <<<<<<<<<<<<<<
@@ -3296,7 +3296,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_22interfaces(CYTHON_UNUSED PyObject
   __pyx_v_adjacency_list = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/node.pyx":108
+  /* "pyNTM/node.py":108
  *         adjacency_list = []
  * 
  *         interface_iterator = (interface for interface in model.interface_objects)             # <<<<<<<<<<<<<<
@@ -3308,7 +3308,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_22interfaces(CYTHON_UNUSED PyObject
   __pyx_v_interface_iterator = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/node.pyx":110
+  /* "pyNTM/node.py":110
  *         interface_iterator = (interface for interface in model.interface_objects)
  * 
  *         for interface in interface_iterator:             # <<<<<<<<<<<<<<
@@ -3357,7 +3357,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_22interfaces(CYTHON_UNUSED PyObject
     __Pyx_XDECREF_SET(__pyx_v_interface, __pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "pyNTM/node.pyx":111
+    /* "pyNTM/node.py":111
  * 
  *         for interface in interface_iterator:
  *             if interface.node_object.name == self.name:             # <<<<<<<<<<<<<<
@@ -3378,7 +3378,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_22interfaces(CYTHON_UNUSED PyObject
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (__pyx_t_7) {
 
-      /* "pyNTM/node.pyx":112
+      /* "pyNTM/node.py":112
  *         for interface in interface_iterator:
  *             if interface.node_object.name == self.name:
  *                 adjacency_list.append(interface)             # <<<<<<<<<<<<<<
@@ -3387,7 +3387,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_22interfaces(CYTHON_UNUSED PyObject
  */
       __pyx_t_8 = __Pyx_PyList_Append(__pyx_v_adjacency_list, __pyx_v_interface); if (unlikely(__pyx_t_8 == ((int)-1))) __PYX_ERR(0, 112, __pyx_L1_error)
 
-      /* "pyNTM/node.pyx":111
+      /* "pyNTM/node.py":111
  * 
  *         for interface in interface_iterator:
  *             if interface.node_object.name == self.name:             # <<<<<<<<<<<<<<
@@ -3396,7 +3396,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_22interfaces(CYTHON_UNUSED PyObject
  */
     }
 
-    /* "pyNTM/node.pyx":110
+    /* "pyNTM/node.py":110
  *         interface_iterator = (interface for interface in model.interface_objects)
  * 
  *         for interface in interface_iterator:             # <<<<<<<<<<<<<<
@@ -3406,7 +3406,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_22interfaces(CYTHON_UNUSED PyObject
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/node.pyx":114
+  /* "pyNTM/node.py":114
  *                 adjacency_list.append(interface)
  * 
  *         return adjacency_list             # <<<<<<<<<<<<<<
@@ -3418,7 +3418,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_22interfaces(CYTHON_UNUSED PyObject
   __pyx_r = __pyx_v_adjacency_list;
   goto __pyx_L0;
 
-  /* "pyNTM/node.pyx":99
+  /* "pyNTM/node.py":99
  *             raise ValueError("lon attribute must be integer or float.")
  * 
  *     def interfaces(self, model):             # <<<<<<<<<<<<<<
@@ -3444,7 +3444,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_22interfaces(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":116
+/* "pyNTM/node.py":116
  *         return adjacency_list
  * 
  *     def adjacent_nodes(self, model):             # <<<<<<<<<<<<<<
@@ -3529,7 +3529,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_24adjacent_nodes(CYTHON_UNUSED PyOb
   int __pyx_t_6;
   __Pyx_RefNannySetupContext("adjacent_nodes", 0);
 
-  /* "pyNTM/node.pyx":121
+  /* "pyNTM/node.py":121
  *         """
  * 
  *         adjacencies = self.interfaces(model)             # <<<<<<<<<<<<<<
@@ -3556,7 +3556,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_24adjacent_nodes(CYTHON_UNUSED PyOb
   __pyx_v_adjacencies = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pyNTM/node.pyx":123
+  /* "pyNTM/node.py":123
  *         adjacencies = self.interfaces(model)
  * 
  *         adjacent_nodes = set()             # <<<<<<<<<<<<<<
@@ -3568,7 +3568,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_24adjacent_nodes(CYTHON_UNUSED PyOb
   __pyx_v_adjacent_nodes = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pyNTM/node.pyx":125
+  /* "pyNTM/node.py":125
  *         adjacent_nodes = set()
  * 
  *         for adjacency in adjacencies:             # <<<<<<<<<<<<<<
@@ -3617,7 +3617,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_24adjacent_nodes(CYTHON_UNUSED PyOb
     __Pyx_XDECREF_SET(__pyx_v_adjacency, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pyNTM/node.pyx":126
+    /* "pyNTM/node.py":126
  * 
  *         for adjacency in adjacencies:
  *             adjacent_nodes.add(adjacency.remote_node_object)             # <<<<<<<<<<<<<<
@@ -3629,7 +3629,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_24adjacent_nodes(CYTHON_UNUSED PyOb
     __pyx_t_6 = PySet_Add(__pyx_v_adjacent_nodes, __pyx_t_2); if (unlikely(__pyx_t_6 == ((int)-1))) __PYX_ERR(0, 126, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pyNTM/node.pyx":125
+    /* "pyNTM/node.py":125
  *         adjacent_nodes = set()
  * 
  *         for adjacency in adjacencies:             # <<<<<<<<<<<<<<
@@ -3639,7 +3639,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_24adjacent_nodes(CYTHON_UNUSED PyOb
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/node.pyx":128
+  /* "pyNTM/node.py":128
  *             adjacent_nodes.add(adjacency.remote_node_object)
  * 
  *         return adjacent_nodes             # <<<<<<<<<<<<<<
@@ -3651,7 +3651,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_24adjacent_nodes(CYTHON_UNUSED PyOb
   __pyx_r = __pyx_v_adjacent_nodes;
   goto __pyx_L0;
 
-  /* "pyNTM/node.pyx":116
+  /* "pyNTM/node.py":116
  *         return adjacency_list
  * 
  *     def adjacent_nodes(self, model):             # <<<<<<<<<<<<<<
@@ -3675,7 +3675,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_24adjacent_nodes(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":130
+/* "pyNTM/node.py":130
  *         return adjacent_nodes
  * 
  *     def add_to_srlg(self, srlg_name, model, create_if_not_present=False):             # <<<<<<<<<<<<<<
@@ -3790,7 +3790,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
   int __pyx_t_10;
   __Pyx_RefNannySetupContext("add_to_srlg", 0);
 
-  /* "pyNTM/node.pyx":145
+  /* "pyNTM/node.py":145
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -3806,7 +3806,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pyNTM/node.pyx":146
+      /* "pyNTM/node.py":146
  *         # exist in model
  *         try:
  *             get_srlg = model.get_srlg_object(srlg_name)             # <<<<<<<<<<<<<<
@@ -3833,7 +3833,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
       __pyx_v_get_srlg = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "pyNTM/node.pyx":145
+      /* "pyNTM/node.py":145
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -3850,7 +3850,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "pyNTM/node.pyx":147
+    /* "pyNTM/node.py":147
  *         try:
  *             get_srlg = model.get_srlg_object(srlg_name)
  *         except ModelException:             # <<<<<<<<<<<<<<
@@ -3871,7 +3871,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
 
-      /* "pyNTM/node.pyx":148
+      /* "pyNTM/node.py":148
  *             get_srlg = model.get_srlg_object(srlg_name)
  *         except ModelException:
  *             get_srlg = False             # <<<<<<<<<<<<<<
@@ -3888,7 +3888,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "pyNTM/node.pyx":145
+    /* "pyNTM/node.py":145
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -3908,7 +3908,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
     __pyx_L8_try_end:;
   }
 
-  /* "pyNTM/node.pyx":150
+  /* "pyNTM/node.py":150
  *             get_srlg = False
  * 
  *         if get_srlg is False:             # <<<<<<<<<<<<<<
@@ -3919,7 +3919,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
   __pyx_t_10 = (__pyx_t_9 != 0);
   if (__pyx_t_10) {
 
-    /* "pyNTM/node.pyx":152
+    /* "pyNTM/node.py":152
  *         if get_srlg is False:
  *             # SRLG does not exist
  *             if create_if_not_present is True:             # <<<<<<<<<<<<<<
@@ -3930,7 +3930,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
     __pyx_t_9 = (__pyx_t_10 != 0);
     if (likely(__pyx_t_9)) {
 
-      /* "pyNTM/node.pyx":153
+      /* "pyNTM/node.py":153
  *             # SRLG does not exist
  *             if create_if_not_present is True:
  *                 new_srlg = SRLG(srlg_name, model)             # <<<<<<<<<<<<<<
@@ -3987,7 +3987,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
       __pyx_v_new_srlg = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "pyNTM/node.pyx":154
+      /* "pyNTM/node.py":154
  *             if create_if_not_present is True:
  *                 new_srlg = SRLG(srlg_name, model)
  *                 model.srlg_objects.add(new_srlg)             # <<<<<<<<<<<<<<
@@ -4016,7 +4016,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/node.pyx":155
+      /* "pyNTM/node.py":155
  *                 new_srlg = SRLG(srlg_name, model)
  *                 model.srlg_objects.add(new_srlg)
  *                 self._srlgs.add(new_srlg)             # <<<<<<<<<<<<<<
@@ -4045,7 +4045,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pyNTM/node.pyx":152
+      /* "pyNTM/node.py":152
  *         if get_srlg is False:
  *             # SRLG does not exist
  *             if create_if_not_present is True:             # <<<<<<<<<<<<<<
@@ -4055,7 +4055,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
       goto __pyx_L12;
     }
 
-    /* "pyNTM/node.pyx":157
+    /* "pyNTM/node.py":157
  *                 self._srlgs.add(new_srlg)
  *             else:
  *                 msg = "An SRLG with name {} does not exist in the Model".format(srlg_name)             # <<<<<<<<<<<<<<
@@ -4083,7 +4083,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
       __pyx_v_msg = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "pyNTM/node.pyx":158
+      /* "pyNTM/node.py":158
  *             else:
  *                 msg = "An SRLG with name {} does not exist in the Model".format(srlg_name)
  *                 raise ModelException(msg)             # <<<<<<<<<<<<<<
@@ -4113,7 +4113,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
     }
     __pyx_L12:;
 
-    /* "pyNTM/node.pyx":150
+    /* "pyNTM/node.py":150
  *             get_srlg = False
  * 
  *         if get_srlg is False:             # <<<<<<<<<<<<<<
@@ -4123,7 +4123,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
     goto __pyx_L11;
   }
 
-  /* "pyNTM/node.pyx":161
+  /* "pyNTM/node.py":161
  *         else:
  *             # SRLG does exist in model; add self to that SRLG
  *             get_srlg.node_objects.add(self)             # <<<<<<<<<<<<<<
@@ -4153,7 +4153,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/node.pyx":162
+    /* "pyNTM/node.py":162
  *             # SRLG does exist in model; add self to that SRLG
  *             get_srlg.node_objects.add(self)
  *             self._srlgs.add(get_srlg)             # <<<<<<<<<<<<<<
@@ -4184,7 +4184,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
   }
   __pyx_L11:;
 
-  /* "pyNTM/node.pyx":130
+  /* "pyNTM/node.py":130
  *         return adjacent_nodes
  * 
  *     def add_to_srlg(self, srlg_name, model, create_if_not_present=False):             # <<<<<<<<<<<<<<
@@ -4211,7 +4211,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_26add_to_srlg(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":164
+/* "pyNTM/node.py":164
  *             self._srlgs.add(get_srlg)
  * 
  *     def remove_from_srlg(self, srlg_name, model):             # <<<<<<<<<<<<<<
@@ -4310,7 +4310,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
   int __pyx_t_10;
   __Pyx_RefNannySetupContext("remove_from_srlg", 0);
 
-  /* "pyNTM/node.pyx":175
+  /* "pyNTM/node.py":175
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -4326,7 +4326,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pyNTM/node.pyx":176
+      /* "pyNTM/node.py":176
  *         # exist in model
  *         try:
  *             get_srlg = model.get_srlg_object(srlg_name)             # <<<<<<<<<<<<<<
@@ -4353,7 +4353,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
       __pyx_v_get_srlg = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "pyNTM/node.pyx":175
+      /* "pyNTM/node.py":175
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -4370,7 +4370,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "pyNTM/node.pyx":177
+    /* "pyNTM/node.py":177
  *         try:
  *             get_srlg = model.get_srlg_object(srlg_name)
  *         except ModelException:             # <<<<<<<<<<<<<<
@@ -4391,7 +4391,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
 
-      /* "pyNTM/node.pyx":178
+      /* "pyNTM/node.py":178
  *             get_srlg = model.get_srlg_object(srlg_name)
  *         except ModelException:
  *             get_srlg = False             # <<<<<<<<<<<<<<
@@ -4408,7 +4408,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "pyNTM/node.pyx":175
+    /* "pyNTM/node.py":175
  *         # or it will be False if the SRLG with name=srlg_name does not
  *         # exist in model
  *         try:             # <<<<<<<<<<<<<<
@@ -4428,7 +4428,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
     __pyx_L8_try_end:;
   }
 
-  /* "pyNTM/node.pyx":180
+  /* "pyNTM/node.py":180
  *             get_srlg = False
  * 
  *         if get_srlg is False:             # <<<<<<<<<<<<<<
@@ -4439,7 +4439,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
   __pyx_t_10 = (__pyx_t_9 != 0);
   if (unlikely(__pyx_t_10)) {
 
-    /* "pyNTM/node.pyx":181
+    /* "pyNTM/node.py":181
  * 
  *         if get_srlg is False:
  *             msg = "An SRLG with name {} does not exist in the Model".format(srlg_name)             # <<<<<<<<<<<<<<
@@ -4466,7 +4466,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
     __pyx_v_msg = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "pyNTM/node.pyx":182
+    /* "pyNTM/node.py":182
  *         if get_srlg is False:
  *             msg = "An SRLG with name {} does not exist in the Model".format(srlg_name)
  *             raise ModelException(msg)             # <<<<<<<<<<<<<<
@@ -4494,7 +4494,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __PYX_ERR(0, 182, __pyx_L1_error)
 
-    /* "pyNTM/node.pyx":180
+    /* "pyNTM/node.py":180
  *             get_srlg = False
  * 
  *         if get_srlg is False:             # <<<<<<<<<<<<<<
@@ -4503,7 +4503,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
  */
   }
 
-  /* "pyNTM/node.pyx":185
+  /* "pyNTM/node.py":185
  *         else:
  *             # Remove self from SRLG
  *             get_srlg.node_objects.remove(self)             # <<<<<<<<<<<<<<
@@ -4533,7 +4533,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/node.pyx":186
+    /* "pyNTM/node.py":186
  *             # Remove self from SRLG
  *             get_srlg.node_objects.remove(self)
  *             self._srlgs.remove(get_srlg)             # <<<<<<<<<<<<<<
@@ -4562,7 +4562,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "pyNTM/node.pyx":198
+    /* "pyNTM/node.py":198
  *             #         pass
  * 
  *             self.failed = False             # <<<<<<<<<<<<<<
@@ -4572,7 +4572,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_failed_2, Py_False) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
   }
 
-  /* "pyNTM/node.pyx":164
+  /* "pyNTM/node.py":164
  *             self._srlgs.add(get_srlg)
  * 
  *     def remove_from_srlg(self, srlg_name, model):             # <<<<<<<<<<<<<<
@@ -4598,7 +4598,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_28remove_from_srlg(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "pyNTM/node.pyx":201
+/* "pyNTM/node.py":201
  * 
  *     @property
  *     def srlgs(self):             # <<<<<<<<<<<<<<
@@ -4626,7 +4626,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_30srlgs(CYTHON_UNUSED PyObject *__p
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("srlgs", 0);
 
-  /* "pyNTM/node.pyx":202
+  /* "pyNTM/node.py":202
  *     @property
  *     def srlgs(self):
  *         return self._srlgs             # <<<<<<<<<<<<<<
@@ -4640,7 +4640,7 @@ static PyObject *__pyx_pf_5pyNTM_4node_4Node_30srlgs(CYTHON_UNUSED PyObject *__p
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyNTM/node.pyx":201
+  /* "pyNTM/node.py":201
  * 
  *     @property
  *     def srlgs(self):             # <<<<<<<<<<<<<<
@@ -5004,12 +5004,12 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_new_srlg, __pyx_k_new_srlg, sizeof(__pyx_k_new_srlg), 0, 0, 1, 1},
   {&__pyx_n_s_node_object, __pyx_k_node_object, sizeof(__pyx_k_node_object), 0, 0, 1, 1},
   {&__pyx_n_s_node_objects, __pyx_k_node_objects, sizeof(__pyx_k_node_objects), 0, 0, 1, 1},
-  {&__pyx_kp_s_node_pyx, __pyx_k_node_pyx, sizeof(__pyx_k_node_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_object, __pyx_k_object, sizeof(__pyx_k_object), 0, 0, 1, 1},
   {&__pyx_n_s_other_node, __pyx_k_other_node, sizeof(__pyx_k_other_node), 0, 0, 1, 1},
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
   {&__pyx_n_s_property, __pyx_k_property, sizeof(__pyx_k_property), 0, 0, 1, 1},
   {&__pyx_n_s_pyNTM_node, __pyx_k_pyNTM_node, sizeof(__pyx_k_pyNTM_node), 0, 0, 1, 1},
+  {&__pyx_kp_s_pyNTM_node_py, __pyx_k_pyNTM_node_py, sizeof(__pyx_k_pyNTM_node_py), 0, 0, 1, 0},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_remote_node_object, __pyx_k_remote_node_object, sizeof(__pyx_k_remote_node_object), 0, 0, 1, 1},
   {&__pyx_n_s_remove, __pyx_k_remove, sizeof(__pyx_k_remove), 0, 0, 1, 1},
@@ -5041,7 +5041,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pyNTM/node.pyx":25
+  /* "pyNTM/node.py":25
  *         # Validate lat, lon values
  *         if not(isinstance(lat, float)) and not(isinstance(lat, int)):
  *             raise ValueError('lat must be a float value')             # <<<<<<<<<<<<<<
@@ -5052,7 +5052,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "pyNTM/node.pyx":27
+  /* "pyNTM/node.py":27
  *             raise ValueError('lat must be a float value')
  *         if not(isinstance(lon, float)) and not(isinstance(lon, int)):
  *             raise ValueError('lon must be a float value')             # <<<<<<<<<<<<<<
@@ -5063,7 +5063,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "pyNTM/node.pyx":85
+  /* "pyNTM/node.py":85
  *             self._lat = status
  *         else:
  *             raise ValueError("lat attribute must be integer or float.")             # <<<<<<<<<<<<<<
@@ -5074,7 +5074,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "pyNTM/node.pyx":97
+  /* "pyNTM/node.py":97
  *             self._lon = status
  *         else:
  *             raise ValueError("lon attribute must be integer or float.")             # <<<<<<<<<<<<<<
@@ -5085,7 +5085,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "pyNTM/node.pyx":7
+  /* "pyNTM/node.py":7
  * 
  * 
  * class Node(object):             # <<<<<<<<<<<<<<
@@ -5096,7 +5096,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
-  /* "pyNTM/node.pyx":16
+  /* "pyNTM/node.py":16
  *     """
  * 
  *     def __init__(self, name, lat=0, lon=0):             # <<<<<<<<<<<<<<
@@ -5106,12 +5106,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__6 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_name, __pyx_n_s_lat, __pyx_n_s_lon); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(4, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_init, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(4, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_init, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 16, __pyx_L1_error)
   __pyx_tuple__8 = PyTuple_Pack(2, ((PyObject *)__pyx_int_0), ((PyObject *)__pyx_int_0)); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "pyNTM/node.pyx":29
+  /* "pyNTM/node.py":29
  *             raise ValueError('lon must be a float value')
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -5121,9 +5121,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__9 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
-  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_repr, 29, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_repr, 29, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 29, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":38
+  /* "pyNTM/node.py":38
  *     # focus on the Node.name equivalency and and __hash__ to focus on the
  *     # hash of the Node.name will make equivalency testing possible
  *     def __eq__(self, other_node):             # <<<<<<<<<<<<<<
@@ -5133,9 +5133,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__11 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_other_node); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
-  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_eq, 38, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_eq, 38, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 38, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":41
+  /* "pyNTM/node.py":41
  *         return self.__dict__ == other_node.__dict__
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -5145,9 +5145,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__13 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_hash, 41, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_hash, 41, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 41, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":45
+  /* "pyNTM/node.py":45
  *         return hash(self.name)
  * 
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -5157,9 +5157,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__15 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
-  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_key, 45, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 45, __pyx_L1_error)
+  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_key, 45, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 45, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":49
+  /* "pyNTM/node.py":49
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -5169,9 +5169,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__17 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
-  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_failed_2, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_failed_2, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 49, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":58
+  /* "pyNTM/node.py":58
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -5181,9 +5181,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__19 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_status, __pyx_n_s_failed_srlgs, __pyx_n_s_srlg); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_failed_2, 58, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_failed_2, 58, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 58, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":76
+  /* "pyNTM/node.py":76
  * 
  *     @property
  *     def lat(self):             # <<<<<<<<<<<<<<
@@ -5193,9 +5193,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__21 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_lat, 76, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_lat, 76, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 76, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":81
+  /* "pyNTM/node.py":81
  * 
  *     @lat.setter
  *     def lat(self, status):             # <<<<<<<<<<<<<<
@@ -5205,9 +5205,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__23 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_status); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_lat, 81, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 81, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_lat, 81, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 81, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":88
+  /* "pyNTM/node.py":88
  * 
  *     @property
  *     def lon(self):             # <<<<<<<<<<<<<<
@@ -5217,9 +5217,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__25 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_lon, 88, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 88, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_lon, 88, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 88, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":93
+  /* "pyNTM/node.py":93
  * 
  *     @lon.setter
  *     def lon(self, status):             # <<<<<<<<<<<<<<
@@ -5229,9 +5229,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__27 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_status); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 93, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_lon, 93, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_lon, 93, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 93, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":99
+  /* "pyNTM/node.py":99
  *             raise ValueError("lon attribute must be integer or float.")
  * 
  *     def interfaces(self, model):             # <<<<<<<<<<<<<<
@@ -5241,9 +5241,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__29 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_adjacency_list, __pyx_n_s_interface_iterator, __pyx_n_s_interface, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_interfaces, 99, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_interfaces, 99, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 99, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":116
+  /* "pyNTM/node.py":116
  *         return adjacency_list
  * 
  *     def adjacent_nodes(self, model):             # <<<<<<<<<<<<<<
@@ -5253,9 +5253,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__31 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_model, __pyx_n_s_adjacencies, __pyx_n_s_adjacent_nodes, __pyx_n_s_adjacency); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__31);
   __Pyx_GIVEREF(__pyx_tuple__31);
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_adjacent_nodes, 116, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_adjacent_nodes, 116, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 116, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":130
+  /* "pyNTM/node.py":130
  *         return adjacent_nodes
  * 
  *     def add_to_srlg(self, srlg_name, model, create_if_not_present=False):             # <<<<<<<<<<<<<<
@@ -5265,12 +5265,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__33 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_srlg_name, __pyx_n_s_model, __pyx_n_s_create_if_not_present, __pyx_n_s_get_srlg, __pyx_n_s_new_srlg, __pyx_n_s_msg); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
-  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(4, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_add_to_srlg, 130, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(4, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_add_to_srlg, 130, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 130, __pyx_L1_error)
   __pyx_tuple__35 = PyTuple_Pack(1, ((PyObject *)Py_False)); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__35);
   __Pyx_GIVEREF(__pyx_tuple__35);
 
-  /* "pyNTM/node.pyx":164
+  /* "pyNTM/node.py":164
  *             self._srlgs.add(get_srlg)
  * 
  *     def remove_from_srlg(self, srlg_name, model):             # <<<<<<<<<<<<<<
@@ -5280,9 +5280,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__36 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_srlg_name, __pyx_n_s_model, __pyx_n_s_get_srlg, __pyx_n_s_msg); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
-  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_remove_from_srlg, 164, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_remove_from_srlg, 164, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 164, __pyx_L1_error)
 
-  /* "pyNTM/node.pyx":201
+  /* "pyNTM/node.py":201
  * 
  *     @property
  *     def srlgs(self):             # <<<<<<<<<<<<<<
@@ -5292,7 +5292,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__38 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__38);
   __Pyx_GIVEREF(__pyx_tuple__38);
-  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_node_pyx, __pyx_n_s_srlgs_2, 201, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_pyNTM_node_py, __pyx_n_s_srlgs_2, 201, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5593,7 +5593,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "pyNTM/node.pyx":3
+  /* "pyNTM/node.py":3
  * """A class to represent a layer 3 device in the Model"""
  * 
  * from .exceptions import ModelException             # <<<<<<<<<<<<<<
@@ -5614,7 +5614,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pyNTM/node.pyx":4
+  /* "pyNTM/node.py":4
  * 
  * from .exceptions import ModelException
  * from .srlg import SRLG             # <<<<<<<<<<<<<<
@@ -5635,7 +5635,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/node.pyx":7
+  /* "pyNTM/node.py":7
  * 
  * 
  * class Node(object):             # <<<<<<<<<<<<<<
@@ -5647,7 +5647,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_2 = __Pyx_Py3MetaclassPrepare(__pyx_t_1, __pyx_tuple__5, __pyx_n_s_Node, __pyx_n_s_Node, (PyObject *) NULL, __pyx_n_s_pyNTM_node, __pyx_kp_s_A_class_to_represent_a_layer_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "pyNTM/node.pyx":16
+  /* "pyNTM/node.py":16
  *     """
  * 
  *     def __init__(self, name, lat=0, lon=0):             # <<<<<<<<<<<<<<
@@ -5660,7 +5660,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":29
+  /* "pyNTM/node.py":29
  *             raise ValueError('lon must be a float value')
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -5672,7 +5672,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_repr, __pyx_t_3) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":38
+  /* "pyNTM/node.py":38
  *     # focus on the Node.name equivalency and and __hash__ to focus on the
  *     # hash of the Node.name will make equivalency testing possible
  *     def __eq__(self, other_node):             # <<<<<<<<<<<<<<
@@ -5684,7 +5684,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_eq, __pyx_t_3) < 0) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":41
+  /* "pyNTM/node.py":41
  *         return self.__dict__ == other_node.__dict__
  * 
  *     def __hash__(self):             # <<<<<<<<<<<<<<
@@ -5696,7 +5696,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_hash, __pyx_t_3) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":45
+  /* "pyNTM/node.py":45
  *         return hash(self.name)
  * 
  *     def _key(self):             # <<<<<<<<<<<<<<
@@ -5708,7 +5708,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_key, __pyx_t_3) < 0) __PYX_ERR(0, 45, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":49
+  /* "pyNTM/node.py":49
  * 
  *     @property
  *     def failed(self):             # <<<<<<<<<<<<<<
@@ -5718,7 +5718,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_4node_4Node_11failed, 0, __pyx_n_s_Node_failed, NULL, __pyx_n_s_pyNTM_node, __pyx_d, ((PyObject *)__pyx_codeobj__18)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/node.pyx":48
+  /* "pyNTM/node.py":48
  *         return self.name
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -5731,7 +5731,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_failed_2, __pyx_t_4) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/node.pyx":57
+  /* "pyNTM/node.py":57
  *         return self._failed
  * 
  *     @failed.setter             # <<<<<<<<<<<<<<
@@ -5749,7 +5749,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":58
+  /* "pyNTM/node.py":58
  * 
  *     @failed.setter
  *     def failed(self, status):             # <<<<<<<<<<<<<<
@@ -5777,7 +5777,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_failed_2, __pyx_t_4) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/node.pyx":76
+  /* "pyNTM/node.py":76
  * 
  *     @property
  *     def lat(self):             # <<<<<<<<<<<<<<
@@ -5787,7 +5787,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_4 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_4node_4Node_15lat, 0, __pyx_n_s_Node_lat, NULL, __pyx_n_s_pyNTM_node, __pyx_d, ((PyObject *)__pyx_codeobj__22)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "pyNTM/node.pyx":75
+  /* "pyNTM/node.py":75
  *             self._failed = True
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -5800,7 +5800,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_lat, __pyx_t_5) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pyNTM/node.pyx":80
+  /* "pyNTM/node.py":80
  *         return self._lat
  * 
  *     @lat.setter             # <<<<<<<<<<<<<<
@@ -5818,7 +5818,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/node.pyx":81
+  /* "pyNTM/node.py":81
  * 
  *     @lat.setter
  *     def lat(self, status):             # <<<<<<<<<<<<<<
@@ -5846,7 +5846,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_lat, __pyx_t_5) < 0) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pyNTM/node.pyx":88
+  /* "pyNTM/node.py":88
  * 
  *     @property
  *     def lon(self):             # <<<<<<<<<<<<<<
@@ -5856,7 +5856,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_4node_4Node_19lon, 0, __pyx_n_s_Node_lon, NULL, __pyx_n_s_pyNTM_node, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "pyNTM/node.pyx":87
+  /* "pyNTM/node.py":87
  *             raise ValueError("lat attribute must be integer or float.")
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -5869,7 +5869,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_lon, __pyx_t_3) < 0) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":92
+  /* "pyNTM/node.py":92
  *         return self._lon
  * 
  *     @lon.setter             # <<<<<<<<<<<<<<
@@ -5887,7 +5887,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pyNTM/node.pyx":93
+  /* "pyNTM/node.py":93
  * 
  *     @lon.setter
  *     def lon(self, status):             # <<<<<<<<<<<<<<
@@ -5915,7 +5915,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_lon, __pyx_t_3) < 0) __PYX_ERR(0, 93, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":99
+  /* "pyNTM/node.py":99
  *             raise ValueError("lon attribute must be integer or float.")
  * 
  *     def interfaces(self, model):             # <<<<<<<<<<<<<<
@@ -5927,7 +5927,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_interfaces, __pyx_t_3) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":116
+  /* "pyNTM/node.py":116
  *         return adjacency_list
  * 
  *     def adjacent_nodes(self, model):             # <<<<<<<<<<<<<<
@@ -5939,7 +5939,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_adjacent_nodes, __pyx_t_3) < 0) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":130
+  /* "pyNTM/node.py":130
  *         return adjacent_nodes
  * 
  *     def add_to_srlg(self, srlg_name, model, create_if_not_present=False):             # <<<<<<<<<<<<<<
@@ -5952,7 +5952,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_add_to_srlg, __pyx_t_3) < 0) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":164
+  /* "pyNTM/node.py":164
  *             self._srlgs.add(get_srlg)
  * 
  *     def remove_from_srlg(self, srlg_name, model):             # <<<<<<<<<<<<<<
@@ -5964,7 +5964,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_remove_from_srlg, __pyx_t_3) < 0) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pyNTM/node.pyx":201
+  /* "pyNTM/node.py":201
  * 
  *     @property
  *     def srlgs(self):             # <<<<<<<<<<<<<<
@@ -5974,7 +5974,7 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_5pyNTM_4node_4Node_31srlgs, 0, __pyx_n_s_Node_srlgs, NULL, __pyx_n_s_pyNTM_node, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "pyNTM/node.pyx":200
+  /* "pyNTM/node.py":200
  *             self.failed = False
  * 
  *     @property             # <<<<<<<<<<<<<<
@@ -5987,7 +5987,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_srlgs_2, __pyx_t_4) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pyNTM/node.pyx":7
+  /* "pyNTM/node.py":7
  * 
  * 
  * class Node(object):             # <<<<<<<<<<<<<<
@@ -6001,7 +6001,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pyNTM/node.pyx":1
+  /* "pyNTM/node.py":1
  * """A class to represent a layer 3 device in the Model"""             # <<<<<<<<<<<<<<
  * 
  * from .exceptions import ModelException
